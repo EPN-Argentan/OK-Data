@@ -61,6 +61,7 @@ public class displayMessage : MonoBehaviour
 
 //Destroy message display
 //Index = how many message should be destroy from older one to new one
+//if index = 0, all messages will be destroy
     public void destroyMessages(int index){
         int numberChildren = transform.childCount-1;
         if(index==0){
