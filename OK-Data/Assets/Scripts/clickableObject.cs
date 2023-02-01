@@ -26,4 +26,5 @@ public class clickableObject : MonoBehaviour
         //Load the specific scene
         //SceneManager.LoadScene(nameSceneToLoad, LoadSceneMode.Additive);
     }
+
 }
