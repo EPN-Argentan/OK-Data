@@ -19,6 +19,7 @@ public class clickableObject : MonoBehaviour
     {
         //Output this to console when the Button3 is clicked
         Debug.Log(transform.gameObject.name + " has been clicked");
-        SceneManager.LoadScene(nameSceneToLoad, LoadSceneMode.Additive);
+        //Load the specific scene
+        //SceneManager.LoadScene(nameSceneToLoad, LoadSceneMode.Additive);
     }
 }
