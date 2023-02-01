@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     private int numberHealthElements;
-    public static int[] healthValues; //create a global array with all values
+    public static int[] healthValues; //create a global array with all values of health point
 
     void Start()
     {  

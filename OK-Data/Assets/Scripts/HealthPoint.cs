@@ -15,6 +15,7 @@ public class HealthPoint : MonoBehaviour
     {  
         //target text field to display value score
         Transform objectText = transform.GetChild(1).GetChild(1);
+        //get rank of health element in the healthbar
         rankHealthElement = transform.GetSiblingIndex();
         
         //display value score

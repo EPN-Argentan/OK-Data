@@ -7,17 +7,21 @@ using UnityEngine.SceneManagement;
 public class clickableObject : MonoBehaviour
 {
     private Button objectButton;
+
+    //name of scene to load as to be set in the inspector
     public string nameSceneToLoad;
-    // Start is called before the first frame update
+
     void Start()
     {
+        //find the button attach to the image
         objectButton = transform.gameObject.GetComponent<Button>();
+        //wait for click event on the button
         objectButton.onClick.AddListener(() => ButtonClicked());
     }
 
     void ButtonClicked()
     {
-        //Output this to console when the Button3 is clicked
+        //Output this to console when the Button is clicked
         Debug.Log(transform.gameObject.name + " has been clicked");
         //Load the specific scene
         //SceneManager.LoadScene(nameSceneToLoad, LoadSceneMode.Additive);
