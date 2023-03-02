@@ -14,6 +14,7 @@ public class displayMessage : MonoBehaviour
 
     void Start()
     {
+        //debug start by displaying two messages and destroy the inspector one
         InstantiateMessage("test", true,true); //Display a test message
         InstantiateMessage("Ceci est un autre texte", false,false); //Display a test message
         destroyMessages(1); //Destroy index X message, if value 0 then destroy all messages
@@ -72,5 +73,10 @@ public class displayMessage : MonoBehaviour
         } else {
             Destroy(transform.GetChild(index).gameObject);
         }
+    }
+
+//Display image in smartphone
+    public void InstantiateImage(){
+
     }
 }
