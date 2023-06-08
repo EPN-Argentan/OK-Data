@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 49, in script
+    call screen telephoneplayer
+ScriptError: could not find label 'phoneDown'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
+    context.run()
+  File "game/script.rpy", line 49, in script
+    call screen telephoneplayer
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'phoneDown'.
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.0.3.22090809
+OKDATA 1.0
+Thu Jun  8 17:46:34 2023
