@@ -1,6 +1,6 @@
 screen barre_de_vie :
-    $ yposPastille = -20
     $ xposPastille = -30
+    $ yposPastille = -20
     $ xtextPastille = -20
     $ ytextPastille = -5
 

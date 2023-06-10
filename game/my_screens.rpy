@@ -97,6 +97,10 @@ screen telephoneplayer :
 #Screen phone when selfie photo is display
 screen selfie :
     imagebutton:
-        xpos 700
-        ypos 150
+        xalign 0.5
+        yalign 0.5
         idle "selfie.png"
+    imagebutton:
+        xalign 0.5
+        yalign 0.72
+        idle "share-icon.png"

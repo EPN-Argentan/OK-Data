@@ -33,11 +33,9 @@ label start:
     $ point_localisation = 5
     $ point_sociaux = 5
     $ point_administrative = 5
-
-
+    
     m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
     m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
-
     e_nvl "Bienvenue sur Ok Data"
     n_nvl "Let's go"
 
