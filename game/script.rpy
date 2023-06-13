@@ -27,15 +27,20 @@ label start:
     show Mary at Position (xpos = 820, ypos = 1000)
     show screen barre_de_vie
 
-    $ point_interet = 5
-    $ point_sante = 5
-    $ point_conviction = 5
-    $ point_localisation = 5
-    $ point_sociaux = 5
-    $ point_administrative = 5
-    
+    $ points = {
+        'point_interet': 5,
+        'point_sante': 5,
+        'point_conviction': 5,
+        'point_localisation': 5,
+        'point_sociaux': 5,
+        'point_administrative': 5
+    }
+
+
     m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
     m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
+    call addPoints(3,'point_sante')
+
     e_nvl "Bienvenue sur Ok Data"
     n_nvl "Let's go"
 
@@ -47,10 +52,12 @@ label start:
         call screen telephoneplayer
 
     label selfie:
-        if LocalisationState:
-            $ point_interet -= 5
-        else:
-            $ point_interet += 5
         call screen selfie
         with dissolve
+
+    #function to call to add value to one of lifebar element
+    #$ points['point_interet'] += 2
+    label addPoints(values = 0, key = ''):
+        $ points[key] += values
+
     return

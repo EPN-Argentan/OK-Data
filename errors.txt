@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 105: 'zoom' is not a keyword argument or valid child for the imagebutton statement.
-    zoom 0.3
-        ^
+File "game/barre_de_vie.rpy", line 5: expected a keyword argument or child statement.
+    $ points['point_interet'] += 2
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Jun 10 10:41:02 2023
+Tue Jun 13 14:41:47 2023

@@ -1,4 +1,5 @@
 screen barre_de_vie :
+
     $ xposPastille = -30
     $ yposPastille = -20
     $ xtextPastille = -20
@@ -16,7 +17,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_interet]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_interet]]" xpos xtextPastille ypos ytextPastille
 
         #pastille santé
         hbox:
@@ -26,7 +27,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_sante]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_sante]]" xpos xtextPastille ypos ytextPastille
 
         #pastille conviction
         hbox:
@@ -36,7 +37,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_conviction]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_conviction]]" xpos xtextPastille ypos ytextPastille
 
         #pastille localisation
         hbox:
@@ -46,7 +47,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_localisation]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_localisation]]" xpos xtextPastille ypos ytextPastille
 
         #pastille sociaux
         hbox:
@@ -56,7 +57,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_sociaux]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_sociaux]]" xpos xtextPastille ypos ytextPastille
 
         #pastille administrative
         hbox:
@@ -66,7 +67,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[point_administrative]" xpos xtextPastille ypos ytextPastille
+                text "[points[point_administrative]]" xpos xtextPastille ypos ytextPastille
 
 transform custom_zoom:
     zoom 0.3

@@ -1,66 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 54, in script
-    call screen selfie
-  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/my_screens.rpy", line 98, in execute
-    screen selfie :
-  File "game/my_screens.rpy", line 98, in execute
-    screen selfie :
-  File "game/my_screens.rpy", line 103, in execute
-    imagebutton:
-Exception: Imagebutton does not have a idle image.
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 517, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 517, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Informatique\\Documents\\OK Data\\game\\saves\\_reload-1-LT1.save'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 54, in script
-    call screen selfie
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
-    self.call("execute")
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 609, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 3181, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/my_screens.rpy", line 98, in execute
-    screen selfie :
-  File "game/my_screens.rpy", line 98, in execute
-    screen selfie :
-  File "game/my_screens.rpy", line 103, in execute
-    imagebutton:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ui.py", line 952, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ui.py", line 948, in choice
-    raise Exception("Imagebutton does not have a %s image." % (name,))
-Exception: Imagebutton does not have a idle image.
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 517, in script
+    python hide:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 517, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\loadsave.py", line 768, in load
+    roots, log = loads(location.load(filename))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\savelocation.py", line 469, in load
+    return l.load(slotname) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\savelocation.py", line 260, in load
+    with zipfile.ZipFile(filename, "r") as zf:
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/zipfile.py", line 1239, in __init__
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Informatique\\Documents\\OK Data\\game\\saves\\_reload-1-LT1.save'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Sat Jun 10 10:39:48 2023
+Tue Jun 13 14:44:46 2023
