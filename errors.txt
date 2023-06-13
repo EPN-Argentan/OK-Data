@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/barre_de_vie.rpy", line 5: expected a keyword argument or child statement.
-    $ points['point_interet'] += 2
-    ^
+File "game/functions.rpy", line 23: expected 'label_name' not found.
+    call scene black
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jun 13 14:41:47 2023
+Tue Jun 13 16:07:10 2023

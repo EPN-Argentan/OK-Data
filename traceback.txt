@@ -1,41 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Informatique\\Documents\\OK Data\\game\\saves\\_reload-1-LT1.save'
+  File "game/script.rpy", line 43, in script call
+    call addPoints(5,'point_conviction','')
+  File "game/functions.rpy", line 17, in script
+    if newValue < oldValue :
+SyntaxError: invalid syntax (game/functions.rpy, line 19)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\loadsave.py", line 768, in load
-    roots, log = loads(location.load(filename))
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\savelocation.py", line 469, in load
-    return l.load(slotname) # type: ignore
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\savelocation.py", line 260, in load
-    with zipfile.ZipFile(filename, "r") as zf:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/zipfile.py", line 1239, in __init__
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Informatique\\Documents\\OK Data\\game\\saves\\_reload-1-LT1.save'
+  File "game/script.rpy", line 43, in script call
+    call addPoints(5,'point_conviction','')
+  File "game/functions.rpy", line 17, in script
+    if newValue < oldValue :
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1090, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
+    raise orig_e
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/functions.rpy, line 19)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Jun 13 14:44:46 2023
+Tue Jun 13 15:08:08 2023
