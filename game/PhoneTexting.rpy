@@ -2,6 +2,7 @@
 
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Nighten" ##The name of the main character, used to place them on the screen
+define Eric = "Eric"
 
 init -1 python:
     phone_position_x = 0.5
@@ -123,6 +124,8 @@ screen nvl_phonetext(dialogue):
         else:
             if d.who == MC_Name:
                 $ message_frame = "phone_send_frame.png"
+            if d.who == Eric:
+                $ message_frame = "Eric_Icon.png"
             else:
                 $ message_frame = "phone_received_frame.png"
 

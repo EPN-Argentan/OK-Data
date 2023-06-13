@@ -1,32 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 43, in script call
-    call addPoints(5,'point_conviction','')
-  File "game/functions.rpy", line 17, in script
-    if newValue < oldValue :
-SyntaxError: invalid syntax (game/functions.rpy, line 19)
+After initialization, but before game start.
+  File "game/PhoneTexting.rpy", line 73, in analyze_screen
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 111, in analyze
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 123, in analyze
+    else:
+  File "game/PhoneTexting.rpy", line 126, in analyze
+    if d.who ==:
+SyntaxError: unexpected EOF while parsing (game/PhoneTexting.rpy, line 126)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 43, in script call
-    call addPoints(5,'point_conviction','')
-  File "game/functions.rpy", line 17, in script
-    if newValue < oldValue :
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1090, in py_eval
-    code = py_compile(code, 'eval')
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 87, in run
+    renpy.display.screen.analyze_screens()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 946, in analyze_screens
+    s.ast.analyze_screen()
+  File "game/PhoneTexting.rpy", line 73, in analyze_screen
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 111, in analyze
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 123, in analyze
+    else:
+  File "game/PhoneTexting.rpy", line 126, in analyze
+    if d.who ==:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 540, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
     raise e
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
     raise orig_e
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
     tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/functions.rpy, line 19)
+SyntaxError: unexpected EOF while parsing (game/PhoneTexting.rpy, line 126)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Jun 13 15:08:08 2023
+Tue Jun 13 17:17:13 2023

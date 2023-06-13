@@ -39,8 +39,9 @@ label start:
 
     m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
     m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
-    #call addPoints(3,'point_sante', BluetoothState)
+
     call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
+
     m "je crois que quelque chose vient de se passer"
     e_nvl "Bienvenue sur Ok Data"
     n_nvl "Let's go"
@@ -50,7 +51,7 @@ label start:
         call screen phoneDown
 
     label telplay:
-        call screen telephoneplayer
+        call screen telephoneplayer(False,True,False,True,True,True)
 
     label selfie:
         call screen selfie

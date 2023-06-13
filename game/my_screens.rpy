@@ -43,7 +43,9 @@ screen phoneDown :
             action SetVariable("LocalisationState", not LocalisationState)
 
 
-screen telephoneplayer :
+#Smartphone home screen
+#Each argument is one application icon that can be avaible or not
+screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
     imagebutton:
         xalign 0.5
         ypos 150
@@ -56,12 +58,69 @@ screen telephoneplayer :
         hover "masquetelhiver.png"
         action Hide("telephoneplayer"), Jump("lPhoneDown")
 
-    imagebutton:
-        xpos 800
-        ypos 300
-        idle "appphoto.png"
-        hover "appphotohover.png"
-        action Jump("selfie")
+    frame:
+        background None
+        xalign 0.5
+        yalign 0.4
+        xmaximum 360
+        ymaximum 700
+        grid 3 2:
+            spacing 20
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if A1:
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if A2:
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if A3:
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if B1:
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if B2:
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+            imagebutton:
+                xalign 0.5
+                yalign 0.5
+                if B3   :
+                    idle "appphoto.png"
+                    hover "appphotohover.png"
+                    action Jump("selfie")
+                else:
+                    idle "appphotoout.png"
+
 
     hbox:
         xalign 0.5

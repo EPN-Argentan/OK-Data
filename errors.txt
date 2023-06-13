@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 23: expected 'label_name' not found.
-    call scene black
+File "game/my_screens.rpy", line 60: 'grid' is not a keyword argument or valid child for the imagebutton statement.
+    grid 3 2:
         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jun 13 16:07:10 2023
+Tue Jun 13 17:00:27 2023
