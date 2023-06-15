@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 60: 'grid' is not a keyword argument or valid child for the imagebutton statement.
-    grid 3 2:
-        ^
+File "game/functions.rpy", line 36: invalid syntax
+    points[key][1] = 5 with easeinright
+                        ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jun 13 17:00:27 2023
+Thu Jun 15 14:37:44 2023

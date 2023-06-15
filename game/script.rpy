@@ -27,13 +27,14 @@ label start:
     show Mary at Position (xpos = 820, ypos = 1000)
     show screen barre_de_vie
 
+    #points store all point score and y position (to be able to shake this value later)
     $ points = {
-        'point_interet': 5,
-        'point_sante': 5,
-        'point_conviction': 5,
-        'point_localisation': 5,
-        'point_sociaux': 5,
-        'point_administrative': 5
+        'point_interet': [5,0],
+        'point_sante': [5,0],
+        'point_conviction': [5,0],
+        'point_localisation': [5,0],
+        'point_sociaux': [5,0],
+        'point_administrative': [5,0]
     }
 
 

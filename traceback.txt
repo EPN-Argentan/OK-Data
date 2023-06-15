@@ -1,64 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/PhoneTexting.rpy", line 73, in analyze_screen
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 73, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 73, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 110, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 110, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 111, in analyze
-    if d.who == None: # Narrator
-  File "game/PhoneTexting.rpy", line 123, in analyze
-    else:
-  File "game/PhoneTexting.rpy", line 126, in analyze
-    if d.who ==:
-SyntaxError: unexpected EOF while parsing (game/PhoneTexting.rpy, line 126)
+While running game code:
+  File "game/functions.rpy", line 35, in script
+    init python:
+  File "game/functions.rpy", line 35, in script
+    init python:
+  File "game/functions.rpy", line 40, in <module>
+    original_value = points[key][1]
+NameError: name 'points' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
     renpy.main.main()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
-    run(restart)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 87, in run
-    renpy.display.screen.analyze_screens()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 946, in analyze_screens
-    s.ast.analyze_screen()
-  File "game/PhoneTexting.rpy", line 73, in analyze_screen
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 73, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 73, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 110, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 110, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 111, in analyze
-    if d.who == None: # Narrator
-  File "game/PhoneTexting.rpy", line 123, in analyze
-    else:
-  File "game/PhoneTexting.rpy", line 126, in analyze
-    if d.who ==:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 540, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
-    raise e
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
-    raise orig_e
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: unexpected EOF while parsing (game/PhoneTexting.rpy, line 126)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
+    renpy.game.context().run(node)
+  File "game/functions.rpy", line 35, in script
+    init python:
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "game/functions.rpy", line 35, in script
+    init python:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/functions.rpy", line 40, in <module>
+    original_value = points[key][1]
+NameError: name 'points' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Jun 13 17:17:13 2023
+Thu Jun 15 13:47:03 2023
