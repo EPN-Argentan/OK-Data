@@ -1,35 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/functions.rpy", line 35, in script
-    init python:
-  File "game/functions.rpy", line 35, in script
-    init python:
-  File "game/functions.rpy", line 40, in <module>
-    original_value = points[key][1]
-NameError: name 'points' is not defined
+  File "game/script.rpy", line 44, in script call
+    call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
+  File "game/functions.rpy", line 10, in script
+    label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
+Exception: Could not find return label ('game/functions.rpy', 1686823489, 1).
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/functions.rpy", line 35, in script
-    init python:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/functions.rpy", line 35, in script
-    init python:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/functions.rpy", line 40, in <module>
-    original_value = points[key][1]
-NameError: name 'points' is not defined
+  File "game/script.rpy", line 44, in script call
+    call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
+  File "game/functions.rpy", line 10, in script
+    label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1782, in execute
+    next_node(renpy.game.context().lookup_return(pop=True))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\execution.py", line 726, in lookup_return
+    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
+Exception: Could not find return label ('game/functions.rpy', 1686823489, 1).
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Thu Jun 15 13:47:03 2023
+Tue Jun 20 16:16:42 2023

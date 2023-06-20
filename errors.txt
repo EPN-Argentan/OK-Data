@@ -2,10 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 36: invalid syntax
-    points[key][1] = 5 with easeinright
-                        ^
-    
+File "game/functions.rpy", line 22: if statement expects a non-empty block.
+    if newValue < oldValue :
+                            ^
+
+File "game/functions.rpy", line 24: Line is indented, but the preceding show screen statement statement does not expect a block. Please check this line's indentation.
+    if losemessage:
+    ^
+
+File "game/functions.rpy", line 27: expected statement.
+    elif newValue == oldValue :
+                  ^
+
+File "game/functions.rpy", line 30: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Jun 15 14:37:44 2023
+Tue Jun 20 16:20:33 2023

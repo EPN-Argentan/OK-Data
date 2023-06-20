@@ -8,7 +8,6 @@
 # Exemple d'usage de la fonction :
 # addPoints(5,'point_sante',BluetoothState,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
-    call shake(key)
     $ oldValue = points[key][0]
     if not condition:
         $ points[key][0] += values
@@ -21,6 +20,7 @@ label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage
 
     #you lose points
     if newValue < oldValue :
+        show screen barre_de_vie with hpunch
         if losemessage:
             e_nvl '[losemessage]'
     #nothing happens
@@ -30,19 +30,3 @@ label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage
     else:
         if winmessage:
             e_nvl '[winmessage]'
-
-label shake( key = '' ):
-    $ pauseDelay = 0.05
-    $ points[key][1] = 5
-    pause pauseDelay
-    $ points[key][1] = 4
-    pause pauseDelay
-    $ points[key][1] = 3
-    pause pauseDelay
-    $ points[key][1] = 2
-    pause pauseDelay
-    $ points[key][1] = 1
-    pause pauseDelay
-    $ points[key][1] = -10
-    pause pauseDelay
-    $ points[key][1] = 5

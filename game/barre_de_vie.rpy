@@ -1,7 +1,9 @@
 screen barre_de_vie :
 
+#position of green pastille
     $ xposPastille = -30
     $ yposPastille = -20
+#position of text inside green pastille
     $ xtextPastille = -20
     $ ytextPastille = -5
 
