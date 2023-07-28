@@ -1,26 +1,116 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 44, in script call
-    call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
-  File "game/functions.rpy", line 10, in script
-    label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
-Exception: Could not find return label ('game/functions.rpy', 1686823489, 1).
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 495, in _execute_python_hide
+    ui.interact(suppress_overlay=True, suppress_underlay=True)
+  File "renpy/common/00library.rpy", line 167, in _default_empty_window
+    nvl_show_core()
+  File "renpy/common/00nvl_mode.rpy", line 207, in nvl_show_core
+    return __nvl_show_screen("nvl", items=[ ])
+  File "renpy/common/00nvl_mode.rpy", line 201, in _m1_00nvl_mode__nvl_show_screen
+    return renpy.get_widget(screen_name, "what", config.nvl_layer)
+  File "game/screens.rpy", line 1299, in execute
+    screen nvl(dialogue, items=None):
+  File "game/screens.rpy", line 1299, in execute
+    screen nvl(dialogue, items=None):
+  File "game/screens.rpy", line 1302, in execute
+    if nvl_mode == "phone":
+  File "game/screens.rpy", line 1303, in execute
+    use PhoneDialogue(dialogue, items)
+  File "game/PhoneTexting.rpy", line 54, in execute
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/PhoneTexting.rpy", line 54, in execute
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/PhoneTexting.rpy", line 57, in execute
+    frame at phone_transform(phone_position_x, phone_position_y):
+  File "game/PhoneTexting.rpy", line 62, in execute
+    viewport:
+  File "game/PhoneTexting.rpy", line 68, in execute
+    vbox:
+  File "game/PhoneTexting.rpy", line 70, in execute
+    use nvl_phonetext(dialogue)
+  File "game/PhoneTexting.rpy", line 73, in execute
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in execute
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in execute
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 111, in execute
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 126, in execute
+    if d.who == Eric:
+  File "game/PhoneTexting.rpy", line 126, in <module>
+    if d.who == Eric:
+NameError: name 'Eric' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 44, in script call
-    call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
-  File "game/functions.rpy", line 10, in script
-    label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1782, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\execution.py", line 726, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label ('game/functions.rpy', 1686823489, 1).
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 495, in _execute_python_hide
+    ui.interact(suppress_overlay=True, suppress_underlay=True)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3359, in interact
+    self.show_window()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 2780, in show_window
+    renpy.config.empty_window()
+  File "renpy/common/00library.rpy", line 167, in _default_empty_window
+    nvl_show_core()
+  File "renpy/common/00nvl_mode.rpy", line 207, in nvl_show_core
+    return __nvl_show_screen("nvl", items=[ ])
+  File "renpy/common/00nvl_mode.rpy", line 201, in _m1_00nvl_mode__nvl_show_screen
+    return renpy.get_widget(screen_name, "what", config.nvl_layer)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 1386, in get_displayable
+    screen.update()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 1299, in execute
+    screen nvl(dialogue, items=None):
+  File "game/screens.rpy", line 1299, in execute
+    screen nvl(dialogue, items=None):
+  File "game/screens.rpy", line 1302, in execute
+    if nvl_mode == "phone":
+  File "game/screens.rpy", line 1303, in execute
+    use PhoneDialogue(dialogue, items)
+  File "game/PhoneTexting.rpy", line 54, in execute
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/PhoneTexting.rpy", line 54, in execute
+    screen PhoneDialogue(dialogue, items=None):
+  File "game/PhoneTexting.rpy", line 57, in execute
+    frame at phone_transform(phone_position_x, phone_position_y):
+  File "game/PhoneTexting.rpy", line 62, in execute
+    viewport:
+  File "game/PhoneTexting.rpy", line 68, in execute
+    vbox:
+  File "game/PhoneTexting.rpy", line 70, in execute
+    use nvl_phonetext(dialogue)
+  File "game/PhoneTexting.rpy", line 73, in execute
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 73, in execute
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 110, in execute
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 111, in execute
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 126, in execute
+    if d.who == Eric:
+  File "game/PhoneTexting.rpy", line 126, in <module>
+    if d.who == Eric:
+NameError: name 'Eric' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Jun 20 16:16:42 2023
+Tue Jun 20 16:42:52 2023

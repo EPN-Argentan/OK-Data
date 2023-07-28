@@ -1,9 +1,9 @@
 
-#function to call to add value to one of lifebar element
+# function to call to add value to one of lifebar element
 # value = number to increment
 # key = wich lifebar element has to be increment
 # condition = if condition is not empty, increment will be effective if the condition is true else it will decrement
-# lsoemessage = message to display if player lose points
+# losemessage = message to display if player lose points
 # winmessage = message to display if player earn points
 # Exemple d'usage de la fonction :
 # addPoints(5,'point_sante',BluetoothState,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")

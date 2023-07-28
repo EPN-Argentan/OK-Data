@@ -53,7 +53,7 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
 
     imagebutton:
         xalign 0.5
-        yalign 0.85
+        yalign 0.95
         idle "masquetelephone.png"
         hover "masquetelhiver.png"
         action Hide("telephoneplayer"), Jump("lPhoneDown")

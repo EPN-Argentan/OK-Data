@@ -76,7 +76,7 @@ screen nvl_phonetext(dialogue):
     #Buttons settings, bluetooth, localisation...
     hbox:
         xalign 0.4
-        spacing 50
+        spacing 20
         imagebutton:
             xpos phone_position_x-0.1
             ypos phone_position_y
@@ -112,7 +112,7 @@ screen nvl_phonetext(dialogue):
         if d.who == None: # Narrator
             text d.what:
                     xpos -335
-                    ypos 0.0
+                    ypos .0
                     xsize 350
                     text_align 0.5
                     italic True
@@ -197,8 +197,8 @@ style phoneFrame_viewport:
     yfill True
     xfill True
 
-    yoffset -20
+    yoffset -20 #margin-top phone frame
 
 style phoneFrame_vbox:
-    spacing 20
+    spacing 15 #spacing between dialogue box from same conversation
     xfill True
