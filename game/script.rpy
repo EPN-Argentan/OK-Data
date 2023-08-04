@@ -15,6 +15,41 @@ image Player :
     "player_sit"
     zoom 0.55
 
+image Player_Walking :
+    "0001"
+    pause 0.1
+    "0003"
+    pause 0.1
+    "0005"
+    pause 0.1
+    "0007"
+    pause 0.1
+    "0009"
+    pause 0.1
+    "0011"
+    pause 0.1
+    "0013"
+    pause 0.1
+    "0015"
+    pause 0.1
+    "0017"
+    pause 0.1
+    "0019"
+    pause 0.1
+    "0021"
+    pause 0.1
+    "0023"
+    pause 0.1
+    "0025"
+    pause 0.1
+    "0027"
+    pause 0.1
+    "0029"
+    pause 0.1
+    repeat
+
+
+
 # Le jeu commence ici
 label start:
 
@@ -39,6 +74,7 @@ label start:
 
 
     m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
+    show Player_Walking
     m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
 
     call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
