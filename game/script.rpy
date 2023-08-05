@@ -16,35 +16,37 @@ image Player :
     zoom 0.55
 
 image Player_Walking :
-    "0001"
+    "/sprites/walking/0001.png"
     pause 0.1
-    "0003"
+    "/sprites/walking/0002.png"
     pause 0.1
-    "0005"
+    "/sprites/walking/0003.png"
     pause 0.1
-    "0007"
+    "/sprites/walking/0003.png"
     pause 0.1
-    "0009"
+    "/sprites/walking/0004.png"
     pause 0.1
-    "0011"
+    "/sprites/walking/0005.png"
     pause 0.1
-    "0013"
+    "/sprites/walking/0006.png"
     pause 0.1
-    "0015"
+    "/sprites/walking/0007.png"
     pause 0.1
-    "0017"
+    "/sprites/walking/0008.png"
     pause 0.1
-    "0019"
+    "/sprites/walking/0009.png"
     pause 0.1
-    "0021"
+    "/sprites/walking/0010.png"
     pause 0.1
-    "0023"
+    "/sprites/walking/0011.png"
     pause 0.1
-    "0025"
+    "/sprites/walking/0012.png"
     pause 0.1
-    "0027"
+    "/sprites/walking/0013.png"
     pause 0.1
-    "0029"
+    "/sprites/walking/0014.png"
+    pause 0.1
+    "/sprites/walking/0015.png"
     pause 0.1
     repeat
 
@@ -74,7 +76,6 @@ label start:
 
 
     m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
-    show Player_Walking
     m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
 
     call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')

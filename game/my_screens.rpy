@@ -163,3 +163,9 @@ screen selfie :
         xalign 0.5
         yalign 0.72
         idle "share-icon.png"
+        action Jump("walkOut")
+
+label walkOut :
+    scene desert
+    show Player_Walking
+    m "Oh non, qu'est ce que j'ai fais ?"
