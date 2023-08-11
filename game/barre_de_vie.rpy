@@ -16,9 +16,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/intérêt.png"
+                idle "UI/barre_de_vie/intérêt.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
 
@@ -26,9 +26,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/santé.png"
+                idle "UI/barre_de_vie/santé.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_sante][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
 
@@ -36,9 +36,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/conviction.png"
+                idle "UI/barre_de_vie/conviction.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_conviction][0]]" xpos xtextPastille ypos ytextPastille + points['point_conviction'][1]
 
@@ -46,9 +46,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/localisation.png"
+                idle "UI/barre_de_vie/localisation.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_localisation][0]]" xpos xtextPastille ypos ytextPastille + points['point_localisation'][1]
 
@@ -56,9 +56,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/sociaux.png"
+                idle "UI/barre_de_vie/sociaux.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_sociaux][0]]" xpos xtextPastille ypos ytextPastille + points['point_sociaux'][1]
 
@@ -66,9 +66,9 @@ screen barre_de_vie :
         hbox:
             spacing xposPastille
             imagebutton:
-                idle "barre_de_vie/administrative.png"
+                idle "UI/barre_de_vie/administrative.png"
                 at custom_zoom
-            add "barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points[point_administrative][0]]" xpos xtextPastille ypos ytextPastille + points['point_administrative'][1]
 

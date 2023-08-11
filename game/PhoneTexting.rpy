@@ -81,31 +81,31 @@ screen nvl_phonetext(dialogue):
             xpos phone_position_x-0.1
             ypos phone_position_y
             if BluetoothState == True:
-                idle "BluetoothON.png"
-                hover "BluetoothOFF.png"
+                idle "UI/settingsIcons/BluetoothON.png"
+                hover "UI/settingsIcons/BluetoothOFF.png"
             else:
-                idle "BluetoothOFF.png"
-                hover "BluetoothON.png"
+                idle "UI/settingsIcons/BluetoothOFF.png"
+                hover "UI/settingsIcons/BluetoothON.png"
             action SetVariable("BluetoothState", not BluetoothState)
         imagebutton:
             xpos phone_position_x
             ypos phone_position_y
             if DataState == True:
-                idle "DataON.png"
-                hover "DataOFF.png"
+                idle "UI/settingsIcons/DataON.png"
+                hover "UI/settingsIcons/DataOFF.png"
             else:
-                idle "DataOFF.png"
-                hover "DataON.png"
+                idle "UI/settingsIcons/DataOFF.png"
+                hover "UI/settingsIcons/DataON.png"
             action SetVariable("DataState", not DataState)
         imagebutton:
             xpos phone_position_x+0.1
             ypos phone_position_y
             if LocalisationState == True:
-                idle "LocalisationON.png"
-                hover "LocalisationOFF.png"
+                idle "UI/settingsIcons/LocalisationON.png"
+                hover "UI/settingsIcons/LocalisationOFF.png"
             else:
-                idle "LocalisationOFF.png"
-                hover "LocalisationON.png"
+                idle "UI/settingsIcons/LocalisationOFF.png"
+                hover "UI/settingsIcons/LocalisationON.png"
             action SetVariable("LocalisationState", not LocalisationState)
     $ previous_d_who = None
     for id_d, d in enumerate(dialogue):
@@ -123,11 +123,11 @@ screen nvl_phonetext(dialogue):
                         at message_narrator
         else:
             if d.who == MC_Name:
-                $ message_frame = "phone_send_frame.png"
+                $ message_frame = "UI/conversation/phone_send_frame.png"
             if d.who == Eric:
-                $ message_frame = "Eric_Icon.png"
+                $ message_frame = "UI/conversation/Eric_Icon.png"
             else:
-                $ message_frame = "phone_received_frame.png"
+                $ message_frame = "UI/conversation/phone_received_frame.png"
 
             hbox:
                 spacing 10
@@ -137,9 +137,9 @@ screen nvl_phonetext(dialogue):
                 #If this is the first message of the character, show an icon
                 if previous_d_who != d.who:
                     if d.who == MC_Name:
-                        $ message_icon = "phone_send_icon.png"
+                        $ message_icon = "UI/conversation/phone_send_icon.png"
                     else:
-                        $ message_icon = "phone_received_icon.png"
+                        $ message_icon = "UI/conversation/phone_received_icon.png"
 
                     add message_icon:
                         if d.current:

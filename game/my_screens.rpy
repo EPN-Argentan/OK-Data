@@ -19,27 +19,27 @@ screen phoneDown :
         yalign 0.95
         imagebutton:
             if BluetoothState == True:
-                idle "BluetoothON.png"
-                hover "BluetoothOFF.png"
+                idle "UI/settingsIcons/BluetoothON.png"
+                hover "UI/settingsIcons/BluetoothOFF.png"
             else:
-                idle "BluetoothOFF.png"
-                hover "BluetoothON.png"
+                idle "UI/settingsIcons/BluetoothOFF.png"
+                hover "UI/settingsIcons/BluetoothON.png"
             action SetVariable("BluetoothState", not BluetoothState)
         imagebutton:
             if DataState == True:
-                idle "DataON.png"
-                hover "DataOFF.png"
+                idle "UI/settingsIcons/DataON.png"
+                hover "UI/settingsIcons/DataOFF.png"
             else:
-                idle "DataOFF.png"
-                hover "DataON.png"
+                idle "UI/settingsIcons/DataOFF.png"
+                hover "UI/settingsIcons/DataON.png"
             action SetVariable("DataState", not DataState)
         imagebutton:
             if LocalisationState == True:
-                idle "LocalisationON.png"
-                hover "LocalisationOFF.png"
+                idle "UI/settingsIcons/LocalisationON.png"
+                hover "UI/settingsIcons/LocalisationOFF.png"
             else:
-                idle "LocalisationOFF.png"
-                hover "LocalisationON.png"
+                idle "UI/settingsIcons/LocalisationOFF.png"
+                hover "UI/settingsIcons/LocalisationON.png"
             action SetVariable("LocalisationState", not LocalisationState)
 
 
@@ -70,56 +70,56 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
                 xalign 0.5
                 yalign 0.5
                 if A1:
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A2:
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A3:
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B1:
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B2:
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B3   :
-                    idle "appphoto.png"
-                    hover "appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
 
 
     hbox:
@@ -128,27 +128,27 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
         spacing 20
         imagebutton:
             if BluetoothState == True:
-                idle "BluetoothON.png"
-                hover "BluetoothOFF.png"
+                idle "UI/settingsIcons/BluetoothON.png"
+                hover "UI/settingsIcons/BluetoothOFF.png"
             else:
-                idle "BluetoothOFF.png"
-                hover "BluetoothON.png"
+                idle "UI/settingsIcons/BluetoothOFF.png"
+                hover "UI/settingsIcons/BluetoothON.png"
             action SetVariable("BluetoothState", not BluetoothState)
         imagebutton:
             if DataState == True:
-                idle "DataON.png"
-                hover "DataOFF.png"
+                idle "UI/settingsIcons/DataON.png"
+                hover "UI/settingsIcons/DataOFF.png"
             else:
-                idle "DataOFF.png"
-                hover "DataON.png"
+                idle "UI/settingsIcons/DataOFF.png"
+                hover "UI/settingsIcons/DataON.png"
             action SetVariable("DataState", not DataState)
         imagebutton:
             if LocalisationState == True:
-                idle "LocalisationON.png"
-                hover "LocalisationOFF.png"
+                idle "UI/settingsIcons/LocalisationON.png"
+                hover "UI/settingsIcons/LocalisationOFF.png"
             else:
-                idle "LocalisationOFF.png"
-                hover "LocalisationON.png"
+                idle "UI/settingsIcons/LocalisationOFF.png"
+                hover "UI/settingsIcons/LocalisationON.png"
             action SetVariable("LocalisationState", not LocalisationState)
 
 
