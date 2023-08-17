@@ -8,6 +8,16 @@ screen hub:
             action Null
         else:
             action Jump("browserScene")
+    imagebutton:
+        xpos 230
+        ypos 838
+        idle "UI/imagebuttons/watch_idle.png"
+        hover "UI/imagebuttons/watch_hover.png"
+        if hubClickable["watch"] == 1:
+            action Null
+        else:
+            action Jump("browserScene")
+    #...
     #add list of hub clickable elements here
 
 #Screen when head phone is just visible with settings icons

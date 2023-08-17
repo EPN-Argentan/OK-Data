@@ -3,19 +3,7 @@
 While running game code:
   File "game/screen_browser.rpy", line 4, in script
     m "Mince, qu'est-ce que c'est ?"
-  File "game/my_screens.rpy", line 1, in execute
-    screen hub:
-  File "game/my_screens.rpy", line 1, in execute
-    screen hub:
-  File "game/my_screens.rpy", line 2, in execute
-    imagebutton:
-  File "game/my_screens.rpy", line 2, in keywords
-    imagebutton:
-  File "game/my_screens.rpy", line 7, in keywords
-    if hubClickable["dog"] == 1:
-  File "game/my_screens.rpy", line 7, in <module>
-    if hubClickable["dog"] == 1:
-TypeError: list indices must be integers or slices, not str
+AttributeError: 'function' object has no attribute 'visit'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -44,31 +32,17 @@ Full traceback:
     d.visit_all(callback, seen)
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/my_screens.rpy", line 1, in execute
-    screen hub:
-  File "game/my_screens.rpy", line 1, in execute
-    screen hub:
-  File "game/my_screens.rpy", line 2, in execute
-    imagebutton:
-  File "game/my_screens.rpy", line 2, in keywords
-    imagebutton:
-  File "game/my_screens.rpy", line 7, in keywords
-    if hubClickable["dog"] == 1:
-  File "game/my_screens.rpy", line 7, in <module>
-    if hubClickable["dog"] == 1:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\revertable.py", line 217, in __getitem__
-    rv = list.__getitem__(self, index)
-TypeError: list indices must be integers or slices, not str
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 456, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 572, in visit_all
+    for d in self.visit():
+AttributeError: 'function' object has no attribute 'visit'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Thu Aug 17 09:31:40 2023
+Thu Aug 17 09:46:47 2023
