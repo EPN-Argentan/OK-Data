@@ -32,3 +32,10 @@ image Player_Walking :
     "/sprites/walking/0015.png"
     pause 0.1
     repeat
+
+image Player_Sitting :
+    "/sprites/sitting/eva1.png"
+    pause 0.1
+    "/sprites/sitting/eva2.png"
+    pause 0.1
+    repeat

@@ -23,11 +23,6 @@ label start:
     $ LocalisationState = True
     $ DataState = True
 
-    scene bar
-    show Player at Position (xpos = 1100, ypos = 1000)
-    show Mary at Position (xpos = 820, ypos = 1000)
-    show screen barre_de_vie
-
     #points store all point score and y position (to be able to shake this value later)
     $ points = {
         'point_interet': [5,0],
@@ -38,25 +33,30 @@ label start:
         'point_administrative': [5,0]
     }
 
+    #dynamic list of elements clickable in hub
+    #if value == 0, the element can't be clicked
+    $ hubClickable = {
+        'dog': 1,
+        'laptop': 0,
+        'photoFrame': 0,
+        'watch': 0,
+        'tablet': 0,
+        'homeAssistant': 0
+    }
 
-    m "ça fait vraiment longtemps en effet, je suis contente de pouvoir te voir de passage par ici."
-    m "Tu veux pas qu'on fasse un selfie ? Et tu l'envois à notre frêre après ?"
 
-    call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
+
+    scene hub
+    show Player_Sitting
+    show screen barre_de_vie
+    show screen hub
 
     m "je crois que quelque chose vient de se passer"
-    e_nvl "Bienvenue sur Ok Data"
-    n_nvl "Let's go"
+    jump browserScene
 
+    #call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
 
-    label lPhoneDown :
-        call screen phoneDown
-
-    label telplay:
-        call screen telephoneplayer(False,True,False,True,True,True)
-
-    label selfie:
-        call screen selfie
-        with dissolve
+    #label telplay:
+    #    call screen telephoneplayer(False,True,False,True,True,True)
 
     return

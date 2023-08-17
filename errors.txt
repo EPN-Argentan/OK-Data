@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 168: 'show' is not a keyword argument or valid child for the screen statement.
-    show Player_Walking
-        ^
+File "game/my_screens.rpy", line 7: imagebutton expects a non-empty block.
+    if hubClickable[0] == True :
+                                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Aug  5 14:07:53 2023
+Thu Aug 17 09:20:34 2023

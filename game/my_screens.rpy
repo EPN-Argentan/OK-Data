@@ -2,9 +2,13 @@ screen hub:
     imagebutton:
         xpos 1400
         ypos 797
-        idle "dog_idle.png"
-        hover "dog_hover.png"
-        action Null
+        idle "UI/imagebuttons/dog_idle.png"
+        hover "UI/imagebuttons/dog_hover.png"
+        if hubClickable["dog"] == 1:
+            action Null
+        else:
+            action Jump("browserScene")
+    #add list of hub clickable elements here
 
 #Screen when head phone is just visible with settings icons
 screen phoneDown :
