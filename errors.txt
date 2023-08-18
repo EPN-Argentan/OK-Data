@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 7: imagebutton expects a non-empty block.
-    if hubClickable[0] == True :
-                                ^
+File "game/my_screens.rpy", line 185: imagebutton expects a non-empty block.
+    imagebutton:
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Aug 17 09:20:34 2023
+Fri Aug 18 13:49:53 2023

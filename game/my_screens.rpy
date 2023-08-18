@@ -1,4 +1,4 @@
-screen hub:
+screen hubElements:
     imagebutton:
         xpos 1400
         ypos 797
@@ -7,7 +7,7 @@ screen hub:
         if hubClickable["dog"] == 1:
             action Null
         else:
-            action Jump("browserScene")
+            action Jump("browserLabel")
     imagebutton:
         xpos 230
         ypos 838
@@ -16,7 +16,7 @@ screen hub:
         if hubClickable["watch"] == 1:
             action Null
         else:
-            action Jump("browserScene")
+            action Jump("browserLabel")
     #...
     #add list of hub clickable elements here
 
@@ -179,7 +179,5 @@ screen selfie :
         idle "share-icon.png"
         action Jump("walkOut")
 
-label walkOut :
-    scene desert
-    show Player_Walking
-    m "Oh non, qu'est ce que j'ai fais ?"
+screen browserWindow:
+    add "UI/browser/Home_browser.png"

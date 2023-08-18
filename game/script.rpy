@@ -16,7 +16,7 @@ image Player :
     zoom 0.55
 
 
-# Le jeu commence ici
+# Initialisation du jeu
 label start:
 
     $ BluetoothState = True
@@ -44,15 +44,17 @@ label start:
         'homeAssistant': 0
     }
 
-
-
+#Lancement du Hub
+label hub:
     scene hub
     show Player_Sitting
     show screen barre_de_vie
-    show screen hub
+    show screen hubElements
 
     m "je crois que quelque chose vient de se passer"
-    jump browserScene
+
+    #Boucle infinie dans le hub
+    jump hub
 
     #call addPoints(-5,'point_conviction','','bravo, tu n\'as rien compris','Bravo tu as bien compris !')
 
