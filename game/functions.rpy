@@ -7,12 +7,12 @@
 # winmessage = message to display if player earn points
 # Exemple d'usage de la fonction :
 # addPoints(5,'point_sante',BluetoothState,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
-label addPoints(values = 0, key = '', condition = '', losemessage='', winmessage=''):
+label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage=''):
     $ oldValue = points[key][0]
     if not condition:
         $ points[key][0] += values
     else:
-        if condition:
+        if condition == conditionValue:
             $ points[key][0] += values
         else:
             $ points[key][0] -= values

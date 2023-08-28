@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 185: imagebutton expects a non-empty block.
-    imagebutton:
-                ^
+File "game/scene_walkOut.rpy", line 20: expected statement.
+    empty = ""
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Aug 18 13:49:53 2023
+Mon Aug 28 19:31:58 2023

@@ -4,16 +4,16 @@ screen hubElements:
         ypos 797
         idle "UI/imagebuttons/dog_idle.png"
         hover "UI/imagebuttons/dog_hover.png"
-        if hubClickable["dog"] == 1:
+        if hubClickable["dog"] == 0:
             action Null
         else:
-            action Jump("browserLabel")
+            action Jump("walkOut")
     imagebutton:
         xpos 230
         ypos 838
         idle "UI/imagebuttons/watch_idle.png"
         hover "UI/imagebuttons/watch_hover.png"
-        if hubClickable["watch"] == 1:
+        if hubClickable["watch"] == 0:
             action Null
         else:
             action Jump("browserLabel")
@@ -23,13 +23,13 @@ screen hubElements:
 #Screen when head phone is just visible with settings icons
 screen phoneDown :
     imagebutton:
-        xalign 0.5
+        xalign 0.9
         yalign 3.0
         idle "smartphone.png"
         action Jump("telplay")
     hbox:
         spacing 20
-        xalign 0.5
+        xalign 0.87
         yalign 0.95
         imagebutton:
             if BluetoothState == True:
@@ -84,11 +84,11 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
                 xalign 0.5
                 yalign 0.5
                 if A1:
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
+                    idle "UI/applications/appOKDATA.png"
+                    hover "UI/applications/appOKDATA_hover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/appOKDATA_out.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
@@ -181,3 +181,16 @@ screen selfie :
 
 screen browserWindow:
     add "UI/browser/Home_browser.png"
+
+style bubble_tuto:
+    background "#e226c0"
+    xpadding 30
+    ypadding 30
+
+screen bubbleTuto(value="mon texte", posX=0, posY=0):
+    add "UI/bubbletuto/bubbletop.png" xpos posX ypos posY
+    frame:
+        style "bubble_tuto"
+        xpos posX
+        ypos posY+20
+        text value xalign 0.5 yalign 0.5

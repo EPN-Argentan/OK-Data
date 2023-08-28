@@ -1,4 +1,20 @@
 label walkOut :
-    scene desert
+    scene hub
+    hide screen hubElements
+    e_nvl "Votre chien veut sortir"
+    e_nvl "C'est partit pour la promenade"
+    nvl clear
+    hide screen hubElements
+    scene street
     show Player_Walking
-    m "Oh non, qu'est ce que j'ai fais ?"
+    show screen phoneDown
+    p "Je marche seule !"
+    hide screen phoneDown
+    sepharo_nvl "Vous passez devant Sepharo !"
+    sepharo_nvl "Venez profiter de notre offre du moment : Un parfum acheté le deuxième offert !"
+    call addPoints(5,'point_localisation',LocalisationState, False, "Tu as perdu 5 points de vie Privée !", "Tu as bien désactiver la localisation")
+    e_nvl "En laissant activée la géolocalisation sur ton téléphone, tu peux être visible par les réseaux, d’où la réception de message de publicité."
+    e_nvl "Tu as la possibilité d’activer ou nom cette fonction en touchant l’icône en haut du téléphone. Penses-y à l’avenir et essaye dès maintenant."
+    show screen phoneDown
+    show screen bubbleTuto("Dés que le téléphone est visible, tu peux à tout moment désactiver un des paramètres",100,posY+50)
+    empty ""

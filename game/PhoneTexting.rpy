@@ -2,7 +2,8 @@
 
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Nighten" ##The name of the main character, used to place them on the screen
-define Eric = "Eric"
+define Syrielle = "Syrielle"
+define Sepharo = "Sepharo"
 
 init -1 python:
     phone_position_x = 0.5
@@ -124,8 +125,6 @@ screen nvl_phonetext(dialogue):
         else:
             if d.who == MC_Name:
                 $ message_frame = "UI/conversation/phone_send_frame.png"
-            if d.who == Eric:
-                $ message_frame = "UI/conversation/Eric_Icon.png"
             else:
                 $ message_frame = "UI/conversation/phone_received_frame.png"
 
@@ -137,9 +136,13 @@ screen nvl_phonetext(dialogue):
                 #If this is the first message of the character, show an icon
                 if previous_d_who != d.who:
                     if d.who == MC_Name:
-                        $ message_icon = "UI/conversation/phone_send_icon.png"
+                        $ message_icon = "UI/conversation/mediateur_phone_icon.png"
+                    elif d.who == Syrielle:
+                        $ message_icon = "UI/conversation/sister_phone_icon.png"
+                    elif d.who == Sepharo:
+                        $ message_icon = "UI/conversation/sepharo_phone_icon.png"
                     else:
-                        $ message_icon = "UI/conversation/phone_received_icon.png"
+                        $ message_icon = "UI/conversation/mediateur_phone_icon.png"
 
                     add message_icon:
                         if d.current:
