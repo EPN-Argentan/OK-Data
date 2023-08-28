@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scene_walkOut.rpy", line 20: expected statement.
-    empty = ""
-          ^
+File "game/script.rpy", line 51: invalid syntax
+            'phoneCall': 0
+             ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Aug 28 19:31:58 2023
+Tue Aug 29 00:26:36 2023

@@ -1,6 +1,6 @@
 # NVL characters are used for the phone texting
 define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
-define e_nvl = Character("Narrateur", kind=nvl, callback=Phone_ReceiveSound)
+define e_nvl = Character("Médiateur", kind=nvl, callback=Phone_ReceiveSound)
 define syrielle_nvl = Character("Syrielle", kind=nvl, callback=Phone_ReceiveSound)
 define sepharo_nvl = Character("Sepharo", kind=nvl, callback=Phone_ReceiveSound)
 
@@ -8,16 +8,13 @@ define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.2)
 
 define s = Character('Syrielle', color="#c8ffc8")
-image Mary :
-    "sister"
-    zoom 0.55
 
-define p = Character('Alexia', color="#209792")
-image Player :
-    "player_sit"
-    zoom 0.55
+define a = Character('Alexia', color="#209792")
 
-define empty = Character('',color="#00000000")
+define m = Character('Maman', color="#209792")
+
+#Empty character display nothing
+define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 
 
 # Initialisation du jeu
@@ -43,13 +40,16 @@ label start:
         'dog': 1,
         'laptop': 0,
         'photoFrame': 0,
-        'watch': 1,
+        'watch': 0,
         'tablet': 0,
-        'homeAssistant': 0
+        'homeAssistant': 0,
+        'phone': 0,
+        'phoneCall': 0
     }
 
 #Lancement du Tuto
-#jump tuto
+jump tuto #To reactivate
+
 
 #Lancement du Hub
 label hub:
@@ -58,7 +58,7 @@ label hub:
     show screen barre_de_vie
     show screen hubElements
 
-    p ""
+    empty ""
 
     #Boucle infinie dans le hub
     jump hub

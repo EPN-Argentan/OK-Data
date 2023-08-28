@@ -4,6 +4,7 @@ label browserLabel:
     show screen phoneDown
     show Player_Sitting
     s "Mince, qu'est-ce que c'est ?"
+    hide screen phoneDown
     e_nvl "Salut, comment ça va ? Pourrais-tu venir m'aider ?"
     e_nvl "Monique m'as invité à l'anniversaire de Franck mais il me faut un compte Databook"
     scene bar

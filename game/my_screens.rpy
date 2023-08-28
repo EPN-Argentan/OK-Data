@@ -1,21 +1,35 @@
 screen hubElements:
-    imagebutton:
-        xpos 1400
-        ypos 797
-        idle "UI/imagebuttons/dog_idle.png"
-        hover "UI/imagebuttons/dog_hover.png"
-        if hubClickable["dog"] == 0:
-            action Null
-        else:
+
+    if hubClickable["dog"] == 1:
+        imagebutton:
+            xpos 1400
+            ypos 797
+            idle "UI/imagebuttons/dog_idle.png"
+            hover "UI/imagebuttons/dog_hover.png"
             action Jump("walkOut")
-    imagebutton:
-        xpos 230
-        ypos 838
-        idle "UI/imagebuttons/watch_idle.png"
-        hover "UI/imagebuttons/watch_hover.png"
-        if hubClickable["watch"] == 0:
-            action Null
-        else:
+
+    if hubClickable["phone"] == 1:
+        imagebutton:
+            xpos 1175
+            ypos 607
+            idle "UI/imagebuttons/phone_idle.png"
+            hover "UI/imagebuttons/phone_hover.png"
+            action Jump("barOut")
+
+    if hubClickable["phoneCall"] == 1:
+        imagebutton:
+            xpos 1175
+            ypos 607
+            idle "UI/imagebuttons/phone_idle.png"
+            hover "UI/imagebuttons/phone_hover.png"
+            action Jump("browserLabel")
+
+    if hubClickable["watch"] == 1:
+        imagebutton:
+            xpos 230
+            ypos 838
+            idle "UI/imagebuttons/watch_idle.png"
+            hover "UI/imagebuttons/watch_hover.png"
             action Jump("browserLabel")
     #...
     #add list of hub clickable elements here
@@ -166,19 +180,6 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
             action SetVariable("LocalisationState", not LocalisationState)
 
 
-
-#Screen phone when selfie photo is display
-screen selfie :
-    imagebutton:
-        xalign 0.5
-        yalign 0.5
-        idle "selfie.png"
-    imagebutton:
-        xalign 0.5
-        yalign 0.72
-        idle "share-icon.png"
-        action Jump("walkOut")
-
 screen browserWindow:
     add "UI/browser/Home_browser.png"
 
@@ -194,3 +195,23 @@ screen bubbleTuto(value="mon texte", posX=0, posY=0):
         xpos posX
         ypos posY+20
         text value xalign 0.5 yalign 0.5
+
+screen dataMap:
+    add "smartphone.png" xalign 0.5 yalign 0.5
+    add "UI/applications/dataMap.png" xalign 0.5 yalign 0.5
+    frame:
+        background #ffffff
+        xalign 0.5
+        yalign 0.65
+        text "{color=#000000}{size=-10}Veuillez activer la \ngéolocalisation pour \nconnaitre l'itinéraire{/size}{/color}" xalign 0.5 yalign 0.5
+
+#Screen phone when selfie photo is display
+screen selfie :
+    add "smartphoneBlack.png" xalign 0.5 yalign 0.5
+    add "UI/applications/selfie.png" xalign 0.5 yalign 0.5
+    imagebutton:
+        xalign 0.5
+        yalign 0.8
+        idle "UI/applications/Icons/send_idle.png"
+        hover "UI/applications/Icons/send_hover.png"
+        action Jump("barOutAfter")

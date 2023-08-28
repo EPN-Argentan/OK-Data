@@ -23,7 +23,7 @@ label tuto:
     empty ""
     show screen bubbleTuto("Vous perdrez des points si vous ne prêtez pas attentions aux réglages permettant de préserver votre vie privée.",100,posY+50)
     empty ""
-    show screen bubbleTuto("Au contraire, des points vous seront attribués dans les cas suivants : 	En suivant les tutoriels d’explication, En faisant les bons choix, En regardant les contenus supplémentaires",100,posY+50)
+    show screen bubbleTuto("Au contraire, des points vous seront attribués dans les cas suivants : \nEn suivant les tutoriels d’explication, \nEn faisant les bons choix, \nEn regardant les contenus supplémentaires",100,posY+50)
     empty ""
     show screen bubbleTuto("", -500,-500)
     jump hub
