@@ -181,7 +181,34 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
 
 
 screen browserWindow:
-    add "UI/browser/Home_browser.png"
+    add "UI/browser/frameDataBook.png" xalign 0.5 yalign 0.5
+    side "c b r":
+         area (700, 200, 646, 700)
+
+         viewport id "vp":
+             draggable True
+             vbox:
+                 spacing 30
+                 imagebutton:
+                     idle "UI/browser/eventBanner.png"
+                 imagebutton:
+                     idle "UI/browser/eventBirtdhay.png"
+                 imagebutton:
+                     idle "UI/browser/alarmArticle.png"
+             #add "UI/browser/feedDataBook.png"
+
+         bar value XScrollValue("vp")
+         vbar value YScrollValue("vp")
+
+screen callPhone:
+    add "smartphoneBlack.png" xalign 0.5 yalign 0.5
+    add "UI/call/incoming_call_mother.png" xalign 0.5 yalign 0.5
+    imagebutton:
+        xalign 0.5
+        yalign 0.69
+        idle "UI/call/answer_idle.png"
+        hover "UI/call/answer_hover.png"
+        action Hide("")
 
 style bubble_tuto:
     background "#e226c0"
@@ -204,6 +231,10 @@ screen dataMap:
         xalign 0.5
         yalign 0.65
         text "{color=#000000}{size=-10}Veuillez activer la \ngéolocalisation pour \nconnaitre l'itinéraire{/size}{/color}" xalign 0.5 yalign 0.5
+
+screen phoneCall:
+    add "smartphoneBlack.png" xalign 0.5 yalign 0.5
+
 
 #Screen phone when selfie photo is display
 screen selfie :

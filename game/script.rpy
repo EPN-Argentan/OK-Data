@@ -48,8 +48,8 @@ label start:
     }
 
 #Lancement du Tuto
-jump tuto #To reactivate
-
+#jump tuto #To reactivate
+jump browserLabel
 
 #Lancement du Hub
 label hub:

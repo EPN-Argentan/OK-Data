@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: invalid syntax
-            'phoneCall': 0
-             ^
-    
+File "game/my_screens.rpy", line 191: 'margin' is not a keyword argument or valid child for the vbox statement.
+    margin 10
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Aug 29 00:26:36 2023
+Tue Aug 29 02:08:33 2023
