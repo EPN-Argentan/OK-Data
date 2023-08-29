@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/my_screens.rpy", line 191: 'margin' is not a keyword argument or valid child for the vbox statement.
-    margin 10
-          ^
+File "game/scene_browser.rpy", line 31: end of line expected.
+    show loungeHandIn: zorder 100
+                       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Aug 29 02:08:33 2023
+Tue Aug 29 14:44:51 2023

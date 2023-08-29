@@ -626,3 +626,175 @@ image barPlace:
     "/sprites/bar/bar265.png"
     pause 0.1
     repeat
+
+image loungeIdle :
+    "sprites/lounge/idle/SalonMother001.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother002.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother003.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother004.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother005.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother006.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother007.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother008.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother009.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother010.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother011.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother012.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother013.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother014.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother015.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother016.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother017.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother018.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother019.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother020.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother021.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother022.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother023.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother024.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother025.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother026.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother027.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother028.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother029.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother030.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother031.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother032.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother033.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother034.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother035.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother036.png"
+    pause 0.1
+    "sprites/lounge/idle/SalonMother037.png"
+    pause 0.1
+    repeat
+
+image loungeZoom :
+    "sprites/lounge/zoom/SalonZoom001.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom002.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom003.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom004.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom005.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom006.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom007.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom008.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom009.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom010.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom011.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom012.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom013.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom014.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom015.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom016.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom017.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom018.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom019.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom020.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom021.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom022.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom023.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom024.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom025.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom026.png"
+    pause 0.1
+    "sprites/lounge/zoom/SalonZoom027.png"
+    pause 0.1
+    
+image loungeHandIn :
+    "sprites/lounge/handIn/handIn001.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn002.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn003.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn004.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn005.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn006.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn007.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn008.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn009.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn010.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn011.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn012.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn013.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn014.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn015.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn016.png"
+    pause 0.1
+    "sprites/lounge/handIn/handIn017.png"
+    pause 0.1
+
+image loungeZoomFix:
+    "sprites/lounge/zoom/SalonZoom027.png"

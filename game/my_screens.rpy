@@ -180,10 +180,10 @@ screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
             action SetVariable("LocalisationState", not LocalisationState)
 
 
-screen browserWindow:
-    add "UI/browser/frameDataBook.png" xalign 0.5 yalign 0.5
+screen browserWindowFeed:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
     side "c b r":
-         area (700, 200, 646, 700)
+         area (358, 160, 675, 800)
 
          viewport id "vp":
              draggable True
@@ -200,7 +200,33 @@ screen browserWindow:
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
 
-screen callPhone:
+screen browserWindowSubscribe:
+    add "UI/browser/DataBookToSubscribe.png" xpos 42 ypos 97
+    vbox:
+        spacing 30
+        hbox:
+            spacing 15
+            xpos 380
+            ypos 805
+            imagebutton:
+                idle "UI/browser/fakeInformation_idle.png"
+                hover "UI/browser/fakeInformation_hover.png"
+                action [Show("browserWindowSubscribeFake"),SetVariable("GoodState", True),Jump("browserLabelFeed")]
+
+            imagebutton:
+                idle "UI/browser/trueInformation_idle.png"
+                hover "UI/browser/trueInformation_hover.png"
+                action [Show("browserWindowSubscribeTrue"),SetVariable("GoodState", False),Jump("browserLabelFeed")]
+        #add "UI/browser/feedDataBook.png"
+
+screen browserWindowSubscribeTrue:
+    add "UI/browser/DataBookTrueInformation.png" xpos 42 ypos 97
+
+screen browserWindowSubscribeFake:
+    add "UI/browser/DataBookFakeInformation.png" xpos 42 ypos 97
+
+#Phone call incoming
+screen callPhoneIncoming:
     add "smartphoneBlack.png" xalign 0.5 yalign 0.5
     add "UI/call/incoming_call_mother.png" xalign 0.5 yalign 0.5
     imagebutton:
@@ -208,7 +234,17 @@ screen callPhone:
         yalign 0.69
         idle "UI/call/answer_idle.png"
         hover "UI/call/answer_hover.png"
-        action Hide("")
+        action [Show("callPhoneAnswer"),Jump("browserLabelCall")]
+
+screen callPhoneAnswer:
+    add "smartphoneBlack.png" xalign 0.5 yalign 0.5
+    add "UI/call/call_mother.png" xalign 0.5 yalign 0.5
+    imagebutton:
+        xalign 0.5
+        yalign 0.69
+        idle "UI/call/hangup_hover.png"
+        hover "UI/call/hangup_idle.png"
+        action Jump("browserLabelAfterCall")
 
 style bubble_tuto:
     background "#e226c0"
