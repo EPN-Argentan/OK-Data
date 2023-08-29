@@ -29,4 +29,8 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     #you earn points
     else:
         if winmessage:
-            e_nvl '[winmessage]'
+            e_nvl 'winmessage'
+            #$ phrases = winmessage.split("µ")
+            #$ nbrPhrases = len(phrases)
+            #$ i = 1
+            #e_nvl '[phrases[i]]'

@@ -1,22 +1,120 @@
-Tue Aug 29 14:36:37 2023
+Tue Aug 29 15:38:30 2023
 Windows-10-10.0.22621
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.06s
+Loader init took 0.05s
 Loading error handling took 0.03s
 Loading script took 0.28s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
+
+File "game/functions.rpy", line 34: expected statement.
+    for i=0 in range(nbrPhrases):
+         ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 1.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 105.57s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.08s
-Loading analysis data took 0.01s
+Running init code took 0.07s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups. took 0.06s
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    if i < nbrePhrases:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 2115, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/functions.rpy", line 35, in <module>
+    if i < nbrePhrases:
+NameError: name 'nbrePhrases' is not defined
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    if i < nbrePhrases:
+  File "game/functions.rpy", line 35, in <module>
+    if i < nbrePhrases:
+NameError: name 'nbrePhrases' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 136.17s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.03s
@@ -32,10 +130,10 @@ Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.14s
+Interface start took 0.04s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -45,17 +143,155 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'Quadro P1000/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 516.69'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 190.90s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/functions.rpy", line 36: invalid syntax
+    e_nvl '[phrases[i]]'
+           ^
+    
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.35s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 313.55s
+Bootstrap to the start of init.init took 270.21s
 Early init took 0.00s
 Loader init took 0.05s
-Loading error handling took 0.03s
-Loading script took 0.17s
-Loading save slot metadata. took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/functions.rpy", line 34: expected statement.
+    for i in range (nbrPhrases):
+          ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 407.33s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/functions.rpy", line 34: expected statement.
+    for i in range (nbrPhrases):
+          ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 408.64s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/functions.rpy", line 34: expected statement.
+    for i in range (nbrPhrases):
+          ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.36s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 844.42s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.04s
@@ -66,13 +302,154 @@ Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/back
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 881.42s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 902.86s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
 Initial gc. took 0.04s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 909.09s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.27s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
@@ -95,255 +472,7 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 322.95s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 335.38s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-
-File "game/scene_browser.rpy", line 43: end of line expected.
-    show screen barre_de_vie zorder 10
-                             ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.33s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 344.59s
-Early init took 0.00s
-Loader init took 0.06s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.29s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 425.09s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 433.00s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.13s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.29s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 436.71s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 444.60s
+Bootstrap to the start of init.init took 936.71s
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
@@ -359,215 +488,11 @@ Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/back
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 457.04s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 468.07s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.09s
-Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 494.13s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-
-File "game/scene_browser.rpy", line 31: end of line expected.
-    show loungeHandIn: zorder 100
-                       ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.34s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 498.87s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.01s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.02s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.29s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 614.19s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.03s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.26s
+Creating interface object took 0.27s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
@@ -593,24 +518,37 @@ Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/scene_browser.rpy", line 31, in script
-    show loungeHandIn onlayer Master
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 712, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 1101, in add
-    raise Exception("Trying to add something to non-existent layer '%s'." % layer)
-Exception: Trying to add something to non-existent layer 'Master'.
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
 
 While running game code:
-  File "game/scene_browser.rpy", line 31, in script
-    show loungeHandIn onlayer Master
-Exception: Trying to add something to non-existent layer 'Master'.
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
 Resetting cache.
-Bootstrap to the start of init.init took 629.64s
+Bootstrap to the start of init.init took 967.31s
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
@@ -639,6 +577,216 @@ Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 982.80s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 1005.72s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1019.67s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1087.99s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
@@ -655,12 +803,393 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 642.09s
+Bootstrap to the start of init.init took 1192.61s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 1205.14s
+Early init took 0.00s
+Loader init took 0.06s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases(i)]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+KeyError: 'phrases(i)'
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases(i)]'
+KeyError: 'phrases(i)'
+Resetting cache.
+Bootstrap to the start of init.init took 1213.02s
+Early init took 0.00s
+Loader init took 0.06s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 36, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 1235.95s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.28s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 1242.41s
 Early init took 0.00s
 Loader init took 0.05s
 Loading error handling took 0.02s
 Loading script took 0.12s
-Loading save slot metadata. took 0.01s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[2]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+IndexError: list index out of range
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[2]]'
+IndexError: list index out of range
+Resetting cache.
+Bootstrap to the start of init.init took 1248.79s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
 Running init code took 0.03s
@@ -684,10 +1213,131 @@ Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1299.01s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2400, 1261) drawable=(2400, 1261)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[i]]'
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/scene_browser.rpy", line 37, in script call
+    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
+  File "game/functions.rpy", line 35, in script
+    e_nvl '[phrases[i]]'
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Bootstrap to the start of init.init took 1329.52s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Informatique\\Documents\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups. took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

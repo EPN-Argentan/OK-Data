@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scene_browser.rpy", line 31: end of line expected.
-    show loungeHandIn: zorder 100
-                       ^
+File "game/functions.rpy", line 34: expected statement.
+    for i in range (nbrPhrases):
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Aug 29 14:44:51 2023
+Tue Aug 29 15:45:19 2023
