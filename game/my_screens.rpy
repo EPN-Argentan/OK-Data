@@ -31,6 +31,15 @@ screen hubElements:
             idle "UI/imagebuttons/watch_idle.png"
             hover "UI/imagebuttons/watch_hover.png"
             action Jump("browserLabel")
+
+
+    if hubClickable["dogForest"] == 1:
+        imagebutton:
+            xpos 1400
+            ypos 797
+            idle "UI/imagebuttons/dog_idle.png"
+            hover "UI/imagebuttons/dog_hover.png"
+            action Jump("walkForest")
     #...
     #add list of hub clickable elements here
 
@@ -211,12 +220,12 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [Show("browserWindowSubscribeFake"),SetVariable("GoodState", True),Jump("browserLabelFeed")]
+                action [SetVariable("GoodState", True), Show("browserWindowSubscribeFake"), Jump("browserLabelFeed")]
 
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),SetVariable("GoodState", False),Jump("browserLabelFeed")]
+                action [SetVariable("GoodState", False), Show("browserWindowSubscribeTrue"), Jump("browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
@@ -231,7 +240,7 @@ screen callPhoneIncoming:
     add "UI/call/incoming_call_mother.png" xalign 0.5 yalign 0.5
     imagebutton:
         xalign 0.5
-        yalign 0.69
+        yalign 0.76
         idle "UI/call/answer_idle.png"
         hover "UI/call/answer_hover.png"
         action [Show("callPhoneAnswer"),Jump("browserLabelCall")]
@@ -241,7 +250,7 @@ screen callPhoneAnswer:
     add "UI/call/call_mother.png" xalign 0.5 yalign 0.5
     imagebutton:
         xalign 0.5
-        yalign 0.69
+        yalign 0.76
         idle "UI/call/hangup_hover.png"
         hover "UI/call/hangup_idle.png"
         action Jump("browserLabelAfterCall")
@@ -263,7 +272,7 @@ screen dataMap:
     add "smartphone.png" xalign 0.5 yalign 0.5
     add "UI/applications/dataMap.png" xalign 0.5 yalign 0.5
     frame:
-        background #ffffff
+        background "#ffffff"
         xalign 0.5
         yalign 0.65
         text "{color=#000000}{size=-10}Veuillez activer la \ngéolocalisation pour \nconnaitre l'itinéraire{/size}{/color}" xalign 0.5 yalign 0.5

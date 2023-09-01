@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 34: expected statement.
-    for i in range (nbrPhrases):
-          ^
+File "game/functions.rpy", line 37: expected statement.
+    phrase = phrases[i]
+           ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Aug 29 15:45:19 2023
+Wed Aug 30 09:54:51 2023

@@ -1,39 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/scene_browser.rpy", line 37, in script call
-    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
-  File "game/functions.rpy", line 35, in script
-    e_nvl '[phrases[i]]'
-TypeError: list indices must be integers or slices, not str
+After initialization, but before game start.
+  File "game/my_screens.rpy", line 203, in prepare_screen
+    screen browserWindowSubscribe:
+  File "game/my_screens.rpy", line 203, in prepare
+    screen browserWindowSubscribe:
+  File "game/my_screens.rpy", line 205, in prepare
+    vbox:
+  File "game/my_screens.rpy", line 205, in prepare
+    vbox:
+  File "game/my_screens.rpy", line 207, in prepare
+    hbox:
+  File "game/my_screens.rpy", line 207, in prepare
+    hbox:
+  File "game/my_screens.rpy", line 211, in prepare
+    imagebutton:
+  File "game/my_screens.rpy", line 211, in prepare
+    imagebutton:
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' (game/my_screens.rpy, line 214)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scene_browser.rpy", line 37, in script call
-    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
-  File "game/functions.rpy", line 35, in script
-    e_nvl '[phrases[i]]'
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1253, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1172, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1152, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
-    s = formatter.vformat(s, (), kwargs) # type: ignore
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
-    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
-TypeError: list indices must be integers or slices, not str
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
+    run(restart)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 95, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 976, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/my_screens.rpy", line 203, in prepare_screen
+    screen browserWindowSubscribe:
+  File "game/my_screens.rpy", line 203, in prepare
+    screen browserWindowSubscribe:
+  File "game/my_screens.rpy", line 205, in prepare
+    vbox:
+  File "game/my_screens.rpy", line 205, in prepare
+    vbox:
+  File "game/my_screens.rpy", line 207, in prepare
+    hbox:
+  File "game/my_screens.rpy", line 207, in prepare
+    hbox:
+  File "game/my_screens.rpy", line 211, in prepare
+    imagebutton:
+  File "game/my_screens.rpy", line 211, in prepare
+    imagebutton:
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 790, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
+    raise orig_e
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' (game/my_screens.rpy, line 214)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Aug 29 16:00:10 2023
+Wed Aug 30 14:03:18 2023

@@ -47,7 +47,8 @@ label start:
         'tablet': 0,
         'homeAssistant': 0,
         'phone': 0,
-        'phoneCall': 0
+        'phoneCall': 0,
+        'dogForest': 0
     }
 
 #Lancement du Tuto
