@@ -16,5 +16,6 @@ label forest :
   a "Je récupère des points de vie privée (interet)"
   call addPoints(2,'point_conviction') from _call_addPoints_7
   a "Je récupère des points de vie privée (conviction)"
+  a "Je suis trop content"
   $ hubClickable["forest"]= 0
   jump hub
