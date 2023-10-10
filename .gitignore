@@ -3,3 +3,7 @@
 log.txt
 errors.txt
 traceback.txt
+*.rpyc
+*.rpymc
+*.rpyb
+*.bak
