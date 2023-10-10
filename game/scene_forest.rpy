@@ -1,5 +1,6 @@
 label forest :
   nvl clear
+  hide screen hubElements
   show walkInForest
   show screen barre_de_vie
   a "Oh c'est tellement bien d'être en forêt loin des réseaux, je me sens ressourcée"

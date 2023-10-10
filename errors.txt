@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/functions.rpy", line 37: expected statement.
-    phrase = phrases[i]
-           ^
+File "game/script.rpy", line 65: expected statement.
+    textbutton _("Visit Website") action OpenURL("http://reddit.com/")
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Aug 30 09:54:51 2023
+Tue Oct 10 10:59:10 2023

@@ -43,7 +43,7 @@ label start:
         'dog': 1,
         'laptop': 0,
         'photoFrame': 0,
-        'watch': 0,
+        'watch': 1,
         'tablet': 0,
         'homeAssistant': 0,
         'phone': 0,
@@ -62,7 +62,6 @@ label hub:
     show Player_Sitting
     show screen barre_de_vie
     show screen hubElements
-
     empty ""
 
     #Boucle infinie dans le hub

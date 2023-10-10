@@ -30,7 +30,8 @@ screen hubElements:
             ypos 838
             idle "UI/imagebuttons/watch_idle.png"
             hover "UI/imagebuttons/watch_hover.png"
-            action Jump("browserLabel")
+            action OpenURL("http://reddit.com/")
+            #action Jump("browserLabel")
 
     if hubClickable["forest"] == 1:
         imagebutton:
