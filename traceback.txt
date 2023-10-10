@@ -1,64 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 65, in script
-    empty ""
-  File "game/my_screens.rpy", line 1, in execute
-    screen hubElements:
-  File "game/my_screens.rpy", line 1, in execute
-    screen hubElements:
-  File "game/my_screens.rpy", line 35, in execute
-    if hubClickable["forest"] == 1:
-  File "game/my_screens.rpy", line 35, in <module>
-    if hubClickable["forest"] == 1:
-KeyError: 'forest'
+After initialization, but before game start.
+  File "game/screens.rpy", line 549, in prepare_screen
+    screen sources():
+  File "game/screens.rpy", line 549, in prepare
+    screen sources():
+  File "game/screens.rpy", line 555, in prepare
+    use game_menu(_("Sources"), scroll="viewport"):
+  File "game/screens.rpy", line 555, in prepare
+    use game_menu(_("Sources"), scroll="viewport"):
+  File "game/screens.rpy", line 559, in prepare
+    vbox:
+  File "game/screens.rpy", line 559, in prepare
+    vbox:
+  File "game/screens.rpy", line 571, in prepare
+    text _(Rien à cache / Bande annonce du film documentaire / Marc Meillassoux (réalisateur))
+SyntaxError: invalid syntax (screens.rpy, line 571)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 65, in script
-    empty ""
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/my_screens.rpy", line 1, in execute
-    screen hubElements:
-  File "game/my_screens.rpy", line 1, in execute
-    screen hubElements:
-  File "game/my_screens.rpy", line 35, in execute
-    if hubClickable["forest"] == 1:
-  File "game/my_screens.rpy", line 35, in <module>
-    if hubClickable["forest"] == 1:
-KeyError: 'forest'
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/main.py", line 660, in main
+    run(restart)
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/main.py", line 95, in run
+    renpy.display.screen.prepare_screens()
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/display/screen.py", line 976, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 549, in prepare_screen
+    screen sources():
+  File "game/screens.rpy", line 549, in prepare
+    screen sources():
+  File "game/screens.rpy", line 555, in prepare
+    use game_menu(_("Sources"), scroll="viewport"):
+  File "game/screens.rpy", line 555, in prepare
+    use game_menu(_("Sources"), scroll="viewport"):
+  File "game/screens.rpy", line 559, in prepare
+    vbox:
+  File "game/screens.rpy", line 559, in prepare
+    vbox:
+  File "game/screens.rpy", line 571, in prepare
+    text _(Rien à cache / Bande annonce du film documentaire / Marc Meillassoux (réalisateur))
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/py3analysis.py", line 790, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/py3analysis.py", line 772, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
+    raise e
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
+    raise orig_e
+  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (screens.rpy, line 571)
 
-Windows-10-10.0.22621 AMD64
+macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Oct 10 10:26:23 2023
+Tue Oct 10 13:56:34 2023

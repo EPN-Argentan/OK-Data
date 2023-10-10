@@ -305,9 +305,12 @@ screen navigation():
 
             textbutton _("Sauvegarde") action ShowMenu("save")
 
+
         textbutton _("Charger") action ShowMenu("load")
 
         textbutton _("Préférences") action ShowMenu("preferences")
+
+
 
         if _in_replay:
 
@@ -317,7 +320,9 @@ screen navigation():
 
             textbutton _("Menu principal") action MainMenu()
 
-        textbutton _("À propos") action ShowMenu("about")
+        textbutton _("Sources") action ShowMenu("sources")
+
+
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -541,15 +546,15 @@ style return_button:
 ## Il n’y a rien de spécial sur cet écran. Par conséquent, il sert aussi
 ## d’exemple pour créer un écran personnalisé.
 
-screen about():
+screen sources():
 
     tag menu
 
     ## Cette déclaration concerne l’écran game_menu. L’élément vbox est ensuite
     ## inclus dans la fenêtre de l'écran game_menu.
-    use game_menu(_("À propos"), scroll="viewport"):
+    use game_menu(_("Sources"), scroll="viewport"):
 
-        style_prefix "about"
+        style_prefix "sources"
 
         vbox:
 
@@ -560,6 +565,14 @@ screen about():
             ## options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
+
+            text _("Voici une liste de sources disponibles pour en connaitre davantages sur le sujet des traitement de données:\n")
+
+            text _("Rien à cacher")
+            text _("{a=https://www.dailymotion.com/video/x8a2ale}Bande annonce du film documentaire de Marc Meillassoux (réalisateur){/a}\n\n")
+
+            text _("Disparaître – Sous les radars des algorithmes")
+            text _("{a=https://vimeo.com/651304043}Bande annonce du film documentaire Marc Meillassoux (réalisateur){/a}\n\n")
 
             text _("Conçu avec {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
@@ -1119,6 +1132,8 @@ style help_label_text:
     size gui.text_size
     xalign 1.0
     text_align 1.0
+
+
 
 
 

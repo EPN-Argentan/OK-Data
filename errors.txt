@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 65: expected statement.
-    textbutton _("Visit Website") action OpenURL("http://reddit.com/")
-                ^
+File "game/screens.rpy", line 571: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                text _("Rien à cacher\n)
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Oct 10 10:59:10 2023
+Tue Oct 10 14:01:00 2023

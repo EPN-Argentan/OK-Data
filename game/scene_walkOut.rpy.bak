@@ -12,7 +12,7 @@ label walkOut :
     hide screen phoneDown
     sepharo_nvl "Vous passez devant Sepharo !"
     sepharo_nvl "Venez profiter de notre offre du moment : Un parfum acheté le deuxième offert !"
-    call addPoints(5,'point_localisation',LocalisationState, False, "Tu as perdu 5 points de vie Privée !", "Tu as bien désactiver la localisation") from _call_addPoints_8
+    call addPoints(5,'point_localisation',LocalisationState, False, "Tu as perdu 5 points de vie Privée !", "Tu as bien désactiver la localisation")
     e_nvl "En laissant activée la géolocalisation sur ton téléphone, tu peux être visible par les réseaux, d’où la réception de message de publicité."
     e_nvl "Tu as la possibilité d’activer ou non cette fonction en touchant l’icône en haut du téléphone. Penses-y à l’avenir et essaye dès maintenant."
     show screen phoneDown
