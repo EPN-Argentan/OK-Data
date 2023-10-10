@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 571: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                text _("Rien à cacher\n)
+File "game/scene_browser.rpy", line 43: end of line expected.
+    show screen barre_de_vie onlayer overlay
+                             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Oct 10 14:01:00 2023
+Tue Oct 10 15:11:43 2023
