@@ -1,23 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/my_screens.rpy", line 203, in prepare_screen
-    screen browserWindowSubscribe:
-  File "game/my_screens.rpy", line 203, in prepare
-    screen browserWindowSubscribe:
-  File "game/my_screens.rpy", line 205, in prepare
-    vbox:
-  File "game/my_screens.rpy", line 205, in prepare
-    vbox:
-  File "game/my_screens.rpy", line 207, in prepare
-    hbox:
-  File "game/my_screens.rpy", line 207, in prepare
-    hbox:
-  File "game/my_screens.rpy", line 211, in prepare
-    imagebutton:
-  File "game/my_screens.rpy", line 211, in prepare
-    imagebutton:
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' (game/my_screens.rpy, line 214)
+While running game code:
+  File "game/scene_walkOut.rpy", line 23, in script
+    empty ""
+ScriptError: could not find label 'telplay'.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,39 +12,17 @@ Full traceback:
     renpy.main.main()
   File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
     run(restart)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 95, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\display\screen.py", line 976, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/my_screens.rpy", line 203, in prepare_screen
-    screen browserWindowSubscribe:
-  File "game/my_screens.rpy", line 203, in prepare
-    screen browserWindowSubscribe:
-  File "game/my_screens.rpy", line 205, in prepare
-    vbox:
-  File "game/my_screens.rpy", line 205, in prepare
-    vbox:
-  File "game/my_screens.rpy", line 207, in prepare
-    hbox:
-  File "game/my_screens.rpy", line 207, in prepare
-    hbox:
-  File "game/my_screens.rpy", line 211, in prepare
-    imagebutton:
-  File "game/my_screens.rpy", line 211, in prepare
-    imagebutton:
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 790, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\py3analysis.py", line 772, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 1027, in py_compile
-    raise e
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 979, in py_compile
-    raise orig_e
-  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\python.py", line 972, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' (game/my_screens.rpy, line 214)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
+    context.run()
+  File "game/scene_walkOut.rpy", line 23, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'telplay'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Wed Aug 30 14:03:18 2023
+Tue Oct 10 10:16:33 2023

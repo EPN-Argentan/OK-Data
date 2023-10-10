@@ -31,6 +31,14 @@ screen hubElements:
             idle "UI/imagebuttons/watch_idle.png"
             hover "UI/imagebuttons/watch_hover.png"
             action Jump("browserLabel")
+
+    if hubClickable["forest"] == 1:
+        imagebutton:
+            xpos 1400
+            ypos 797
+            idle "UI/imagebuttons/dog_idle.png"
+            hover "UI/imagebuttons/dog_hover.png"
+            action Jump("forest")
     #...
     #add list of hub clickable elements here
 
