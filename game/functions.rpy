@@ -22,25 +22,15 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     if newValue < oldValue :
         show screen barre_de_vie with hpunch
         if losemessage:
-            #e_nvl '[losemessage]'
-            $ phrases = losemessage.split("µ")
-            $ nbrPhrases = len(phrases)
-            $ i = 0
-            while i < nbrPhrases:
-                $ phrase = phrases[i]
-                e_nvl '[phrase]'
-                $ i = i + 1
+            e_nvl '[losemessage]'
     #nothing happens
     elif newValue == oldValue :
         return
     #you earn points
     else:
         if winmessage:
-            #e_nvl '[winmessage]'
-            $ phrases = winmessage.split("µ")
-            $ nbrPhrases = len(phrases)
-            $ i = 0
-            while i < nbrPhrases:
-                $ phrase = phrases[i]
-                e_nvl '[phrase]'
-                $ i = i + 1
+            e_nvl '[winmessage]'
+            #$ phrases = winmessage.split("µ")
+            #$ nbrPhrases = len(phrases)
+            #$ i = 1
+            #e_nvl '[phrases[i]]'

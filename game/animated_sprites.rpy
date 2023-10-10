@@ -759,7 +759,7 @@ image loungeZoom :
     pause 0.1
     "sprites/lounge/zoom/SalonZoom027.png"
     pause 0.1
-    
+
 image loungeHandIn :
     "sprites/lounge/handIn/handIn001.png"
     pause 0.1
@@ -798,3 +798,139 @@ image loungeHandIn :
 
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
+
+
+image walkInForest :
+    "sprites/walkinforest/1WalkInForest1.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest22.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest001.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest22.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest1.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest22.png"
+    pause 0.1
+    repeat
