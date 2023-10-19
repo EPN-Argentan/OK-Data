@@ -1,60 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 549, in prepare_screen
-    screen sources():
-  File "game/screens.rpy", line 549, in prepare
-    screen sources():
-  File "game/screens.rpy", line 555, in prepare
-    use game_menu(_("Sources"), scroll="viewport"):
-  File "game/screens.rpy", line 555, in prepare
-    use game_menu(_("Sources"), scroll="viewport"):
-  File "game/screens.rpy", line 559, in prepare
-    vbox:
-  File "game/screens.rpy", line 559, in prepare
-    vbox:
-  File "game/screens.rpy", line 571, in prepare
-    text _(Rien à cache / Bande annonce du film documentaire / Marc Meillassoux (réalisateur))
-SyntaxError: invalid syntax (screens.rpy, line 571)
+While running game code:
+  File "game/scene_walkOut.rpy", line 11, in script
+    a "Je marche seule !"
+ScriptError: could not find label 'telplay'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
     renpy.main.main()
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/main.py", line 660, in main
+  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\main.py", line 660, in main
     run(restart)
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/main.py", line 95, in run
-    renpy.display.screen.prepare_screens()
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/display/screen.py", line 976, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 549, in prepare_screen
-    screen sources():
-  File "game/screens.rpy", line 549, in prepare
-    screen sources():
-  File "game/screens.rpy", line 555, in prepare
-    use game_menu(_("Sources"), scroll="viewport"):
-  File "game/screens.rpy", line 555, in prepare
-    use game_menu(_("Sources"), scroll="viewport"):
-  File "game/screens.rpy", line 559, in prepare
-    vbox:
-  File "game/screens.rpy", line 559, in prepare
-    vbox:
-  File "game/screens.rpy", line 571, in prepare
-    text _(Rien à cache / Bande annonce du film documentaire / Marc Meillassoux (réalisateur))
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/py3analysis.py", line 790, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/py3analysis.py", line 772, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 1027, in py_compile
-    raise e
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 979, in py_compile
-    raise orig_e
-  File "/Users/epnpontleveque/Desktop/renpy-8.0.3-sdk/renpy/python.py", line 972, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (screens.rpy, line 571)
+  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\execution.py", line 938, in run_context
+    context.run()
+  File "game/scene_walkOut.rpy", line 11, in script
+    a "Je marche seule !"
+  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'telplay'.
 
-macOS-10.16-x86_64-i386-64bit x86_64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 OKDATA 1.0
-Tue Oct 10 13:56:34 2023
+Thu Oct 19 14:08:28 2023

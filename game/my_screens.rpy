@@ -82,7 +82,7 @@ screen phoneDown :
 
 #Smartphone home screen
 #Each argument is one application icon that can be avaible or not
-screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
+screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
     imagebutton:
         xalign 0.5
         ypos 150
@@ -204,6 +204,10 @@ screen browserWindowFeed:
                      idle "UI/browser/eventBirtdhay.png"
                  imagebutton:
                      idle "UI/browser/alarmArticle.png"
+                 imagebutton:
+                     idle "UI/browser/chickenArticle.jpg"
+                 imagebutton:
+                     idle "UI/browser/burgerArticle.jpg"
              #add "UI/browser/feedDataBook.png"
 
          bar value XScrollValue("vp")
