@@ -224,12 +224,12 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [SetVariable("GoodState", True),Show("browserWindowSubscribeFake"),Jump("browserLabelFeed")]
+                action [SetVariable("NeutralState", True),Show("browserWindowSubscribeFake"),Jump("browserLabelFeed")]
 
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [SetVariable("GoodState", False),Show("browserWindowSubscribeTrue"),Jump("browserLabelFeed")]
+                action [SetVariable("NeutralState", False),Show("browserWindowSubscribeTrue"),Jump("browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:

@@ -25,7 +25,7 @@ label start:
     $ BluetoothState = True
     $ LocalisationState = True
     $ DataState = True
-    $ GoodState = True #an invisible variable to add points without using settings
+    $ NeutralState = True #an invisible variable to add points without using settings
 
     #points store all point score and y position (to be able to shake this value later)
     $ points = {
