@@ -1,70 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scene_browser.rpy", line 34, in script
-    empty ""
-  File "renpy/common/00action_data.rpy", line 79, in get_selected
-    return __get_field(self.object, self.field, self.kind) == self.value
-  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
-    raise NameError("The {} {} does not exist.".format(kind, name))
-NameError: The variable NeutralState does not exist.
+  File "game/script.rpy", line 18, in script
+    define medBubble = Character(None, None, kind=bubble)   # Lucy
+  File "game/script.rpy", line 18, in <module>
+    define medBubble = Character(None, None, kind=bubble)   # Lucy
+TypeError: Character() got multiple values for argument 'kind'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scene_browser.rpy", line 34, in script
-    empty ""
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\screen.py", line 456, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 584, in visit_all
-    callback(self)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\behavior.py", line 968, in per_interact
-    if self.is_selected():
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\behavior.py", line 956, in is_selected
-    return is_selected(self.action)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\behavior.py", line 398, in is_selected
-    return any(is_selected(i) for i in action)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\behavior.py", line 398, in <genexpr>
-    return any(is_selected(i) for i in action)
-  File "C:\Users\Informatique\Mon Drive\Quentin\Ateliers\MiniLab Enfants\Moliere\renpy-8.0.3-sdk\renpy\display\behavior.py", line 401, in is_selected
-    return action.get_selected()
-  File "renpy/common/00action_data.rpy", line 79, in get_selected
-    return __get_field(self.object, self.field, self.kind) == self.value
-  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
-    raise NameError("The {} {} does not exist.".format(kind, name))
-NameError: The variable NeutralState does not exist.
+  File "game/script.rpy", line 18, in script
+    define medBubble = Character(None, None, kind=bubble)   # Lucy
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2508, in execute
+    self.set()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2522, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 18, in <module>
+    define medBubble = Character(None, None, kind=bubble)   # Lucy
+TypeError: Character() got multiple values for argument 'kind'
 
 Windows-10-10.0.22621 AMD64
-Ren'Py 8.0.3.22090809
+Ren'Py 8.1.3.23091805
 OKDATA 1.0
-Thu Oct 19 14:42:52 2023
+Wed Nov  8 11:18:37 2023
