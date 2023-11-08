@@ -41,4 +41,11 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    s "T'es complétement chtarbée"
+    s "Regarde l'événement"
+
+label insideEventPage:
+    hide screen browserWindowFeed
+    show screen insideEvent
+    show screen barre_de_vie
+    s "Tu as vu ? Ils proposent de partager des photos"
+    s "C'est incroyable"

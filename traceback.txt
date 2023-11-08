@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 18, in script
-    define medBubble = Character(None, None, kind=bubble)   # Lucy
-  File "game/script.rpy", line 18, in <module>
-    define medBubble = Character(None, None, kind=bubble)   # Lucy
-TypeError: Character() got multiple values for argument 'kind'
+  File "game/scene_browser.rpy", line 44, in script
+    s "T'es complétement chtarbée"
+ScriptError: could not find label 'InsideEventPage'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 18, in script
-    define medBubble = Character(None, None, kind=bubble)   # Lucy
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2508, in execute
-    self.set()
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2522, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 18, in <module>
-    define medBubble = Character(None, None, kind=bubble)   # Lucy
-TypeError: Character() got multiple values for argument 'kind'
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\main.py", line 144, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "game/scene_browser.rpy", line 44, in script
+    s "T'es complétement chtarbée"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\script.py", line 1013, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'InsideEventPage'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.3.23091805
 OKDATA 1.0
-Wed Nov  8 11:18:37 2023
+Wed Nov  8 12:24:19 2023

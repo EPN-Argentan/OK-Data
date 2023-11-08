@@ -202,6 +202,7 @@ screen browserWindowFeed:
                      idle "UI/browser/eventBanner.png"
                  imagebutton:
                      idle "UI/browser/eventBirtdhay.png"
+                     action Jump("insideEventPage")
                  imagebutton:
                      idle "UI/browser/alarmArticle.png"
                  imagebutton:
@@ -209,6 +210,29 @@ screen browserWindowFeed:
                  imagebutton:
                      idle "UI/browser/burgerArticle.jpg"
              #add "UI/browser/feedDataBook.png"
+
+         bar value XScrollValue("vp")
+         vbar value YScrollValue("vp")
+
+screen insideEvent:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    side "c b r":
+         area (358, 160, 675, 800)
+
+         viewport id "vp":
+             draggable True
+             vbox:
+                 spacing 0
+                 imagebutton:
+                     idle "UI/browser/EventPage.png"
+                 hbox:
+                     xalign 0.7
+                     spacing 10
+                     imagebutton:
+                         idle "UI/browser/sendPhotosDatabook.png"
+                     imagebutton:
+                         idle "UI/browser/sendPhotosMail.png"
+
 
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
@@ -276,7 +300,7 @@ screen dataMap:
     add "smartphone.png" xalign 0.5 yalign 0.5
     add "UI/applications/dataMap.png" xalign 0.5 yalign 0.5
     frame:
-        background #ffffff
+        background "#ffffff"
         xalign 0.5
         yalign 0.65
         text "{color=#000000}{size=-10}Veuillez activer la \ngéolocalisation pour \nconnaitre l'itinéraire{/size}{/color}" xalign 0.5 yalign 0.5

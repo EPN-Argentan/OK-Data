@@ -99,5 +99,14 @@
             400,
             180
         ]
+    },
+    "walkOut_1ad22c3a": {
+        "area": [
+            1360,
+            585,
+            480,
+            270
+        ],
+        "properties": "bottom_left"
     }
 }
