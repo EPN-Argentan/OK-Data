@@ -12,7 +12,7 @@ Ce fichier doit commencer avec l'élément suivant :
     empty "" #cette ligne permet d'éviter que cela entraine des erreurs en affichant un premier texte vide à l'ouverture du label
 ```
 Ensuite, il faut créer les images cliquables. Pour cela il faut exporter deux images de l'élément, l'une avec un contour blanc et l'autre sans contour blanc. Ces deux images doivent avoir exactement la même taille.
-![Example d'élément cliquable en version hover et idle](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
+![Example d'élément cliquable en version hover et idle]("https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png")
 Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le screen *HubElements* :
 ```python
   if hubClickable["le_nom_de_votre_element_cliquable"] == 1:
