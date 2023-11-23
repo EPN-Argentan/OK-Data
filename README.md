@@ -66,5 +66,12 @@ addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bl
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
 ```
 
+## Le téléphone
+### Afficher un message dans le téléphone
+Pour afficher un message depuis l'interface texto du téléphone, il suffit de créer un personnage émetteur :
+```python
+define *nomDuPersonnage*_nvl = Character("nomDuPersonnage", kind=nvl, callback=Phone_ReceiveSound)
+```
+
 
 
