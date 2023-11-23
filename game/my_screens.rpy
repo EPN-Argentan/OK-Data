@@ -40,6 +40,14 @@ screen hubElements:
             idle "UI/imagebuttons/dog_idle.png"
             hover "UI/imagebuttons/dog_hover.png"
             action Jump("forest")
+
+    if hubClickable["CadrePhoto"] == 1:
+        imagebutton:
+            xpos 446
+            ypos 159
+            idle "UI/imagebuttons/cadrephoto_idle.png"
+            hover "UI/imagebuttons/cadrephoto_hover.png"
+            action Jump("SceneGermain")
     #...
     #add list of hub clickable elements here
 

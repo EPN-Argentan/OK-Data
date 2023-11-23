@@ -7,5 +7,4 @@ traceback.txt
 *.rpymc
 *.rpyb
 *.bak
-game/cache/screens.rpyb
-game/cache/shaders.txt
+traceback.txt

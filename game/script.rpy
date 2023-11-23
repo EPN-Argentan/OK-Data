@@ -44,7 +44,7 @@ label start:
     $ hubClickable = {
         'dog': 1,
         'laptop': 0,
-        'photoFrame': 0,
+        'CadrePhoto': 1,
         'watch': 1,
         'tablet': 0,
         'homeAssistant': 0,
