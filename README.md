@@ -54,7 +54,7 @@ Dans certains moment du jeu, on souhaite que le joueur clique sur un élément p
 
 ## Les points
 ### Typologie de points
-La barre de vie privée est composée d'un ensemble de points de vie. Chaque points de vie à un nom spécifique.
+La barre de vie privée est composée d'un ensemble de points de vie. Chaque points de vie a un nom spécifique.
 
 ![La barre de vie](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_barre_de_vie.png)
 
