@@ -65,13 +65,20 @@ Exemple d'usage de la fonction :
 addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
 ```
+### Splitter un message 
+Si votre message, gagnant ou perdant, est trop long, il risque de ne pas être totalement lisible. Pour éviter cela, il suffit d'ajouter dans les textes, à chaque fin d'un message : *"µ"*
 
 ## Le téléphone
 ### Afficher un message dans le téléphone
-Pour afficher un message depuis l'interface texto du téléphone, il suffit de créer un personnage émetteur :
+Pour afficher un message depuis l'interface texto du téléphone, il suffit de créer un personnage émetteur (si celui-ci n'existe pas déjà) :
 ```python
-define *nomDuPersonnage*_nvl = Character("nomDuPersonnage", kind=nvl, callback=Phone_ReceiveSound)
+define nomDuPersonnage_nvl = Character("nomDuPersonnage", kind=nvl, callback=Phone_ReceiveSound)
 ```
+Puis pour le faire parler, il suffira d'écrire :
+```python
+nomDuPersonnage_nvl "Le texte à faire dire à votre personnage"
+```
+
 
 
 
