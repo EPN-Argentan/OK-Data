@@ -23,8 +23,8 @@ Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le scr
 ```python
   if hubClickable["le_nom_de_votre_element_cliquable"] == 1:
     imagebutton:
-      xpos 1400 #sa position X
-      ypos 797 #sa position Y
+      xpos 1400 #la position X du bord supérieur gauche 
+      ypos 797 #la position Y du bord supérieur gauche
       idle "UI/imagebuttons/dog_idle.png" #chemin de l'image de l'élément cliquable avec un contour blanc
       hover "UI/imagebuttons/dog_hover.png" #chemin de l'image de l'élément cliquable sans un contour blanc
       action Jump("leNomDeVotreScene") #le nom du label où est la scène
