@@ -5,13 +5,13 @@
 Afin de rendre un scénario accessible il faut créer un élément cliquable dans le hub qui sera la porte d'entrée.
 Pour cela, il faut d'abord créer un fichier dans le dossier "game" qui servira de squelette pour la scène sous cette dénomination : "scene_leNomDeVotreScene.rpy"
 Ce fichier doit commencer avec l'élément suivant :
-```
+```python
   label leNomDeVotreScene:
     empty "" #cette ligne permet d'éviter que cela entraine des erreurs en affichant un premier texte vide à l'ouverture du label
 ```
 
 Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le screen *HubElements* :
-```
+```python
   if hubClickable["le_nom_de_votre_element_cliquable"] == 1:
     imagebutton:
       xpos 1400 #sa position X
