@@ -55,14 +55,16 @@ Dans certains moment du jeu, on souhaite que le joueur clique sur un élément p
 ## Les points
 ### Typologie de points
 La barre de vie privée est composée d'un ensemble de points de vie. Chaque point de vie à un nom sépcifique.
-![La barre de vie]([https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_barre_de_vie.png)
+
+![La barre de vie](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_barre_de_vie.png)
+
 Vous trouverez dans l'ordre :
-    1. point_interet
-    2. point_sante
-    3. point_conviction
-    4. point_localisation
-    5. point_sociaux
-    6. point_administrative
+1. point_interet
+2. point_sante
+3. point_conviction
+4. point_localisation
+5. point_sociaux
+6. point_administrative
 Ce nommage vous sera particuliérement utile si vous souhaitez ajoutez ou retirer des points.
 
 ### Ajouter ou enlever des points SANS une condition
