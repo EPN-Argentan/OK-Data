@@ -65,6 +65,7 @@ Vous trouverez dans l'ordre :
 4. point_localisation
 5. point_sociaux
 6. point_administrative
+
 Ce nommage vous sera particuliérement utile si vous souhaitez ajoutez ou retirer des points.
 
 ### Ajouter ou enlever des points SANS une condition
