@@ -1,6 +1,8 @@
 # OK Data
 
 ## Implémenter du contenu (nouveau scénario)
+Pour ajouter un nouveau scénario au jeu, il faut d'abord créer l'élément cliquable dans le salon (comme le sont le téléphone ou le chien) puis ensuite associer cet élément à un label.
+
 ### Créer un élément cliquable sur le hub
 Afin de rendre un scénario accessible il faut créer un élément cliquable dans le hub qui sera la porte d'entrée.
 Pour cela, il faut d'abord créer un fichier dans le dossier "game" qui servira de squelette pour la scène sous cette dénomination : "scene_leNomDeVotreScene.rpy"
