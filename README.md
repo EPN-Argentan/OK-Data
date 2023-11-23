@@ -29,5 +29,37 @@ Si vous souhaitez que l'élément soit cliquable dés le début du jeu, il faut 
 ```python
 le_nom_de_votre_element_cliquable: 1,
 ```
+### Structure d'un scénario
+| Nom de l'élément  | Description |
+| ------------- | ------------- |
+| label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un labl : "label forest :"  |
+| screen  | Élément flottant à afficher et positionner où l'on souhaite dans l'image. La barre de vie privée est un screen appelé à chaque fois que celle-ci doit être affichée  |
+
+## Les points
+### Ajouter ou enlever des points SANS une condition
+Pour ajouter des points de vie sans condition, il suffit d'écrire :
+```python
+  $ points['le_nom_des_points'][0] += 5
+```
+Pour retirer des points de vie sans condition, il suffit d'écrire :
+```python
+  $ points['le_nom_des_points'][0] -= 5
+```
+
+### Ajouter ou enlever des points AVEC une condition 
+Pour ajouter ou retirer des points de vie selon une condition, une fonction existe :
+```python
+call addPoints(value,key,condition, False, "Raté ! \n En laissant ta géolocalisation activée, les données de localisation seront présentent dans les méta données) de ta photo. N’importe qui peut ainsi savoir où tu étais à ce moment-là.", "Bravo  ! \n Tu gagnes des points de géolocalisation, les données de localisation en pensant a la désactiver. De cette façon, ta photo ne contient pas de données de Métadonnées de localisation.") from _call_addPoints
+
+# value = number to increment
+# key = wich lifebar element has to be increment
+# condition = if condition is not empty, increment will be effective if the condition is true else it will decrement
+# losemessage = message to display if player lose points
+# winmessage = message to display if player earn points
+# Exemple d'usage de la fonction :
+# addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
+    
+```
+
 
 
