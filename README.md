@@ -59,10 +59,11 @@ call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage")
 # conditionValue = waiting condition value to determine if it's a win or not
 # losemessage = message to display if player lose points
 # winmessage = message to display if player earn points
-# Exemple d'usage de la fonction :
-
+```
+Exemple d'usage de la fonction :
+```python
 addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
-    
+# Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
 ```
 
 
