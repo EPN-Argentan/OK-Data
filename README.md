@@ -67,6 +67,16 @@ addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bl
 ```
 ### Splitter un message à afficher après un gain ou une perte de points
 Si votre message, gagnant ou perdant, est trop long, il risque de ne pas être totalement lisible. Pour éviter cela, il suffit d'ajouter dans les textes, à chaque fin d'un message : *"µ"*
+# Les dialogues
+## Paroles
+Pour afficher une parole il suffit de créer un personnage émetteur (si celui-ci n'existe pas déjà) dans le fichier *script.rpy* :
+```python
+define raccourcisDuNom = Character('nomDuPersonnage', color="#codeColorTextBackground")
+```
+Puis pour le faire parler, il suffira d'écrire à l'endroit souhaité :
+```python
+raccourcisDuNom "Le texte à faire dire à votre personnage"
+```
 
 ## Le téléphone
 ### Afficher un message dans le téléphone
@@ -79,7 +89,7 @@ Puis pour le faire parler, il suffira d'écrire à l'endroit souhaité :
 nomDuPersonnage_nvl "Le texte à faire dire à votre personnage"
 ```
 ### Retirer les messages précédents
-Pour éviter que les anciens messages du téléphone soient visibles au moment de la réception d'un nouveau, il faut ajouter en premier :
+Pour éviter que les anciens messages du téléphone soient visibles au moment de la réception d'un nouveau message, il faut ajouter en amont :
 ```python
 nvl clear
 ```
