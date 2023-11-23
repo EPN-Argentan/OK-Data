@@ -4,6 +4,7 @@
 Pour ajouter un nouveau scénario au jeu, il faut d'abord créer l'élément cliquable dans le salon (comme le sont le téléphone ou le chien) puis ensuite associer cet élément à un label.
 
 ### Créer un élément cliquable sur le hub
+#### Initialisation du scénario
 Afin de rendre un scénario accessible il faut créer un élément cliquable dans le hub qui sera la porte d'entrée.
 Pour cela, il faut d'abord créer un fichier dans le dossier "game" qui servira de squelette pour la scène sous cette dénomination : "scene_leNomDeVotreScene.rpy"
 Ce fichier doit commencer avec l'élément suivant :
@@ -11,8 +12,12 @@ Ce fichier doit commencer avec l'élément suivant :
   label leNomDeVotreScene:
     empty "" #cette ligne permet d'éviter que cela entraine des erreurs en affichant un premier texte vide à l'ouverture du label
 ```
+#### Image de l'objet cliquable
 Ensuite, il faut créer les images cliquables. Pour cela il faut exporter deux images de l'élément, l'une avec un contour blanc et l'autre sans contour blanc. Ces deux images doivent avoir exactement la même taille.
-![Example d'élément cliquable en version hover et idle]("https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png")
+![Example d'élément cliquable en version hover et idle](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png)
+Afin de faciliter le stockage, ces images doivent être stockées dans *OK Data\game\images\UI\imagebuttons* sous l'appelation : nomDeLElement_hover.png (sans contour blanc) et nomDeLElement_idle.png (avec contour blanc)
+
+#### Placement de l'objet
 Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le screen *HubElements* :
 ```python
   if hubClickable["le_nom_de_votre_element_cliquable"] == 1:
@@ -23,6 +28,7 @@ Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le scr
       hover "UI/imagebuttons/dog_hover.png" #chemin de l'image de l'élément cliquable sans un contour blanc
       action Jump("leNomDeVotreScene") #le nom du label où est la scène
 ```
+#### Mise en fonctionnement de l'objet
 Afin de rendre l'élément cliquable, il faut au moment opportun du scénario écrire ceci :
 ```python
   $ hubClickable["le_nom_de_votre_element_cliquable"]= 1
