@@ -39,7 +39,7 @@ Si vous souhaitez que l'élément soit cliquable dés le début du jeu, il faut 
 ```python
 le_nom_de_votre_element_cliquable: 1,
 ```
-### Structure d'un scénario
+## Structure d'un scénario
 | Nom de l'élément  | Description |
 | ------------- | ------------- |
 | label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un labl : "label forest :"  |
