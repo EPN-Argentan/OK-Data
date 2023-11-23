@@ -13,7 +13,8 @@ Ce fichier doit commencer avec l'élément suivant :
     empty "" #cette ligne permet d'éviter que cela entraine des erreurs en affichant un premier texte vide à l'ouverture du label
 ```
 #### Image de l'objet cliquable
-Ensuite, il faut créer les images cliquables. Pour cela il faut exporter deux image de l'élément en png transparent, l'une avec un contour blanc de **3px** et l'autre sans contour blanc. **Ces deux images doivent avoir exactement la même taille à l'export  .**
+Ensuite, il faut créer les images cliquables. Pour cela il faut exporter deux image de l'élément en png transparent, l'une avec un contour blanc de **3px** et l'autre sans contour blanc. **Ces deux images doivent avoir exactement la même taille à l'export.**
+
 ![Example d'élément cliquable en version hover et idle](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png)
 
 Afin de faciliter le stockage, ces images doivent être stockées dans *OK Data\game\images\UI\imagebuttons* sous l'appelation : nomDeLElement_hover.png (sans contour blanc) et nomDeLElement_idle.png (avec contour blanc)
