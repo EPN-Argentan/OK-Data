@@ -78,7 +78,10 @@ Puis pour le faire parler, il suffira d'écrire à l'endroit souhaité :
 ```python
 nomDuPersonnage_nvl "Le texte à faire dire à votre personnage"
 ```
-
-
+### Retirer les messages précédents
+Pour éviter que les anciens messages du téléphone soient visibles au moment de la réception d'un nouveau, il faut ajouter en premier :
+```python
+nvl clear
+```
 
 
