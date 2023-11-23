@@ -15,6 +15,8 @@ define m = Character('Maman', color="#209792")
 
 define med = Character('Mediateur', color="#209792")
 
+define medBubble = Character(None, image="lucy", kind=bubble)   # Lucy
+
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 
@@ -25,7 +27,7 @@ label start:
     $ BluetoothState = True
     $ LocalisationState = True
     $ DataState = True
-    $ GoodState = True #an invisible variable to add points without using settings
+    $ NeutralState = True #an invisible variable to add points without using settings
 
     #points store all point score and y position (to be able to shake this value later)
     $ points = {

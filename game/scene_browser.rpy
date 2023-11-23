@@ -34,11 +34,18 @@ label browserLabelAfterCall:
         empty ""
 
 label browserLabelFeed:
-    call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.") from _call_addPoints_1
+    call addPoints(5,'point_sociaux',NeutralState,True,"Vous perdez des points ! µEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.")
     show loungeZoomFix
     show screen browserWindowFeed
     hide screen browserWindowSubscribe
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    s "T'es complétement chtarbée"
+    s "Regarde l'événement"
+
+label insideEventPage:
+    hide screen browserWindowFeed
+    show screen insideEvent
+    show screen barre_de_vie
+    s "Tu as vu ? Ils proposent de partager des photos"
+    s "C'est incroyable"

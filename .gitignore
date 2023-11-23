@@ -1,0 +1,11 @@
+/game/saves/
+/game/cache/
+log.txt
+errors.txt
+traceback.txt
+*.rpyc
+*.rpymc
+*.rpyb
+*.bak
+game/cache/screens.rpyb
+game/cache/shaders.txt

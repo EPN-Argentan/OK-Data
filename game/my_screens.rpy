@@ -82,7 +82,7 @@ screen phoneDown :
 
 #Smartphone home screen
 #Each argument is one application icon that can be avaible or not
-screen telephoneplayer(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
+screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
     imagebutton:
         xalign 0.5
         ypos 150
@@ -202,9 +202,37 @@ screen browserWindowFeed:
                      idle "UI/browser/eventBanner.png"
                  imagebutton:
                      idle "UI/browser/eventBirtdhay.png"
+                     action Jump("insideEventPage")
                  imagebutton:
                      idle "UI/browser/alarmArticle.png"
+                 imagebutton:
+                     idle "UI/browser/chickenArticle.jpg"
+                 imagebutton:
+                     idle "UI/browser/burgerArticle.jpg"
              #add "UI/browser/feedDataBook.png"
+
+         bar value XScrollValue("vp")
+         vbar value YScrollValue("vp")
+
+screen insideEvent:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    side "c b r":
+         area (358, 160, 675, 800)
+
+         viewport id "vp":
+             draggable True
+             vbox:
+                 spacing 0
+                 imagebutton:
+                     idle "UI/browser/EventPage.png"
+                 hbox:
+                     xalign 0.7
+                     spacing 10
+                     imagebutton:
+                         idle "UI/browser/sendPhotosDatabook.png"
+                     imagebutton:
+                         idle "UI/browser/sendPhotosMail.png"
+
 
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
@@ -220,12 +248,12 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [Show("browserWindowSubscribeFake"),SetVariable("GoodState", True),Jump("browserLabelFeed")]
+                action [SetVariable("NeutralState", True),Show("browserWindowSubscribeFake"),Jump("browserLabelFeed")]
 
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),SetVariable("GoodState", False),Jump("browserLabelFeed")]
+                action [SetVariable("NeutralState", False),Show("browserWindowSubscribeTrue"),Jump("browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
@@ -272,7 +300,7 @@ screen dataMap:
     add "smartphone.png" xalign 0.5 yalign 0.5
     add "UI/applications/dataMap.png" xalign 0.5 yalign 0.5
     frame:
-        background #ffffff
+        background "#ffffff"
         xalign 0.5
         yalign 0.65
         text "{color=#000000}{size=-10}Veuillez activer la \ngéolocalisation pour \nconnaitre l'itinéraire{/size}{/color}" xalign 0.5 yalign 0.5

@@ -68,46 +68,41 @@ screen PhoneDialogue(dialogue, items=None):
             yinitial 1.0
             # scrollbars "vertical"
             vbox:
-                null height 20
+                null height 30
                 use nvl_phonetext(dialogue)
                 null height 100
+        hbox:
+            spacing 20
+            xalign 0.5
+            yalign -0.15 #top margin for settings buttons
+            imagebutton:
+                if BluetoothState == True:
+                    idle "UI/settingsIcons/BluetoothON.png"
+                    hover "UI/settingsIcons/BluetoothOFF.png"
+                else:
+                    idle "UI/settingsIcons/BluetoothOFF.png"
+                    hover "UI/settingsIcons/BluetoothON.png"
+                action SetVariable("BluetoothState", not BluetoothState)
+            imagebutton:
+                if DataState == True:
+                    idle "UI/settingsIcons/DataON.png"
+                    hover "UI/settingsIcons/DataOFF.png"
+                else:
+                    idle "UI/settingsIcons/DataOFF.png"
+                    hover "UI/settingsIcons/DataON.png"
+                action SetVariable("DataState", not DataState)
+            imagebutton:
+                if LocalisationState == True:
+                    idle "UI/settingsIcons/LocalisationON.png"
+                    hover "UI/settingsIcons/LocalisationOFF.png"
+                else:
+                    idle "UI/settingsIcons/LocalisationOFF.png"
+                    hover "UI/settingsIcons/LocalisationON.png"
+                action SetVariable("LocalisationState", not LocalisationState)
 
 screen nvl_phonetext(dialogue):
     style_prefix None
     #Buttons settings, bluetooth, localisation...
-    hbox:
-        xalign 0.4
-        spacing 20
-        imagebutton:
-            xpos phone_position_x-0.1
-            ypos phone_position_y
-            if BluetoothState == True:
-                idle "UI/settingsIcons/BluetoothON.png"
-                hover "UI/settingsIcons/BluetoothOFF.png"
-            else:
-                idle "UI/settingsIcons/BluetoothOFF.png"
-                hover "UI/settingsIcons/BluetoothON.png"
-            action SetVariable("BluetoothState", not BluetoothState)
-        imagebutton:
-            xpos phone_position_x
-            ypos phone_position_y
-            if DataState == True:
-                idle "UI/settingsIcons/DataON.png"
-                hover "UI/settingsIcons/DataOFF.png"
-            else:
-                idle "UI/settingsIcons/DataOFF.png"
-                hover "UI/settingsIcons/DataON.png"
-            action SetVariable("DataState", not DataState)
-        imagebutton:
-            xpos phone_position_x+0.1
-            ypos phone_position_y
-            if LocalisationState == True:
-                idle "UI/settingsIcons/LocalisationON.png"
-                hover "UI/settingsIcons/LocalisationOFF.png"
-            else:
-                idle "UI/settingsIcons/LocalisationOFF.png"
-                hover "UI/settingsIcons/LocalisationON.png"
-            action SetVariable("LocalisationState", not LocalisationState)
     $ previous_d_who = None
     for id_d, d in enumerate(dialogue):
         if d.who == None: # Narrator
@@ -193,14 +188,14 @@ style phoneFrame_frame:
     background Transform("smartphone.png", xcenter=0.5,yalign=0.5)
     #foreground Transform("phone_foreground.png", xcenter=0.5,yalign=0.5)
 
-    ysize 815
+    ysize 550
     xsize 495
 
 style phoneFrame_viewport:
     yfill True
     xfill True
 
-    yoffset -20 #margin-top phone frame
+    yoffset 50 #margin-top phone dialogue frame
 
 style phoneFrame_vbox:
     spacing 15 #spacing between dialogue box from same conversation
