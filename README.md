@@ -76,7 +76,7 @@ call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage")
 ```
 Exemple d'usage de la fonction :
 ```python
-addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
+call addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
 ```
 ### Splitter un message à afficher après un gain ou une perte de points
