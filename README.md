@@ -51,15 +51,17 @@ Pour retirer des points de vie sans condition, il suffit d'écrire :
 ### Ajouter ou enlever des points AVEC une condition 
 Pour ajouter ou retirer des points de vie selon une condition, une fonction existe :
 ```python
-call addPoints(value,key,condition, False, "Raté ! \n En laissant ta géolocalisation activée, les données de localisation seront présentent dans les méta données) de ta photo. N’importe qui peut ainsi savoir où tu étais à ce moment-là.", "Bravo  ! \n Tu gagnes des points de géolocalisation, les données de localisation en pensant a la désactiver. De cette façon, ta photo ne contient pas de données de Métadonnées de localisation.") from _call_addPoints
+call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage")
 
 # value = number to increment
 # key = wich lifebar element has to be increment
-# condition = if condition is not empty, increment will be effective if the condition is true else it will decrement
+# condition = condition to check
+# conditionValue = waiting condition value to determine if it's a win or not
 # losemessage = message to display if player lose points
 # winmessage = message to display if player earn points
 # Exemple d'usage de la fonction :
-# addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
+
+addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
     
 ```
 
