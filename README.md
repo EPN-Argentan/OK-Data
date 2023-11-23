@@ -35,7 +35,7 @@ le_nom_de_votre_element_cliquable: 1,
 | Nom de l'élément  | Description |
 | ------------- | ------------- |
 | label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un labl : "label forest :"  |
-| screen  | Élément flottant à afficher et positionner où l'on souhaite dans l'image. La barre de vie privée est un screen appelé à chaque fois que celle-ci doit être affichée  |
+| screen  | Élément flottant à afficher et positionner où l'on souhaite dans l'image. La barre de vie privée est, par exemple, un screen appelé à chaque fois que celle-ci doit être affichée. Les screens sont rangés dans le fichier "my_screens.rpy"  |
 
 ## Les points
 ### Ajouter ou enlever des points SANS une condition
