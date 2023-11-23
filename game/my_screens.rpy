@@ -46,7 +46,7 @@ screen hubElements:
             xpos 446
             ypos 159
             idle "UI/imagebuttons/cadrephoto_idle.png"
-            hover "UI/imagebuttons/cadrephoto_hover.png"
+            hover "UI/Cadre/CadreFrere.png"
             action Jump("SceneGermain")
     #...
     #add list of hub clickable elements here
