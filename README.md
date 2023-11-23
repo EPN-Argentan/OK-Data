@@ -21,7 +21,13 @@ Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le scr
       action Jump("leNomDeVotreScene") #le nom du label où est la scène
 ```
 Afin de rendre l'élément cliquable, il faut au moment opportun du scénario écrire ceci :
+```python
   $ hubClickable["le_nom_de_votre_element_cliquable"]= 1
-Cela peut être définit à n'importe quel moment, soit à la fin d'un scénario soit à l'initialisation (dans script.rpy, dans la liste "$ hubClickable = {" sous la forme "le_nom_de_votre_element_cliquable: 1,")
+```
+Cela peut être définit à n'importe quel moment
+Si vous souhaitez que l'élément soit cliquable dés le début du jeu, il faut dans "script.rpy", dans la liste "$ hubClickable = {" ajouter une ligne :
+```python
+le_nom_de_votre_element_cliquable: 1,
+```
 
 
