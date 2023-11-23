@@ -70,11 +70,11 @@ Si votre message, gagnant ou perdant, est trop long, il risque de ne pas être t
 
 ## Le téléphone
 ### Afficher un message dans le téléphone
-Pour afficher un message depuis l'interface texto du téléphone, il suffit de créer un personnage émetteur (si celui-ci n'existe pas déjà) :
+Pour afficher un message depuis l'interface texto du téléphone, il suffit de créer un personnage émetteur (si celui-ci n'existe pas déjà) dans le fichier *script.rpy* :
 ```python
 define nomDuPersonnage_nvl = Character("nomDuPersonnage", kind=nvl, callback=Phone_ReceiveSound)
 ```
-Puis pour le faire parler, il suffira d'écrire :
+Puis pour le faire parler, il suffira d'écrire à l'endroit souhaité :
 ```python
 nomDuPersonnage_nvl "Le texte à faire dire à votre personnage"
 ```
