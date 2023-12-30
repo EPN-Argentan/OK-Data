@@ -1,4 +1,4 @@
-label SceneGermain:
+label bus:
 hide screen hubElements
 a "mais...mais..."
 a "C'est pas possible c'est Thierry !"
