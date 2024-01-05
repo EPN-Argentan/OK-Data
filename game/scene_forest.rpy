@@ -1,8 +1,8 @@
 label forest :
   nvl clear
   hide screen hubElements
-  show walkInForest
   show screen barre_de_vie
+  show walkingForest
   a "Oh c'est tellement bien d'être en forêt loin des réseaux, je me sens ressourcée"
   call addPoints(2,'point_localisation') from _call_addPoints_2
   a "Je récupère des points de vie privée (localisation)"
