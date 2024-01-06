@@ -798,7 +798,8 @@ image loungeHandIn :
 
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
-
+image barSister = Movie(play="images/sprites/bar/barSister.ogv", size=(1920,1080), loop=True)
+image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size=(1920,1080), loop=True)
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)

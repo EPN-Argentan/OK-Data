@@ -9,7 +9,7 @@ label barOut:
         empty ""
     hide screen dataMap
     scene bar
-    show barPlace
+    show barSister
     empty ""
     s "Ça fait tellement longtemps en effet, je suis super contente de te voir de passage dans le coin !! "
     s  "On fait un Selfie et on l’envoi à Pierre, Il sera content de voir ses sœurs réunies ! "
