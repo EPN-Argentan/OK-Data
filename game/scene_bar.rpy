@@ -27,5 +27,5 @@ label barOutAfter:
     $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 0
     $ hubClickable["phoneCall"]= 1
-    $ hubClickable["watch"]= 1
+    $ hubClickable["watch"]= 0
     jump hub
