@@ -805,12 +805,15 @@ image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size
 
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
-image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
+<<<<<<< Updated upstream
 image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
 
 image getInStore = Movie(play="images/sprites/store/getInStore.ogv", size=(1920,1080), loop=False)
 image homeStore = Movie(play="images/sprites/store/homeStore.ogv", size=(1920,1080), loop=False)
+=======
+image getInsideBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
+>>>>>>> Stashed changes
 
     #Bus is arriving to station, we can see an ad on his back
     # $ renpy.movie_cutscene("sprites/busComeIn/animBusPub.mp4")

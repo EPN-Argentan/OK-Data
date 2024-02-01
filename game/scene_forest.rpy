@@ -4,17 +4,17 @@ label forest :
   show screen barre_de_vie
   show walkingForest
   a "Oh c'est tellement bien d'être en forêt loin des réseaux, je me sens ressourcée"
-  call addPoints(2,'point_localisation') from _call_addPoints_2
+  call addPoints(2,'point_localisation')
   a "Je récupère des points de vie privée (localisation)"
-  call addPoints(2,'point_sociaux') from _call_addPoints_3
+  call addPoints(2,'point_sociaux')
   a "Je récupère des points de vie privée (sociaux)"
-  call addPoints(2,'point_sante') from _call_addPoints_4
+  call addPoints(2,'point_sante')
   a "Je récupère des points de vie privée (santé)"
-  call addPoints(2,'point_administrative') from _call_addPoints_5
+  call addPoints(2,'point_administrative')
   a "Je récupère des points de vie privée (administrative)"
-  call addPoints(2,'point_interet') from _call_addPoints_6
+  call addPoints(2,'point_interet')
   a "Je récupère des points de vie privée (interet)"
-  call addPoints(2,'point_conviction') from _call_addPoints_7
+  call addPoints(2,'point_conviction')
   a "Je récupère des points de vie privée (conviction)"
   a "Je suis trop content"
   $ hubClickable["forest"]= 0

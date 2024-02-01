@@ -24,7 +24,7 @@ Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le scr
 ```python
   if hubClickable["le_nom_de_votre_element_cliquable"] == 1:
     imagebutton:
-      xpos 1400 #la position X du bord supérieur gauche 
+      xpos 1400 #la position X du bord supérieur gauche
       ypos 797 #la position Y du bord supérieur gauche
       idle "UI/imagebuttons/dog_idle.png" #chemin de l'image de l'élément cliquable avec un contour blanc
       hover "UI/imagebuttons/dog_hover.png" #chemin de l'image de l'élément cliquable sans un contour blanc
@@ -71,17 +71,31 @@ Ce nommage vous sera particuliérement utile si vous souhaitez ajoutez ou retire
 ### Ajouter ou enlever des points SANS une condition
 Pour ajouter des points de vie sans condition, il suffit d'écrire :
 ```python
+<<<<<<< Updated upstream
     call addPointsCondition(2,'le_nom_des_points')
 ```
 Pour retirer des points de vie sans condition, il suffit d'écrire :
 ```python
     call addPointsCondition(-2,'le_nom_des_points')
+=======
+  # $ points['le_nom_des_points'][0] += 5 DEPRECIATE
+  call addPoints(5,'point_administrative')
+```
+Pour retirer des points de vie sans condition, il suffit d'écrire :
+```python
+    # $ points['le_nom_des_points'][0] -= 5 DEPRECIATE
+    call addPoints(-5,'point_administrative')
+>>>>>>> Stashed changes
 ```
 
-### Ajouter ou enlever des points AVEC une condition 
+### Ajouter ou enlever des points AVEC une condition
 Pour ajouter ou retirer des points de vie selon une condition, une fonction existe :
 ```python
+<<<<<<< Updated upstream
 call addPointsCondition(value,key,condition, conditionValue, "losemessage", "winmessage")
+=======
+call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage",labelNext)
+>>>>>>> Stashed changes
 
 # value = number to increment
 # key = wich lifebar element has to be increment
@@ -89,11 +103,17 @@ call addPointsCondition(value,key,condition, conditionValue, "losemessage", "win
 # conditionValue = waiting condition value to determine if it's a win or not
 # losemessage = message to display if player lose points
 # winmessage = message to display if player earn points
+# labelNext = jump to the specify label if needed
 ```
 Exemple d'usage de la fonction :
 ```python
+<<<<<<< Updated upstream
 call addPointsCondition(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
+=======
+call addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth",tuto)
+# Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth puis jump au label tuto"
+>>>>>>> Stashed changes
 ```
 ### Splitter un message à afficher après un gain ou une perte de points
 Si votre message, gagnant ou perdant, est trop long, il risque de ne pas être totalement lisible. Pour éviter cela, il suffit d'ajouter dans les textes, à chaque fin d'un message : *"µ"*
@@ -123,5 +143,3 @@ Pour éviter que les anciens messages du téléphone soient visibles au moment d
 ```python
 nvl clear
 ```
-
-
