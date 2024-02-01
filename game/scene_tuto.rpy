@@ -12,9 +12,9 @@ label tuto:
     medBubble "Les données de réseaux sociaux"
     medBubble "Les données administratives"
     medBubble "Pour chacune de ces catégories, un chiffre vous indiquera le nombre de points restants"
-    $ points['point_administrative'][0] -= 5
+    call addPoints(-5,'point_administrative')
     medBubble "Vous perdrez des points si vous ne prêtez pas attentions aux réglages permettant de préserver votre vie privée."
-    $ points['point_administrative'][0] += 5
+    call addPoints(5,'point_administrative')
     medBubble "Au contraire, des points vous seront attribués dans les cas suivants : \nEn suivant les tutoriels d’explication, \nEn faisant les bons choix, \nEn regardant les contenus supplémentaires"
 
     jump hub
