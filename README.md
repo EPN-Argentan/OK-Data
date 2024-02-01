@@ -72,11 +72,21 @@ Ce nommage vous sera particuliérement utile si vous souhaitez ajoutez ou retire
 Pour ajouter des points de vie sans condition, il suffit d'écrire :
 ```python
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     call addPointsCondition(2,'le_nom_des_points')
 ```
 Pour retirer des points de vie sans condition, il suffit d'écrire :
 ```python
     call addPointsCondition(-2,'le_nom_des_points')
+=======
+  # $ points['le_nom_des_points'][0] += 5 DEPRECIATE
+  call addPoints(5,'point_administrative')
+```
+Pour retirer des points de vie sans condition, il suffit d'écrire :
+```python
+    # $ points['le_nom_des_points'][0] -= 5 DEPRECIATE
+    call addPoints(-5,'point_administrative')
+>>>>>>> Stashed changes
 =======
   # $ points['le_nom_des_points'][0] += 5 DEPRECIATE
   call addPoints(5,'point_administrative')
@@ -92,7 +102,11 @@ Pour retirer des points de vie sans condition, il suffit d'écrire :
 Pour ajouter ou retirer des points de vie selon une condition, une fonction existe :
 ```python
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 call addPointsCondition(value,key,condition, conditionValue, "losemessage", "winmessage")
+=======
+call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage",labelNext)
+>>>>>>> Stashed changes
 =======
 call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage",labelNext)
 >>>>>>> Stashed changes
@@ -108,8 +122,13 @@ call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage",
 Exemple d'usage de la fonction :
 ```python
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 call addPointsCondition(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
+=======
+call addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth",tuto)
+# Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth puis jump au label tuto"
+>>>>>>> Stashed changes
 =======
 call addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth",tuto)
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth puis jump au label tuto"
