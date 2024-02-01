@@ -71,11 +71,11 @@ Ce nommage vous sera particuliérement utile si vous souhaitez ajoutez ou retire
 ### Ajouter ou enlever des points SANS une condition
 Pour ajouter des points de vie sans condition, il suffit d'écrire :
 ```python
-  $ points['le_nom_des_points'][0] += 5
+    call addPointsCondition(2,'le_nom_des_points')
 ```
 Pour retirer des points de vie sans condition, il suffit d'écrire :
 ```python
-  $ points['le_nom_des_points'][0] -= 5
+    call addPointsCondition(-2,'le_nom_des_points')
 ```
 
 ### Ajouter ou enlever des points AVEC une condition 
