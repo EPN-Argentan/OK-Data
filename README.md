@@ -81,7 +81,7 @@ Pour retirer des points de vie sans condition, il suffit d'écrire :
 ### Ajouter ou enlever des points AVEC une condition 
 Pour ajouter ou retirer des points de vie selon une condition, une fonction existe :
 ```python
-call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage")
+call addPointsCondition(value,key,condition, conditionValue, "losemessage", "winmessage")
 
 # value = number to increment
 # key = wich lifebar element has to be increment
@@ -92,7 +92,7 @@ call addPoints(value,key,condition, conditionValue, "losemessage", "winmessage")
 ```
 Exemple d'usage de la fonction :
 ```python
-call addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
+call addPointsCondition(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 # Si l'état du Bluetooth est activé alors ajoute 5 points et affiche "Vous avez bien pensé à désactiver le bluetooth" et sinon, retire 5 points et affiche "Vous n'avez pas désactivé le bluetooth"
 ```
 ### Splitter un message à afficher après un gain ou une perte de points
