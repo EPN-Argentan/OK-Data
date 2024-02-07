@@ -79,9 +79,7 @@ Pour retirer des points de vie sans condition, il suffit d'écrire :
 =======
   # $ points['le_nom_des_points'][0] += 5 DEPRECIATE
   call addPoints(5,'point_administrative')
-```
 Pour retirer des points de vie sans condition, il suffit d'écrire :
-```python
     # $ points['le_nom_des_points'][0] -= 5 DEPRECIATE
     call addPoints(-5,'point_administrative')
 ```
