@@ -20,7 +20,6 @@ define medBubble = Character(None, image="lucy", kind=bubble)   # Lucy
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 
-
 # Initialisation du jeu
 label start:
 
