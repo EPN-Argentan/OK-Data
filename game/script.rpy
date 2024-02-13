@@ -20,6 +20,7 @@ define medBubble = Character(None, image="lucy", kind=bubble)   # Lucy
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 
+
 # Initialisation du jeu
 label start:
 
@@ -42,8 +43,8 @@ label start:
     #if value == 0, the element can't be clicked
     $ hubClickable = {
         'dog': 1,
-        'laptop': 0,
-        'CadrePhoto': 1,
+        'laptop': 0 ,
+        'photoFrame': 0,
         'watch': 1,
         'tablet': 0,
         'homeAssistant': 0,
@@ -53,9 +54,9 @@ label start:
     }
 
 #Lancement du Tuto
-jump tuto #To reactivate
+#jump tuto #To reactivate
 #jump browserLabel
-#jump forest
+jump dataZon
 
 #Lancement du Hub
 label hub:
