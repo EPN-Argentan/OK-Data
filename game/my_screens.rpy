@@ -31,7 +31,7 @@ screen hubElements:
             idle "UI/imagebuttons/watch_idle.png"
             hover "UI/imagebuttons/watch_hover.png"
             action OpenURL("http://reddit.com/")
-            #action Jump("browserLabel")
+            #action Jump("browserLabel")dataZon
 
     if hubClickable["forest"] == 1:
         imagebutton:
@@ -41,13 +41,13 @@ screen hubElements:
             hover "UI/imagebuttons/dog_hover.png"
             action Jump("forest")
 
-    if hubClickable["CadrePhoto"] == 1:
+    if hubClickable["laptop"] == 1:
         imagebutton:
-            xpos 446
-            ypos 159
-            idle "UI/imagebuttons/cadrephoto_idle.png"
-            hover "UI/Cadre/CadreFrere.png"
-            action Jump("bus")
+            xpos 199
+            ypos 410
+            idle "UI/imagebuttons/PC_idle.png"
+            hover "UI/imagebuttons/PC_hover.png"
+            action Jump("dataZon")
     #...
     #add list of hub clickable elements here
 
@@ -115,56 +115,58 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
                 xalign 0.5
                 yalign 0.5
                 if A1:
-                    idle "UI/applications/Icons/appOKDATA.png"
-                    hover "UI/applications/Icons/appOKDATA_hover.png"
-                    action Jump("serachInGallery")
+                    idle "UI/applications/appOKDATA.png"
+                    hover "UI/applications/appOKDATA_hover.png"
+                    action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appOKDATA_out.png"
+                    idle "UI/applications/appOKDATA_out.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A2:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("searchInDataCloud")
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
+                    action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A3:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B1:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B2:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B3   :
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
+                    idle "UI/applications/appphoto.png"
+                    hover "UI/applications/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/appphotoout.png"
+
+
     hbox:
         xalign 0.5
         yalign 0.2
@@ -220,6 +222,29 @@ screen browserWindowFeed:
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
 
+screen insideEvent:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    side "c b r":
+         area (358, 160, 675, 800)
+
+         viewport id "vp":
+             draggable True
+             vbox:
+                 spacing 0
+                 imagebutton:
+                     idle "UI/browser/EventPage.png"
+                 hbox:
+                     xalign 0.7
+                     spacing 10
+                     imagebutton:
+                         idle "UI/browser/sendPhotosDatabook.png"
+                     imagebutton:
+                         idle "UI/browser/sendPhotosMail.png"
+
+
+         bar value XScrollValue("vp")
+         vbar value YScrollValue("vp")
+
 screen browserWindowSubscribe:
     add "UI/browser/DataBookToSubscribe.png" xpos 42 ypos 97
     vbox:
@@ -231,11 +256,12 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [Show("browserWindowSubscribeFake"),Call("addPoints",5,"point_sociaux","","","","Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.","browserLabelFeed")]
+                action [SetVariable("NeutralState", True),Show("browserWindowSubscribeFake"),Jump("browserLabelFeed")]
+
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Vous perdez des points ! µEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
+                action [SetVariable("NeutralState", False),Show("browserWindowSubscribeTrue"),Jump("browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:

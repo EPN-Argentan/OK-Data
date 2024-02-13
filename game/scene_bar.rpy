@@ -9,7 +9,7 @@ label barOut:
         empty ""
     hide screen dataMap
     scene bar
-    show barSister
+    show barPlace
     empty ""
     s "Ça fait tellement longtemps en effet, je suis super contente de te voir de passage dans le coin !! "
     s  "On fait un Selfie et on l’envoi à Pierre, Il sera content de voir ses sœurs réunies ! "
@@ -27,5 +27,7 @@ label barOutAfter:
     $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 0
     $ hubClickable["phoneCall"]= 1
-    $ hubClickable["watch"]= 0
+    $ hubClickable["watch"]= 1
+    $ hubClickable["forest"]= 1
+    $ hubClickable["laptop"]= 1
     jump hub
