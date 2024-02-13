@@ -20,7 +20,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
+                text "[points['point_interet'][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
 
         #pastille santé
         hbox:
@@ -30,7 +30,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_sante][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
+                text "[points['point_sante'][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
 
         #pastille conviction
         hbox:
@@ -40,7 +40,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_conviction][0]]" xpos xtextPastille ypos ytextPastille + points['point_conviction'][1]
+                text "[points['point_conviction'][0]]" xpos xtextPastille ypos ytextPastille + points['point_conviction'][1]
 
         #pastille localisation
         hbox:
@@ -50,7 +50,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_localisation][0]]" xpos xtextPastille ypos ytextPastille + points['point_localisation'][1]
+                text "[points['point_localisation'][0]]" xpos xtextPastille ypos ytextPastille + points['point_localisation'][1]
 
         #pastille sociaux
         hbox:
@@ -60,7 +60,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_sociaux][0]]" xpos xtextPastille ypos ytextPastille + points['point_sociaux'][1]
+                text "[points['point_sociaux'][0]]" xpos xtextPastille ypos ytextPastille + points['point_sociaux'][1]
 
         #pastille administrative
         hbox:
@@ -70,7 +70,7 @@ screen barre_de_vie :
                 at custom_zoom
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
-                text "[points[point_administrative][0]]" xpos xtextPastille ypos ytextPastille + points['point_administrative'][1]
+                text "[points['point_administrative'][0]]" xpos xtextPastille ypos ytextPastille + points['point_administrative'][1]
 
 transform custom_zoom:
     zoom 0.3

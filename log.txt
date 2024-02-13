@@ -1,44 +1,548 @@
-2024-02-13 13:13:52 UTC
-Windows-10-10.0.22631
+2024-02-13 14:11:36 UTC
+Windows-10-10.0.22621
 Ren'Py 8.2.0.24012702
 
-Early init took 0.12s
+Early init took 0.25s
+Loading error handling took 0.08s
+Loading script took 0.89s
+Loading save slot metadata took 0.13s
+Loading persistent took 0.00s
+Running init code took 0.21s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.03s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.13s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.29s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.05s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 583, in execute
+    statement_name(stmt_name)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 52, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1781, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 1548, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 16, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 22, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 23, in execute
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1738, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1868, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 368, in substitute
+    s = interpolate(s, kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 310, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'point_interet' is not defined.
+
+While running game code:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 16, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 22, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 23, in execute
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
+NameError: Name 'point_interet' is not defined.
+Resetting cache.
+Early init took 236.61s
 Loading error handling took 0.07s
+Loading script took 0.46s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1391, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1042, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 738, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 16, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 22, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 23, in execute
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+  File "game/screen_barre_de_vie.rpy", line 23, in keywords
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+  File "game/screen_barre_de_vie.rpy", line 23, in <module>
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+NameError: name 'point_interet' is not defined
+
+While running game code:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 16, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 22, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 23, in execute
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+  File "game/screen_barre_de_vie.rpy", line 23, in keywords
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+  File "game/screen_barre_de_vie.rpy", line 23, in <module>
+    text "[points[point_interet][0]]" xpos xtextPastille ypos ytextPastille + points[point_interet][1]
+NameError: name 'point_interet' is not defined
+Resetting cache.
+Early init took 248.78s
+Loading error handling took 0.03s
 Loading script took 0.24s
 Loading save slot metadata took 0.05s
 Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.03s
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Dump and make backups took 0.06s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 3.000000
+Initial gc took 0.07s
+DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.01s
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.21s
 Cleaning stores took 0.00s
 Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.06s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.08s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 3840, 2160)
+primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'Intel'"
-Renderer: b'Intel(R) UHD Graphics 620'
-Version: b'4.6.0 - Build 27.20.100.9664'
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(3648, 2052) drawable=(3648, 2052)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1391, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1042, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 738, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2683, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 26, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 32, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 33, in execute
+    text "[points[point_sante][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1738, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1868, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 368, in substitute
+    s = interpolate(s, kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 310, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'point_sante' is not defined.
+
+While running game code:
+  File "game/scene_dataZon.rpy", line 7, in script
+    a "allons voir mes mails"
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 1, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 11, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 26, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 32, in execute
+    hbox:
+  File "game/screen_barre_de_vie.rpy", line 33, in execute
+    text "[points[point_sante][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
+NameError: Name 'point_sante' is not defined.
+Resetting cache.
+Early init took 285.97s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.19s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 331.72s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.12s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.22s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_bus.rpy", line 3, in script
+    show screen birthdayPicture with moveinbottom
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 650, in execute_show_screen
+    renpy.with_statement(eval(transition_expr))
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1781, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 1548, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2814, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\movetransition.py", line 383, in render
+    old_r = renpy.display.render.render(self.old, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\transform.py", line 957, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 2084, in render
+    cr = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\transform.py", line 957, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\im.py", line 626, in render
+    return cache.get(self, render=True)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\im.py", line 309, in get
+    surf = image.load()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\im.py", line 761, in load
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\im.py", line 711, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'UI/Cadre/frameBirthday.png'.
+
+While loading <renpy.display.im.Image object ('UI/Cadre/frameBirthday.png') at 0x0000000004a788b0>:
+  File "game/scene_bus.rpy", line 3, in script
+    show screen birthdayPicture with moveinbottom
+  File "renpy/common/000statements.rpy", line 650, in execute_show_screen
+    renpy.with_statement(eval(transition_expr))
+OSError: Couldn't find file 'UI/Cadre/frameBirthday.png'.
