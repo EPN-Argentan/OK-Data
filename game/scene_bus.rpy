@@ -90,6 +90,6 @@ screen freeWifi:
             action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention µSur des réseaux publics, vous n'êtes pas protégé ! ","")
 
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
-    
+
 screen cloudPhotos:
     add "smartphone.png" xalign 0.5 yalign 0.5
