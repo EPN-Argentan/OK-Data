@@ -7,4 +7,6 @@ traceback.txt
 *.rpymc
 *.rpyb
 *.bak
+*.DS_Store
 traceback.txt
+errors.txt

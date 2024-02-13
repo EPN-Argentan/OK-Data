@@ -4,9 +4,10 @@
 # condition = if condition is not empty, increment will be effective if the condition is true else it will decrement
 # losemessage = message to display if player lose points
 # winmessage = message to display if player earn points
+# labelNext = allow to jump to another label at the end of the function if needed
 # Exemple d'usage de la fonction :
 # addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
-label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage=''):
+label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage='', labelNext= ''):
     $ oldValue = points[key][0]
     if not condition:
         $ points[key][0] += values
@@ -16,7 +17,7 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         else:
             $ points[key][0] -= values
     $ newValue = points[key][0]
-
+    nvl clear
     #you lose points
     if newValue < oldValue :
         show screen barre_de_vie with hpunch
@@ -50,4 +51,3 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         $ renpy.jump(labelNext)
 
 #label information:
-    

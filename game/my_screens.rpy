@@ -222,29 +222,6 @@ screen browserWindowFeed:
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
 
-screen insideEvent:
-    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
-    side "c b r":
-         area (358, 160, 675, 800)
-
-         viewport id "vp":
-             draggable True
-             vbox:
-                 spacing 0
-                 imagebutton:
-                     idle "UI/browser/EventPage.png"
-                 hbox:
-                     xalign 0.7
-                     spacing 10
-                     imagebutton:
-                         idle "UI/browser/sendPhotosDatabook.png"
-                     imagebutton:
-                         idle "UI/browser/sendPhotosMail.png"
-
-
-         bar value XScrollValue("vp")
-         vbar value YScrollValue("vp")
-
 screen browserWindowSubscribe:
     add "UI/browser/DataBookToSubscribe.png" xpos 42 ypos 97
     vbox:
@@ -256,12 +233,11 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [SetVariable("NeutralState", True),Show("browserWindowSubscribeFake"),Jump("browserLabelFeed")]
-
+                action [Show("browserWindowSubscribeFake"),Call("addPoints",5,"point_sociaux","","","","Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.","browserLabelFeed")]
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [SetVariable("NeutralState", False),Show("browserWindowSubscribeTrue"),Jump("browserLabelFeed")]
+                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Vous perdez des points ! µEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:

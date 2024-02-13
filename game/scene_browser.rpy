@@ -1,4 +1,5 @@
 label browserLabel:
+    $ hubClickable["phoneCall"]= 0
     scene hub
     hide screen hubElements
     hide screen phoneDown
@@ -6,6 +7,7 @@ label browserLabel:
     show screen callPhoneIncoming
     while True:
         empty ""
+
 
 label browserLabelCall:
     s "Alors Maman, qu’est-ce que tu veux que je te montre ? "
@@ -49,3 +51,32 @@ label insideEventPage:
     show screen barre_de_vie
     s "Tu as vu ? Ils proposent de partager des photos"
     s "C'est incroyable"
+    while True:
+        empty ""
+
+#Screens used in scene_browser
+
+screen insideEvent:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    side "c b r":
+         area (358, 160, 675, 800)
+
+         viewport id "vp":
+             draggable True
+             vbox:
+                 spacing 0
+                 imagebutton:
+                     idle "UI/browser/EventPage.png"
+                 hbox:
+                     xalign 0.7
+                     spacing 10
+                     imagebutton:
+                         idle "UI/browser/sendPhotosDatabook.png"
+                         hover "UI/browser/sendPhotosDatabook.png"
+                         action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail","",'hub')
+                     imagebutton:
+                         idle "UI/browser/sendPhotosMail.png"
+                         hover "UI/browser/sendPhotosDatabook.png"
+                         action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait",'hub')
+         bar value XScrollValue("vp")
+         vbar value YScrollValue("vp")
