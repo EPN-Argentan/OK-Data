@@ -50,3 +50,6 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     else:
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
+
+label information:
+    
