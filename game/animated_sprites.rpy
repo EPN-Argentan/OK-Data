@@ -799,20 +799,192 @@ image loungeHandIn :
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
 
-image barSister = Movie(play="images/sprites/bar/barSister.ogv", size=(1920,1080), loop=True)
 
-image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size=(1920,1080), loop=True)
+image walkInForest :
+    "sprites/walkinforest/1WalkInForest1.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/1WalkInForest22.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest001.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/WalkInForest22.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest1.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest2.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest3.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest4.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest5.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest6.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest7.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest8.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest9.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest10.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest11.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest12.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest13.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest14.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest15.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest16.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest17.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest18.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest19.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest20.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest21.png"
+    pause 0.1
+    "sprites/walkinforest/3WalkInForest22.png"
+    pause 0.1
+    repeat
 
-image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
-image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
-image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
-
-image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
-
-image getInStore = Movie(play="images/sprites/store/getInStore.ogv", size=(1920,1080), loop=False)
-image homeStore = Movie(play="images/sprites/store/homeStore.ogv", size=(1920,1080), loop=False)
-
-image getInsideBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
-
-    #Bus is arriving to station, we can see an ad on his back
-    # $ renpy.movie_cutscene("sprites/busComeIn/animBusPub.mp4")
+image zoomPC :
+    "sprites/zoomPC/ZoomPC1.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC2.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC3.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC4.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC5.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC6.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC7.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC8.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC9.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC10.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC11.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC12.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC13.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC14.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC15.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC16.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC17.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC18.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC19.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC20.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC21.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC22.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC23.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC24.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC25.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC26.jpeg"
+    pause 0.1

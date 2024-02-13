@@ -22,5 +22,5 @@ label walkOut :
         empty ""
     $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 1
-    $ hubClickable["forest"]= 1
+    
     jump hub
