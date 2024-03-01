@@ -1,7 +1,7 @@
 label barOut:
     nvl clear
     show screen phoneDown
-    syrielle_nvl "Salut ! voilà l’adresse pour notre rendez-vous ! \n {u}Bar chez Thon Thon \n 16 rue de la sardine{/u}"
+    syrielle_nvl "Salut frangine ! On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
     hide screen hubElements
     show screen dataMap
     empty ""
@@ -11,10 +11,10 @@ label barOut:
     scene bar
     show barPlace
     empty ""
-    s "Ça fait tellement longtemps en effet, je suis super contente de te voir de passage dans le coin !! "
-    s  "On fait un Selfie et on l’envoi à Pierre, Il sera content de voir ses sœurs réunies ! "
-    s "Mais pas de gaffe ! il ne doit pas savoir qu’on prépare son anniversaire ! "
-    a "OK je prends mon téléphone."
+    s "Ça fait longtemps, je suis heureuse de te revoir ! "
+    s "Aller, on se fait un Selfie et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "
+    s "Mais attention ! pas de gaffes sur son anniversaire surprise ! "
+    a "OK, je prends mon téléphone."
     show screen selfie
     with dissolve
     while True:
@@ -22,7 +22,7 @@ label barOut:
 
 label barOutAfter:
     nvl clear
-    call addPoints(5,'point_localisation',LocalisationState, False, "Raté ! \n En laissant ta géolocalisation activée, les données de localisation seront présentent dans les méta données) de ta photo. N’importe qui peut ainsi savoir où tu étais à ce moment-là.", "Bravo  ! \n Tu gagnes des points de géolocalisation, les données de localisation en pensant a la désactiver. De cette façon, ta photo ne contient pas de données de Métadonnées de localisation.") from _call_addPoints
+    call addPoints(5,'point_localisation',LocalisationState, False, "Raté ! \n En laissant ta géolocalisation activée, ta localisation sera présente dans les métadonnées de ta photo. N’importe qui peut ainsi savoir où tu étais.", "Bravo  ! \n Tu gagnes des points de géolocalisation, en pensant à la désactiver. De cette façon, ta photo ne contient pas d'information de localisation.") from _call_addPoints
     hide screen selfie
     $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 0

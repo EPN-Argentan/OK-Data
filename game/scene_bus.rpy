@@ -10,11 +10,10 @@ $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
 $ renpy.pause(3.0, hard=True)
-a "c'est bon, ce n'est pas encore mon bus"
 a "mais...mais..."
-a "C'est pas possible c'est Thierry !"
-a "Mais comment ils ont eu cette photo, je l'ai déjà vu"
-a "C'est moi qui l'ai prise, j'en suis sûre, elle doit être sur mon téléphone"
+a "C'est la photo de Pierre mon frère!"
+a "Mais comment c'est possible, c'est ma photo en plus ! "
+a "Elle doit même encore être sur mon téléphone"
 show screen appsPhone(True,True,True,False,False,False)
 while True:
     empty ""
@@ -24,10 +23,10 @@ label serachInGallery:
     show screen galeryNoFilter
     hide screen galeryOpening
     a "Cherchons"
-    a "Il faut que je fasse le tri"
+    a "Il faut que je fasse le tri !"
     show screen galeryFilter
     hide screen galeryNoFilter
-    a "Non je n'ai rien...comment c'est possible"
+    a "Non je n'ai rien...comment ça se fait ?"
     hide screen appsPhone
     show screen appsPhone(False,True,True,False,False,False)
     a "Elle doit être ailleurs..."
@@ -83,11 +82,11 @@ screen freeWifi:
         imagebutton:
             idle "UI/applications/yes_idle.png"
             hover "UI/applications/yes_hover.png"
-            action Call("addPoints",-5,"point_sociaux","","","Faites attention µSur des réseaux publics, vous n'êtes pas protégé ! ","")
+            action Call("addPoints",-5,"point_sociaux","","","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","")
         imagebutton:
             idle "UI/applications/no_idle.png"
             hover "UI/applications/no_hover.png"
-            action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention µSur des réseaux publics, vous n'êtes pas protégé ! ","")
+            action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","")
 
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
