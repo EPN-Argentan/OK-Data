@@ -10,3 +10,6 @@ traceback.txt
 *.DS_Store
 traceback.txt
 errors.txt
+log.txt
+*.txt
+log.txt

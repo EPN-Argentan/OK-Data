@@ -5,7 +5,7 @@ a "oh là là, ça date ça..."
 call addPoints(-5,'point_sociaux',"","","Chaque photo stocké sur un serveur, n'est plus à vous")
 show screen notificationWinted with dissolve
 a "Oh mince, j'avais complétement zappé !"
-a "Allez je vais le cherche de suite sinon il va encore repartir"
+a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
 $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
@@ -37,7 +37,7 @@ label serachInGallery:
 label searchInDataCloud:
     a "elle est peut être sur le cloud..."
     show screen freeWifi
-    a "il me reste encore un peu de forfais"
+    a "il me reste encore un peu de forfait"
     while True:
         empty ""
 
