@@ -115,56 +115,56 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
                 xalign 0.5
                 yalign 0.5
                 if A1:
-                    idle "UI/applications/appOKDATA.png"
-                    hover "UI/applications/appOKDATA_hover.png"
-                    action Jump("selfie")
+                    idle "UI/applications/Icons/appOKDATA.png"
+                    hover "UI/applications/Icons/appOKDATA_hover.png"
+                    action Jump("searchInDataCloud")
                 else:
-                    idle "UI/applications/appOKDATA_out.png"
+                    idle "UI/applications/Icons/appOKDATA_out.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A2:
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
-                    action Jump("selfie")
+                    idle "UI/applications/Icons/appphoto.png"
+                    hover "UI/applications/Icons/appphotohover.png"
+                    action Jump("serachInGallery")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/Icons/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A3:
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
+                    idle "UI/applications/Icons/appphoto.png"
+                    hover "UI/applications/Icons/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/Icons/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B1:
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
+                    idle "UI/applications/Icons/appphoto.png"
+                    hover "UI/applications/Icons/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/Icons/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B2:
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
+                    idle "UI/applications/Icons/appphoto.png"
+                    hover "UI/applications/Icons/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/Icons/appphotoout.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if B3   :
-                    idle "UI/applications/appphoto.png"
-                    hover "UI/applications/appphotohover.png"
+                    idle "UI/applications/Icons/appphoto.png"
+                    hover "UI/applications/Icons/appphotohover.png"
                     action Jump("selfie")
                 else:
-                    idle "UI/applications/appphotoout.png"
+                    idle "UI/applications/Icons/appphotoout.png"
 
 
     hbox:
