@@ -117,18 +117,18 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
                 if A1:
                     idle "UI/applications/Icons/appOKDATA.png"
                     hover "UI/applications/Icons/appOKDATA_hover.png"
-                    action Jump("searchInDataCloud")
+                    action Jump("searchInGallery")
                 else:
                     idle "UI/applications/Icons/appOKDATA_out.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5
                 if A2:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("serachInGallery")
+                    idle "UI/applications/Icons/appOKDATA.png"
+                    hover "UI/applications/Icons/appOKDATA_hover.png"
+                    action Jump("searchInDataCloud")
                 else:
-                    idle "UI/applications/Icons/appphotoout.png"
+                    idle "UI/applications/Icons/appOKDATA_out.png"
             imagebutton:
                 xalign 0.5
                 yalign 0.5

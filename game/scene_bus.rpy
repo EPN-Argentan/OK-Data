@@ -2,8 +2,8 @@ label bus:
 hide screen hubElements
 show screen birthdayPicture with moveinbottom
 a "oh là là, ça date ça..."
-call addPoints(-5,'point_sociaux',"","","Chaque photo stocké sur un serveur, n'est plus à vous")
-show screen notificationWinted with dissolve
+#show screen notificationWinted with dissolve
+e_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
 a "Oh mince, j'avais complétement zappé !"
 a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
 $ renpy.scene(layer = "screens")
@@ -14,12 +14,13 @@ a "mais...mais..."
 a "C'est la photo de Pierre mon frère!"
 a "Mais comment c'est possible, c'est ma photo en plus ! "
 a "Elle doit même encore être sur mon téléphone"
-show screen appsPhone(True,True,True,False,False,False)
+show screen appsPhone(True,True,False,False,False,False)
 while True:
     empty ""
 
-label serachInGallery:
+label searchInGallery:
     show screen galeryOpening
+    a "..."
     show screen galeryNoFilter
     hide screen galeryOpening
     a "Cherchons"
@@ -55,15 +56,11 @@ label travelToStore:
 
 #All scenes elements used in this label
 screen galeryOpening:
-    add "UI/applications/galeryOpening.jpg" xalign 0.5 yalign 0.5
+    add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen galeryNoFilter:
-    add "UI/applications/galeryNoFilter.jpg" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
-
-screen galeryFilter:
-    add "UI/applications/galeryFilter.jpg" xalign 0.5 yalign 0.5
+    add "UI/applications/galeryNoFilter.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen birthdayPicture:
