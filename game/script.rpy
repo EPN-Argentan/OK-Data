@@ -56,7 +56,8 @@ label start:
 #Lancement du Tuto
 #jump tuto #To reactivate
 #jump browserLabel
-jump dataZon
+#jump dataZon
+jump hub
 
 #Lancement du Hub
 label hub:
