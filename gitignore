@@ -7,4 +7,5 @@ traceback.txt
 *.rpymc
 *.rpyb
 *.bak
+*.tab
 traceback.txt
