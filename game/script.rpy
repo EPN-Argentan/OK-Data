@@ -21,9 +21,9 @@ define medBubble = Character(None, image="lucy", kind=bubble)   # Lucy
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 
 
+
 # Initialisation du jeu
 label start:
-
     $ BluetoothState = True
     $ LocalisationState = True
     $ DataState = True

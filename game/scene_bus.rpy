@@ -9,6 +9,7 @@ a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
 $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
+window auto hide
 $ renpy.pause(3.0, hard=True)
 a "mais...mais..."
 a "C'est la photo de Pierre mon frère!"
@@ -40,6 +41,7 @@ label openDataCloud:
             empty ""
     else:
         show screen dataCloudOpening
+        window auto hide
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
         a "Alors, quelle est la date..."
@@ -67,6 +69,7 @@ label searchInDataCloud:
 label searchInDataBook:
     hide screen cloudNoFilter
     show screen dataBookOpening
+    window auto hide
     $ renpy.pause(1.0, hard=True)
     show screen dataBookSearch
     hide screen dataBookOpening
@@ -81,6 +84,7 @@ label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
     a "Mais non !"
+    window auto hide
     $ renpy.pause(3.0, hard=True)
     hide screen dataBookFound
     show screen outOfBattery
@@ -92,12 +96,16 @@ label travelToStore:
     hide busAdFreeze
     hide screen galeryFilter
     show getInsideBus
+    window auto hide
     $ renpy.pause(3.0, hard=True)
     a "mais comment ils ont obtenu cette photo..."
+    window auto hide
     $ renpy.pause(3.0, hard=True)
     show exitBus
+    window auto hide
     $ renpy.pause(3.0, hard=True)
     show getInStore
+    window auto hide
     $ renpy.pause(3.0, hard=True)
     show homeStore
 
