@@ -14,9 +14,11 @@ a "mais...mais..."
 a "C'est la photo de Pierre mon frère!"
 a "Mais comment c'est possible, c'est ma photo en plus ! "
 a "Elle doit même encore être sur mon téléphone"
-show screen appsPhone(True,True,False,False,False,False)
-while True:
-    empty ""
+
+label homeScreen:
+    show screen appsPhone(True,True,False,False,False,False)
+    while True:
+        empty ""
 
 label searchInGallery:
     show screen galeryOpening
@@ -46,17 +48,42 @@ label openDataCloud:
         empty ""
 
 label inputDate:
-    $ dateInput = renpy.input("Entrez la date recherchée", "1900", length = 4)
+    $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
     if dateInput == "2014":
         jump searchInDataCloud
-    else:        
+    else:
         jump inputDate
 
 label searchInDataCloud:
     show screen cloudNoFilter
-    a "je fais ma recherche" 
-    $ renpy.pause(1.0)
+    a "je fais ma recherche"
+    $ renpy.pause(3.0)
     a "bon, toujours rien"
+    a "j'ai peut-être vu cette photo sur Databook !"
+
+label searchInDataBook:
+    hide screen cloudNoFilter
+    show screen dataBookOpening
+    $ renpy.pause(1.0, hard=True)
+    show screen dataBookSearch
+    hide screen dataBookOpening
+    $ dateInput = renpy.input("Entrez la localisation", "Paris", length = 12)
+    if dateInput == "Barcelone":
+        jump foundInDataBook
+        hide screen dataBookSearch
+    else:
+        jump searchInDataBook
+
+label foundInDataBook:
+    hide screen dataBookSearch
+    show screen dataBookFound
+    a "Mais non !"
+    $ renpy.pause(3.0, hard=True)
+    hide screen dataBookFound
+    show screen outOfBattery
+    a "mince !"
+    a "et en plus j'ai oublié mon chargeur"
+    hide screen outOfBattery
 
 label travelToStore:
     hide busAdFreeze
@@ -71,7 +98,7 @@ label travelToStore:
     $ renpy.pause(3.0, hard=True)
     show homeStore
 
-
+#####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
 screen galeryOpening:
     add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
@@ -80,7 +107,7 @@ screen galeryOpening:
 screen galeryNoFilter:
     add "UI/applications/galeryNoFilter.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
-        
+
     side "c b r":
          area (0.42, 0.3, 330, 500)
 
@@ -90,7 +117,7 @@ screen galeryNoFilter:
                 spacing 20
                 text "2024"  color "#000000"
                 grid 2 4:
-                    spacing 20  
+                    spacing 20
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
@@ -100,7 +127,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/003.jpeg"
                 text "2023"  color "#000000"
                 grid 2 4:
-                    spacing 20  
+                    spacing 20
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/001.jpeg"
@@ -108,7 +135,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/003.jpeg"
                 text "2022"  color "#000000"
                 grid 2 4:
-                    spacing 20  
+                    spacing 20
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/001.jpeg"
@@ -123,9 +150,9 @@ screen galeryNoFilter:
 screen cloudNoFilter:
     add "UI/applications/cloudNoFilter.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
-        
+
     side "c b r":
-         area (0.42, 0.3, 330, 500)
+         area (0.42, 0.3, 330, 600)
 
          viewport id "vp":
             draggable True
@@ -133,7 +160,7 @@ screen cloudNoFilter:
                 spacing 20
                 text "2014"  color "#000000"
                 grid 2 4:
-                    spacing 20  
+                    spacing 10
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
@@ -148,10 +175,16 @@ screen dataCloudOpening:
     add "UI/applications/cloudOpening.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
-
 screen dataCloudSearching:
-    add "UI/applications/cloudOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/cloudDateInput.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    hbox:
+        xalign 0.58
+        yalign 0.22
+        imagebutton:
+            idle "UI/applications/Exit.png"
+            hover "UI/applications/Exit.png"
+            action Jump("homeScreen")
 
 screen birthdayPicture:
     add "UI/Cadre/frameBirthday.png" xalign 0.5 yalign 0.5
@@ -179,3 +212,27 @@ screen freeWifi:
 
 screen cloudPhotos:
     add "smartphone.png" xalign 0.5 yalign 0.5
+
+screen dataBookOpening:
+    add "UI/applications/dataBookOpening.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+screen dataBookSearch:
+    add "UI/applications/dataBookSearch.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    hbox:
+        xalign 0.58
+        yalign 0.22
+        imagebutton:
+            idle "UI/applications/Exit.png"
+            hover "UI/applications/Exit.png"
+            action Jump("homeScreen")
+
+
+screen dataBookFound:
+    add "UI/applications/dataBookFound.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+screen outOfBattery:
+    add "UI/applications/outBattery.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5

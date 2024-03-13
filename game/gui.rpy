@@ -133,16 +133,16 @@ define gui.namebox_tile = False
 
 ## L’emplacement du dialogue relatif à la zone de texte. La valeur peut être un
 ## nombre entier de pixels depuis la gauche ou le haut ou 0.5 pour le centre.
-define gui.dialogue_xpos = 0.5
+define gui.dialogue_xpos = 0.3
 define gui.dialogue_ypos = 0.4
 
 ## La largeur maximale en pixels de la zone de dialogue.
-define gui.dialogue_width = 600
+define gui.dialogue_width = 820
 
 ## L’alignement horizontal de la zone de dialogue. La valeur peut être 0.0 pour
 ## un alignement à gauche, 0.5 pour le centrer et 1.0 pour un alignement à
 ## droite.
-define gui.dialogue_text_xalign = 0.5
+define gui.dialogue_text_xalign = 0.0
 
 
 ## Boutons #####################################################################
