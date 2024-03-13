@@ -52,6 +52,7 @@ label openDataCloud:
 label inputDate:
     $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
     if dateInput == "2014":
+        hide screen dataCloudSearching
         jump searchInDataCloud
     else:
         jump inputDate
@@ -59,12 +60,12 @@ label inputDate:
 label searchInDataCloud:
     show screen cloudNoFilter
     a "je fais ma recherche"
-    empty ""
+    window auto hide
     $ renpy.pause(3.0)
-    empty ""
     a "bon, toujours rien"
     a "j'ai peut-être vu cette photo sur Databook !"
-    empty ""
+    window auto hide
+    $ renpy.pause(1.0)
 
 label searchInDataBook:
     hide screen cloudNoFilter
@@ -163,7 +164,7 @@ screen cloudNoFilter:
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
     side "c b r":
-         area (0.42, 0.3, 330, 600)
+         area (0.42, 0.3, 330, 550)
 
          viewport id "vp":
             draggable True
@@ -237,7 +238,7 @@ screen dataBookSearch:
         imagebutton:
             idle "UI/applications/Exit.png"
             hover "UI/applications/Exit.png"
-            action Jump("homeScreen")
+            action Jump("searchInDataCloud")
 
 
 screen dataBookFound:
