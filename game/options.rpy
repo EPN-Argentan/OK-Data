@@ -17,6 +17,8 @@
 
 define config.name = _("OKDATA")
 
+define config.window_auto_hide =  "renpy.pause"  
+define config.window = "hide"
 
 ## Détermine si le titre renseigné plus haut est affiché sur l'écran du menu
 ## principal Configurez-le à False (Faux) pour cacher le titre.

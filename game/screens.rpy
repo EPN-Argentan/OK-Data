@@ -144,7 +144,6 @@ style namebox:
     xsize gui.namebox_width
     ypos gui.name_ypos
     ysize gui.namebox_height
-
     #background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
@@ -152,11 +151,12 @@ style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
+    font "fonts/FiraSans-MediumItalic.ttf"
 
 style say_dialogue:
     properties gui.text_properties("dialogue")
-
     color "#000"
+    font "fonts/FiraSans-Regular.ttf"
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
@@ -176,24 +176,29 @@ style say_dialogue:
 screen input(prompt):
     style_prefix "input"
 
-    window:
-
+    frame:
+        background Frame("gui/input_frame_bg.png")
+        xalign 0.5
+        yalign 0.8
+        xpadding 30
+        ypadding 30
+        xminimum 500
         vbox:
-            xanchor gui.dialogue_text_xalign
-            xpos gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
-
+            spacing 10
             text prompt style "input_prompt"
             input id "input"
 
 style input_prompt is default
 
 style input_prompt:
+    color "#000"
+    font "fonts/FiraSans-Regular.ttf"
     xalign gui.dialogue_text_xalign
     properties gui.text_properties("input_prompt")
 
 style input:
+    color "#000"
+    font "fonts/FiraSans-Bold.ttf"
     xalign gui.dialogue_text_xalign
     xmaximum gui.dialogue_width
 

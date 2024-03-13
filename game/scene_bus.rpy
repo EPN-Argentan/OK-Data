@@ -57,9 +57,12 @@ label inputDate:
 label searchInDataCloud:
     show screen cloudNoFilter
     a "je fais ma recherche"
+    empty ""
     $ renpy.pause(3.0)
+    empty ""
     a "bon, toujours rien"
     a "j'ai peut-être vu cette photo sur Databook !"
+    empty ""
 
 label searchInDataBook:
     hide screen cloudNoFilter
@@ -206,7 +209,7 @@ screen freeWifi:
         imagebutton:
             idle "UI/applications/no_idle.png"
             hover "UI/applications/no_hover.png"
-            action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","openDataCloud")
+            action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","Dans la mesure du possible, évitez les réseaux wifi publics","openDataCloud")
 
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 

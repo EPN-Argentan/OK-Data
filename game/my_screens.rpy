@@ -96,13 +96,6 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
         ypos 150
         idle "smartphone.png"
 
-    imagebutton:
-        xalign 0.5
-        yalign 0.95
-        idle "masquetelephone.png"
-        hover "masquetelhiver.png"
-        action Hide("telephoneplayer"), Jump("lPhoneDown")
-
     frame:
         background None
         xalign 0.5

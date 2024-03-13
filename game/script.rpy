@@ -9,7 +9,7 @@ define config.nvl_adv_transition = Dissolve(0.2)
 
 define s = Character('Syrielle', color="#c8ffc8")
 
-define a = Character('Alexia', color="#209792")
+define a = Character('Alexia', color="#7A1EBB")
 
 define m = Character('Maman', color="#209792")
 
