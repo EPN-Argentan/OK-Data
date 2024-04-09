@@ -3,9 +3,9 @@ define algo = Character("")
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt',True],
-    'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté',False],
-    'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction',False],
+    'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt', 'intérêt',True],
+    'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté', 'santé',False],
+    'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found
@@ -22,7 +22,7 @@ define whatInsideBottom = ""
 init python:
     def displayData() :
         for key, value in combinaisonClues.items():
-            if value[6] == True:
+            if value[7] == True:
                 print(len(combinaisonClues))
                 print(value[5])
                 renpy.call_screen(value[5])
@@ -310,36 +310,15 @@ screen algorithmnMenu :
     vbox:
         xalign 0.9
         yalign 0.3
-        spacing 35
+        spacing 30
         #pastille d'intérêt
-        imagebutton:
-            idle "UI/barre_de_vie/intérêt.png"
-            at custom_zoom
-            action NullAction()
-        #pastille santé
-        imagebutton:
-            idle "UI/barre_de_vie/santé.png"
-            at custom_zoom
-            action NullAction()
-        #pastille conviction
-        imagebutton:
-            idle "UI/barre_de_vie/conviction.png"
-            at custom_zoom
-            action NullAction()
-        #pastille localisation
-        imagebutton:
-            idle "UI/barre_de_vie/conviction.png"
-            at custom_zoom
-            action NullAction()
-        #pastille sociaux
-        imagebutton:
-            idle "UI/barre_de_vie/sociaux.png"
-            at custom_zoom
-            action NullAction()
-        #pastille administrative
-        imagebutton:
-            idle "UI/barre_de_vie/administrative.png"
-            at custom_zoom
-            action NullAction()
+        for key, value in combinaisonClues.items():
+            imagebutton :
+                if value[4] == False:
+                    idle "UI/barre_de_vie/"+value[6]+".png"
+                else:
+                    idle At("UI/barre_de_vie/"+value[6]+".png", outline_transform(20, "#ffffff", 4.0))
+                at custom_zoom
+                action NullAction()
 transform custom_zoom:
-    zoom 0.3
+    zoom 0.7

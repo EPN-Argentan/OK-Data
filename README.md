@@ -227,7 +227,7 @@ Une fois votre ensemble (screen créée), vous devez déclarer quels éléments 
 Pour cela, toujours dans *scene_algorithm*, rendez vous dans la variable *define combinaisonClues*. Il ne vous reste plus qu'à ajouter un élément en respectant cette nomenclature :
 
 ```python
-'IntituléDeVotreIndice' : ['Nom de votre indice n°1','Nom de votre indice n°2',"MEssage à laissé afficher comme trace de l'indice révélé \n","Dialogue à afficher quand l'indice est trouvé",False, 'nomDeVotreEnsemble',False]
+'IntituléDeVotreIndice' : ['Nom de votre indice n°1','Nom de votre indice n°2',"MEssage à laissé afficher comme trace de l'indice révélé \n","Dialogue à afficher quand l'indice est trouvé",False, 'nomDeVotreEnsemble',"nom de l'image png de l'icône à afficher sur le coté",False]
 ```
 À noter que si vous souhaitez que votre ensemble d'indice soit le premier révélé dans la séquence, il suffit de placer votre élément en premier de la liste et de mettre le dernier de celui-ci argument à *True* et bien vérifier que tous les autres sont à *False*.
 
@@ -235,8 +235,8 @@ Vous devriez obtenir quelquechose comme ceci :
 
 ```python
 define combinaisonClues = {
-  'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt',True],
-  'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté',False],
-  'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction',False],
+    'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt', 'intérêt',True],
+    'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté', 'santé',False],
+    'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction', 'conviction',False],
 }
 ```
