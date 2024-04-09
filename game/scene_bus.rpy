@@ -44,6 +44,7 @@ label openDataCloud:
         window auto hide
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
+        hide screen dataCloudOpening
         a "Alors, quelle est la date..."
         jump inputDate
     while True:
@@ -85,6 +86,7 @@ label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
     a "Mais non !"
+    e_nvl "quand vous partagé une photo sur un réseau social, celle-ci ne vous appartient plus."
     window auto hide
     $ renpy.pause(3.0, hard=True)
     hide screen dataBookFound
@@ -99,16 +101,18 @@ label travelToStore:
     show getInsideBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
-    a "mais comment ils ont obtenu cette photo..."
-    window auto hide
-    $ renpy.pause(3.0, hard=True)
+    empty ""
     show exitBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show getInStore
-    window auto hide
+    a "Yo !"
+
+label insideStore:
+    show getInStore
     $ renpy.pause(3.0, hard=True)
     show homeStore
+    $ renpy.pause(3.0, hard=True)
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label

@@ -50,4 +50,26 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
 
-#label information:
+
+label checkClueALL():
+    python:
+        for key, value in combinaisonClues.items():
+            if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
+                if value[4] == False:
+                    phrase = value[3]
+                    renpy.say(e_nvl, phrase)
+                    cluesDisplay += value[2]
+                    value[4] = True
+                    if categoriesIndex < len(combinaisonClues) :
+                        #categoriesClues[categoriesIndex] = False
+                        #categoriesClues[categoriesIndex+1] = True
+                        categoriesIndex += 1
+                    else:
+                        renpy.jump('endAlgorithm')
+                else:
+                    renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+
+#clean the clues spot
+label clearClues():
+    $ whatInsideTop = ""
+    $ whatInsideBottom = ""

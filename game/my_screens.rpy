@@ -4,32 +4,32 @@ screen hubElements:
         imagebutton:
             xpos 1400
             ypos 797
-            idle "UI/imagebuttons/dog_idle.png"
-            hover "UI/imagebuttons/dog_hover.png"
+            idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/dog.png"
             action Jump("walkOut")
 
     if hubClickable["phone"] == 1:
         imagebutton:
             xpos 1175
             ypos 607
-            idle "UI/imagebuttons/phone_idle.png"
-            hover "UI/imagebuttons/phone_hover.png"
+            idle At('UI/imagebuttons/phone.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/phone.png"
             action Jump("barOut")
 
     if hubClickable["phoneCall"] == 1:
         imagebutton:
             xpos 1175
             ypos 607
-            idle "UI/imagebuttons/phone_idle.png"
-            hover "UI/imagebuttons/phone_hover.png"
+            idle At('UI/imagebuttons/phone.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/phone.png"
             action Jump("browserLabel")
 
     if hubClickable["watch"] == 1:
         imagebutton:
             xpos 230
             ypos 838
-            idle "UI/imagebuttons/watch_idle.png"
-            hover "UI/imagebuttons/watch_hover.png"
+            idle At('UI/imagebuttons/watch.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/watch.png"
             action OpenURL("http://reddit.com/")
             #action Jump("browserLabel")dataZon
 
@@ -37,16 +37,16 @@ screen hubElements:
         imagebutton:
             xpos 1400
             ypos 797
-            idle "UI/imagebuttons/dog_idle.png"
-            hover "UI/imagebuttons/dog_hover.png"
+            idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/dog.png"
             action Jump("forest")
 
     if hubClickable["laptop"] == 1:
         imagebutton:
             xpos 199
             ypos 410
-            idle "UI/imagebuttons/PC_idle.png"
-            hover "UI/imagebuttons/PC_hover.png"
+            idle "UI/imagebuttons/PC.png"
+            hover "UI/imagebuttons/PC.png"
             action Jump("dataZon")
     #...
     #add list of hub clickable elements here

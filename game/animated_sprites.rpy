@@ -799,11 +799,19 @@ image loungeHandIn :
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
 image barSister = Movie(play="images/sprites/bar/barSister.ogv", size=(1920,1080), loop=True)
+
 image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size=(1920,1080), loop=True)
+
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
+
 image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
-image getInsideBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
+image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
+
+image getInStore = Movie(play="images/sprites/bus/getInStore.ogv", size=(1920,1080), loop=False)
+image homeStore = Movie(play="images/sprites/bus/homeStore.ogv", size=(1920,1080), loop=False)
+image computerStore = Movie(play="images/sprites/bus/computerStore.ogv", size=(1920,1080), loop=False)
+
 
 
 image walkInForest :

@@ -15,7 +15,7 @@ define m = Character('Maman', color="#209792")
 
 define med = Character('Mediateur', color="#209792")
 
-define medBubble = Character(None, image="lucy", kind=bubble)   # Lucy
+define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
