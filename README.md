@@ -129,3 +129,114 @@ Pour éviter que les anciens messages du téléphone soient visibles au moment d
 ```python
 nvl clear
 ```
+
+#### Mini jeu de l'algorithme
+Le jeu de l'algorithme consiste à associer deux éléments (*clues*) pour révéler un indice.
+Pour ajouter des éléments à ce jeu, il vous suffit, dans un premier temps, de créer un ensemble d'éléments. Cet ensemble d'éléments dans comporter les deux éléments à associer ensemble et les autres ne servant qu'à être des leurres.
+Rendez-vous dans le script *scene_algorithm* et créez un screen comme ceci :
+
+```python
+screen nomDeVotreEnsemble:
+  text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+```
+
+Ensuite, ajoutez un *Dragroup* ainsi :
+```python
+screen nomDeVotreEnsemble:
+  text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    draggroup:
+```
+
+Dans ce *dragGroup*, ajoutez deux *drag* qui serviront de zone de dépôt où le joueur viendra *drag and drop* chacun de ses indices à combiner :
+
+```python
+screen nomDeVotreEnsemble:
+  text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    draggroup:
+      drag:
+          drag_name "Drop Zone Top"
+          child "images/UI/algorithm/dropZone.png"
+          align(0.5,0.3)
+          draggable False
+          droppable True   
+      drag:
+          drag_name "Drop Zone Bottom"
+          child "images/UI/algorithm/dropZone.png"
+          align(0.5,0.8)
+          draggable False
+          droppable True
+```
+Enfin, ajoutez autant d'éléments *drags* que d'indices que vous souhaitez mettre dedans :
+
+```python
+drag:
+  drag_name "Nom de votre indice"
+  child "images/UI/algorithm/nomDeVotreImageIndice.png"
+  align(positionX,positionY)
+  draggable True
+  droppable False
+  dragged drag_placed
+  drag_raise True
+```  
+À la fin vous devez obtenir quelque chose comme ça :
+
+```python
+screen catSanté:
+    text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    draggroup:
+        drag:
+            drag_name "Miniature Youtube"
+            child "images/UI/algorithm/youtubeMini.png"
+            align(0.1,0.2)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Historique de recherche"
+            child "images/UI/algorithm/searchHistory.png"
+            align(0.3,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Logged"
+            child "images/UI/algorithm/logged.png"
+            align(0.8,0.6)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True  
+
+        drag:
+            drag_name "Drop Zone Top"
+            child "images/UI/algorithm/dropZone.png"
+            align(0.5,0.3)
+            draggable False
+            droppable True   
+        drag:
+            drag_name "Drop Zone Bottom"
+            child "images/UI/algorithm/dropZone.png"
+            align(0.5,0.8)
+            draggable False
+            droppable True
+```
+
+Une fois votre ensemble (screen créée), vous devez déclarer quels éléments indices combinés ensemble vont donner la bonne réponse.
+Pour cela, toujours dans *scene_algorithm*, rendez vous dans la variable *define combinaisonClues*. Il ne vous reste plus qu'à ajouter un élément en respectant cette nomenclature :
+
+```python
+'IntituléDeVotreIndice' : ['Nom de votre indice n°1','Nom de votre indice n°2',"MEssage à laissé afficher comme trace de l'indice révélé \n","Dialogue à afficher quand l'indice est trouvé",False, 'nomDeVotreEnsemble',False]
+```
+À noter que si vous souhaitez que votre ensemble d'indice soit le premier révélé dans la séquence, il suffit de placer votre élément en premier de la liste et de mettre le dernier de celui-ci argument à *True* et bien vérifier que tous les autres sont à *False*.
+
+Vous devriez obtenir quelquechose comme ceci :
+
+```python
+define combinaisonClues = {
+  'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt',True],
+  'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté',False],
+  'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction',False],
+}
+```

@@ -61,8 +61,6 @@ label checkClueALL():
                     cluesDisplay += value[2]
                     value[4] = True
                     if categoriesIndex < len(combinaisonClues) :
-                        #categoriesClues[categoriesIndex] = False
-                        #categoriesClues[categoriesIndex+1] = True
                         categoriesIndex += 1
                     else:
                         renpy.jump('endAlgorithm')
