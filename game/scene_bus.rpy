@@ -101,7 +101,11 @@ label travelToStore:
     show getInsideBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
-    empty ""
+    #empty ""
+    show insideBus
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
+    #empty ""
     show exitBus
     window auto hide
     $ renpy.pause(3.0, hard=True)

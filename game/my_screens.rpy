@@ -45,9 +45,26 @@ screen hubElements:
         imagebutton:
             xpos 199
             ypos 410
-            idle "UI/imagebuttons/PC.png"
+            idle At('UI/imagebuttons/PC.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/PC.png"
             action Jump("dataZon")
+
+    if hubClickable["tablet"] == 1:
+        imagebutton:
+            xpos 275
+            ypos 765
+            idle At('UI/imagebuttons/tablet.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/tablet.png"
+            action Jump("algorithmGame")
+    
+    if hubClickable["photoFrame"] == 1:
+        imagebutton:
+            xpos 435
+            ypos 145
+            idle At('UI/imagebuttons/photoFrame.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/photoFrame.png"
+            action Jump("bus")
+
     #...
     #add list of hub clickable elements here
 

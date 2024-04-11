@@ -45,7 +45,7 @@ label start:
         'dog': 1,
         'laptop': 0 ,
         'photoFrame': 0,
-        'watch': 1,
+        'watch': 0,
         'tablet': 0,
         'homeAssistant': 0,
         'phone': 0,
@@ -61,6 +61,7 @@ jump tuto
 
 #Lancement du Hub
 label hub:
+    hide screen phoneDown
     scene hub
     show Player_Sitting
     show screen barre_de_vie

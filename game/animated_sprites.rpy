@@ -806,6 +806,7 @@ image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
 
 image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
+image insideBus = Movie(play="images/sprites/bus/insideBus.ogv", size=(1920,1080), loop=False)
 image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
 
 image getInStore = Movie(play="images/sprites/bus/getInStore.ogv", size=(1920,1080), loop=False)
