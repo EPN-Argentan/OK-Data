@@ -8,7 +8,14 @@ label browserLabel:
     while True:
         empty ""
 
-
+label browserLabelCall:
+    show screen callPhoneAnswer
+    s "Ouiiiii maman"
+    m "Salut ma grande"
+    m "ça va ?"
+    jump browserLabelAfterCall
+    while True:
+        empty ""
 
 label browserLabelAfterCall:
     hide screen callPhoneIncoming
@@ -53,24 +60,23 @@ label insideEventPage:
 screen insideEvent:
     add "UI/browser/frameDataBook.png" xpos 42 ypos 97
     side "c b r":
-         area (358, 160, 675, 800)
-
-         viewport id "vp":
-             draggable True
-             vbox:
-                 spacing 0
-                 imagebutton:
-                     idle "UI/browser/EventPage.png"
-                 hbox:
-                     xalign 0.7
-                     spacing 10
-                     imagebutton:
-                         idle "UI/browser/sendPhotosDatabook.png"
-                         hover "UI/browser/sendPhotosDatabook.png"
-                         action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail","",'hub')
-                     imagebutton:
-                         idle "UI/browser/sendPhotosMail.png"
-                         hover "UI/browser/sendPhotosDatabook.png"
-                         action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait",'hub')
-         bar value XScrollValue("vp")
-         vbar value YScrollValue("vp")
+        area (358, 160, 675, 800)
+        viewport id "vp":
+            draggable True
+            vbox:
+                spacing 0
+                imagebutton:
+                    idle "UI/browser/EventPage.png"
+                hbox:
+                    xalign 0.7
+                    spacing 10
+                    imagebutton:
+                        idle "UI/browser/sendPhotosDatabook.png"
+                        hover "UI/browser/sendPhotosDatabook.png"
+                        action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail","",'hub')
+                    imagebutton:
+                        idle "UI/browser/sendPhotosMail.png"
+                        hover "UI/browser/sendPhotosDatabook.png"
+                        action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait",'hub')
+        bar value XScrollValue("vp")
+        vbar value YScrollValue("vp")

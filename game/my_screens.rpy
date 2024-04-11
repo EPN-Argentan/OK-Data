@@ -193,27 +193,27 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
 screen browserWindowFeed:
     add "UI/browser/frameDataBook.png" xpos 42 ypos 97
     side "c b r":
-         area (358, 160, 675, 800)
+        area (358, 160, 675, 800)
 
-         viewport id "vp":
-             draggable True
-             vbox:
-                 spacing 30
-                 imagebutton:
-                     idle "UI/browser/eventBanner.png"
-                 imagebutton:
-                     idle "UI/browser/eventBirtdhay.png"
-                     action Jump("insideEventPage")
-                 imagebutton:
-                     idle "UI/browser/alarmArticle.png"
-                 imagebutton:
-                     idle "UI/browser/chickenArticle.jpg"
-                 imagebutton:
-                     idle "UI/browser/burgerArticle.jpg"
-             #add "UI/browser/feedDataBook.png"
+        viewport id "vp":
+            draggable True
+            vbox:
+                spacing 30
+                imagebutton:
+                    idle "UI/browser/eventBanner.png"
+                imagebutton:
+                    idle "UI/browser/eventBirtdhay.png"
+                    action Jump("insideEventPage")
+                imagebutton:
+                    idle "UI/browser/alarmArticle.png"
+                imagebutton:
+                    idle "UI/browser/chickenArticle.jpg"
+                imagebutton:
+                    idle "UI/browser/burgerArticle.jpg"
+            #add "UI/browser/feedDataBook.png"
 
-         bar value XScrollValue("vp")
-         vbar value YScrollValue("vp")
+        bar value XScrollValue("vp")
+        vbar value YScrollValue("vp")
 
 screen browserWindowSubscribe:
     add "UI/browser/DataBookToSubscribe.png" xpos 42 ypos 97

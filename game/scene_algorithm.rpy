@@ -11,15 +11,16 @@ define combinaisonClues = {
 #Track how many clues have been found
 define categoriesIndex = 0
 
+#Text to display with clue resume
 define cluesDisplay = ""
 
-define dragX = 0.1
 
 define whatInsideTop = ""
 define whatInsideBottom = ""
 
 #Function to check wich draggable object is on which
 init python:
+
     def displayData() :
         for key, value in combinaisonClues.items():
             if value[7] == True:
@@ -28,13 +29,25 @@ init python:
                 renpy.call_screen(value[5])
 
     def drag_placed(drags, drop):
+        global whatInsideTop
+        global whatInsideBottom
         if not drop: 
             return
-
-        drags[0].snap(drop.x, drop.y, 0.5)
         # Update the store variables
-        store.draggable = drags[0].drag_name
-        store.droppable = drop.drag_name
+        if drop:
+            drags[0].snap(drop.x,drop.y)
+            store.draggable = drags[0].drag_name
+            store.droppable = drop.drag_name
+            if droppable == "Drop Zone Top":
+                whatInsideTop = drags[0].drag_name
+                print(whatInsideTop)    
+            if droppable == "Drop Zone Bottom":
+                whatInsideBottom = drags[0].drag_name
+                print(whatInsideBottom)
+            if whatInsideBottom != "" and whatInsideTop != "":
+                renpy.call('checkClueALL')
+                renpy.call('clearClues')
+            return
         
         return True
     
@@ -46,13 +59,14 @@ label algorithmGame:
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
-    if droppable == "Drop Zone Top":
-        $ whatInsideTop = draggable
-    if droppable == "Drop Zone Bottom":
-        $ whatInsideBottom = draggable
-    if whatInsideTop != "" and whatInsideBottom != "":
-        call checkClueALL()
-        call clearClues()
+
+    #if droppable == "Drop Zone Top":
+    #    $ whatInsideTop = draggable
+    #if droppable == "Drop Zone Bottom":
+    #    $ whatInsideBottom = draggable
+    #if whatInsideTop != "" and whatInsideBottom != "":
+    #    call checkClueALL()
+    #    call clearClues()
     call algorithmGame
 
 label endAlgorithm:
