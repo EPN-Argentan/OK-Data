@@ -24,10 +24,6 @@ label barOutAfter:
     nvl clear
     call addPoints(5,'point_localisation',LocalisationState, False, "Raté ! \n En laissant ta géolocalisation activée, ta localisation sera présente dans les métadonnées de ta photo. N’importe qui peut ainsi savoir où tu étais.", "Bravo  ! \n Tu gagnes des points de géolocalisation, en pensant à la désactiver. De cette façon, ta photo ne contient pas d'information de localisation.") from _call_addPoints
     hide screen selfie
-    $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 0
     $ hubClickable["phoneCall"]= 1
-    $ hubClickable["watch"]= 1
-    $ hubClickable["forest"]= 1
-    $ hubClickable["laptop"]= 1
     jump hub

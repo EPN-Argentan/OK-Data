@@ -10,7 +10,7 @@ label browserLabel:
 
 label browserLabelCall:
     show screen callPhoneAnswer
-    s "Ouiiiii maman"
+    a "Ouiiiii maman"
     m "Salut ma grande"
     m "ça va ?"
     jump browserLabelAfterCall
@@ -23,9 +23,9 @@ label browserLabelAfterCall:
     scene lounge
     show loungeIdle
     show screen phoneDown
-    s "Alors Maman, qu’est-ce que je peux faire pour toi ?"
+    a "Alors Maman, qu’est-ce que je peux faire pour toi ?"
     m "Un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, je ne sais pas comment ça marche … "
-    s "Mais tu n’as pas de compte Databook !? il va falloir t’en créer un."
+    a "Mais tu n’as pas de compte Databook !? il va falloir t’en créer un."
     m "Oh je préfère que tu le créé toi !Tiens voila mes papiers d’identité si tu en as besoin."
     hide screen phoneDown
     show loungeZoom
@@ -44,14 +44,16 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    s "Regarde l'événement"
+    a "Regarde l'événement"
+    while True:
+        empty ""
 
 label insideEventPage:
     hide screen browserWindowFeed
     show screen insideEvent
     show screen barre_de_vie
-    s "Tu as vu ? Ils proposent de partager des photos"
-    s "C'est incroyable"
+    a "Tu as vu ? Ils proposent de partager des photos"
+    m "C'est incroyable"
     while True:
         empty ""
 

@@ -24,7 +24,7 @@ label walkOut :
     ##Set hub elements clickable
     $ hubClickable["dog"]= 0
     $ hubClickable["phone"]= 1
-    $ hubClickable["tablet"]= 1
+    $ hubClickable["tablet"]= 0
     $ hubClickable["laptop"]= 1
     $ hubClickable["walkout"]= 1
     $ hubClickable["forest"]= 1
