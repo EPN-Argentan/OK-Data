@@ -4,6 +4,8 @@ define e_nvl = Character("Médiateur", kind=nvl, callback=Phone_ReceiveSound)
 define syrielle_nvl = Character("Syrielle", kind=nvl, callback=Phone_ReceiveSound)
 define sepharo_nvl = Character("Sepharo", kind=nvl, callback=Phone_ReceiveSound)
 
+define info = Character(None, image="info", kind=bubble)
+
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.2)
 

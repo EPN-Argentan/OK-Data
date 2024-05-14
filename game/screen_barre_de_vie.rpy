@@ -6,12 +6,9 @@ screen barre_de_vie :
 #position of text inside green pastille
     $ xtextPastille = -20
     $ ytextPastille = -5
-
-    zorder 10
     hbox:
         xalign 0.1
         yalign 0.05
-
         #pastille d'intérêt
         hbox:
             spacing xposPastille    
