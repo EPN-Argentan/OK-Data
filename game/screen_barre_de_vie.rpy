@@ -1,5 +1,7 @@
-screen barre_de_vie :
+default mtt = MouseTooltip(Text(""), padding={"x": 10, "y": -10})
 
+screen barre_de_vie :
+    add mtt
 #position of green pastille
     $ xposPastille = -30
     $ yposPastille = -20
@@ -15,6 +17,8 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/intérêt.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Intérêt"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_interet'][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
@@ -25,6 +29,8 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/santé.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Santé"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_sante'][0]]" xpos xtextPastille ypos ytextPastille + points['point_sante'][1]
@@ -35,6 +41,8 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/conviction.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Conviction"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_conviction'][0]]" xpos xtextPastille ypos ytextPastille + points['point_conviction'][1]
@@ -45,6 +53,8 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/localisation.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Localisation"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_localisation'][0]]" xpos xtextPastille ypos ytextPastille + points['point_localisation'][1]
@@ -55,6 +65,8 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/sociaux.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Sociaux"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_sociaux'][0]]" xpos xtextPastille ypos ytextPastille + points['point_sociaux'][1]
@@ -65,9 +77,21 @@ screen barre_de_vie :
             imagebutton:
                 idle "UI/barre_de_vie/administrative.png"
                 at custom_zoom
+                hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Administratif"))]
+                action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
             hbox:
                 text "[points['point_administrative'][0]]" xpos xtextPastille ypos ytextPastille + points['point_administrative'][1]
+        
+    $ tooltip = GetTooltip()
+
+    if tooltip:
+        frame:
+            background "#00B6ED"
+            xpos 500
+            yalign 0.17
+            text "[tooltip]"
 
 transform custom_zoom:
     zoom 0.3
+
