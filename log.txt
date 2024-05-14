@@ -1,44 +1,488 @@
-2024-05-14 13:22:58 UTC
+2024-05-14 14:01:28 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.0.24012702
 
-Early init took 0.07s
-Loading error handling took 0.02s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
+Early init took 0.28s
+Loading error handling took 0.05s
+Loading script took 0.27s
+Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.01s
+Running init code took 0.08s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Dump and make backups took 0.03s
+Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.250000
+Initial gc took 0.03s
+DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.01s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.04s
 Build styles took 0.00s
-Load screen analysis took 0.02s
+Load screen analysis took 0.04s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.05s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.18s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 501.31s
+Loading error handling took 0.05s
+Loading script took 0.36s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.11s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 3840, 2160)
 swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 546.80'
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 642.15s
+Loading error handling took 0.03s
+Loading script took 0.29s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3461, 1947) drawable=(3461, 1947)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 959.14s
+Loading error handling took 0.04s
+Loading script took 0.31s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1152.06s
+Loading error handling took 0.06s
+Loading script took 0.71s
+Loading save slot metadata took 0.13s
+Loading persistent took 0.00s
+Running init code took 0.19s
+Loading analysis data took 0.16s
+Analyze and compile ATL took 0.04s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.30s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.17s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.05s
+Prepare screens took 0.23s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.01s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1217.20s
+Loading error handling took 0.11s
+Loading script took 0.97s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1342.71s
+Loading error handling took 0.07s
+Loading script took 0.45s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.20s
+Loading analysis data took 0.21s
+Analyze and compile ATL took 0.04s
+Reloading save slot metadata took 0.10s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.27s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.24s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.01s
+Cleaning stores took 0.00s
+Init translation took 0.13s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.07s
+Prepare screens took 0.25s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1489.91s
+Loading error handling took 0.11s
+Loading script took 0.66s
+Loading save slot metadata took 0.12s
+Loading persistent took 0.00s
+Running init code took 0.23s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.25s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2118.00s
+Loading error handling took 0.15s
+Loading script took 0.66s
+Loading save slot metadata took 0.12s
+Loading persistent took 0.00s
+Running init code took 0.15s
+Loading analysis data took 0.06s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.14s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.17s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2955.97s
+Loading error handling took 0.07s
+Loading script took 0.40s
+Loading save slot metadata took 0.14s
+Loading persistent took 0.00s
+Running init code took 0.28s
+Loading analysis data took 0.15s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.27s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.24s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3348.68s
+Loading error handling took 0.16s
+Loading script took 0.65s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.17s
+Loading analysis data took 0.08s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.09s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\utilisateur\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.15s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.13s
+DPI scale factor: 3.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.10s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.07s
+Prepare screens took 0.24s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3840, 2160)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
 Maximum texture size: 4096x4096
