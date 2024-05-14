@@ -43,6 +43,11 @@ Si vous souhaitez que l'élément soit cliquable dés le début du jeu, il faut 
 ```python
 le_nom_de_votre_element_cliquable: 1,
 ```
+
+## Gestion des bulles
+Pour modifier la dimension et l'emplacement des bulles il suffit de se place dans le jeu sur la bulle correspondante et faire shift+R. ensuite, en haut à gauche cliquer sur "AREA... " puis faire un cliquer glisser pour placer et dimensionner la bulle.
+```
+
 ## Structure d'un scénario
 | Nom de l'élément  | Description |
 | ------------- | ------------- |
