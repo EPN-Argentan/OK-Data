@@ -9,7 +9,7 @@ label barOut:
         empty ""
     hide screen dataMap
     scene bar
-    show barPlace
+    show barSister
     empty ""
     s "Ça fait longtemps, je suis heureuse de te revoir ! "
     s "Aller, on se fait un Selfie et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "

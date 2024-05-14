@@ -63,7 +63,7 @@ jump tuto
 label hub:
     hide screen phoneDown
     scene hub
-    show Player_Sitting
+    show hubDogCouch
     show screen barre_de_vie
     show screen hubElements
     empty ""

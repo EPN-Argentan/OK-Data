@@ -108,14 +108,18 @@ label travelToStore:
     #empty ""
     show exitBus
     window auto hide
-    $ renpy.pause(3.0, hard=True)
+    #$ renpy.pause(3.0, hard=True)
     show getInStore
-    a "Yo !"
 
 label insideStore:
-    show getInStore
+    show askStore
+    window auto hide
     $ renpy.pause(3.0, hard=True)
-    show homeStore
+    show receiveStore
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
+    show computerStore
+    window auto hide
     $ renpy.pause(3.0, hard=True)
 
 #####################################################################SCREEN#####################################################################

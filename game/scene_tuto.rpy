@@ -1,7 +1,7 @@
 label tuto:
     $ posY = 175
     scene hub
-    show Player_Sitting
+    show hubDogCouch
     show screen barre_de_vie
     medBubble "Vos points de données personnelles se trouvent ici"
     medBubble "Ils sont répartis en 6 catégories"

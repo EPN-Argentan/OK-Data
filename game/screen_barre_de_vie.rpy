@@ -14,7 +14,7 @@ screen barre_de_vie :
 
         #pastille d'intérêt
         hbox:
-            spacing xposPastille
+            spacing xposPastille    
             imagebutton:
                 idle "UI/barre_de_vie/intérêt.png"
                 at custom_zoom
