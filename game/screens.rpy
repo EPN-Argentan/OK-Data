@@ -1597,6 +1597,7 @@ style bubble_what:
 
 define bubble.frame = Frame("gui/bubble.png", 55, 55, 55, 95)
 define bubble.thoughtframe = Frame("gui/thoughtbubble.png", 55, 55, 55, 55)
+define bubble.infoframe = Frame("gui/infoBubble.png", 55, 55, 55, 55)
 
 define bubble.properties = {
     "bottom_left" : {
@@ -1621,6 +1622,12 @@ define bubble.properties = {
 
     "thought" : {
         "window_background" : bubble.thoughtframe,
+    },
+
+    "info" : {
+        "window_background" : bubble.infoframe,
+        "what_color" : "#fff",
+        "what_text_align" : 0.0
     }
 }
 

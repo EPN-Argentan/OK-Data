@@ -71,3 +71,19 @@ label checkClueALL():
 label clearClues():
     $ whatInsideTop = ""
     $ whatInsideBottom = ""
+
+#Function to display information when click on specific word
+style infoStyle:
+    xalign 0.5
+    
+
+init python:
+  def information_display(txt):
+    renpy.call_in_new_context("infoLabel",txt)
+
+label infoLabel(txt):
+    info "[txt]"
+
+define config.hyperlink_handlers = {
+    "information": information_display
+}

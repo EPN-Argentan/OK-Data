@@ -75,10 +75,10 @@ screen insideEvent:
                     imagebutton:
                         idle "UI/browser/sendPhotosDatabook.png"
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail µEn partageant vos photos sur un réseau social, vous risquez de ne plus savoir avec qui elles auront été partagées. µDe plus, DATABOOK en deviendra le copropriétaire, comme sur la pluspart des réseaux sociaux","",'hub')
                     imagebutton:
                         idle "UI/browser/sendPhotosMail.png"
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait ! En partageant vos photos sur un réseau social, vous risquiez de ne plus savoir avec qui elles auraient été partagées. µDe plus, DATABOOK en deviendrait le copropriétaire, comme sur la pluspart des réseaux sociaux",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")

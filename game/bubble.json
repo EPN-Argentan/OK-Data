@@ -1,4 +1,13 @@
 {
+    "infoLabel_9e133d6f": {
+        "area": [
+            1200,
+            45,
+            640,
+            315
+        ],
+        "properties": "info"
+    },
     "tuto_168ab299": {
         "area": [
             1120,
@@ -122,7 +131,8 @@
             180,
             480,
             180
-        ]
+        ],
+        "properties": "top_left"
     },
     "tuto_ddcd79aa": {
         "area": [
