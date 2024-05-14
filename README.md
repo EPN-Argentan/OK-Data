@@ -46,13 +46,14 @@ le_nom_de_votre_element_cliquable: 1,
 
 ## Gestion des bulles
 Pour modifier la dimension et l'emplacement des bulles il suffit de se place dans le jeu sur la bulle correspondante et faire shift+R. ensuite, en haut à gauche cliquer sur "AREA... " puis faire un cliquer glisser pour placer et dimensionner la bulle.
-```
+
 
 ## Structure d'un scénario
 | Nom de l'élément  | Description |
 | ------------- | ------------- |
 | label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un label : "label forest :"  |
 | screen  | Élément flottant à afficher et positionner où l'on souhaite dans l'image. La barre de vie privée est, par exemple, un screen appelé à chaque fois que celle-ci doit être affichée. Les screens sont rangés dans le fichier "my_screens.rpy"  |
+
 ### En attente d'un clic dans le scénario
 Dans certains moment du jeu, on souhaite que le joueur clique sur un élément pour avancer. Le problème dans renpy, est que la narration est linéaire et que en l'absence d'éléments, le jeu va s'arrêter tout seul. Pour éviter cela, il suffit d'ajouter, au moment de l'attente, cet élément :
 ```python
