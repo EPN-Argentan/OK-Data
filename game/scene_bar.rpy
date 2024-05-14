@@ -12,7 +12,7 @@ label barOut:
     show barSister
     empty ""
     s "Ça fait longtemps, je suis heureuse de te revoir ! "
-    s "Aller, on se fait un Selfie et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "
+    s "Aller, on se fait un {a=information:Un selfie est une pratique photographique narcissique, visant à se prendre soi même en photo de manière ouf, visant à se prendre soi même en photo de manière ouf}Selfie{/a} et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "
     s "Mais attention ! pas de gaffes sur son anniversaire surprise ! "
     a "OK, je prends mon téléphone."
     show screen selfie
