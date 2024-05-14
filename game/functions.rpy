@@ -22,6 +22,9 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     if newValue < oldValue :
         show screen barre_de_vie with hpunch
         if losemessage:
+            $ renamePoint = key.replace("point_","")
+            $ intro = 'Tu as perdu '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
+            e_nvl '[intro]' 
             $ phrases = losemessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -36,6 +39,8 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     else:
         if winmessage:
             #e_nvl '[winmessage]'
+            $ renamePoint = key.replace("point_","")
+            $ intro = 'Tu as gagné '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
             $ phrases = winmessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0

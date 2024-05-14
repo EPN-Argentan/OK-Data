@@ -51,7 +51,7 @@ Pour modifier la dimension et l'emplacement des bulles il suffit de se place dan
 ## Structure d'un scénario
 | Nom de l'élément  | Description |
 | ------------- | ------------- |
-| label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un labl : "label forest :"  |
+| label  | Élément principal d'un scénario. C'est une sorte d'encapsuleur dans lequel vous pourrez mettre des images, des éléments d'interfaces, des dialogues. Chaque Scénario s'ouver avec un label : "label forest :"  |
 | screen  | Élément flottant à afficher et positionner où l'on souhaite dans l'image. La barre de vie privée est, par exemple, un screen appelé à chaque fois que celle-ci doit être affichée. Les screens sont rangés dans le fichier "my_screens.rpy"  |
 ### En attente d'un clic dans le scénario
 Dans certains moment du jeu, on souhaite que le joueur clique sur un élément pour avancer. Le problème dans renpy, est que la narration est linéaire et que en l'absence d'éléments, le jeu va s'arrêter tout seul. Pour éviter cela, il suffit d'ajouter, au moment de l'attente, cet élément :
@@ -59,6 +59,17 @@ Dans certains moment du jeu, on souhaite que le joueur clique sur un élément p
     while True:
         empty ""
 ```
+
+## Les mots clés
+Les mots clés sont des infos qui peuvent être révélées en cliquant sur un mot spécifique.
+Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information:Texte} comme ici :
+```
+  python
+  Mon texte avec un mot clé à valoriser.
+  ↓↓↓
+  Mon texte avec un {a=information:Ici le texte à afficher en cliquant sur le mot clé}mot clé{/a} à valoriser.
+```
+
 
 ## Les points
 ### Typologie de points
