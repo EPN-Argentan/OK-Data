@@ -276,7 +276,7 @@ screen callPhoneAnswer:
         yalign 0.69
         idle "UI/call/hangup_hover.png"
         hover "UI/call/hangup_idle.png"
-        action Jump("browserLabelAfterCall")
+        action NullAction()
 
 style bubble_tuto:
     background "#e226c0"

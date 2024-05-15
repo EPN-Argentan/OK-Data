@@ -26,25 +26,6 @@ define empty = Character(None,color="#00000000", window_background="gui/empty_te
 
 # Initialisation du jeu
 label start:
-    $ BluetoothState = True
-    $ LocalisationState = True
-    $ DataState = True
-    $ NeutralState = True #an invisible variable to add points without using settings
-
-
-    #dynamic list of elements clickable in hub
-    #if value == 0, the element can't be clicked
-    $ hubClickable = {
-        'dog': 1,
-        'laptop': 0 ,
-        'photoFrame': 0,
-        'watch': 0,
-        'tablet': 0,
-        'homeAssistant': 0,
-        'phone': 0,
-        'phoneCall': 0,
-        'forest' : 0
-    }
 
 #Lancement du Tuto
 #jump tuto #To reactivate
