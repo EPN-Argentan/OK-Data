@@ -3,14 +3,15 @@
 init python:
     maxPts = 5
     minPts = -10
+    initPts = 5
     incrPts = 1
     points = {
-        'point_interet': [5,0],
-        'point_sante': [5,0],
-        'point_conviction': [5,0],
-        'point_localisation': [5,0],
-        'point_sociaux': [5,0],
-        'point_administrative': [5,0]
+        'point_interet': [initPts,0],
+        'point_sante': [initPts,0],
+        'point_conviction': [initPts,0],
+        'point_localisation': [initPts,0],
+        'point_sociaux': [initPts,0],
+        'point_administrative': [initPts,0]
     }
     def checkMinMax():
         for key, value in points.items():
