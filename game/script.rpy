@@ -31,15 +31,6 @@ label start:
     $ DataState = True
     $ NeutralState = True #an invisible variable to add points without using settings
 
-    #points store all point score and y position (to be able to shake this value later)
-    $ points = {
-        'point_interet': [5,0],
-        'point_sante': [5,0],
-        'point_conviction': [5,0],
-        'point_localisation': [5,0],
-        'point_sociaux': [5,0],
-        'point_administrative': [5,0]
-    }
 
     #dynamic list of elements clickable in hub
     #if value == 0, the element can't be clicked

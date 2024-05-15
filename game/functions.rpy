@@ -55,7 +55,7 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
 
-
+#Algortihmn function
 label checkClueALL():
     python:
         for key, value in combinaisonClues.items():
@@ -79,8 +79,7 @@ label clearClues():
 
 #Function to display information when click on specific word
 style infoStyle:
-    xalign 0.5
-    
+    xalign 0.5  
 
 init python:
   def information_display(txt):
@@ -92,3 +91,16 @@ label infoLabel(txt):
 define config.hyperlink_handlers = {
     "information": information_display
 }
+
+#Map function
+init python:
+    def translate(value, leftMin, leftMax, rightMin, rightMax):
+        # Figure out how 'wide' each range is
+        leftSpan = leftMax - leftMin
+        rightSpan = rightMax - rightMin
+
+        # Convert the left range into a 0-1 range (float)
+        valueScaled = float(value - leftMin) / float(leftSpan)
+
+        # Convert the 0-1 range into a value in the right range.
+        return rightMin + (valueScaled * rightSpan)

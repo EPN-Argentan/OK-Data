@@ -1,7 +1,11 @@
+#caption on hover
 default mtt = MouseTooltip(Text(""), padding={"x": 10, "y": -10})
+transform dark_tint(value):
+    matrixcolor  OpacityMatrix(value)
 
 screen barre_de_vie :
-    add mtt
+    add mtt # add caption on hover
+    $ checkMinMax()
 #position of green pastille
     $ xposPastille = -30
     $ yposPastille = -20
@@ -19,7 +23,7 @@ screen barre_de_vie :
                 at custom_zoom
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Intérêt"))]
                 action NullAction()
-            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille
+            add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_interet'][0]/5-0.5)
             hbox:
                 text "[points['point_interet'][0]]" xpos xtextPastille ypos ytextPastille + points['point_interet'][1]
 

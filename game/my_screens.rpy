@@ -74,7 +74,8 @@ screen phoneDown :
         xalign 0.9
         yalign 3.0
         idle "smartphone.png"
-        action Jump("telplay")
+        #action Jump("telplay")
+        action NullAction()
     hbox:
         spacing 20
         xalign 0.87
