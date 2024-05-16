@@ -115,7 +115,7 @@
             1120,
             90,
             560,
-            270
+            315
         ]
     },
     "tuto_a9422ba5": {
@@ -195,11 +195,11 @@
     },
     "walkOut_ee8e62ec": {
         "area": [
-            1360,
-            495,
-            400,
-            360
+            1200,
+            630,
+            560,
+            225
         ],
-        "properties": "thought"
+        "properties": "bottom_left"
     }
 }

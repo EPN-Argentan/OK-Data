@@ -1,7 +1,7 @@
 label barOut:
     nvl clear
     show screen phoneDown
-    syrielle_nvl "Salut frangine ! On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
+    syrielle_nvl "Salut frangine ! \n On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
     hide screen hubElements
     show screen dataMap
     empty ""

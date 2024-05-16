@@ -20,14 +20,5 @@ label walkOut :
     show screen bubbleTuto("", -500,-500)
     while LocalisationState == True:
         empty ""
- 
-    ##Set hub elements clickable
-    $ hubClickable["dog"]= 0
-    $ hubClickable["phone"]= 1
-    $ hubClickable["tablet"]= 0
-    $ hubClickable["laptop"]= 1
-    $ hubClickable["walkout"]= 1
-    $ hubClickable["forest"]= 1
-    $ hubClickable["photoFrame"]= 1
-    
-    jump hub
+  
+    jump med
