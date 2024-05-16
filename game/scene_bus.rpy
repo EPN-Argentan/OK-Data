@@ -86,7 +86,7 @@ label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
     a "Mais non !"
-    e_nvl "quand vous partagé une photo sur un réseau social, celle-ci ne vous appartient plus."
+    e_nvl "quand vous partagez une photo sur un réseau social, celle-ci ne vous appartient plus."
     window auto hide
     $ renpy.pause(3.0, hard=True)
     hide screen dataBookFound
