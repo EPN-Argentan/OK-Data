@@ -2,9 +2,9 @@
     "infoLabel_9e133d6f": {
         "area": [
             1200,
-            45,
-            640,
-            315
+            135,
+            560,
+            270
         ],
         "properties": "info"
     },
@@ -66,6 +66,15 @@
             315
         ],
         "properties": "top_left"
+    },
+    "tuto_6a379b35": {
+        "area": [
+            160,
+            180,
+            560,
+            180
+        ],
+        "properties": "thought"
     },
     "tuto_73fcff28": {
         "area": [

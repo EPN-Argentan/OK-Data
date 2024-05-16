@@ -3,7 +3,7 @@ label tuto:
     scene hub
     show hubDogCouch
     show screen barre_de_vie
-    medBubble "Vos données personnelles sont réparties en 6 catégories"
+    medBubble "Vos {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
     medBubble "Les données de centre d’intérêt"
     medBubble "Les données de santé"
     medBubble "Les données de convictions"
