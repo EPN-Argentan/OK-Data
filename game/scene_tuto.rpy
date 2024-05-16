@@ -3,7 +3,7 @@ label tuto:
     scene hub
     show hubDogCouch
     show screen barre_de_vie
-    medBubble "Vos {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
+    medBubble "Tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
     medBubble "Les données de centre d’intérêt"
     medBubble "Les données de santé"
     medBubble "Les données de convictions"
@@ -14,5 +14,5 @@ label tuto:
     call addPoints(-5,'point_administrative')
     medBubble "Tu perds des points si tu ne prêtes pas attention à préserver ta vie privée."
     call addPoints(5,'point_administrative')
-    medBubble "Au contraire, tu gagneras des points : \nEn faisant les bons choix, \nEn regardant les contenus supplémentaires,\nEn allant vous promener!" 
+    medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant vous promener!" 
     jump hub

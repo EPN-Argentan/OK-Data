@@ -16,7 +16,7 @@ label walkOut :
     call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_8
     e_nvl "Tu as la possibilité d’activer ou non cette fonction en touchant l’icône en haut du téléphone. Penses-y à l’avenir et essaye dès maintenant."
     show screen phoneDown
-    medBubble "Dés que le téléphone est visible, tu peux à tout moment désactiver un des paramètres"
+    medBubble "Dès que le téléphone est visible, tu peux à tout moment désactiver un des paramètres"
     show screen bubbleTuto("", -500,-500)
     while LocalisationState == True:
         empty ""
