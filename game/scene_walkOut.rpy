@@ -1,8 +1,8 @@
 label walkOut :
     scene hub
     hide screen hubElements
-    e_nvl "Bonjour, je suis le {a=information: Le médiateur numérique est un super-héros du monde digital ! Il a pour mission d’accompagner les publics vers une autonomie des usages du numérique.}médiateur numérique{/a}, et je vais vous guider et vous conseiller tout au long du jeu."
-    e_nvl "D'ailleurs, il serait bon d'aller promener votre chien."
+    e_nvl "Bonjour, je suis le {a=information: Le médiateur numérique est un super-héros du monde digital ! Il a pour mission d’accompagner les publics vers une autonomie des usages du numérique.}médiateur numérique{/a}, et je vais te guider et te conseiller tout au long du jeu."
+    e_nvl "D'ailleurs, il serait bon d'aller promener ton chien."
     e_nvl "C'est parti !"
     nvl clear
     hide screen hubElements
