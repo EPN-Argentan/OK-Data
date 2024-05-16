@@ -192,5 +192,14 @@
             270
         ],
         "properties": "bottom_left"
+    },
+    "walkOut_ee8e62ec": {
+        "area": [
+            1360,
+            495,
+            400,
+            360
+        ],
+        "properties": "thought"
     }
 }
