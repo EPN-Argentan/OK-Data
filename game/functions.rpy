@@ -36,6 +36,10 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ i = i + 1
             #stop bounce effect after mediateur message
             $ points[key][1] = 0
+        else:           
+            #stop bounce effect
+            pause 1.2
+            $ points[key][1] = 0
     #nothing happens
     elif newValue == oldValue :
         return
@@ -53,6 +57,10 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 e_nvl '[phrase]'
                 $ i = i + 1
             #stop bounce effect after mediateur message
+            $ points[key][1] = 0
+        else:           
+            #stop bounce effect
+            pause 1.2
             $ points[key][1] = 0
     #If needed, after text messages, jump to this label if needed
     if not labelNext:
