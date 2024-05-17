@@ -22,9 +22,8 @@ label barOut:
 
 label barOutAfter:
     nvl clear
-    
+
     #check if selfie has been shared to be display or not on photo frame
-    $ shareSelfie = False
     if LocalisationState :
         $ shareSelfie = True
 

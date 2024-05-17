@@ -1,5 +1,8 @@
 #life bar set
 init python:
+    import time
+    year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
+
     maxPts = 5
     minPts = -10
     initPts = 5
@@ -41,3 +44,5 @@ init python:
     LocalisationState = True
     DataState = True
     NeutralState = True #an invisible variable to add points without using settings
+
+    shareSelfie = False #check if Selfie has been shared or not

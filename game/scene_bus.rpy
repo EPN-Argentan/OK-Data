@@ -19,7 +19,7 @@ show busAdReveal
 window auto hide
 $ renpy.pause(3.0, hard=True)
 a "mais...mais..."
-a "C'est la photo de Pierre mon frère!"
+a "C'est la photo des 30 ans de Pierre mon frère!"
 a "Mais comment c'est possible, c'est ma photo en plus ! "
 a "Elle doit même encore être sur mon téléphone"
 
@@ -39,7 +39,7 @@ label searchInGallery:
         empty ""
 
 label openDataCloud:
-    a "alors..."
+    a "mince, elle doit dater d'avant 2022"
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         show screen freeWifi
@@ -52,14 +52,15 @@ label openDataCloud:
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
         hide screen dataCloudOpening
-        a "Alors, quelle est la date..."
+        a "mais de quand date-t-elle ?..."
         jump inputDate
     while True:
         empty ""
 
 label inputDate:
     $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
-    if dateInput == "2014":
+    $ birthdayYear = str(year-5)
+    if dateInput == birthdayYear:
         hide screen dataCloudSearching
         jump searchInDataCloud
     else:
@@ -166,7 +167,7 @@ screen galeryNoFilter:
             draggable True
             vbox:
                 spacing 20
-                text "2024"  color "#000000"
+                text "[year]"  color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -176,7 +177,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
-                text "2023"  color "#000000"
+                text "[year-1]" color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -184,7 +185,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
-                text "2022"  color "#000000"
+                text "[year-2]"  color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -209,7 +210,7 @@ screen cloudNoFilter:
             draggable True
             vbox:
                 spacing 20
-                text "2014"  color "#000000"
+                text "[year-5]"  color "#000000"
                 grid 2 4:
                     spacing 10
                     add "UI/applications/galery/001.jpeg"
