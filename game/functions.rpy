@@ -9,6 +9,8 @@
 # addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage='', labelNext= ''):
     $ oldValue = points[key][0]
+    #start bounce effect
+    $ points[key][1] = 1
     if not condition:
         $ points[key][0] += values
     else:
@@ -32,6 +34,8 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ phrase = phrases[i]
                 e_nvl '[phrase]'
                 $ i = i + 1
+            #stop bounce effect after mediateur message
+            $ points[key][1] = 0
     #nothing happens
     elif newValue == oldValue :
         return
@@ -48,12 +52,27 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ phrase = phrases[i]
                 e_nvl '[phrase]'
                 $ i = i + 1
+            #stop bounce effect after mediateur message
+            $ points[key][1] = 0
     #If needed, after text messages, jump to this label if needed
     if not labelNext:
         return
     else:
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
+
+#Bounce imagebutton from lifebar
+transform bounce:
+    pause .15
+    yoffset 0
+    easein .175 yoffset -16
+    easeout .175 yoffset 0
+    easein .175 yoffset -10
+    easeout .175 yoffset 0
+    easein .175 yoffset -4
+    easeout .175 yoffset 0
+    yoffset 0
+    repeat
 
 #Algortihmn function
 label checkClueALL():

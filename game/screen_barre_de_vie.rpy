@@ -20,7 +20,7 @@ screen barre_de_vie :
             spacing xposPastille    
             imagebutton:
                 idle "UI/barre_de_vie/intérêt.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_interet'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Intérêt"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_interet'][0])
@@ -32,7 +32,7 @@ screen barre_de_vie :
             spacing xposPastille
             imagebutton:
                 idle "UI/barre_de_vie/santé.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_sante'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Santé"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_sante'][0])
@@ -44,7 +44,7 @@ screen barre_de_vie :
             spacing xposPastille
             imagebutton:
                 idle "UI/barre_de_vie/conviction.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_conviction'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Conviction"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_conviction'][0])
@@ -56,7 +56,7 @@ screen barre_de_vie :
             spacing xposPastille
             imagebutton:
                 idle "UI/barre_de_vie/localisation.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_localisation'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Localisation"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_localisation'][0])
@@ -68,7 +68,7 @@ screen barre_de_vie :
             spacing xposPastille
             imagebutton:
                 idle "UI/barre_de_vie/sociaux.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_sociaux'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Sociaux"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_sociaux'][0])
@@ -80,7 +80,7 @@ screen barre_de_vie :
             spacing xposPastille
             imagebutton:
                 idle "UI/barre_de_vie/administrative.png"
-                at custom_zoom
+                at custom_zoom, (default if points['point_administrative'][1] == 0 else bounce)
                 hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Administratif"))]
                 action NullAction()
             add "UI/barre_de_vie/pastilleverte.png" zoom 0.4 ypos yposPastille at dark_tint(points['point_administrative'][0])

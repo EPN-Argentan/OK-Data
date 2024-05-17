@@ -9,11 +9,11 @@ define info = Character(None, image="info", kind=bubble)
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.2)
 
-define s = Character('Syrielle', color="#c8ffc8")
+define s = Character('Syrielle', color="#ae3f5b")
 
 define a = Character('Alexia', color="#7A1EBB")
 
-define m = Character('Maman', color="#209792")
+define m = Character('Maman', color="#5833ae")
 
 define med = Character('Mediateur', color="#209792")
 
