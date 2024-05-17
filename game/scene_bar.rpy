@@ -22,6 +22,12 @@ label barOut:
 
 label barOutAfter:
     nvl clear
+    
+    #check if selfie has been shared to be display or not on photo frame
+    $ shareSelfie = False
+    if LocalisationState :
+        $ shareSelfie = True
+
     call addPoints(5,'point_localisation',LocalisationState, False, "Raté ! \n En laissant ta géolocalisation activée, ta localisation sera présente dans les métadonnées de ta photo.µ N’importe qui peut ainsi savoir où tu étais.", "Bravo  ! \n Tu gagnes des points de géolocalisation, en pensant à la désactiver.µ De cette façon, ta photo ne contient pas d'information de localisation.") from _call_addPoints
     hide screen selfie
     $ hubClickable["phone"]= 0

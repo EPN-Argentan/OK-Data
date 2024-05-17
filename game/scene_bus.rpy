@@ -1,8 +1,15 @@
 label bus:
 $ freeWifiActivate = False
 hide screen hubElements
-show screen birthdayPicture with moveinbottom
-a "oh là là, ça date ça..."
+
+#display photo without sister selie or with it depending of previous events (see bar scene)
+if shareSelfie == False:
+    show frame_slideshow_noselfie with moveinbottom
+    a "oh là là, ça date ça..."
+else:
+    show frame_slideshow_withselfie with moveinbottom
+    a "oh non pourvu que personne d'autre ne voit cette photo..."
+
 e_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
 a "Oh mince, j'avais complétement zappé !"
 a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
@@ -124,6 +131,26 @@ label insideStore:
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
+
+image frame_slideshow_noselfie:
+   "/UI/Cadre/slideshowFrame_001.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_002.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_003.png"
+   pause 2.5
+   repeat
+
+image frame_slideshow_withselfie:
+   "/UI/Cadre/slideshowFrame_015.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_002.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_003.png"
+   pause 2.5
+   repeat
+
+
 screen galeryOpening:
     add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5

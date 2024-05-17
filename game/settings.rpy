@@ -3,7 +3,6 @@ init python:
     maxPts = 5
     minPts = -10
     initPts = 5
-    totalPts = initPts*6
     incrPts = 1
     points = {
         'point_interet': [initPts,0],
@@ -13,22 +12,7 @@ init python:
         'point_sociaux': [initPts,0],
         'point_administrative': [initPts,0]
     }
-    #avoid to go upper than maximum points or lower than minimum points
-    def checkMinMax():
-        for key, value in points.items():
-            if value[0] >= maxPts:
-                value[0] = maxPts
-            if value[0] <= minPts:
-                value[0] = minPts
-                hubClickable["forest"] = 1
-
-
-
-    BluetoothState = True
-    LocalisationState = True
-    DataState = True
-    NeutralState = True #an invisible variable to add points without using settings
-
+    
 
     #dynamic list of elements clickable in hub
     #if value == 0, the element can't be clicked
@@ -43,3 +27,17 @@ init python:
         'phoneCall': 0,
         'forest' : 0
     }
+    
+    #avoid to go upper than maximum points or lower than minimum points
+    def checkMinMax():
+        for key, value in points.items():
+            if value[0] >= maxPts:
+                value[0] = maxPts
+            if value[0] <= minPts:
+                value[0] = minPts
+
+
+    BluetoothState = True
+    LocalisationState = True
+    DataState = True
+    NeutralState = True #an invisible variable to add points without using settings

@@ -32,7 +32,7 @@ screen hubElements:
             hover "UI/imagebuttons/watch.png"
             action OpenURL("http://reddit.com/")
             #action Jump("browserLabel")dataZon
-
+    
     if hubClickable["forest"] == 1:
         imagebutton:
             xpos 1400
@@ -277,10 +277,19 @@ screen callPhoneAnswer:
         hover "UI/call/hangup_idle.png"
         action Jump("browserLabelAfterCall")
 
-screen skipTuto:
-    textbutton "Passer le tutoriel" 
-    at bounce 
-    action Jump("hub")
+
+style bubble_tuto:
+    background "#e226c0"
+    xpadding 30
+    ypadding 30
+
+screen bubbleTuto(value="mon texte", posX=0, posY=0):
+    add "UI/bubbletuto/bubbletop.png" xpos posX ypos posY
+    frame:
+        style "bubble_tuto"
+        xpos posX
+        ypos posY+20
+        text value xalign 0.5 yalign 0.5
 
 screen dataMap:
     add "smartphone.png" xalign 0.5 yalign 0.5
