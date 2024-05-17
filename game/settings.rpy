@@ -13,6 +13,7 @@ init python:
         'point_sociaux': [initPts,0],
         'point_administrative': [initPts,0]
     }
+    #avoid to go upper than maximum points or lower than minimum points
     def checkMinMax():
         for key, value in points.items():
             if value[0] >= maxPts:

@@ -18,7 +18,22 @@ label walkOut :
     show screen phoneDown
     medBubble "Dès que le téléphone est visible, tu peux à tout moment désactiver un des paramètres"
     show screen bubbleTuto("", -500,-500)
+    #wait until localisation setting is desactivate
     while LocalisationState == True:
         empty ""
-  
-    jump med
+    #give back point if you lost them before
+    if points['point_localisation'][0] == -5:
+        call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9      
+    scene hub
+    hide screen hubElements
+    e_nvl "Maintenant, tu es prêt pour la grande aventure, le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
+    ##Set hub elements clickable
+    $ hubClickable["dog"]= 0
+    $ hubClickable["phone"]= 1
+    $ hubClickable["tablet"]= 0
+    $ hubClickable["laptop"]= 1
+    $ hubClickable["walkout"]= 1
+    $ hubClickable["forest"]= 0
+    $ hubClickable["photoFrame"]= 1
+    
+    jump hub
