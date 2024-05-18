@@ -116,19 +116,27 @@ label travelToStore:
     #empty ""
     show exitBus
     window auto hide
-    #$ renpy.pause(3.0, hard=True)
-    show getInStore
+    $ renpy.pause(3.0, hard=True)
 
 label insideStore:
+    show getInStore
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
     show askStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show receiveStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    a "Mais oui, je pourrai en profiter pour customiser une tasse !"
     show computerStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    show zoomComputerStore
+    show screen storeCustomPage
+    a "Bon, alors qu'est ce que je pourrai mettre dessus ?"
+    while True:
+        empty ""
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
@@ -288,3 +296,13 @@ screen dataBookFound:
 screen outOfBattery:
     add "UI/applications/outBattery.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+screen storeCustomPage:
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    imagebutton:
+        idle At("UI/store/importPicture.png", outline_transform(6, "#000", 4.0))
+        hover "UI/store/importPicture.png"
+        xalign 0.68
+        yalign 0.75
+        action NullAction()
+
