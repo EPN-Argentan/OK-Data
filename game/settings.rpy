@@ -3,9 +3,9 @@ init python:
     import time
     year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
 
-    maxPts = 5
-    minPts = -10
-    initPts = 5
+    maxPts = 20
+    minPts = 0
+    initPts = 10
     incrPts = 1
     points = {
         'point_interet': [initPts,0],

@@ -107,7 +107,12 @@ screen phoneDown :
 
 #Smartphone home screen
 #Each argument is one application icon that can be avaible or not
-screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
+transform greyscale():
+    matrixcolor SaturationMatrix(0)
+
+default nameAppSize = 18
+
+screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True) :
     imagebutton:
         xalign 0.5
         ypos 150
@@ -116,65 +121,88 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True) :
     frame:
         background None
         xalign 0.5
-        yalign 0.4
+        yalign 0.5
         xmaximum 360
         ymaximum 700
-        grid 3 2:
-            spacing 20
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if A1:
-                    idle "UI/applications/Icons/appOKDATA.png"
-                    hover "UI/applications/Icons/appOKDATA_hover.png"
-                    action Jump("searchInGallery")
-                else:
-                    idle "UI/applications/Icons/appOKDATA_out.png"
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if A2:
-                    idle "UI/applications/Icons/appOKDATA.png"
-                    hover "UI/applications/Icons/appOKDATA_hover.png"
-                    action Jump("openDataCloud")
-                else:
-                    idle "UI/applications/Icons/appOKDATA_out.png"
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if A3:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("selfie")
-                else:
-                    idle "UI/applications/Icons/appphotoout.png"
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if B1:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("selfie")
-                else:
-                    idle "UI/applications/Icons/appphotoout.png"
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if B2:
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("selfie")
-                else:
-                    idle "UI/applications/Icons/appphotoout.png"
-            imagebutton:
-                xalign 0.5
-                yalign 0.5
-                if B3   :
-                    idle "UI/applications/Icons/appphoto.png"
-                    hover "UI/applications/Icons/appphotohover.png"
-                    action Jump("selfie")
-                else:
-                    idle "UI/applications/Icons/appphotoout.png"
+        grid 3 3:
+            spacing 12
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if A1:
+                        idle At("UI/applications/Icons/appGallery.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appGallery.png"
+                        action Jump("openDataCloud")
+                    else:
+                        idle "UI/applications/Icons/appGallery.png" at greyscale()
+                text "{color=#555}Photos{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if A2:
+                        idle At("UI/applications/Icons/appCloud.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appCloud.png"
+                        action Jump("openDataCloud")
+                    else:
+                        idle "UI/applications/Icons/appCloud.png" at greyscale()
+                text "{color=#555}Data Book{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if A3:
+                        idle At("UI/applications/Icons/appOKDATA.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appOKDATA.png"
+                        action Jump("searchInGallery")
+                    else:
+                        idle "UI/applications/Icons/appOKDATA.png" at greyscale()
+                text "{color=#555}Recherche{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if B1:
+                        idle At("UI/applications/Icons/appMail.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appMail.png"
+                        action Jump("searchInGallery")
+                    else:
+                        idle "UI/applications/Icons/appMail.png" at greyscale()
+                text "{color=#555}Mail{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if B2:
+                        idle At("UI/applications/Icons/appLocalisation.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appLocalisation.png"
+                        action Jump("searchInGallery")
+                    else:
+                        idle "UI/applications/Icons/appLocalisation.png" at greyscale()
+                text "{color=#555}Carte{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if B3   :
+                        idle At("UI/applications/Icons/appNoCo.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appNoCo.png"
+                        action Jump("searchInGallery")
+                    else:
+                        idle "UI/applications/Icons/appNoCo.png" at greyscale()
+                text "{color=#555}Normandie{/color}" xalign 0.5 size nameAppSize
+            vbox:
+                imagebutton:
+                    xalign 0.5
+                    yalign 0.5
+                    if C1   :
+                        idle At("UI/applications/Icons/appSettings.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appSettings.png"
+                        action Jump("searchInGallery")
+                    else:
+                        idle "UI/applications/Icons/appSettings.png" at greyscale()
+                text "{color=#555}Paramètres{/color}" xalign 0.5 size nameAppSize
 
 
     hbox:
