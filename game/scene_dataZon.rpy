@@ -86,8 +86,8 @@ label phonestopcoli6mots :
     show screen feed_coli6mots_statique
     show screen barre_de_vie
     call addPoints(-2,'point_administrative')
-    e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à vous extorquer de l'argent."
-    e_nvl "Pensez à vérifier l'adresse de l'expéditeur avant de cliquer"
+    e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
+    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
     jump mailx3
 
 
@@ -152,7 +152,7 @@ label datazonsiteafternocookie :
     $ renpy.scene(layer="screens")
     show screen datazonsiteafternocookie
     show screen barre_de_vie
-    e_nvl "Bien jouée, pas besoin de donner des informations sur ta navigation"
+    e_nvl "Bien joué !, pas besoin de donner des informations sur ta navigation"
     jump datazonsiteok
 
 label datazonsiteaftercookieok :

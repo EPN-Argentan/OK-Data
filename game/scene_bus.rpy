@@ -94,7 +94,7 @@ label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
     a "Mais non !"
-    e_nvl "quand vous partagez une photo sur un réseau social, celle-ci ne vous appartient plus."
+    e_nvl "quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
     window auto hide
     $ renpy.pause(3.0, hard=True)
     hide screen dataBookFound
@@ -278,11 +278,11 @@ screen freeWifi:
         imagebutton:
             idle "UI/applications/yes_idle.png"
             hover "UI/applications/yes_hover.png"
-            action Call("addPoints",-5,"point_sociaux","","","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","","openDataCloud")
+            action Call("addPoints",-5,"point_sociaux","","","Fais attention, sur des réseaux publics tu n'es pas protégé ! ","","openDataCloud")
         imagebutton:
             idle "UI/applications/no_idle.png"
             hover "UI/applications/no_hover.png"
-            action Call("addPoints",5,"point_sociaux","","Bravo","Faites attention, sur des réseaux publics vous n'êtes pas protégé ! ","Dans la mesure du possible, évitez les réseaux wifi publics","openDataCloud")
+            action Call("addPoints",5,"point_sociaux","","Bravo","Fais attention, sur des réseaux publics tu n'es pas protégé ! ","Dans la mesure du possible, évites les réseaux wifi publics","openDataCloud")
 
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 

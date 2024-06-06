@@ -275,7 +275,7 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Vous perdez des points ! µEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
+                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Tu perds des points ! µEvites de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
