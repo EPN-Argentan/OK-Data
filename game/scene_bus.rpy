@@ -138,6 +138,19 @@ label insideStore:
     while True:
         empty ""
 
+label outStore:
+    show screen storeCustomPage
+    a "Ce sera du plus bel effet !"
+    menu:
+        "Récupérer votre mug":
+            call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub")
+        "Rester sur la session":
+            a "J'ai du oublier quelquechose"
+    while True:
+        empty ""
+    jump hub
+
+
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
 
@@ -161,7 +174,8 @@ image frame_slideshow_withselfie:
 
 
 screen galeryOpening:
-    add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appGallery.png" xalign 0.5 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen galeryNoFilter:
@@ -232,7 +246,8 @@ screen cloudNoFilter:
          vbar value YScrollValue("vp")
 
 screen dataCloudOpening:
-    add "UI/applications/cloudOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appCloud.png" xalign 0.5 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen dataCloudSearching:
@@ -274,7 +289,8 @@ screen cloudPhotos:
     add "smartphone.png" xalign 0.5 yalign 0.5
 
 screen dataBookOpening:
-    add "UI/applications/dataBookOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appDataBook.png" xalign 0.5 yalign 0.5  zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen dataBookSearch:
@@ -297,12 +313,50 @@ screen outOfBattery:
     add "UI/applications/outBattery.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
+default profilPic = False
+
 screen storeCustomPage:
     add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    if profilPic == False:
+        imagebutton:
+            idle At("UI/store/importPicture.png", outline_transform(6, "#A27ABB", 4.0))
+            hover "UI/store/importPicture.png"
+            xalign 0.72
+            yalign 0.8
+            action Show("logViaPopup")
+        imagebutton:
+            idle "UI/store/profilPicLogOut.png"
+            hover "UI/store/profilPicLogOut.png"
+            xalign 0.77
+            yalign 0.15
+            action NullAction()
+    else:
+        add "UI/store/customMugShot.png" xalign 0.33 yalign 0.71
+        imagebutton:
+            idle At("UI/store/printBtn.png", outline_transform(6, "#A27ABB", 4.0))
+            hover "UI/store/printBtn.png"
+            xalign 0.70
+            yalign 0.8
+            action Call("outStore")
+        imagebutton:
+            idle At("UI/store/profilPicLogIn.png", outline_transform(6, "#A27ABB", 4.0))
+            hover "UI/store/profilPicLogIn.png"
+            xalign 0.77
+            yalign 0.15
+            action [Call("addPoints",5,'point_sociaux',"","","","Vous avez raison, il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui",'hub')]
+
+screen logViaPopup:
+    add "UI/store/logVia.png" xalign 0.5 yalign 0.5
     imagebutton:
-        idle At("UI/store/importPicture.png", outline_transform(6, "#000", 4.0))
-        hover "UI/store/importPicture.png"
-        xalign 0.68
-        yalign 0.75
-        action NullAction()
+        idle At("UI/store/logViaOK.png", outline_transform(6, "#A27ABB", 4.0))
+        hover "UI/store/logViaOK.png"
+        xalign 0.5
+        yalign 0.51
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique","",'')]
+    imagebutton:
+        idle "UI/store/logViaMail.png"
+        hover "UI/store/logViaMail.png"
+        xalign 0.5
+        yalign 0.6
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique",'')]
 
