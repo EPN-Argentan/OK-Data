@@ -152,7 +152,7 @@ label datazonsiteafternocookie :
     $ renpy.scene(layer="screens")
     show screen datazonsiteafternocookie
     show screen barre_de_vie
-    e_nvl "Bien jouée, pas besoin de donner des informations sur ta navigation"
+    e_nvl "Bien joué !, pas besoin de donner des informations sur ta navigation"
     jump datazonsiteok
 
 label datazonsiteaftercookieok :
