@@ -141,6 +141,7 @@ label insideStore:
 label outStore:
     show screen storeCustomPage
     a "Ce sera du plus bel effet !"
+    window auto hide
     menu:
         "Récupérer votre mug":
             call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub")
@@ -319,7 +320,7 @@ screen storeCustomPage:
     add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
     if profilPic == False:
         imagebutton:
-            idle At("UI/store/importPicture.png", outline_transform(6, "#A27ABB", 4.0))
+            idle At("UI/store/importPicture.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
             hover "UI/store/importPicture.png"
             xalign 0.72
             yalign 0.8
@@ -333,14 +334,15 @@ screen storeCustomPage:
     else:
         add "UI/store/customMugShot.png" xalign 0.33 yalign 0.71
         imagebutton:
-            idle At("UI/store/printBtn.png", outline_transform(6, "#A27ABB", 4.0))
+            idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
             hover "UI/store/printBtn.png"
             xalign 0.70
             yalign 0.8
             action Call("outStore")
         imagebutton:
-            idle At("UI/store/profilPicLogIn.png", outline_transform(6, "#A27ABB", 4.0))
+            idle At("UI/store/profilPicLogIn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
             hover "UI/store/profilPicLogIn.png"
+            hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
             xalign 0.77
             yalign 0.15
             action [Call("addPoints",5,'point_sociaux',"","","","Vous avez raison, il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui",'hub')]
@@ -348,7 +350,7 @@ screen storeCustomPage:
 screen logViaPopup:
     add "UI/store/logVia.png" xalign 0.5 yalign 0.5
     imagebutton:
-        idle At("UI/store/logViaOK.png", outline_transform(6, "#A27ABB", 4.0))
+        idle At("UI/store/logViaOK.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaOK.png"
         xalign 0.5
         yalign 0.51
