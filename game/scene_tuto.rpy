@@ -15,7 +15,7 @@ label tuto:
     call addPoints(-5,'point_administrative')
     medBubble "Tu perds des points si tu ne prêtes pas attention à préserver ta vie privée."
     call addPoints(5,'point_administrative')
-    medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant vous promener!" 
+    medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant te promener !" 
     jump hub
 
 
