@@ -174,7 +174,8 @@ image frame_slideshow_withselfie:
 
 
 screen galeryOpening:
-    add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appGallery.png" xalign 0.5 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen galeryNoFilter:
@@ -245,7 +246,8 @@ screen cloudNoFilter:
          vbar value YScrollValue("vp")
 
 screen dataCloudOpening:
-    add "UI/applications/cloudOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appCloud.png" xalign 0.5 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen dataCloudSearching:
@@ -287,7 +289,8 @@ screen cloudPhotos:
     add "smartphone.png" xalign 0.5 yalign 0.5
 
 screen dataBookOpening:
-    add "UI/applications/dataBookOpening.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
+    add "UI/applications/Icons/appDataBook.png" xalign 0.5 yalign 0.5  zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
 
 screen dataBookSearch:
