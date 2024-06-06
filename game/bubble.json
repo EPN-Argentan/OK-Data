@@ -1,4 +1,21 @@
 {
+    "infoLabel_9e133d6f": {
+        "area": [
+            800,
+            45,
+            960,
+            360
+        ],
+        "properties": "info"
+    },
+    "tuto_168ab299": {
+        "area": [
+            1120,
+            90,
+            400,
+            270
+        ]
+    },
     "tuto_2472cb7e": {
         "area": [
             800,
@@ -10,6 +27,15 @@
     "tuto_28532739": {
         "area": [
             80,
+            180,
+            480,
+            180
+        ],
+        "properties": "thought"
+    },
+    "tuto_343f0875": {
+        "area": [
+            160,
             180,
             480,
             180
@@ -50,6 +76,15 @@
         ],
         "properties": "top_left"
     },
+    "tuto_6a379b35": {
+        "area": [
+            160,
+            180,
+            560,
+            180
+        ],
+        "properties": "thought"
+    },
     "tuto_73fcff28": {
         "area": [
             320,
@@ -75,6 +110,22 @@
             180
         ]
     },
+    "tuto_9ecae8b8": {
+        "area": [
+            1120,
+            90,
+            560,
+            315
+        ]
+    },
+    "tuto_a9422ba5": {
+        "area": [
+            960,
+            180,
+            720,
+            450
+        ]
+    },
     "tuto_adcdfea2": {
         "area": [
             80,
@@ -83,14 +134,47 @@
             180
         ]
     },
+    "tuto_b3ee2943": {
+        "area": [
+            1120,
+            90,
+            400,
+            270
+        ]
+    },
     "tuto_b97c4714": {
         "area": [
             160,
             180,
-            400,
+            320,
             180
         ],
         "properties": "top_left"
+    },
+    "tuto_c8e992d5": {
+        "area": [
+            160,
+            180,
+            480,
+            180
+        ],
+        "properties": "top_left"
+    },
+    "tuto_ddcd79aa": {
+        "area": [
+            1120,
+            90,
+            560,
+            315
+        ]
+    },
+    "tuto_f50f88bb": {
+        "area": [
+            1120,
+            90,
+            560,
+            270
+        ]
     },
     "tuto_fdfa236f": {
         "area": [
@@ -106,6 +190,15 @@
             585,
             480,
             270
+        ],
+        "properties": "bottom_left"
+    },
+    "walkOut_ee8e62ec": {
+        "area": [
+            1200,
+            630,
+            560,
+            225
         ],
         "properties": "bottom_left"
     }

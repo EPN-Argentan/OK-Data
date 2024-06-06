@@ -10,7 +10,7 @@ label browserLabel:
 
 label browserLabelCall:
     show screen callPhoneAnswer
-    s "Ouiiiii maman"
+    a "Ouiiiii maman"
     m "Salut ma grande"
     m "ça va ?"
     jump browserLabelAfterCall
@@ -23,9 +23,9 @@ label browserLabelAfterCall:
     scene lounge
     show loungeIdle
     show screen phoneDown
-    s "Alors Maman, qu’est-ce que je peux faire pour toi ?"
+    a "Alors Maman, qu’est-ce que je peux faire pour toi ?"
     m "Un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, je ne sais pas comment ça marche … "
-    s "Mais tu n’as pas de compte Databook !? il va falloir t’en créer un."
+    a "Mais tu n’as pas de compte Databook !? il va falloir t’en créer un."
     m "Oh je préfère que tu le créé toi !Tiens voila mes papiers d’identité si tu en as besoin."
     hide screen phoneDown
     show loungeZoom
@@ -37,21 +37,23 @@ label browserLabelAfterCall:
         empty ""
 
 label browserLabelFeed:
-    #call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! \nEvitez de donner trop d’informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. \n Cela contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.\nLes champs obligatoires (indiquées par un astérisque) sont suffisants. \nTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité. Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite, soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.") from _call_addPoints_1
+    #call addPoints(5,'point_sociaux',GoodState,True,"Vous perdez des points ! µEvitez de donner trop d’informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. µCela contribue à divulguer vos données personnelles d’identité.µDes grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite µ cela à des fins de marketing ou à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.µLes champs obligatoires (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité.µ Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite \n soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.") from _call_addPoints_1
     show loungeZoomFix
     show screen browserWindowFeed
     hide screen browserWindowSubscribe
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    s "Regarde l'événement"
+    a "Voila maman, il ne te reste plus qu'à lire l'évènement \n qu'ils ont créé pour l'anniversaire de Thierry ! "
+    while True:
+        empty ""
 
 label insideEventPage:
     hide screen browserWindowFeed
     show screen insideEvent
     show screen barre_de_vie
-    s "Tu as vu ? Ils proposent de partager des photos"
-    s "C'est incroyable"
+    a "Tu as vu ? Ils proposent de partager des photos"
+    m "C'est incroyable"
     while True:
         empty ""
 
@@ -73,10 +75,10 @@ screen insideEvent:
                     imagebutton:
                         idle "UI/browser/sendPhotosDatabook.png"
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Vous auriez dû envoyer vos photos via mail","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Tu aurais dû envoyer tes photos via mail µEn partageant tes photos sur un réseau social, tu risques de ne plus savoir avec qui elles auront été partagées. µDe plus, DATABOOK en deviendra le copropriétaire, comme sur la pluspart des réseaux sociaux","",'hub')
                     imagebutton:
                         idle "UI/browser/sendPhotosMail.png"
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",2,'point_administrative',"","","","Vous avez bien fait",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","tu as bien fait ! En partageant tes photos sur un réseau social, tu risquais de ne plus savoir avec qui elles ont été partagées. µDe plus, DATABOOK en deviendrait le copropriétaire, comme sur la pluspart des réseaux sociaux",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")

@@ -9,6 +9,8 @@
 # addPoints(5,'point_sante',BluetoothState,True,"Vous n'avez pas désactivé le bluetooth", "Vous avez bien pensé à désactiver le bluetooth")
 label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage='', labelNext= ''):
     $ oldValue = points[key][0]
+    #start bounce effect
+    $ points[key][1] = 1
     if not condition:
         $ points[key][0] += values
     else:
@@ -22,6 +24,9 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     if newValue < oldValue :
         show screen barre_de_vie with hpunch
         if losemessage:
+            $ renamePoint = key.replace("point_","")
+            $ intro = 'Tu as perdu '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
+            e_nvl '[intro]' 
             $ phrases = losemessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -29,6 +34,12 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ phrase = phrases[i]
                 e_nvl '[phrase]'
                 $ i = i + 1
+            #stop bounce effect after mediateur message
+            $ points[key][1] = 0
+        else:           
+            #stop bounce effect
+            pause 1.2
+            $ points[key][1] = 0
     #nothing happens
     elif newValue == oldValue :
         return
@@ -36,6 +47,8 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     else:
         if winmessage:
             #e_nvl '[winmessage]'
+            $ renamePoint = key.replace("point_","")
+            $ intro = 'Tu as gagné '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
             $ phrases = winmessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -43,6 +56,12 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ phrase = phrases[i]
                 e_nvl '[phrase]'
                 $ i = i + 1
+            #stop bounce effect after mediateur message
+            $ points[key][1] = 0
+        else:           
+            #stop bounce effect
+            pause 1.2
+            $ points[key][1] = 0
     #If needed, after text messages, jump to this label if needed
     if not labelNext:
         return
@@ -50,7 +69,20 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
 
+#Bounce imagebutton from lifebar
+transform bounce:
+    pause .15
+    yoffset 0
+    easein .175 yoffset -16
+    easeout .175 yoffset 0
+    easein .175 yoffset -10
+    easeout .175 yoffset 0
+    easein .175 yoffset -4
+    easeout .175 yoffset 0
+    yoffset 0
+    repeat
 
+#Algortihmn function
 label checkClueALL():
     python:
         for key, value in combinaisonClues.items():
@@ -71,3 +103,31 @@ label checkClueALL():
 label clearClues():
     $ whatInsideTop = ""
     $ whatInsideBottom = ""
+
+#Function to display information when click on specific word
+style infoStyle:
+    xalign 0.5  
+
+init python:
+  def information_display(txt):
+    renpy.call_in_new_context("infoLabel",txt)
+
+label infoLabel(txt):
+    info "[txt]"
+
+define config.hyperlink_handlers = {
+    "information": information_display
+}
+
+#Map function
+init python:
+    def translate(value, leftMin, leftMax, rightMin, rightMax):
+        # Figure out how 'wide' each range is
+        leftSpan = leftMax - leftMin
+        rightSpan = rightMax - rightMin
+
+        # Convert the left range into a 0-1 range (float)
+        valueScaled = float(value - leftMin) / float(leftSpan)
+
+        # Convert the 0-1 range into a value in the right range.
+        return rightMin + (valueScaled * rightSpan)

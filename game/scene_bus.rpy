@@ -1,8 +1,15 @@
 label bus:
 $ freeWifiActivate = False
 hide screen hubElements
-show screen birthdayPicture with moveinbottom
-a "oh là là, ça date ça..."
+
+#display photo without sister selie or with it depending of previous events (see bar scene)
+if shareSelfie == False:
+    show frame_slideshow_noselfie with moveinbottom
+    a "oh là là, ça date ça..."
+else:
+    show frame_slideshow_withselfie with moveinbottom
+    a "oh non pourvu que personne d'autre ne voit cette photo..."
+
 e_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
 a "Oh mince, j'avais complétement zappé !"
 a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
@@ -12,7 +19,7 @@ show busAdReveal
 window auto hide
 $ renpy.pause(3.0, hard=True)
 a "mais...mais..."
-a "C'est la photo de Pierre mon frère!"
+a "C'est la photo des 30 ans de Pierre mon frère!"
 a "Mais comment c'est possible, c'est ma photo en plus ! "
 a "Elle doit même encore être sur mon téléphone"
 
@@ -32,7 +39,7 @@ label searchInGallery:
         empty ""
 
 label openDataCloud:
-    a "alors..."
+    a "mince, elle doit dater d'avant 2022"
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         show screen freeWifi
@@ -45,14 +52,15 @@ label openDataCloud:
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
         hide screen dataCloudOpening
-        a "Alors, quelle est la date..."
+        a "mais de quand date-t-elle ?..."
         jump inputDate
     while True:
         empty ""
 
 label inputDate:
     $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
-    if dateInput == "2014":
+    $ birthdayYear = str(year-5)
+    if dateInput == birthdayYear:
         hide screen dataCloudSearching
         jump searchInDataCloud
     else:
@@ -86,7 +94,7 @@ label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
     a "Mais non !"
-    e_nvl "quand vous partagé une photo sur un réseau social, celle-ci ne vous appartient plus."
+    e_nvl "quand vous partagez une photo sur un réseau social, celle-ci ne vous appartient plus."
     window auto hide
     $ renpy.pause(3.0, hard=True)
     hide screen dataBookFound
@@ -109,17 +117,49 @@ label travelToStore:
     show exitBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
-    show getInStore
-    a "Yo !"
 
 label insideStore:
     show getInStore
+    window auto hide
     $ renpy.pause(3.0, hard=True)
-    show homeStore
+    show askStore
+    window auto hide
     $ renpy.pause(3.0, hard=True)
+    show receiveStore
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
+    a "Mais oui, je pourrai en profiter pour customiser une tasse !"
+    show computerStore
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
+    show zoomComputerStore
+    show screen storeCustomPage
+    a "Bon, alors qu'est ce que je pourrai mettre dessus ?"
+    while True:
+        empty ""
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
+
+image frame_slideshow_noselfie:
+   "/UI/Cadre/slideshowFrame_001.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_002.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_003.png"
+   pause 2.5
+   repeat
+
+image frame_slideshow_withselfie:
+   "/UI/Cadre/slideshowFrame_015.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_002.png"
+   pause 2.5
+   "UI/Cadre/slideshowFrame_003.png"
+   pause 2.5
+   repeat
+
+
 screen galeryOpening:
     add "UI/applications/galeryOpening.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
@@ -135,7 +175,7 @@ screen galeryNoFilter:
             draggable True
             vbox:
                 spacing 20
-                text "2024"  color "#000000"
+                text "[year]"  color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -145,7 +185,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
-                text "2023"  color "#000000"
+                text "[year-1]" color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -153,7 +193,7 @@ screen galeryNoFilter:
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
-                text "2022"  color "#000000"
+                text "[year-2]"  color "#000000"
                 grid 2 4:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
@@ -178,7 +218,7 @@ screen cloudNoFilter:
             draggable True
             vbox:
                 spacing 20
-                text "2014"  color "#000000"
+                text "[year-5]"  color "#000000"
                 grid 2 4:
                     spacing 10
                     add "UI/applications/galery/001.jpeg"
@@ -256,3 +296,13 @@ screen dataBookFound:
 screen outOfBattery:
     add "UI/applications/outBattery.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+screen storeCustomPage:
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    imagebutton:
+        idle At("UI/store/importPicture.png", outline_transform(6, "#000", 4.0))
+        hover "UI/store/importPicture.png"
+        xalign 0.68
+        yalign 0.75
+        action NullAction()
+
