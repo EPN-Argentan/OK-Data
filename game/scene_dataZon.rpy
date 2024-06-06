@@ -67,8 +67,8 @@ label phonestopcoli6mots :
     $ renpy.scene(layer="screens")
     show screen feed_coli6mots_statique
     call addPoints(-2,'point_administrative')
-    e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à vous extorquer de l'argent."
-    e_nvl "Pensez à vérifier l'adresse de l'expéditeur avant de cliquer"
+    e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
+    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
     jump mailx3
 
 
