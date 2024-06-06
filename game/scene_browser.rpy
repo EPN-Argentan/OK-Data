@@ -44,7 +44,7 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    a "Voila maman, il ne te reste plus qu'à lire l'évènement \n qu'ils ont créé pour l'anniversaire de Thierry ! "
+    a "Voila maman, il ne te reste plus qu'à lire l'évènement \n qu'ils ont créé pour l'anniversaire de Pierre ! "
     while True:
         empty ""
 
