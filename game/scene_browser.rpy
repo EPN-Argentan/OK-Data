@@ -30,7 +30,7 @@ label browserLabelAfterCall:
     hide screen phoneDown
     show loungeZoom
     empty ""
-    show screen browserWindowSubscribe
+    show screen browserWindowSubscribe 
     show loungeHandIn onlayer overlay
     hide loungeIdle
     while True:

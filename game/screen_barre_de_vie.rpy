@@ -4,6 +4,7 @@ transform dark_tint(value):
     matrixcolor  HueMatrix(translate(value, minPts, maxPts, -110, 0))
 
 screen barre_de_vie :
+    layer "ontop"
     add mtt # add caption on hover
     $ checkMinMax()
 #position of green pastille
