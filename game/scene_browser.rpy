@@ -62,23 +62,24 @@ label insideEventPage:
 screen insideEvent:
     add "UI/browser/frameDataBook.png" xpos 42 ypos 97
     side "c b r":
-        area (358, 160, 675, 800)
+        area (358, 160, 775, 800)
         viewport id "vp":
             draggable True
             vbox:
-                spacing 0
+                spacing 20
                 imagebutton:
                     idle "UI/browser/EventPage.png"
                 hbox:
-                    xalign 0.7
-                    spacing 10
+                    ypos -175
+                    xalign 1.0
+                    spacing 5
                     imagebutton:
-                        idle "UI/browser/sendPhotosDatabook.png"
+                        idle At("UI/browser/sendPhotosDatabook.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosDatabook.png"
                         action Call("addPoints",-2,'point_administrative',"","","Tu aurais dû envoyer tes photos via mail µEn partageant tes photos sur un réseau social, tu risques de ne plus savoir avec qui elles auront été partagées. µDe plus, DATABOOK en deviendra le copropriétaire, comme sur la pluspart des réseaux sociaux","",'hub')
                     imagebutton:
-                        idle "UI/browser/sendPhotosMail.png"
-                        hover "UI/browser/sendPhotosDatabook.png"
+                        idle At("UI/browser/sendPhotosMail.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
+                        hover "UI/browser/sendPhotosMail.png"
                         action Call("addPoints",2,'point_administrative',"","","","tu as bien fait ! En partageant tes photos sur un réseau social, tu risquais de ne plus savoir avec qui elles ont été partagées. µDe plus, DATABOOK en deviendrait le copropriétaire, comme sur la pluspart des réseaux sociaux",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")
