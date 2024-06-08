@@ -1,34 +1,35 @@
-2024-06-08 09:00:21 UTC
+2024-06-08 09:23:10 UTC
 Windows-10-10.0.22621
 Ren'Py 8.2.0.24012702
 
-Early init took 0.10s
-Loading error handling took 0.03s
-Loading script took 0.36s
-Loading save slot metadata took 0.04s
+Early init took 0.12s
+Loading error handling took 0.04s
+Loading script took 0.54s
+Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.02s
+Running init code took 0.10s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
-Dump and make backups took 0.05s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.05s
+Initial gc took 0.04s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
+Creating interface object took 0.16s
 Cleaning stores took 0.00s
-Init translation took 0.12s
-Build styles took 0.01s
-Load screen analysis took 0.10s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.05s
 Running _start took 0.00s
 Interface start took 0.08s
 
@@ -44,125 +45,10 @@ Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/scene_tuto.rpy", line 5, in script
-    show screen barre_de_vie
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1968, in execute
-    self.call("execute")
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 1950, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\statements.py", line 349, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 1338, in show_screen
-    d = ScreenDisplayable(screen, _tag, _layer, _widget_properties, scope, transient=_transient)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 406, in __init__
-    old_screen = get_screen(tag, layer)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 1148, in get_screen
-    sd = sl.get_displayable_by_tag(layer, tag)
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\scenelists.py", line 855, in get_displayable_by_tag
-    raise Exception("Unknown layer %r." % layer)
-Exception: Unknown layer 'onlayer'.
-
-While running game code:
-  File "game/scene_tuto.rpy", line 5, in script
-    show screen barre_de_vie
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-Exception: Unknown layer 'onlayer'.
 Resetting cache.
-Early init took 16.14s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.13s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.10s
-Build styles took 0.01s
-Load screen analysis took 0.10s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.14s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 551.99s
+Early init took 57.26s
 Loading error handling took 0.03s
-Loading script took 0.32s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.15s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.05s
-Prepare screens took 0.18s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 562.99s
-Loading error handling took 0.02s
-Loading script took 0.16s
+Loading script took 0.19s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
 Running init code took 0.05s
@@ -170,163 +56,22 @@ Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
 Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.15s
+Initial gc took 0.05s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.13s
 Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.09s
-Analyze screens took 0.01s
-Save screen analysis took 0.00s
-Prepare screens took 0.15s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 632.29s
-Loading error handling took 0.02s
-Loading script took 0.20s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/scene_browser.rpy", line 75: imagebutton expects a non-empty block.
-    imagebutton:
-                ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.43s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 646.01s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.15s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.05s
-Prepare screens took 0.16s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 677.23s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/scene_browser.rpy", line 81: keyword argument 'idle' appears more than once in a imagebutton statement.
-    idle "UI/browser/sendPhotosMail.png"
-        ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start took 0.27s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 684.96s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.08s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.19s
-Cleaning stores took 0.00s
-Init translation took 0.07s
+Init translation took 0.04s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.06s
-Prepare screens took 0.17s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -345,275 +90,13 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 694.47s
+Early init took 108.50s
 Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.12s
-Build styles took 0.01s
-Load screen analysis took 0.10s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 707.00s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.12s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.09s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.05s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 725.59s
-Loading error handling took 0.02s
-Loading script took 0.16s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.10s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.16s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.06s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 745.80s
-Loading error handling took 0.02s
-Loading script took 0.19s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Dump and make backups took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.09s
-Build styles took 0.01s
-Load screen analysis took 0.10s
-Analyze screens took 0.02s
-Save screen analysis took 0.00s
-Prepare screens took 0.26s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 752.27s
-Loading error handling took 0.03s
-Loading script took 0.33s
-Loading save slot metadata took 0.06s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.12s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
-Cleaning stores took 0.00s
-Init translation took 0.11s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.05s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 761.98s
-Loading error handling took 0.02s
-Loading script took 0.27s
+Loading script took 0.21s
 Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
-Running init code took 0.07s
+Running init code took 0.05s
 Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.10s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.12s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
-Cleaning stores took 0.00s
-Init translation took 0.12s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.04s
-Prepare screens took 0.16s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 771.48s
-Loading error handling took 0.04s
-Loading script took 0.23s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
 Index archives took 0.00s
@@ -621,18 +104,18 @@ Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/back
 Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.11s
+Initial gc took 0.05s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
+Creating interface object took 0.13s
 Cleaning stores took 0.00s
-Init translation took 0.09s
-Build styles took 0.01s
+Init translation took 0.05s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.05s
-Prepare screens took 0.11s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -651,33 +134,76 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 779.68s
-Loading error handling took 0.03s
-Loading script took 0.25s
-Loading save slot metadata took 0.06s
+Early init took 118.50s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.06s
+Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.12s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 160.31s
+Loading error handling took 0.03s
+Loading script took 0.24s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.04s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
 Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.10s
+Initial gc took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.20s
+Creating interface object took 0.16s
 Cleaning stores took 0.00s
-Init translation took 0.11s
-Build styles took 0.01s
+Init translation took 0.06s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.07s
-Prepare screens took 0.15s
-Save pyanalysis. took 0.03s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.04s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.05s
@@ -695,12 +221,12 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 789.12s
+Early init took 171.35s
 Loading error handling took 0.02s
-Loading script took 0.16s
+Loading script took 0.22s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.04s
+Running init code took 0.05s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
@@ -709,17 +235,17 @@ Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/back
 Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.17s
+Initial gc took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.21s
+Creating interface object took 0.13s
 Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
+Init translation took 0.05s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
 Prepare screens took 0.10s
 Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
@@ -739,343 +265,35 @@ Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 798.55s
+Early init took 188.52s
 Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.09s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.16s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.05s
-Prepare screens took 0.15s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 808.03s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.08s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
-Prepare screens took 0.19s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 895.84s
-Loading error handling took 0.03s
-Loading script took 0.22s
+Loading script took 0.19s
 Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
 Running init code took 0.05s
-Loading analysis data took 0.02s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
-Dump and make backups took 0.09s
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.10s
+Initial gc took 0.17s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.22s
+Creating interface object took 0.25s
 Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.11s
+Init translation took 0.10s
+Build styles took 0.00s
+Load screen analysis took 0.08s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.14s
+Prepare screens took 0.18s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 909.85s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.14s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.05s
-Prepare screens took 0.14s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 928.61s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.10s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.14s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
-Prepare screens took 0.20s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 941.12s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.09s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 950.80s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.09s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.18s
-Cleaning stores took 0.00s
-Init translation took 0.10s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.03s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 964.85s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.17s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.05s
-Prepare screens took 0.14s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
+Interface start took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

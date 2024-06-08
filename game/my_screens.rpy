@@ -252,10 +252,13 @@ screen browserWindowFeed:
                     action Jump("insideEventPage")
                 imagebutton:
                     idle "UI/browser/alarmArticle.png"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
                 imagebutton:
                     idle "UI/browser/chickenArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
                 imagebutton:
                     idle "UI/browser/burgerArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
             #add "UI/browser/feedDataBook.png"
 
         bar value XScrollValue("vp")
