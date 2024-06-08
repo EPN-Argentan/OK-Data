@@ -3,7 +3,7 @@ label browserLabel:
     scene hub
     hide screen hubElements
     hide screen phoneDown
-    show Player_Sitting
+    #show Player_Sitting
     show screen callPhoneIncoming
     while True:
         empty ""
@@ -20,8 +20,8 @@ label browserLabelCall:
 label browserLabelAfterCall:
     hide screen callPhoneIncoming
     hide screen callPhoneAnswer
-    scene lounge
-    show loungeIdle
+    #scene lounge with fade
+    show loungeIdle with fade
     show screen phoneDown
     a "Alors Maman, qu’est-ce que je peux faire pour toi ?"
     m "Un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, je ne sais pas comment ça marche … "

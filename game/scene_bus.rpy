@@ -20,11 +20,12 @@ window auto hide
 $ renpy.pause(3.0, hard=True)
 a "mais...mais..."
 a "C'est la photo des 30 ans de Pierre mon frère!"
-a "Mais comment c'est possible, c'est ma photo en plus ! "
+a "Mais comment c'est possible, c'est ma p  hoto en plus ! "
 a "Elle doit même encore être sur mon téléphone"
 
 label homeScreen:
-    show screen appsPhone(True,True,False,False,False,False)
+    scene busAdOnBus
+    show screen appsPhone(True,True,False,False,False,False,False,0.7)
     while True:
         empty ""
 
@@ -128,6 +129,7 @@ label insideStore:
     show receiveStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    show freezeReceive
     a "Mais oui, je pourrai en profiter pour customiser une tasse !"
     show computerStore
     window auto hide
@@ -223,11 +225,11 @@ screen galeryNoFilter:
          vbar value YScrollValue("vp")
 
 screen cloudNoFilter:
-    add "UI/applications/cloudNoFilter.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/cloudNoFilter.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
     side "c b r":
-         area (0.42, 0.3, 330, 550)
+         area (0.57, 0.3, 330, 550)
 
          viewport id "vp":
             draggable True
@@ -247,15 +249,15 @@ screen cloudNoFilter:
          vbar value YScrollValue("vp")
 
 screen dataCloudOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
-    add "UI/applications/Icons/appCloud.png" xalign 0.5 yalign 0.5 zoom 1.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/Icons/appCloud.png" xalign 0.6955 yalign 0.5 zoom 1.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen dataCloudSearching:
-    add "UI/applications/cloudDateInput.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/cloudDateInput.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
     hbox:
-        xalign 0.58
+        xalign 0.74
         yalign 0.22
         imagebutton:
             idle "UI/applications/Exit.png"
@@ -269,10 +271,10 @@ screen notificationWinted:
     add "UI/Cadre/notificationWinted.png" xalign 0.75 yalign 0.8
 
 screen freeWifi:
-    add "smartphone.png" xalign 0.5 yalign 0.5
-    add "UI/applications/FreeWifi.png" xalign 0.5 yalign 0.5
+    add "smartphone.png" xalign 0.7 yalign 0.5
+    add "UI/applications/FreeWifi.png" xalign 0.6955 yalign 0.5
     hbox:
-        xalign 0.5
+        xalign 0.6955
         yalign 0.65
         spacing 10
         imagebutton:
@@ -284,21 +286,21 @@ screen freeWifi:
             hover "UI/applications/no_hover.png"
             action Call("addPoints",5,"point_sociaux","","Bravo","Fais attention, sur des réseaux publics tu n'es pas protégé ! ","Dans la mesure du possible, évites les réseaux wifi publics","openDataCloud")
 
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen cloudPhotos:
-    add "smartphone.png" xalign 0.5 yalign 0.5
+    add "smartphone.png" xalign 0.7 yalign 0.5
 
 screen dataBookOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
-    add "UI/applications/Icons/appDataBook.png" xalign 0.5 yalign 0.5  zoom 1.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/Icons/appDataBook.png" xalign 0.6955 yalign 0.5  zoom 1.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen dataBookSearch:
-    add "UI/applications/dataBookSearch.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/dataBookSearch.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
     hbox:
-        xalign 0.58
+        xalign 0.74
         yalign 0.22
         imagebutton:
             idle "UI/applications/Exit.png"
@@ -307,12 +309,12 @@ screen dataBookSearch:
 
 
 screen dataBookFound:
-    add "UI/applications/dataBookFound.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/dataBookFound.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen outOfBattery:
-    add "UI/applications/outBattery.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 default profilPic = False
 

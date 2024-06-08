@@ -112,15 +112,15 @@ transform greyscale():
 
 default nameAppSize = 18
 
-screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True) :
+screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.5) :
     imagebutton:
-        xalign 0.5
+        xalign posY
         ypos 150
         idle "smartphone.png"
 
     frame:
         background None
-        xalign 0.5
+        xalign posY
         yalign 0.5
         xmaximum 360
         ymaximum 700
@@ -206,7 +206,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True) :
 
 
     hbox:
-        xalign 0.5
+        xalign posY-0.01
         yalign 0.2
         spacing 20
         imagebutton:
