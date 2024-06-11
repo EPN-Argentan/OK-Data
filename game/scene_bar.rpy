@@ -1,9 +1,11 @@
 label barOut:
     nvl clear
-    show screen phoneDown
+    #show screen phoneDown
+    hide screen phoneDown
     syrielle_nvl "Salut frangine ! \n On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
     hide screen hubElements
     show screen dataMap
+    show screen phoneDown
     empty ""
     while LocalisationState == False:
         empty ""

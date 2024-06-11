@@ -1,4 +1,61 @@
 
+image zoomPC :
+    "sprites/zoomPC/ZoomPC1.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC2.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC3.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC4.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC5.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC6.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC7.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC8.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC9.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC10.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC11.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC12.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC13.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC14.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC15.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC16.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC17.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC18.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC19.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC20.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC21.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC22.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC23.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC24.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC25.jpeg"
+    pause 0.1
+    "sprites/zoomPC/ZoomPC26.jpeg"
+    pause 0.1
+
+
+
+
 image loungeZoom :
     "sprites/lounge/zoom/SalonZoom001.png"
     pause 0.1
@@ -91,6 +148,11 @@ image loungeHandIn :
     "sprites/lounge/handIn/handIn017.png"
     pause 0.1
 
+image walkInfinite = Movie(play="images/sprites/walking/infiniteWalk.ogv", size=(1920,1080), loop=False)
+image walkZoom = Movie(play="images/sprites/walking/walkZoom.ogv", size=(1920,1080), loop=False)
+image walkFix :
+    "images/sprites/walking/freezePhone.jpg"
+
 image loungeIdle = Movie(play="images/sprites/lounge/loungeIdle.ogv", size=(1920,1080), loop=True)
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
@@ -110,11 +172,11 @@ image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(192
 image insideBus = Movie(play="images/sprites/bus/insideBus.ogv", size=(1920,1080), loop=False)
 image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), loop=False)
 
+image freezeReceive :
+    "images/sprites/store/freezeReceive.jpg"
 image getInStore = Movie(play="images/sprites/store/getInStore.ogv", size=(1920,1080), loop=False)
 image askStore = Movie(play="images/sprites/store/askStore.ogv", size=(1920,1080), loop=False)
 image receiveStore = Movie(play="images/sprites/store/receiveStore.ogv", size=(1920,1080), loop=False)
 image computerStore = Movie(play="images/sprites/store/computerStore.ogv", size=(1920,1080), loop=False)
-image freezeReceive = "images/sprites/store/freezeReceive.jpg"
-image zoomComputerStore : 
+image zoomComputerStore :
     "images/sprites/store/freezeFrameComputerStore.jpeg"
-

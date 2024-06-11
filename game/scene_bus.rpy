@@ -3,6 +3,7 @@ $ freeWifiActivate = False
 hide screen hubElements
 
 #display photo without sister selie or with it depending of previous events (see bar scene)
+nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
     a "oh là là, ça date ça..."
@@ -25,7 +26,7 @@ a "Elle doit même encore être sur mon téléphone"
 
 label homeScreen:
     scene busAdOnBus
-    show screen appsPhone(True,True,False,False,False,False,False,0.7)
+    show screen appsPhone(True,True,False,False,False,False,False,0.7) 
     while True:
         empty ""
 
@@ -40,7 +41,6 @@ label searchInGallery:
         empty ""
 
 label openDataCloud:
-    a "mince, elle doit dater d'avant 2022"
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         show screen freeWifi

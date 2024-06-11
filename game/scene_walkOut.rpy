@@ -7,10 +7,14 @@ label walkOut :
     nvl clear
     hide screen hubElements
     scene street
-    show Player_Walking
-    show screen phoneDown
+    show walkInfinite
+    $ renpy.pause(2.0, hard=True)
+    show walkZoom
+    $ renpy.pause(1.0, hard=False)
+    show walkFix
+    #show screen phoneDown
     empty ""
-    hide screen phoneDown
+    #hide screen phoneDown
     sepharo_nvl "Ça fait longtemps que vous n'êtes pas venu nous voir !"
     sepharo_nvl "En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
     hide screen skipTuto
@@ -24,8 +28,9 @@ label walkOut :
         empty ""
     #give back point if you lost them before
     if points['point_localisation'][0] == -5:
-        call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9      
-    scene hub
+        call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9  
+    nvl clear    
+    scene hub with fade
     hide screen hubElements
     e_nvl "Maintenant, tu es prêt pour la grande aventure, le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
     ##Set hub elements clickable
