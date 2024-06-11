@@ -36,6 +36,7 @@ jump tuto
 #Lancement du Hub
 label hub:
     hide screen phoneDown
+    hide screen mailx3
     scene hub
     show hubDogCouch
     show screen barre_de_vie

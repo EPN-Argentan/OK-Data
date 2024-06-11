@@ -9,15 +9,16 @@ label dataZon :
   hide screen phoneDown
   show zoomPC
   show screen barre_de_vie
-  a "allors mail ou Internet ?"
+  a "allors... mes mails ?"
   show screen desktopbutton
   a "allons-y !"
 
 
 label mailx3 :
     $ renpy.scene(layer="screens")
-    show screen barre_de_vie
+
     show screen mailx3
+    show screen barre_de_vie
     if default_clicks >= 3:
         show screen notifMail
     a "hum... je lis quel mail"
@@ -28,8 +29,10 @@ label mailx3 :
 
 label brouillon :
     $ renpy.scene(layer="screens")
-    show screen barre_de_vie
+    show screen mailx3
+
     show screen brouillon
+    show screen barre_de_vie
     a "Ah mais oui mon mail d'hier soir... Je dois le finir."
     a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
 
@@ -38,16 +41,23 @@ label brouillon :
 
 label Brouillon_phone_ok :
     $ renpy.scene(layer="screens")
-    show screen barre_de_vie
+
+
+    show screen mailx3
+
     show screen brouillon
+    show screen barre_de_vie
     call addPoints(2,'point_sociaux')
     e_nvl "Bravo, En effet rien ne sert de communiquer les mails de tes proches à tous"
     jump mailx3
 
 label Brouillon_phone_No:
     $ renpy.scene(layer="screens")
-    show screen barre_de_vie
+
+    show screen mailx3
     show screen brouillon
+    show screen barre_de_vie
+
     call addPoints(-2,'point_sociaux')
     e_nvl "Il faut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
     jump mailx3
@@ -61,6 +71,7 @@ label mail_coli6mots :
         $ lect_mail[0] = False
         show screen notifMail
 
+    show screen mailx3
     show screen mail_coli6mots
     show screen barre_de_vie
     a "Hum un colis ?"
@@ -71,6 +82,8 @@ label mail_coli6mots :
 
 label feed_coli6mots :
     $ renpy.scene(layer="screens")
+
+    show screen mailx3
     show screen feed_coli6mots
     show screen barre_de_vie
     a "Oh Zut !"
@@ -83,6 +96,8 @@ label Noformok :
 label phonestopcoli6mots :
     nvl clear
     $ renpy.scene(layer="screens")
+
+    show screen mailx3
     show screen feed_coli6mots_statique
     show screen barre_de_vie
     call addPoints(-2,'point_administrative')
@@ -99,7 +114,7 @@ label superclerc:
         $ default_clicks = default_clicks+1
         $ lect_mail[1] = False
         show screen notifMail
-
+    show screen mailx3
     show screen superclerc
     show screen barre_de_vie
     a "ok, mon ticket de course"
@@ -113,7 +128,7 @@ label mailsepharo :
         $ default_clicks = default_clicks+1
         $ lect_mail[2] = False
         show screen notifMail
-
+    show screen mailx3
     show screen mailsepharo
     show screen barre_de_vie
     a "Oh ? Ah oui c'est vrai j'avais laissé ma géolocalisation activée"
@@ -121,12 +136,17 @@ label mailsepharo :
 
 label datazonmail :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datazonmail
+    show screen barre_de_vie
+    scene black
+    with dissolve
 
     a "Oh, c'est gentil de penser à me le rappeler..."
 
 label navigateur :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen navigateur
     show screen barre_de_vie
     a "Bon il faudrait que je trouve le cadeau de ma mère quand même pour le frérôt"
@@ -134,6 +154,7 @@ label navigateur :
 
 label datasearchresultx3 :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datasearchresultx3
     show screen barre_de_vie
     a "alors...."
@@ -142,7 +163,9 @@ label datasearchresultx3 :
 
 label datazonsite :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datazonsite
+    with dissolve
     show screen barre_de_vie
     a "Encore les cookies...."
     while True :
@@ -150,6 +173,7 @@ label datazonsite :
 
 label datazonsiteafternocookie :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datazonsiteafternocookie
     show screen barre_de_vie
     e_nvl "Bien jouée, pas besoin de donner des informations sur ta navigation"
@@ -157,6 +181,7 @@ label datazonsiteafternocookie :
 
 label datazonsiteaftercookieok :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datazonsiteaftercookieok
     show screen barre_de_vie
     call addPoints(-2,'point_conviction')
@@ -166,6 +191,7 @@ label datazonsiteaftercookieok :
 
 label datazonsiteok :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datazonsiteok
     show screen barre_de_vie
     a "ah je peux enfin acheter un truc"
@@ -174,6 +200,7 @@ label datazonsiteok :
 
 label aspisite :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen datasearchresultx3
     show screen barre_de_vie
     a "alors...."
@@ -182,6 +209,7 @@ label aspisite :
 
 label aspidatazon_page :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen aspidatazon_page
     show screen barre_de_vie
     a "alors...."
@@ -190,6 +218,7 @@ label aspidatazon_page :
 
 label aspidatazon_pagewithcookies :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen aspidatazon_pagewithcookies
     show screen barre_de_vie
     a "alors...."
@@ -198,6 +227,7 @@ label aspidatazon_pagewithcookies :
 
 label aspidatazon_aftercookieok :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen aspidatazon_aftercookieok
     show screen barre_de_vie
 
@@ -210,6 +240,7 @@ label aspidatazon_aftercookieok :
 
 label aspidatazon_afternocookie :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen aspidatazon_afternocookie
     show screen barre_de_vie
 
@@ -221,6 +252,7 @@ label aspidatazon_afternocookie :
 
 label aspicute :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen aspicute
     show screen barre_de_vie
 
@@ -230,6 +262,7 @@ label aspicute :
 
 label McDyzon :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen McDyzon
     show screen barre_de_vie
 
@@ -239,6 +272,7 @@ label McDyzon :
 
 label achatAspiCute :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen achatAspiCute
     show screen barre_de_vie
 
@@ -248,6 +282,7 @@ label achatAspiCute :
 
 label achatmcdyzon :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen achatmcdyzon
     show screen barre_de_vie
 
@@ -257,6 +292,7 @@ label achatmcdyzon :
 
 label paiementmcdyzon :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen paiementmcdyzon
     show screen barre_de_vie
 
@@ -265,6 +301,7 @@ label paiementmcdyzon :
 
 label CBmcdyson :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen CBmcdyson
     show screen barre_de_vie
 
@@ -273,6 +310,7 @@ label CBmcdyson :
 
 label validationachat :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen validationachat
     show screen barre_de_vie
     nvl clear
@@ -290,6 +328,7 @@ label validationachat :
 
 label paiementAspiCute :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen paiementAspiCute
     show screen barre_de_vie
     while True :
@@ -297,6 +336,7 @@ label paiementAspiCute :
 
 label CBaspicute :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen CBaspicute
     show screen barre_de_vie
     while True :
@@ -305,6 +345,7 @@ label CBaspicute :
 
 label searchaspi :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen searchaspi
     show screen barre_de_vie
     a "oui, un aspirateur connecté. Bonne idée !"
@@ -313,10 +354,13 @@ label searchaspi :
 
 label mailconfirmation :
     $ renpy.scene(layer="screens")
+    show screen mailx3
     show screen mailconfirmation
     show screen barre_de_vie
     a "Bon, voilà pour le moment. Allez hop je ferme l'ordinateur !"
     hide screen mailconfirmation
+    scene black
+    with dissolve
     jump hub
 
 
@@ -424,8 +468,8 @@ screen notifMail:
 screen datazonmail :
     add "UI/datazon/maildatazon.png" xalign 0.5 yalign 0.5
     imagebutton:
-        xalign 0.450
-        yalign 0.792
+        xalign 0.650
+        yalign 0.700
         idle "UI/datazon/button_GOdatazon_idle.png"
         hover "UI/datazon/button_GOdatazon_hover.png"
         action Jump ("datazonsite")
