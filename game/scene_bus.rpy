@@ -1,3 +1,6 @@
+default whereYouStart = [False,False] #track wich application player has launched [Gallery,Cloud]
+default findYearPic = False
+
 label bus:
 $ freeWifiActivate = False
 hide screen hubElements
@@ -12,7 +15,7 @@ else:
     show frame_slideshow_withselfie with moveinbottom
     a "oh non pourvu que personne d'autre ne voit cette photo..."
 
-e_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
+winted_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
 a "Oh mince, j'avais complétement zappé !"
 a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
 $ renpy.scene(layer = "screens")
@@ -27,22 +30,41 @@ a "Elle doit même encore être sur mon téléphone"
 
 label homeScreen:
     scene busAdOnBus
+    window auto hide
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,False,False,False,False,False,0.7)
     while True:
         empty ""
 
 label searchInGallery:
+    hide screen dataCloudSearching
     show screen galeryOpening
-    a "..."
+    a "Allons voir dans la galerie"
     show screen galeryNoFilter
     hide screen galeryOpening
-    a "Cherchons"
-    a "Il faut que je fasse le tri !"
+    if whereYouStart[0] == False and whereYouStart[1] == False: #Player launch gallery at first
+        a "Commençons par ici"
+        a "Il faut vraiment que je fasse le tri !"
+    elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
+        a "Bon, sinon, je devrais pouvoir la retrouver dans mes photos"
+        a "Il faut vraiment que je fasse le tri !"
+    elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
+        a "J'ai du louper une info"
+    $ whereYouStart[0] = True
     while True:
         empty ""
 
 label openDataCloud:
+    nvl clear
+    hide screen galeryNoFilter
+    if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
+        a "Mince, la photo doit être de l'année encore d'avant !"
+        a "Allons voir sur Datacloud"
+    elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
+        a "euh...de quand date la photo"
+    elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
+        a "Elle doit dater d'il y a 5 ans"
+    $ whereYouStart[1] = True
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         show screen freeWifi
@@ -55,7 +77,6 @@ label openDataCloud:
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
         hide screen dataCloudOpening
-        a "mais de quand date-t-elle ?..."
         jump inputDate
     while True:
         empty ""
@@ -71,11 +92,19 @@ label inputDate:
 
 label searchInDataCloud:
     show screen cloudNoFilter
-    a "je fais ma recherche"
+    if findYearPic == False:
+        a "Bingo !"
+        a "plus qu'à trouver la bonne..."
+    else:
+        a "Je devrais pouvoir trouver un indice pour la localisation dans les autres photos"
     window auto hide
     $ renpy.pause(3.0)
-    a "bon, toujours rien"
-    a "j'ai peut-être vu cette photo sur Databook !"
+    if findYearPic == False:
+        a "arg..."
+        a "Mais j'ai du partager cette photo sur Databook !"
+    else :
+        a "Bon réessayons"
+    $ findYearPic = True
     window auto hide
     $ renpy.pause(1.0)
 
@@ -96,14 +125,18 @@ label searchInDataBook:
 label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
-    a "Mais non !"
-    e_nvl "quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
+    a "Voilà, c'est celle là"
+    a "Mais comment ils ont fait ?!"
+    a "Ils n'ont pas le droit"
+    e_nvl "Malheureusement si."
+    e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
+    e_nvl "Tu peux rechercher grâce à des outils comme {a=https://lens.google/intl/fr/}google lens{/a} les occurences d'utilisation d'une photo sur internet"
     window auto hide
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
     show screen outOfBattery
-    a "mince !"
-    a "et en plus j'ai oublié mon chargeur"
+    a "Mince !"
+    a "Et en plus j'ai oublié mon chargeur"
     hide screen outOfBattery
 
 label travelToStore:
@@ -133,7 +166,11 @@ label insideStore:
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    a "Mais oui, je pourrai en profiter pour customiser une tasse !"
+    vendeuse "Voilà pour vous"
+    a "Merci"
+    vendeuse "N'hésitez pas à profiter de notre promotion sur l'impression sur mug"
+    a "C'est vrai, on peut faire ça ici ?"
+    a "Je pourrais en profiter pour customiser une tasse pour mon frère!"
     show computerStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
@@ -159,7 +196,8 @@ label outStore:
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
-
+image emptyPhone:
+    "smartphone.png"
 image frame_slideshow_noselfie:
    "/UI/Cadre/slideshowFrame_001.png"
    pause 2.5
@@ -180,33 +218,28 @@ image frame_slideshow_withselfie:
 
 
 screen galeryOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.5 yalign 0.5
-    add "UI/applications/Icons/appGallery.png" xalign 0.5 yalign 0.5 zoom 1.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/Icons/appGallery.png" xalign 0.675 yalign 0.5 zoom 1.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen galeryNoFilter:
-    add "UI/applications/galeryNoFilter.png" xalign 0.5 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+    add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
     side "c b r":
-         area (0.42, 0.3, 330, 500)
+         area (0.575, 0.3, 330, 500)
 
          viewport id "vp":
             draggable True
             vbox:
                 spacing 20
                 text "[year]"  color "#000000"
-                grid 2 4:
+                grid 2 1:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/003.jpeg"
-                    add "UI/applications/galery/004.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
                 text "[year-1]" color "#000000"
-                grid 2 4:
+                grid 2 3:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
@@ -214,13 +247,23 @@ screen galeryNoFilter:
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/003.jpeg"
                 text "[year-2]"  color "#000000"
-                grid 2 4:
+                grid 2 2:
                     spacing 20
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/001.jpeg"
+                text "[year-3]"  color "#000000"
+                grid 2 2:
+                    spacing 20
+                    add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/003.jpeg"
+                    add "UI/applications/galery/001.jpeg"
+                text "[year-4]"  color "#000000"
+                grid 2 2:
+                    spacing 20
+                    add "UI/applications/galery/001.jpeg"
+                    add "UI/applications/galery/002.jpeg"
+                    add "UI/applications/galery/001.jpeg"
                 textbutton "Retrouvez vos anciennes photos sur Datacloud" action Jump("openDataCloud")
 
 
@@ -263,7 +306,7 @@ screen dataCloudSearching:
         xalign 0.74
         yalign 0.22
         imagebutton:
-            idle "UI/applications/Exit.png"
+            idle At("UI/applications/Exit.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
             hover "UI/applications/Exit.png"
             action Jump("homeScreen")
 
@@ -312,7 +355,7 @@ screen dataBookSearch:
 
 
 screen dataBookFound:
-    add "UI/applications/dataBookFound.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/dataBookInFeed.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen outOfBattery:
