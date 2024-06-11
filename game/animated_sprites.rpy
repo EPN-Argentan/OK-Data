@@ -148,8 +148,10 @@ image loungeHandIn :
     "sprites/lounge/handIn/handIn017.png"
     pause 0.1
 
+image loungeIdle = Movie(play="images/sprites/lounge/loungeIdle.ogv", size=(1920,1080), loop=True)
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
+
 
 image hubDogCouch = Movie(play="images/sprites/hub/hubDogCouch.ogv", size=(1920,1080), loop=True)
 
@@ -159,6 +161,7 @@ image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size
 
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
+image busAdOnBus = "images/sprites/bus/adOnBus.png"
 
 image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
 image insideBus = Movie(play="images/sprites/bus/insideBus.ogv", size=(1920,1080), loop=False)

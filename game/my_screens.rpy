@@ -112,15 +112,15 @@ transform greyscale():
 
 default nameAppSize = 18
 
-screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True) :
+screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.5) :
     imagebutton:
-        xalign 0.5
+        xalign posY
         ypos 150
         idle "smartphone.png"
 
     frame:
         background None
-        xalign 0.5
+        xalign posY
         yalign 0.5
         xmaximum 360
         ymaximum 700
@@ -206,7 +206,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True) :
 
 
     hbox:
-        xalign 0.5
+        xalign posY-0.01
         yalign 0.2
         spacing 20
         imagebutton:
@@ -247,14 +247,18 @@ screen browserWindowFeed:
                 imagebutton:
                     idle "UI/browser/eventBanner.png"
                 imagebutton:
-                    idle "UI/browser/eventBirtdhay.png"
+                    idle At("UI/browser/eventBirtdhay.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                    hover "UI/browser/eventBirtdhay.png"
                     action Jump("insideEventPage")
                 imagebutton:
                     idle "UI/browser/alarmArticle.png"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
                 imagebutton:
                     idle "UI/browser/chickenArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
                 imagebutton:
                     idle "UI/browser/burgerArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
             #add "UI/browser/feedDataBook.png"
 
         bar value XScrollValue("vp")
@@ -275,7 +279,7 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Vous perdez des points ! µEvitez de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
+                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Tu perds des points ! µEvites de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
