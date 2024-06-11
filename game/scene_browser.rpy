@@ -3,6 +3,7 @@ label browserLabel:
     scene hub
     hide screen hubElements
     hide screen phoneDown
+    stop music fadeout 1.0
     #show Player_Sitting
     show screen callPhoneIncoming
     while True:
@@ -12,7 +13,7 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman"
     m "Salut ma grande"
-    m "ça va ?"
+    m "ça va ?, Excuse moi de t'appeler à nouveau pour des soucis d'ordinateur mais il faudrait que tu viennes m'aider, c'est pour l'anniversaire de ton frère ... "
     jump browserLabelAfterCall
     while True:
         empty ""
@@ -30,7 +31,7 @@ label browserLabelAfterCall:
     hide screen phoneDown
     show loungeZoom
     empty ""
-    show screen browserWindowSubscribe 
+    show screen browserWindowSubscribe
     show loungeHandIn onlayer overlay
     hide loungeIdle
     while True:

@@ -7,6 +7,7 @@ label dataZon :
   $ default_clicks = 0
   hide screen hubElements
   hide screen phoneDown
+  stop music fadeout 1.0
   show zoomPC
   show screen barre_de_vie
   a "allors... mes mails ?"
@@ -378,6 +379,7 @@ label mailconfirmation :
     hide screen mailconfirmation
     scene black
     with fade
+    $ hubClickable["laptop"]= 0
     jump hub
 
 

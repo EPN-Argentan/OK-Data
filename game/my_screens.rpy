@@ -68,6 +68,7 @@ screen hubElements:
     #...
     #add list of hub clickable elements here
 
+
 #Screen when head phone is just visible with settings icons
 screen phoneDown :
     imagebutton:
@@ -104,7 +105,6 @@ screen phoneDown :
                 hover "UI/settingsIcons/LocalisationON.png"
             action SetVariable("LocalisationState", not LocalisationState)
 
-
 #Smartphone home screen
 #Each argument is one application icon that can be avaible or not
 transform greyscale():
@@ -133,7 +133,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if A1:
                         idle At("UI/applications/Icons/appGallery.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appGallery.png"
-                        action Jump("openDataCloud")
+                        action [Hide("appsPhone"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appGallery.png" at greyscale()
                 text "{color=#555}Photos{/color}" xalign 0.5 size nameAppSize
@@ -252,13 +252,13 @@ screen browserWindowFeed:
                     action Jump("insideEventPage")
                 imagebutton:
                     idle "UI/browser/alarmArticle.png"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
                 imagebutton:
                     idle "UI/browser/chickenArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
                 imagebutton:
                     idle "UI/browser/burgerArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles 'putaclics'","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
             #add "UI/browser/feedDataBook.png"
 
         bar value XScrollValue("vp")
@@ -279,7 +279,7 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Tu perds des points ! µEvites de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
+                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Evites de donner trop d’informations ou de vraies informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes Sociétés comme ici DATABOOK récoltent ces données et les revendent ensuite, µsoit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses. ","","browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
@@ -307,7 +307,7 @@ screen callPhoneAnswer:
         yalign 0.69
         idle "UI/call/hangup_hover.png"
         hover "UI/call/hangup_idle.png"
-        action Jump("browserLabelAfterCall")
+        action NullAction()
 
 
 style bubble_tuto:

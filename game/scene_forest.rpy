@@ -3,6 +3,8 @@ label forest :
   hide screen hubElements
   show walkInForest
   show screen barre_de_vie
+  stop music fadeout 1.0
+  play music "To Ponder - Godmode.mp3"
   a "Au cœur de la forêt, là où les arbres murmurent leurs secrets au vent, il est un endroit où le temps se suspend."
   a "C’est là que l’âme se ressource, loin des écrans lumineux et des bruits assourdissants."
   call addPoints(2,'point_localisation')

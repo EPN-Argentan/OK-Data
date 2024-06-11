@@ -1,15 +1,20 @@
 label barOut:
     nvl clear
-    show screen phoneDown
+    #show screen phoneDown
+    hide screen phoneDown
+
     syrielle_nvl "Salut frangine ! \n On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
     hide screen hubElements
     show screen dataMap
+    show screen phoneDown
     empty ""
     while LocalisationState == False:
         empty ""
     hide screen dataMap
     scene bar
     show barSister
+    stop music fadeout 1.0
+    play music "ambi_bar.mp3"
     empty ""
     s "Ça fait longtemps, je suis heureuse de te revoir ! "
     s "Aller, on se fait un {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}Selfie{/a} et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "

@@ -1,8 +1,10 @@
 label bus:
 $ freeWifiActivate = False
 hide screen hubElements
+stop music fadeout 1.0
 
 #display photo without sister selie or with it depending of previous events (see bar scene)
+nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
     a "oh là là, ça date ça..."
@@ -25,6 +27,7 @@ a "Elle doit même encore être sur mon téléphone"
 
 label homeScreen:
     scene busAdOnBus
+    play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,False,False,False,False,False,0.7)
     while True:
         empty ""
@@ -40,7 +43,6 @@ label searchInGallery:
         empty ""
 
 label openDataCloud:
-    a "mince, elle doit dater d'avant 2022"
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         show screen freeWifi
@@ -107,6 +109,7 @@ label foundInDataBook:
 label travelToStore:
     hide busAdFreeze
     hide screen galeryFilter
+    stop music fadeout 1.0
     show getInsideBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
@@ -363,4 +366,3 @@ screen logViaPopup:
         xalign 0.5
         yalign 0.6
         action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique",'')]
-
