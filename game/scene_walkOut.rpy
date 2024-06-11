@@ -1,6 +1,7 @@
 label walkOut :
     scene hub
     hide screen hubElements
+
     e_nvl "Bonjour, je suis le {a=information: Le médiateur numérique est un super-héros du monde digital ! Il a pour mission d’accompagner les publics vers une autonomie des usages du numérique.}médiateur numérique{/a}, et je vais te guider et te conseiller tout au long du jeu."
     e_nvl "D'ailleurs, il serait bon d'aller promener ton chien."
     e_nvl "C'est parti !"
@@ -8,6 +9,7 @@ label walkOut :
     hide screen hubElements
     scene street
     show walkInfinite
+    stop music fadeout 1.0
     $ renpy.pause(2.0, hard=True)
     show walkZoom
     $ renpy.pause(1.0, hard=False)
@@ -28,8 +30,8 @@ label walkOut :
         empty ""
     #give back point if you lost them before
     if points['point_localisation'][0] == -5:
-        call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9  
-    nvl clear    
+        call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9
+    nvl clear
     scene hub with fade
     hide screen hubElements
     e_nvl "Maintenant, tu es prêt pour la grande aventure, le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
@@ -41,5 +43,5 @@ label walkOut :
     $ hubClickable["walkout"]= 1
     $ hubClickable["forest"]= 0
     $ hubClickable["photoFrame"]= 1
-    
+
     jump hub

@@ -3,6 +3,7 @@ define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_Se
 define e_nvl = Character("Médiateur", kind=nvl, callback=Phone_ReceiveSound)
 define syrielle_nvl = Character("Syrielle", kind=nvl, callback=Phone_ReceiveSound)
 define sepharo_nvl = Character("Sepharo", kind=nvl, callback=Phone_ReceiveSound)
+define winted_nvl = Character("Winted", kind=nvl, callback=Phone_ReceiveSound)
 
 define info = Character(None, image="info", kind=bubble)
 
@@ -16,6 +17,8 @@ define a = Character('Alexia', color="#7A1EBB")
 define m = Character('Maman', color="#5833ae")
 
 define med = Character('Mediateur', color="#209792")
+
+define vendeuse = Character('Vendeuse', color="#DE843A")
 
 define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
@@ -41,6 +44,8 @@ label hub:
     show hubDogCouch
     show screen barre_de_vie
     show screen hubElements
+    stop music fadeout 1.0
+    play music "Spring Field - Godmode.mp3"
     empty ""
 
     #Boucle infinie dans le hub

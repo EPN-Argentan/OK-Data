@@ -137,6 +137,8 @@ screen nvl_phonetext(dialogue):
                         $ message_icon = "UI/conversation/sister_phone_icon.png"
                     elif d.who == Sepharo:
                         $ message_icon = "UI/conversation/sepharo_phone_icon.png"
+                    elif d.who == Winted:
+                        $ message_icon = "UI/conversation/winted_phone_icon.png"
                     else:
                         $ message_icon = "UI/conversation/mediateur_phone_icon.png"
 

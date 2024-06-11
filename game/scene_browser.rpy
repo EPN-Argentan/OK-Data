@@ -3,6 +3,7 @@ label browserLabel:
     scene hub
     hide screen hubElements
     hide screen phoneDown
+    stop music fadeout 1.0
     #show Player_Sitting
     show screen callPhoneIncoming
     while True:
@@ -30,7 +31,7 @@ label browserLabelAfterCall:
     hide screen phoneDown
     show loungeZoom
     empty ""
-    show screen browserWindowSubscribe 
+    show screen browserWindowSubscribe
     show loungeHandIn onlayer overlay
     hide loungeIdle
     while True:
