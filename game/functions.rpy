@@ -119,6 +119,7 @@ define config.hyperlink_handlers = {
     "information": information_display
 }
 
+
 #Map function
 init python:
     def translate(value, leftMin, leftMax, rightMin, rightMax):
