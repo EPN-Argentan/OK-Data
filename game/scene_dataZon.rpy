@@ -7,17 +7,24 @@ label dataZon :
   $ default_clicks = 0
   hide screen hubElements
   hide screen phoneDown
+  stop music fadeout 1.0
   show zoomPC
   show screen barre_de_vie
   a "allors... mes mails ?"
+  window auto hide
+  $ renpy.pause(3.0, hard=True)
   show screen desktopbutton
   a "allons-y !"
+  while True:
+      empty ""
+
 
 
 label mailx3 :
     $ renpy.scene(layer="screens")
 
     show screen mailx3
+    with dissolve
     show screen barre_de_vie
     if default_clicks >= 3:
         show screen notifMail
@@ -32,6 +39,7 @@ label brouillon :
     show screen mailx3
 
     show screen brouillon
+    with dissolve
     show screen barre_de_vie
     a "Ah mais oui mon mail d'hier soir... Je dois le finir."
     a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
@@ -71,8 +79,9 @@ label mail_coli6mots :
         $ lect_mail[0] = False
         show screen notifMail
 
-    show screen mailx3
+
     show screen mail_coli6mots
+    with dissolve
     show screen barre_de_vie
     a "Hum un colis ?"
 
@@ -83,7 +92,7 @@ label mail_coli6mots :
 label feed_coli6mots :
     $ renpy.scene(layer="screens")
 
-    show screen mailx3
+
     show screen feed_coli6mots
     show screen barre_de_vie
     a "Oh Zut !"
@@ -114,11 +123,13 @@ label superclerc:
         $ default_clicks = default_clicks+1
         $ lect_mail[1] = False
         show screen notifMail
-    show screen mailx3
+
     show screen superclerc
+    with dissolve
     show screen barre_de_vie
-    a "ok, mon ticket de course"
+    a "ok, mon ticket de course... Pas d'importance."
     jump mailx3
+
 
 label mailsepharo :
     $ renpy.scene(layer="screens")
@@ -128,8 +139,9 @@ label mailsepharo :
         $ default_clicks = default_clicks+1
         $ lect_mail[2] = False
         show screen notifMail
-    show screen mailx3
+
     show screen mailsepharo
+    with dissolve
     show screen barre_de_vie
     a "Oh ? Ah oui c'est vrai j'avais laissé ma géolocalisation activée"
     jump mailx3
@@ -138,28 +150,31 @@ label datazonmail :
     $ renpy.scene(layer="screens")
     show screen mailx3
     show screen datazonmail
+    with dissolve
     show screen barre_de_vie
     scene black
     with dissolve
 
     a "Oh, c'est gentil de penser à me le rappeler..."
 
-label navigateur :
-    $ renpy.scene(layer="screens")
-    show screen mailx3
-    show screen navigateur
-    show screen barre_de_vie
-    a "Bon il faudrait que je trouve le cadeau de ma mère quand même pour le frérôt"
+    while True:
+        empty ""
+#label navigateur :
+#    $ renpy.scene(layer="screens")
+#    show screen mailx3
+#    show screen navigateur
+#    show screen barre_de_vie
+#    a "Bon il faudrait que je trouve le cadeau de ma mère quand même pour le frérôt"
 #arrivé du mail dataZon
 
-label datasearchresultx3 :
-    $ renpy.scene(layer="screens")
-    show screen mailx3
-    show screen datasearchresultx3
-    show screen barre_de_vie
-    a "alors...."
-    while True :
-        empty ""
+#label datasearchresultx3 :
+#    $ renpy.scene(layer="screens")
+#    show screen mailx3
+#    show screen datasearchresultx3
+#    show screen barre_de_vie
+#    a "alors...."
+#    while True :
+#        empty ""
 
 label datazonsite :
     $ renpy.scene(layer="screens")
@@ -194,7 +209,7 @@ label datazonsiteok :
     show screen mailx3
     show screen datazonsiteok
     show screen barre_de_vie
-    a "ah je peux enfin acheter un truc"
+    a "ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
     while True :
         empty ""
 
@@ -211,6 +226,7 @@ label aspidatazon_page :
     $ renpy.scene(layer="screens")
     show screen mailx3
     show screen aspidatazon_page
+    with dissolve
     show screen barre_de_vie
     a "alors...."
     while True :
@@ -312,6 +328,7 @@ label validationachat :
     $ renpy.scene(layer="screens")
     show screen mailx3
     show screen validationachat
+    with dissolve
     show screen barre_de_vie
     nvl clear
     if cross_cb == True :
@@ -354,8 +371,9 @@ label searchaspi :
 
 label mailconfirmation :
     $ renpy.scene(layer="screens")
-    show screen mailx3
+
     show screen mailconfirmation
+    with dissolve
     show screen barre_de_vie
     a "Bon, voilà pour le moment. Allez hop je ferme l'ordinateur !"
     hide screen mailconfirmation
@@ -367,8 +385,8 @@ label mailconfirmation :
 
 screen desktopbutton:
     imagebutton:
-        xalign 0.515
-        yalign 0.43
+        xalign 0.517
+        yalign 0.435
         idle "UI/datazon/mailbutton_idle.png"
         hover "UI/datazon/mailbutton_hover.png"
         action Jump("brouillon")
@@ -568,13 +586,13 @@ screen aspidatazon_page:
     add "UI/datazon/aspidatazon_page.png" xalign 0.5 yalign 0.5
     imagebutton :
         xalign 0.425
-        yalign 0.522
+        yalign 0.4715
         idle "UI/datazon/button_aspicute_idle.png"
         hover "UI/datazon/button_aspicute_hover.png"
         action Jump ("aspicute")
     imagebutton :
         xalign 0.425
-        yalign 0.759
+        yalign 0.710
         idle "UI/datazon/button_McDyzon_idle.png"
         hover "UI/datazon/button_McDyzon_hover.png"
         action Jump ("McDyzon")
@@ -644,7 +662,7 @@ screen aspicute:
     add "UI/datazon/aspicute_page.png" xalign 0.5 yalign 0.5
     imagebutton :
         xalign 0.655
-        yalign 0.745
+        yalign 0.725
         idle "UI/datazon/button_panier_idle.png"
         hover "UI/datazon/button_panier_hover.png"
         action Jump ("achatAspiCute")
@@ -653,7 +671,7 @@ screen McDyzon:
     add "UI/datazon/mcdyzon_page.png" xalign 0.5 yalign 0.5
     imagebutton :
         xalign 0.655
-        yalign 0.745
+        yalign 0.725
         idle "UI/datazon/button_panier_idle.png"
         hover "UI/datazon/button_panier_hover.png"
         action Jump ("achatmcdyzon")
@@ -662,7 +680,7 @@ screen achatmcdyzon:
     add "UI/datazon/feedachatmcdyson.png" xalign 0.5 yalign 0.5
     imagebutton :
         xalign 0.455
-        yalign 0.745
+        yalign 0.715
         idle "UI/datazon/paiement_idle.png"
         hover "UI/datazon/paiement_hover.png"
         action Jump ("paiementmcdyzon")
@@ -671,7 +689,7 @@ screen achatAspiCute:
     add "UI/datazon/feedachatAspiCute.png" xalign 0.5 yalign 0.5
     imagebutton :
         xalign 0.455
-        yalign 0.745
+        yalign 0.715
         idle "UI/datazon/paiement_idle.png"
         hover "UI/datazon/paiement_hover.png"
         action Jump ("paiementAspiCute")

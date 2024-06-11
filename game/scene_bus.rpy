@@ -4,6 +4,7 @@ default findYearPic = False
 label bus:
 $ freeWifiActivate = False
 hide screen hubElements
+stop music fadeout 1.0
 
 #display photo without sister selie or with it depending of previous events (see bar scene)
 nvl clear
@@ -30,6 +31,7 @@ a "Elle doit même encore être sur mon téléphone"
 label homeScreen:
     scene busAdOnBus
     window auto hide
+    play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,False,False,False,False,False,0.7)
     while True:
         empty ""
@@ -48,7 +50,7 @@ label searchInGallery:
         a "Il faut vraiment que je fasse le tri !"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
         a "J'ai du louper une info"
-    $ whereYouStart[0] = True   
+    $ whereYouStart[0] = True
     while True:
         empty ""
 
@@ -69,8 +71,8 @@ label openDataCloud:
         a "il me reste encore un peu de forfait"
         while True:
             empty ""
-    else: 
-        show screen dataCloudOpening 
+    else:
+        show screen dataCloudOpening
         window auto hide
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
@@ -140,6 +142,7 @@ label foundInDataBook:
 label travelToStore:
     hide busAdFreeze
     hide screen galeryFilter
+    stop music fadeout 1.0
     show getInsideBus
     window auto hide
     $ renpy.pause(3.0, hard=True)
@@ -407,4 +410,3 @@ screen logViaPopup:
         xalign 0.5
         yalign 0.6
         action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique",'')]
-
