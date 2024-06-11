@@ -41,6 +41,7 @@ label hub:
     show hubDogCouch
     show screen barre_de_vie
     show screen hubElements
+    play music "Spring Field - Godmode.mp3"
     empty ""
 
     #Boucle infinie dans le hub
