@@ -12,7 +12,7 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman"
     m "Salut ma grande"
-    m "ça va ?"
+    m "ça va ?, Excuse moi de t'appeler à nouveau pour des soucis d'ordinateur mais il faudrait que tu viennes m'aider, c'est pour l'anniversaire de ton frère ... "
     jump browserLabelAfterCall
     while True:
         empty ""
