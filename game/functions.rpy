@@ -49,6 +49,7 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
             #e_nvl '[winmessage]'
             $ renamePoint = key.replace("point_","")
             $ intro = 'Tu as gagné '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
+            e_nvl '[intro]' 
             $ phrases = winmessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -121,7 +122,7 @@ define config.hyperlink_handlers = {
 
 #Display information bubble clickable to go to ecternal URL
 
-screen sourcesDisplay(title,URL):
+screen sourcesDisplay(title,URL,categorie): 
     hbox:
         xcenter 0.8
         ycenter 0.1
@@ -130,7 +131,7 @@ screen sourcesDisplay(title,URL):
             textbutton title:
                 text_color "#fff"
                 text_hover_color "#ccc"
-                action OpenURL(URL)
+                action [OpenURL(URL),Hide("sourcesDisplay"),Call("addPoints",1,categorie,"","","","Il est toujours bon de se renseigner",'')]
             xalign 1.0  yalign 0.5
         imagebutton:
             idle "UI/imagebuttons/InfoUrl.png"

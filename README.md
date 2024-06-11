@@ -64,8 +64,7 @@ Dans certains moment du jeu, on souhaite que le joueur clique sur un élément p
 ## Les mots clés
 Les mots clés sont des infos qui peuvent être révélées en cliquant sur un mot spécifique.
 Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information:Texte} comme ici :
-```
-  python
+```python
   Mon texte avec un mot clé à valoriser.
   ↓↓↓
   Mon texte avec un {a=information:Ici le texte à afficher en cliquant sur le mot clé}mot clé{/a} à valoriser.
@@ -73,11 +72,18 @@ Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information
 
 ## Liens externes (URL)
 Pour ajouter un lein vers une  ressource extérieure (URL) il faut appeler le screen sourcesDisplay:
-```
+```python
   #title = le titre de votre article
   #url = le lien vers le site
-  screen sourcesDisplay(title,url)
-  show screen sourcesDisplay("Quand tout va bien","https://google.fr")
+  #categorie = quel type de données privées vont être affectées
+  screen sourcesDisplay(title,url,categorie)
+  #Exemple ↓
+    show screen sourcesDisplay("ce texte","https://google.fr","point_sociaux")
+```
+Pensez à cacher le screen une fois que le lien ne doit plus être visible. Si le joueur a cliqué sur le lien, l'encadré disparaitra automatiquement
+
+```python
+  hide screen sourcesDisplay()
 ```
 
 ## Les points
