@@ -1,19 +1,19 @@
-2024-06-11 07:45:50 UTC
+2024-06-11 08:11:12 UTC
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.2.1.24030407
 
 Early init took 0.09s
-Loading error handling took 0.06s
-Loading script took 0.63s
-Loading save slot metadata took 0.06s
+Loading error handling took 0.07s
+Loading script took 1.15s
+Loading save slot metadata took 0.07s
 Loading persistent took 0.00s
-Running init code took 0.12s
+Running init code took 0.13s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.04s
 Index archives took 0.00s
 Backing up script files to '/Users/epnpontleveque/Library/RenPy/backups/OK-Data-github':
-Dump and make backups took 0.07s
+Dump and make backups took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.05s
@@ -25,133 +25,11 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.04s
-Prepare screens took 0.15s
+Prepare screens took 0.19s
 Save pyanalysis. took 0.04s
 Save bytecode. took 0.05s
 Running _start took 0.00s
-Interface start took 0.39s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1792, 1120)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon Pro 5500M OpenGL Engine'
-Version: b'2.1 ATI-5.2.4'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1690, 951) drawable=(3380, 1902)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1166, 703) drawable=(2332, 1406)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 70.87s
-Loading error handling took 0.07s
-Loading script took 0.41s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to '/Users/epnpontleveque/Library/RenPy/backups/OK-Data-github':
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.07s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.17s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1792, 1120)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon Pro 5500M OpenGL Engine'
-Version: b'2.1 ATI-5.2.4'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1166, 656) drawable=(2332, 1312)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 103.10s
-Loading error handling took 0.03s
-Loading script took 0.38s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to '/Users/epnpontleveque/Library/RenPy/backups/OK-Data-github':
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.09s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.18s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Interface start took 0.09s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1792, 1120)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon Pro 5500M OpenGL Engine'
-Version: b'2.1 ATI-5.2.4'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1166, 656) drawable=(2332, 1312)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 174.67s
-Loading error handling took 0.04s
-Loading script took 0.39s
-Loading save slot metadata took 0.04s
-Loading persistent took 0.00s
-Running init code took 0.07s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to '/Users/epnpontleveque/Library/RenPy/backups/OK-Data-github':
-Dump and make backups took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.08s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.17s
-Save pyanalysis. took 0.04s
-Save bytecode. took 0.03s
-Running _start took 0.01s
-Interface start took 0.10s
+Interface start took 0.45s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1792, 1120)
