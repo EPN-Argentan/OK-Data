@@ -24,9 +24,15 @@ define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
+
+default dogInBasket = True
+
+
 label splashscreen:
     $ renpy.movie_cutscene("images/sprites/splashscreen.ogv")
     return
+
+
 # Initialisation du jeu
 label start:
 
@@ -42,7 +48,10 @@ label hub:
     hide screen phoneDown
     hide screen mailx3
     scene hub
-    show hubDogCouch
+    if dogInBasket == True:
+        show loungeHubDogInBasket  
+    else:
+        show loungeHubDogInCouch
     show screen barre_de_vie
     show screen hubElements
     stop music fadeout 1.0

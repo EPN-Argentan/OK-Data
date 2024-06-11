@@ -1,7 +1,7 @@
 label tuto:
     $ posY = 175
     scene hub
-    show hubDogCouch
+    show loungeHubDogInBasket
     show screen barre_de_vie
     show screen skipTuto 
     medBubble "Tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"

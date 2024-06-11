@@ -159,7 +159,8 @@ image loungeZoomFix:
 
 image walkInForest = Movie(play="images/sprites/walkinforest/walkingForest.ogv", size=(1920,1080), loop=True)
 
-image hubDogCouch = Movie(play="images/sprites/hub/hubDogCouch.ogv", size=(1920,1080), loop=True)
+image loungeHubDogInCouch = Movie(play="images/sprites/hub/loungedDogOnCouch.ogv", size=(1920,1080), loop=True)
+image loungeHubDogInBasket = Movie(play="images/sprites/hub/loungedDogOnBasket.ogv", size=(1920,1080), loop=True)
 
 image barSister = Movie(play="images/sprites/bar/barSister.ogv", size=(1920,1080), loop=True)
 
