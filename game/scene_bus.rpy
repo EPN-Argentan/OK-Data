@@ -163,7 +163,7 @@ label insideStore:
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Voilà pour vous"
+    vendeuse "Voilà votre colis"
     a "Merci"
     vendeuse "N'hésitez pas à profiter de notre promotion sur l'impression sur mug"
     a "C'est vrai, on peut faire ça ici ?"
@@ -181,6 +181,7 @@ label outStore:
     show screen storeCustomPage
     a "Ce sera du plus bel effet !"
     window auto hide
+    $ hubClickable["photoFrame"]= 0
     menu:
         "Récupérer votre mug":
             call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub")
@@ -281,12 +282,12 @@ screen cloudNoFilter:
                 text "[year-5]"  color "#000000"
                 grid 2 4:
                     spacing 10
-                    add "UI/applications/galery/001.jpeg"
+                    add "UI/applications/galery/Sagrada1.jpg"
                     add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/003.jpeg"
+                    add "UI/applications/galery/Sagrada2.jpg"
                     add "UI/applications/galery/004.jpeg"
                     add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
+                    add "UI/applications/galery/Sagrada3.jpg"
                     add "UI/applications/galery/003.jpeg"
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
@@ -336,7 +337,7 @@ screen cloudPhotos:
 
 screen dataBookOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
-    add "UI/applications/Icons/appDataBook.png" xalign 0.6955 yalign 0.5  zoom 1.5
+    add "UI/applications/Icons/appDataBook.png" xalign 0.67 yalign 0.5  zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen dataBookSearch:
