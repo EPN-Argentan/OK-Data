@@ -100,6 +100,15 @@ label checkClueALL():
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
 
+#Count total points
+init python:
+    def totalPoints():
+        totalPts = 0
+        for key, value in points.items():
+            totalPts = totalPts + value[0]
+        return totalPts
+           
+
 #clean the clues spot
 label clearClues():
     $ whatInsideTop = ""

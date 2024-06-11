@@ -55,7 +55,7 @@ label Brouillon_phone_ok :
 
     show screen brouillon
     show screen barre_de_vie
-    call addPoints(2,'point_sociaux')
+    call addPoints(2,'point_sociaux') from _call_addPoints_2
     e_nvl "Bravo, En effet rien ne sert de communiquer les mails de tes proches à tous"
     jump mailx3
 
@@ -66,7 +66,7 @@ label Brouillon_phone_No:
     show screen brouillon
     show screen barre_de_vie
 
-    call addPoints(-2,'point_sociaux')
+    call addPoints(-2,'point_sociaux') from _call_addPoints_3
     e_nvl "Il faut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
     jump mailx3
 
@@ -109,7 +109,7 @@ label phonestopcoli6mots :
     show screen mailx3
     show screen feed_coli6mots_statique
     show screen barre_de_vie
-    call addPoints(-2,'point_administrative')
+    call addPoints(-2,'point_administrative') from _call_addPoints_4
     e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
     e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
     jump mailx3
@@ -199,8 +199,8 @@ label datazonsiteaftercookieok :
     show screen mailx3
     show screen datazonsiteaftercookieok
     show screen barre_de_vie
-    call addPoints(-2,'point_conviction')
-    call addPoints(-2,'point_interet')
+    call addPoints(-2,'point_conviction') from _call_addPoints_5
+    call addPoints(-2,'point_interet') from _call_addPoints_6
     e_nvl "En acceptant les cookies, tu fournies des informations sur ta façon de d'utiliser le site Internet a Datazon"
     jump datazonsiteok
 
@@ -247,8 +247,8 @@ label aspidatazon_aftercookieok :
     show screen aspidatazon_aftercookieok
     show screen barre_de_vie
 
-    call addPoints(-2,'point_conviction')
-    call addPoints(-2,'point_interet')
+    call addPoints(-2,'point_conviction') from _call_addPoints_7
+    call addPoints(-2,'point_interet') from _call_addPoints_10
     e_nvl "En acceptant les cookies, tu fournies des informations sur ta façon de d'utiliser le site Internet a Datazon"
     jump aspidatazon_page
     while True :
@@ -332,12 +332,12 @@ label validationachat :
     show screen barre_de_vie
     nvl clear
     if cross_cb == True :
-        call addPoints(-4,'point_administrative')
+        call addPoints(-4,'point_administrative') from _call_addPoints_11
         e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable de ne pas enregistrer celle-ci sur le site d'achat."
         e_nvl "En cas de piratage cela pourrait être délicat..."
         a "oh zut"
     else :
-        call addPoints(4,'point_administrative')
+        call addPoints(4,'point_administrative') from _call_addPoints_12
         e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable en effet de ne pas enregistrer celle-ci sur le site d'achat."
     a "Voilà une bonne chose de faite"
     jump mailconfirmation

@@ -187,7 +187,7 @@ label outStore:
     $ hubClickable["photoFrame"]= 0
     menu:
         "Récupérer votre mug":
-            call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub")
+            call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub") from _call_addPoints_1
         "Rester sur la session":
             a "J'ai du oublier quelquechose"
     while True:

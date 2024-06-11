@@ -67,7 +67,7 @@ label algorithmGame:
     #if whatInsideTop != "" and whatInsideBottom != "":
     #    call checkClueALL()
     #    call clearClues()
-    call algorithmGame
+    call algorithmGame from _call_algorithmGame
 
 label endAlgorithm:
     e_nvl "Analyse terminée"

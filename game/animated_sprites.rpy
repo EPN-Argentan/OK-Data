@@ -157,6 +157,7 @@ image loungeIdle = Movie(play="images/sprites/lounge/loungeIdle.ogv", size=(1920
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"
 
+image walkInForest = Movie(play="images/sprites/walkinforest/walkingForest.ogv", size=(1920,1080), loop=True)
 
 image hubDogCouch = Movie(play="images/sprites/hub/hubDogCouch.ogv", size=(1920,1080), loop=True)
 

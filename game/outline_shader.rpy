@@ -1,6 +1,6 @@
 ################################################################################
 ##
-## Outline Shader for Ren'Py
+## Outline Shader for Ren'Py v1.1
 ##
 ################################################################################
 ## This file includes a shader and transform for an outline effect in
@@ -28,18 +28,48 @@ image big_outline = Window(Transform(Placeholder(), crop=(0.0, 0.08, 1.0, 1.0)),
 label outline_test:
     scene expression "#4e4e64"
     "Start."
-    show small_outline at truecenter, glow_outline(25, "#fff", num_passes=30)
-    "Example 1 - a glowing outline."
+    show small_outline at truecenter, glow_outline(25, "#ff833588", num_passes=30)
+    show text "1a" at truecenter zorder 10
+    "Example 1a - a glowing outline, with smoothing. It uses linear blending."
+    show small_outline as s1 at truecenter, glow_outline(25, "#ff833588",
+                                            num_passes=30, smoothstep=False):
+        xoffset 500
+    show text "1b" at truecenter:
+        xoffset 500
+    "Example 1b - a glowing outline with no smoothstep. It uses linear blending."
+    show small_outline as s2 at truecenter, glow_outline(25, "#ff833588",
+                                            num_passes=30, power=0.5):
+        xoffset -500
+    show text "1c" at truecenter:
+        xoffset -500
+    "Example 1c - a glowing outline with a square root curve and smoothstepping."
+    show small_outline at truecenter, glow_outline(25, "#ff833588",
+                                        num_passes=30, smoothstep=False, power=0.5)
+    show text "1d" at truecenter:
+        xoffset 0
+    "Example 1d - a glowing outline with a square root curve and no smoothstepping."
+    show small_outline as s1 at truecenter, glow_outline(25, "#ff833588",
+                                        num_passes=30, power=2.0):
+        xoffset 500
+    show text "1e" at truecenter:
+        xoffset 500
+    "Example 1e - a glowing outline with a quadratic curve and smoothstepping."
     scene expression "#4e4e64"
     show small_outline at truecenter, animated_demonstration()
     "Example 2 - an animated outline."
     scene expression "#4e4e64"
-    show small_outline as s2 at truecenter, outline_transform(15, "#fff", 10.0, num_passes=3)
+    show small_outline as s2 at truecenter, outline_transform(15, "#fff",
+                                            10.0, num_passes=3)
+    show text "3" at truecenter zorder 10
     "Example 3 - a thick outline with multiple passes."
     show small_outline as s3 at truecenter, outline_transform(2, "#dd90ec", 4.0):
         xoffset 500
+    show text "4" at truecenter:
+        xoffset 500
     "Example 4 - a thin outline."
     show small_outline at truecenter, drop_shadow():
+        xoffset -500
+    show text "5" at truecenter:
         xoffset -500
     "Example 5 - a drop shadow."
     scene expression "#4e4e64"
@@ -172,10 +202,19 @@ screen sample_outline_screen():
 ## offset : tuple
 ##      A tuple of (xoffset, yoffset) to offset the outline. Default: (0, 0)
 ##      Use this for drop shadows.
+## smoothstep : bool
+##      Whether to use smoothstep to blend the outline. Default: True
+##      Smoothstep tends to result in a smoother looking transition for
+##      glowing outlines or gradients.
+## power : float
+##      A power to apply to the gradient. Default: None. If None, it will not
+##      apply any power to the gradient. If you want a square root curve, use
+##      0.5. If you want a quadratic curve, use 2.0. Usually numbers <1.0 will
+##      look best.
 
 transform outline_transform(width=1, color="#fff", smoothing=1.0, end_color=None,
         num_passes=1, gradient_smoothing=None, is_mesh=True, mesh_pad=False,
-        drawable_res=False, offset=(0, 0)):
+        drawable_res=False, offset=(0, 0), smoothstep=True, power=None):
     shader 'feniks.outline'
     mesh is_mesh
     mesh_pad (False if not mesh_pad else (int(width),) * 4)
@@ -190,13 +229,16 @@ transform outline_transform(width=1, color="#fff", smoothing=1.0, end_color=None
     u_smoothness (float(smoothing) if width > 0 else 1.0)
     u_gradient_smoothness (float(gradient_smoothing if gradient_smoothing is not None else smoothing) if width > 0 else 1.0)
     u_offset (float(offset[0]), float(offset[1]))
+    u_smoothstep float(1.0 if end_color is not None and smoothstep else 0.0)
+    u_power float(max(power, 0.0) if power is not None and end_color is not None else 0.0)
 
 ## A transform that simplifies some of the properties you'll pass to get a
 ## glowing outline. Feel free to modify this to adjust what properties are
 ## passed.
-transform glow_outline(width=15, color="#fff", mesh_pad=False, num_passes=None):
+transform glow_outline(width=15, color="#fff", mesh_pad=False,
+        num_passes=None, smoothstep=True, power=None):
     outline_transform(width, color, 20.0, "#0000", (num_passes or width*2.0),
-        mesh_pad=mesh_pad)
+        mesh_pad=mesh_pad, smoothstep=smoothstep, power=power)
 
 ## A transform that simplifies some of the properties you'll pass to get a drop
 ## shadow effect. Feel free to modify this to adjust what properties are passed.
@@ -213,6 +255,8 @@ transform animated_demonstration():
     u_smoothness 2.0 u_gradient_smoothness 2.0
     u_has_gradient 0.0
     u_end_color Color("#f00").rgba
+    u_power 0.0
+    u_smoothstep 1.0
 
     block:
         parallel:
@@ -250,13 +294,17 @@ init -50 python:
         uniform float u_smoothness;
         uniform float u_gradient_smoothness;
         uniform float u_has_gradient;
+        uniform float u_smoothstep;
+        uniform float u_power;
         uniform float u_num_passes;
         uniform vec2 u_offset;
 
         uniform vec2 u_model_size;
         varying vec2 v_coords;
+        varying vec2 v_size;
     """, vertex_300="""
         v_coords = vec2(a_position.x / u_model_size.x, a_position.y / u_model_size.y);
+        v_size = u_model_size.xy;
     """, fragment_300="""
         float pi = 3.1415926535897932384626433832795;
         // We always check in at least 8 directions
@@ -268,7 +316,7 @@ init -50 python:
         vec4 end_color = vec4(u_end_color.rgb*u_end_color.a, u_end_color.a);
 
         // Figure out the size of one pixel based on the texture size
-        vec2 pixel_size = vec2(1.0 / u_model_size.x, 1.0 / u_model_size.y);
+        vec2 pixel_size = vec2(1.0 / v_size.x, 1.0 / v_size.y);
         vec2 outline_offset = u_offset * pixel_size * vec2(-1.0);
 
         // Set up some initial values
@@ -301,9 +349,17 @@ init -50 python:
         // 100% outline and 0% original image at most.
         outline = min(outline, 1.0);
 
+        float closest = closest_dist/u_width;
+
+        if (u_power > 0.0) {
+            closest = max(min(pow(closest_dist/u_width, u_power), 1.0), 0.0);
+        }
         // Smoothstep evens out the gradient a little towards the edges, so
         // the cutoff doesn't look so harsh.
-        float closest = smoothstep(0.0, 1.0, min(u_has_gradient, closest_dist/u_width));
+        if (u_smoothstep > 0.0) {
+            closest = smoothstep(0.0, 1.0, closest);
+        }
+        closest = min(u_has_gradient, closest);
 
         // Mix together the start/end line colours based on how far the pixel
         // is from the main image.

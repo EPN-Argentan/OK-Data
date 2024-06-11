@@ -12,9 +12,9 @@ label tuto:
     medBubble "Les données de réseaux sociaux"
     medBubble "Les données administratives"
     medBubble "Au-dessus de chaque icône est indiqué le nombre de points restants."
-    call addPoints(-5,'point_administrative')
+    call addPoints(-5,'point_administrative') from _call_addPoints_19
     medBubble "Tu perds des points si tu ne prêtes pas attention à préserver ta vie privée."
-    call addPoints(5,'point_administrative')
+    call addPoints(5,'point_administrative') from _call_addPoints_20
     medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant te promener !" 
     jump hub
 

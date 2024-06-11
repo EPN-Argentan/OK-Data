@@ -38,6 +38,8 @@ jump tuto
 
 #Lancement du Hub
 label hub:
+    if totalPoints() < 30 and visitedForest == False:
+        $ hubClickable["forest"]= 1
     hide screen phoneDown
     hide screen mailx3
     scene hub
