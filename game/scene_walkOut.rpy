@@ -12,9 +12,9 @@ label walkOut :
     show walkZoom
     $ renpy.pause(1.0, hard=False)
     show walkFix
-    show screen phoneDown
+    #show screen phoneDown
     empty ""
-    hide screen phoneDown
+    #hide screen phoneDown
     sepharo_nvl "Ça fait longtemps que vous n'êtes pas venu nous voir !"
     sepharo_nvl "En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
     hide screen skipTuto

@@ -119,6 +119,22 @@ define config.hyperlink_handlers = {
     "information": information_display
 }
 
+#Display information bubble clickable to go to ecternal URL
+
+screen sourcesDisplay(title,URL):
+    hbox:
+        xcenter 0.8
+        ycenter 0.1
+        frame:
+            padding (12, 8,50,8)
+            textbutton title:
+                text_color "#fff"
+                text_hover_color "#ccc"
+                action OpenURL(URL)
+            xalign 1.0  yalign 0.5
+        imagebutton:
+            idle "UI/imagebuttons/InfoUrl.png"
+            action NullAction()
 
 #Map function
 init python:

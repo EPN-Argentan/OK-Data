@@ -4,6 +4,7 @@ define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Nighten" ##The name of the main character, used to place them on the screen
 define Syrielle = "Syrielle"
 define Sepharo = "Sepharo"
+define Winted = "Winted"
 
 init -1 python:
     phone_position_x = 0.5

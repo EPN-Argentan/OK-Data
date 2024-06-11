@@ -72,10 +72,12 @@ Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information
 ```
 
 ## Liens externes (URL)
-Pour ajouter un mot clé renvoyant vers une URL extérieure
+Pour ajouter un lein vers une  ressource extérieure (URL) il faut appeler le screen sourcesDisplay:
 ```
-  python
-  Le contenu de mon texte avec un{a=https://duckduckgo.com/}lien{/a} dedans"
+  #title = le titre de votre article
+  #url = le lien vers le site
+  screen sourcesDisplay(title,url)
+  show screen sourcesDisplay("Quand tout va bien","https://google.fr")
 ```
 
 ## Les points

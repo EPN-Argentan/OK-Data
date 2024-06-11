@@ -360,7 +360,8 @@ label mailconfirmation :
     a "Bon, voilà pour le moment. Allez hop je ferme l'ordinateur !"
     hide screen mailconfirmation
     scene black
-    with dissolve
+    with fade
+    $ hubClickable["laptop"]= 0
     jump hub
 
 
