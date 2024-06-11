@@ -2,7 +2,7 @@
 init:
     define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'ontop' ]
     
-init python:
+init -10 python:
     
     import time
     year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
