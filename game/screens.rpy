@@ -572,11 +572,11 @@ screen sources():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Voici une liste de sources disponibles pour en connaitre davantages sur le sujet des traitement de données:\n")
+            text _("Voici une liste de sources disponibles pour en connaitre davantages sur le sujet des traitements de données:\n")
 
             text _("Rien à cacher")
             text _("{a=https://www.dailymotion.com/video/x8a2ale}Bande annonce du film documentaire de Marc Meillassoux (réalisateur){/a}\n\n")
-            text _("{a=https://www.youtube.com/watch?v=djbwzEIv7gE} film documentaire intégral de Marc Meillassoux {/a}\n\n")
+            text _("{a=https://www.youtube.com/watch?v=djbwzEIv7gE}film documentaire intégral de Marc Meillassoux {/a}\n\n")
 
 
             text _("Disparaître – Sous les radars des algorithmes")
