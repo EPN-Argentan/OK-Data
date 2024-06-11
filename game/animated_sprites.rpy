@@ -148,6 +148,11 @@ image loungeHandIn :
     "sprites/lounge/handIn/handIn017.png"
     pause 0.1
 
+image walkInfinite = Movie(play="images/sprites/walking/infiniteWalk.ogv", size=(1920,1080), loop=False)
+image walkZoom = Movie(play="images/sprites/walking/walkZoom.ogv", size=(1920,1080), loop=False)
+image walkFix :
+    "images/sprites/walking/freezePhone.jpg"
+
 image loungeIdle = Movie(play="images/sprites/lounge/loungeIdle.ogv", size=(1920,1080), loop=True)
 image loungeZoomFix:
     "sprites/lounge/zoom/SalonZoom027.png"

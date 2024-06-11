@@ -71,6 +71,12 @@ Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information
   Mon texte avec un {a=information:Ici le texte à afficher en cliquant sur le mot clé}mot clé{/a} à valoriser.
 ```
 
+## Liens externes (URL)
+Pour ajouter un mot clé renvoyant vers une URL extérieure
+```
+  python
+  Le contenu de mon texte avec un{a=https://duckduckgo.com/}lien{/a} dedans"
+```
 
 ## Les points
 ### Typologie de points
