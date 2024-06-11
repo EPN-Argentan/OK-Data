@@ -71,7 +71,7 @@ Pour ajouter un mot cliquable il suffit de baliser avec la balise {a=information
 ```
 
 ## Liens externes (URL)
-Pour ajouter un lein vers une  ressource extérieure (URL) il faut appeler le screen sourcesDisplay:
+Pour ajouter un lien vers une  ressource extérieure (URL) il faut appeler le screen sourcesDisplay:
 ```python
   #title = le titre de votre article
   #url = le lien vers le site

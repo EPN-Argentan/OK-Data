@@ -24,9 +24,9 @@ define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
-
-
-
+label splashscreen:
+    $ renpy.movie_cutscene("images/sprites/splashscreen.ogv")
+    return
 # Initialisation du jeu
 label start:
 
@@ -35,7 +35,6 @@ label start:
 #jump browserLabel
 #jump dataZon
 jump tuto
-
 #Lancement du Hub
 label hub:
     if totalPoints() < 30 and visitedForest == False:
@@ -59,3 +58,4 @@ label hub:
     #    call screen telephoneplayer(False,True,False,True,True,True)
 
     return
+

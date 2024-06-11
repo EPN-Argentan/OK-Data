@@ -181,3 +181,4 @@ image receiveStore = Movie(play="images/sprites/store/receiveStore.ogv", size=(1
 image computerStore = Movie(play="images/sprites/store/computerStore.ogv", size=(1920,1080), loop=False)
 image zoomComputerStore :
     "images/sprites/store/freezeFrameComputerStore.jpeg"
+
