@@ -2,8 +2,8 @@ screen hubElements:
 
     if hubClickable["dog"] == 1:
         imagebutton:
-            xpos 1400
-            ypos 797
+            xpos 1467
+            ypos 827
             idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/dog.png"
             action Jump("walkOut")
@@ -35,10 +35,10 @@ screen hubElements:
     
     if hubClickable["forest"] == 1:
         imagebutton:
-            xpos 1400
-            ypos 797
-            idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
-            hover "UI/imagebuttons/dog.png"
+            xpos 665
+            ypos 540
+            idle At('UI/imagebuttons/forest.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/forest.png"
             action Jump("forest")
 
     if hubClickable["laptop"] == 1:
