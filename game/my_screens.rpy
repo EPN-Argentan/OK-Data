@@ -1,5 +1,11 @@
 screen hubElements:
-
+    imagebutton:
+        xpos 1258
+        ypos 70
+        idle At('UI/imagebuttons/sources.png', outline_transform(6, "#ffffff", 4.0))
+        hover "UI/imagebuttons/sources.png"
+        hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Sources"))]
+        action ShowMenu("sources")
     if hubClickable["dog"] == 1:
         imagebutton:
             xpos 1467
