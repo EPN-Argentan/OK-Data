@@ -119,8 +119,8 @@ define gui.name_xalign = 0.5
 
 ## La largeur, profondeur et les bords de la zone contenant le nom du personnage
 ## ou « None » pour le dimensionner automatiquement.
-define gui.namebox_width = 375
-define gui.namebox_height = 129
+define gui.namebox_width = None
+define gui.namebox_height = None
 
 ## Les bordures de la zone contenant le nom du personnage dans l’ordre suivant
 ## gauche, haut, droite, bas.
@@ -453,10 +453,10 @@ init python:
         gui.label_text_size = 51
 
         ## Ajuste la position de la zone de texte.
-        gui.textbox_height = 360
+        gui.textbox_height = None
         gui.name_xpos = 120
         gui.dialogue_xpos = 135
-        gui.dialogue_width = 1650
+        gui.dialogue_width = None
 
         ## Changer la taille et l'espacement de diverses choses.
         gui.slider_size = 54
