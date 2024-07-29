@@ -1,34 +1,327 @@
-2024-07-29 15:36:57 UTC
+2024-07-29 22:44:32 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.3.24061702
 
 Early init took 0.09s
 Loading error handling took 0.04s
-Loading script took 0.44s
-Loading save slot metadata took 0.04s
+Loading script took 0.30s
+Loading save slot metadata took 0.05s
 Loading persistent took 0.00s
 Running init code took 0.07s
 Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
+Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.03s
 Index archives took 0.00s
-Dump and make backups took 0.05s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.05s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.27s
+Creating interface object took 0.45s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.08s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 64.49s
+Loading error handling took 0.04s
+Loading script took 0.20s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.40s
+Cleaning stores took 0.00s
+Init translation took 0.10s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetVariable("[points[listePoints[0]][0]]",[points[listePoints[0]][0]] - 1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+Resetting cache.
+Early init took 75.52s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.41s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 161.86s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.50s
+Cleaning stores took 0.00s
+Init translation took 0.12s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+NameError: name 'value' is not defined
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], value)("[points[listePoints[0]][0]]",points[listePoints[0]][0] - 1)
+NameError: name 'value' is not defined
+Resetting cache.
+Early init took 176.10s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.12s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.53s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Interface start took 0.26s
 
@@ -40,13 +333,2708 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'Quadro P1000/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 516.69'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+NameError: name 'listPoints' is not defined
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listPoints[0]-1)
+NameError: name 'listPoints' is not defined
+Resetting cache.
+Early init took 190.25s
+Loading error handling took 0.02s
+Loading script took 0.26s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.40s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
 Maximum texture size: 4096x4096
-3
-catIntérêt
-Historique de recherche
-Miniature Youtube
-3
-catIntérêt
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+Resetting cache.
+Early init took 199.60s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.39s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 357, in execute
+    text "[points[listePoints[0]][0]]"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1832, in _scope
+    return self.set_text(self.text_parameter, scope, self.substitute, update)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1868, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 371, in substitute
+    s = interpolate(s, kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 357, in execute
+    text "[points[listePoints[0]][0]]"
+TypeError: 'int' object is not subscriptable
+Resetting cache.
+Early init took 207.64s
+Loading error handling took 0.02s
+Loading script took 0.24s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.62s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+Resetting cache.
+Early init took 217.18s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.14s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.56s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+Resetting cache.
+Early init took 220.72s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.13s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.51s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.10s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], listePoints[0]-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+Resetting cache.
+Early init took 239.40s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.12s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.43s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, listePoints[0], points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+Resetting cache.
+Early init took 282.17s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.42s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+Resetting cache.
+Early init took 293.05s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.43s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.31s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0, points[listePoints[0]]-1)
+TypeError: unsupported operand type(s) for -: 'RevertableList' and 'int'
+Resetting cache.
+Early init took 308.43s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.12s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.47s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 9, in execute
+    $ checkMinMax()
+  File "game/screen_barre_de_vie.rpy", line 9, in <module>
+    $ checkMinMax()
+  File "game/settings.rpy", line 41, in checkMinMax
+    if value[0] >= maxPts:
+TypeError: 'int' object is not subscriptable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 9, in execute
+    $ checkMinMax()
+  File "game/screen_barre_de_vie.rpy", line 9, in <module>
+    $ checkMinMax()
+  File "game/settings.rpy", line 41, in checkMinMax
+    if value[0] >= maxPts:
+TypeError: 'int' object is not subscriptable
+Resetting cache.
+Early init took 380.05s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.46s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+game/my_screens.rpy:358: SyntaxWarning: 'int' object is not subscriptable; perhaps you missed a comma?
+  timer 1.0 repeat True action SetDict(points, 0[0], -1)
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+TypeError: 'int' object is not subscriptable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 0[0], -1)
+TypeError: 'int' object is not subscriptable
+Resetting cache.
+Early init took 387.95s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.61s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 9, in execute
+    $ checkMinMax()
+  File "game/screen_barre_de_vie.rpy", line 9, in <module>
+    $ checkMinMax()
+  File "game/settings.rpy", line 41, in checkMinMax
+    if value[0] >= maxPts:
+TypeError: 'int' object is not subscriptable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 6, in execute
+    screen barre_de_vie :
+  File "game/screen_barre_de_vie.rpy", line 9, in execute
+    $ checkMinMax()
+  File "game/screen_barre_de_vie.rpy", line 9, in <module>
+    $ checkMinMax()
+  File "game/settings.rpy", line 41, in checkMinMax
+    if value[0] >= maxPts:
+TypeError: 'int' object is not subscriptable
+Resetting cache.
+Early init took 405.12s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.56s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The 0 key or index does not exist.
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The 0 key or index does not exist.
+Resetting cache.
+Early init took 420.80s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.36s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\revertable.py", line 205, in newmethod
+    l = method(*args, **kwargs) # type: ignore
+TypeError: can only concatenate list (not "int") to list
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+TypeError: can only concatenate list (not "int") to list
+Resetting cache.
+Early init took 437.75s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.34s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.21s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The '[listePoints[0]]' key or index does not exist.
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The '[listePoints[0]]' key or index does not exist.
+Resetting cache.
+Early init took 457.88s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.41s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\revertable.py", line 205, in newmethod
+    l = method(*args, **kwargs) # type: ignore
+TypeError: can only concatenate list (not "int") to list
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+TypeError: can only concatenate list (not "int") to list
+Resetting cache.
+Early init took 468.81s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.36s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The 'p' key or index does not exist.
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 114, in current_value
+    raise Exception("The {!r} {} does not exist.".format(key, self.kind)) # from e # PY3 only
+Exception: The 'p' key or index does not exist.
+Resetting cache.
+Early init took 684.45s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.19s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.51s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 112, in current_value
+    return self.dict[self.key]
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\revertable.py", line 221, in __getitem__
+    rv = list.__getitem__(self, index)
+TypeError: list indices must be integers or slices, not str
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "renpy/common/00action_data.rpy", line 106, in __call__
+    self.dict[self.key] = self.value_to_set()
+  File "renpy/common/00action_data.rpy", line 300, in value_to_set
+    return self.current_value() + self.amount
+  File "renpy/common/00action_data.rpy", line 112, in current_value
+    return self.dict[self.key]
+TypeError: list indices must be integers or slices, not str
+Resetting cache.
+Early init took 702.93s
+Loading error handling took 0.02s
+Loading script took 0.30s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.11s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.10s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.42s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+TypeError: 'DictValue' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+TypeError: 'DictValue' object is not callable
+Resetting cache.
+Early init took 724.50s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.38s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.21s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+TypeError: 'DictValue' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+TypeError: 'DictValue' object is not callable
+Resetting cache.
+Early init took 1011.48s
+Loading error handling took 0.03s
+Loading script took 0.24s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.40s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 3208, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 2657, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\behavior.py", line 395, in run
+    return action(*args, **kwargs)
+TypeError: 'DictValue' object is not callable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+TypeError: 'DictValue' object is not callable
+Resetting cache.
+Early init took 1072.56s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.36s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "renpy/common/00action_data.rpy", line 101, in __init__
+    super(Dict, self).__init__(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 174, in __init__
+    super(Set, self).__init__(*args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\revertable.py", line 491, in __init__
+    raise TypeError("object() takes no parameters.")
+TypeError: object() takes no parameters.
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, 'point_interet', 0, points['point_interet'][0] - 1)
+  File "renpy/common/00action_data.rpy", line 101, in __init__
+    super(Dict, self).__init__(*args, **kwargs)
+  File "renpy/common/00action_data.rpy", line 174, in __init__
+    super(Set, self).__init__(*args, **kwargs)
+TypeError: object() takes no parameters.
+Resetting cache.
+Early init took 1085.02s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.12s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.41s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1086.77s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.35s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 357, in execute
+    text "[points[listePoints[0]][0]]"
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1832, in _scope
+    return self.set_text(self.text_parameter, scope, self.substitute, update)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\text\text.py", line 1868, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 371, in substitute
+    s = interpolate(s, kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 357, in execute
+    text "[points[listePoints[0]][0]]"
+TypeError: 'int' object is not subscriptable
+Resetting cache.
+Early init took 1152.35s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.41s
+Cleaning stores took 0.00s
+Init translation took 0.12s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.06s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1158.88s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.41s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1185.34s
+Loading error handling took 0.05s
+Loading script took 0.25s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.35s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.20s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\exports.py", line 1494, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 1045, in do_display
+    display_say(who,
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+KeyError: '[listePoints[0]]'
+
+While running game code:
+  File "game/script.rpy", line 58, in script
+    empty ""
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 356, in execute
+    screen countdown:
+  File "game/my_screens.rpy", line 358, in execute
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+  File "game/my_screens.rpy", line 358, in keywords
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+  File "game/my_screens.rpy", line 358, in <module>
+    timer 1.0 repeat True action SetDict(points, '[listePoints[0]]', [points['[listePoints[0]]'][0] - 1, points['[listePoints[0]]'][1]])
+KeyError: '[listePoints[0]]'
+Resetting cache.
+Early init took 1199.36s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.36s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1205.77s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.35s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1215.23s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.15s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.36s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.19s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.29s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1221.78s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.30s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.20s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1238.89s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.32s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.04s
+Prepare screens took 0.21s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
+Maximum texture size: 4096x4096

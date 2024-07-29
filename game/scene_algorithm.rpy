@@ -1,4 +1,4 @@
-
+    
 define algo = Character("")
 
 #List clues that has to be found to resolve algorithmn mini game 

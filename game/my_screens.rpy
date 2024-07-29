@@ -352,3 +352,7 @@ screen selfie :
         idle "UI/applications/Icons/send_idle.png"
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
+
+screen countdown: 
+    text "[points[listePoints[0]][0]]"
+    timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])
