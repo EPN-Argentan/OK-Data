@@ -14,7 +14,6 @@ define categoriesIndex = 0
 #Text to display with clue resume
 define cluesDisplay = ""
 
-
 define whatInsideTop = ""
 define whatInsideBottom = ""
 
@@ -50,12 +49,11 @@ init python:
             return
         
         return True
-    
-
 
 label algorithmGame:
-    show screen algorithmnMenu
+
     hide screen barre_de_vie
+    scene black
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
@@ -67,7 +65,7 @@ label algorithmGame:
     #if whatInsideTop != "" and whatInsideBottom != "":
     #    call checkClueALL()
     #    call clearClues()
-    call algorithmGame from _call_algorithmGame
+    call algorithmGame 
 
 label endAlgorithm:
     e_nvl "Analyse terminée"

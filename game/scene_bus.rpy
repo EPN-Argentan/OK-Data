@@ -116,7 +116,7 @@ label searchInDataBook:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la localisation", "Paris", length = 12)
-    if dateInput == "Barcelone":
+    if dateInput == "Barcelone" or dateInput =="barcelone" or dateInput == "barcelon":
         jump foundInDataBook
         hide screen dataBookSearch
     else:
