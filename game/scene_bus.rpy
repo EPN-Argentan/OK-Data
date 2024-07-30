@@ -152,7 +152,7 @@ label foundInDataBook:
     a "Ils n'ont pas le droit"
     e_nvl "Malheureusement si."
     e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux rechercher grâce à des outils comme {a=https://lens.google/intl/fr/}google lens{/a} les occurences d'utilisation d'une photo sur internet"
+    e_nvl "Tu peux savoir connaître les endroits où elles sont utilisées  grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
