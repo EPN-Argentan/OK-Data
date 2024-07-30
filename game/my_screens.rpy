@@ -153,7 +153,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                         action Jump("openDataCloud")
                     else:
                         idle "UI/applications/Icons/appCloud.png" at greyscale()
-                text "{color=#555}Data Book{/color}" xalign 0.5 size nameAppSize
+                text "{color=#555}Data Cloud{/color}" xalign 0.5 size nameAppSize
             vbox:
                 imagebutton:
                     xalign 0.5
