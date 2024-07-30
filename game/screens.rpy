@@ -583,6 +583,11 @@ screen sources():
             text _("{a=https://vimeo.com/651304043}Bande annonce du film documentaire de Marc Meillassoux (réalisateur){/a}\n\n")
             text _("{a=https://www.youtube.com/watch?v=_mXyQQnZIMA}version courte 40' du film documentaire de Marc Meillassoux {/a}\n\n")
 
+            text _("Derrière nos écrans de fumée")
+            text _("{a=https://www.francetvinfo.fr/culture/series/netflix/derriere-nos-ecrans-de-fumee-le-documentaire-qui-va-peut-etre-vous-sevrer-des-reseaux-sociaux_4115743.html}article france info autour du film documentaire de Jeff Orlowski (réalisateur){/a}\n\n")
+            text _("{a=https://www.facebook.com/watch/?v=612198476330499}Bande annonce du film documentaire de Jeff Orlowski (réalisateur){/a}\n\n")
+            text _("{a=https://www.netflix.com/fr/title/81254224}film documentaire de Jeff Orlowski sur netflix{/a}\n\n")
+
        
 
             text _("Entretien avec Marc Meillassoux")
