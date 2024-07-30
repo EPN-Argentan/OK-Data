@@ -22,11 +22,12 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     nvl clear
     #you lose points
     if newValue < oldValue :
+        play sound "loose_point.wav"
         show screen barre_de_vie with hpunch
         if losemessage:
             $ renamePoint = key.replace("point_","")
-            $ intro = 'Tu as perdu '+str(values) + ' points de données personnelles de type ' + str(renamePoint)+str(".")
-            e_nvl '[intro]' 
+            $ intro = 'Tu as perdu '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
+            e_nvl '[intro]'
             $ phrases = losemessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -36,7 +37,7 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ i = i + 1
             #stop bounce effect after mediateur message
             $ points[key][1] = 0
-        else:           
+        else:
             #stop bounce effect
             pause 1.2
             $ points[key][1] = 0
@@ -45,11 +46,12 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
         return
     #you earn points
     else:
+        play sound "win_point.wav"
         if winmessage:
             #e_nvl '[winmessage]'
             $ renamePoint = key.replace("point_","")
-            $ intro = 'Tu as gagné '+str(values) + ' points de données personnelles de type ' + str(renamePoint)+str(".")
-            e_nvl '[intro]' 
+            $ intro = 'Tu as gagné '+str(values) + ' points de données personnelles de type ' + str(renamePoint)
+            e_nvl '[intro]'
             $ phrases = winmessage.split("µ")
             $ nbrPhrases = len(phrases)
             $ i = 0
@@ -59,7 +61,7 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
                 $ i = i + 1
             #stop bounce effect after mediateur message
             $ points[key][1] = 0
-        else:           
+        else:
             #stop bounce effect
             pause 1.2
             $ points[key][1] = 0
@@ -88,18 +90,15 @@ label checkClueALL():
     python:
         for key, value in combinaisonClues.items():
             if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
-                #Check if this clue has been already discovered
                 if value[4] == False:
                     phrase = value[3]
                     renpy.say(e_nvl, phrase)
-                    cluesDisplay += value[2] #Add a text keyword to get a "trace" of previous clue
-                    value[4] = True #Mark this step has already discovered
-                    #Check if all steps have been checked
+                    cluesDisplay += value[2]
+                    value[4] = True
                     if categoriesIndex < len(combinaisonClues) :
                         categoriesIndex += 1
                     else:
                         renpy.jump('endAlgorithm')
-                #Clue already found
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
 
@@ -117,9 +116,24 @@ label clearClues():
     $ whatInsideTop = ""
     $ whatInsideBottom = ""
 
+#Function to display information when click on specific word
+style infoStyle:
+    xalign 0.5
+
+init python:
+  def information_display(txt):
+    renpy.call_in_new_context("infoLabel",txt)
+
+label infoLabel(txt):
+    info "[txt]"
+
+define config.hyperlink_handlers = {
+    "information": information_display
+}
+
 #Display information bubble clickable to go to ecternal URL
 
-screen sourcesDisplay(title,URL,categorie): 
+screen sourcesDisplay(title,URL,categorie):
     hbox:
         xcenter 0.8
         ycenter 0.1
@@ -146,19 +160,3 @@ init python:
 
         # Convert the 0-1 range into a value in the right range.
         return rightMin + (valueScaled * rightSpan)
-
-#Function to display information when click on specific word
-style infoStyle:
-    xalign 0.5  
-
-init python:
-    def information_display(*txt):
-        renpy.call_in_new_context("infoLabel",txt)
-
-label infoLabel(*txt):
-    if txt:
-        info "[txt]"
-
-define config.hyperlink_handlers = {
-    "information": information_display
-}
