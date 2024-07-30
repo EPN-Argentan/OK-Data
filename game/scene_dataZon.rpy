@@ -10,11 +10,11 @@ label dataZon :
   stop music fadeout 1.0
   show zoomPC
   show screen barre_de_vie
-  a "allors... mes mails ?"
+  a "Alors... mes mails ?"
   window auto hide
   $ renpy.pause(3.0, hard=True)
   show screen desktopbutton
-  a "allons-y !"
+  a "Allons-y !"
   while True:
       empty ""
 
@@ -28,7 +28,7 @@ label mailx3 :
     show screen barre_de_vie
     if default_clicks >= 3:
         show screen notifMail
-    a "hum... je lis quel mail"
+    a "Hum... Je lis quel mail"
 
     while True:
         empty ""
@@ -42,7 +42,7 @@ label brouillon :
     with dissolve
     show screen barre_de_vie
     a "Ah mais oui mon mail d'hier soir... Je dois le finir."
-    a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
+    a "Bon je l'envoie à tous mes contacts. J'envoie en A ou en CCI ?"
 
     while True:
         empty ""
@@ -56,7 +56,7 @@ label Brouillon_phone_ok :
     show screen brouillon
     show screen barre_de_vie
     call addPoints(2,'point_sociaux') from _call_addPoints_2
-    e_nvl "Bravo, En effet rien ne sert de communiquer les mails de tes proches à tous"
+    e_nvl "Bravo, En effet rien ne sert de communiquer les mails de tes proches à tous !"
     jump mailx3
 
 label Brouillon_phone_No:
@@ -99,7 +99,7 @@ label feed_coli6mots :
 
 label Noformok :
     nvl clear
-    e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte"
+    e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte."
     jump mailx3
 
 label phonestopcoli6mots :
@@ -111,7 +111,7 @@ label phonestopcoli6mots :
     show screen barre_de_vie
     call addPoints(-2,'point_administrative') from _call_addPoints_4
     e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
-    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
+    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer !"
     jump mailx3
 
 
@@ -127,7 +127,7 @@ label superclerc:
     show screen superclerc
     with dissolve
     show screen barre_de_vie
-    a "ok, mon ticket de course... Pas d'importance."
+    a "Ok, mon ticket de course... Pas d'importance."
     jump mailx3
 
 
@@ -191,7 +191,7 @@ label datazonsiteafternocookie :
     show screen mailx3
     show screen datazonsiteafternocookie
     show screen barre_de_vie
-    e_nvl "Bien joué !, pas besoin de donner des informations sur ta navigation"
+    e_nvl "Bien joué !, pas besoin de donner des informations sur ta navigation."
     jump datazonsiteok
 
 label datazonsiteaftercookieok :
@@ -209,7 +209,7 @@ label datazonsiteok :
     show screen mailx3
     show screen datazonsiteok
     show screen barre_de_vie
-    a "ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
+    a "Ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
     while True :
         empty ""
 
@@ -272,7 +272,7 @@ label aspicute :
     show screen aspicute
     show screen barre_de_vie
 
-    a "il est TROOOOP mignon !"
+    a "Il est TROOOOP mignon !"
     while True :
         empty ""
 
@@ -292,7 +292,7 @@ label achatAspiCute :
     show screen achatAspiCute
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "Ils pourraient m'offrir les frais de port quand même à ce prix..."
     while True :
         empty ""
 
@@ -302,7 +302,7 @@ label achatmcdyzon :
     show screen achatmcdyzon
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "Ils pourraient m'offrir les frais de port quand même à ce prix..."
     while True :
         empty ""
 
@@ -339,7 +339,7 @@ label validationachat :
     else :
         call addPoints(4,'point_administrative') from _call_addPoints_12
         e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable en effet de ne pas enregistrer celle-ci sur le site d'achat."
-    a "Voilà une bonne chose de faite"
+    a "Voilà une bonne chose de faite."
     jump mailconfirmation
 
 

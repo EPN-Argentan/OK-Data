@@ -3,7 +3,7 @@ label barOut:
     #show screen phoneDown
     hide screen phoneDown
 
-    syrielle_nvl "Salut frangine ! \n On se retrouve au \n {u}Bar chez Thon Thon \n rue du port{/u}"
+    syrielle_nvl "Salut frangine ! \n On se retrouve au \n {u}Bar chez Thon Thon \n rue du port.{/u}"
     hide screen hubElements
     show screen dataMap
     window auto hide
@@ -19,8 +19,8 @@ label barOut:
     play music "ambi_bar.mp3"
     empty ""
     s "Ça fait longtemps, je suis heureuse de te revoir ! "
-    s "Aller, on se fait un {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}Selfie{/a} et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "
-    s "Mais attention ! pas de gaffes sur son anniversaire surprise ! "
+    s "Allez, on se fait un {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}Selfie{/a} et on l’envoie à Pierrot, il sera content de revoir ses sœurettes ! "
+    s "Mais attention ! Pas de gaffes sur son anniversaire surprise ! "
     a "OK, je prends mon téléphone."
     show screen selfie
     with dissolve
