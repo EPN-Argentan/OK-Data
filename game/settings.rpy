@@ -18,8 +18,8 @@ init -10 python:
         'point_localisation': [initPts,0],
         'point_sociaux': [initPts,0],
         'point_administrative': [initPts,0]
-    }
-    
+    }    
+    listePoints = list(points.keys())#get list of keys from points array
 
     #dynamic list of elements clickable in hub
     #if value == 0, the element can't be clicked
@@ -44,9 +44,14 @@ init -10 python:
                 value[0] = minPts
 
 
-    BluetoothState = True
+    #BluetoothState = True
+    WifiState = True
     LocalisationState = True
     DataState = True
     NeutralState = True #an invisible variable to add points without using settings
 
     shareSelfie = False #check if Selfie has been shared or not
+
+    speakerState = True #does speaker is active
+    speakerTarget = -1 #Number array element points to target to remove a point 
+    current_category = 0 

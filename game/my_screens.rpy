@@ -1,9 +1,15 @@
 screen hubElements:
-
+    imagebutton:
+        xpos 1258
+        ypos 70
+        idle At('UI/imagebuttons/sources.png', outline_transform(6, "#ffffff", 4.0))
+        hover "UI/imagebuttons/sources.png"
+        hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Sources"))]
+        action ShowMenu("sources")
     if hubClickable["dog"] == 1:
         imagebutton:
-            xpos 1400
-            ypos 797
+            xpos 1467
+            ypos 827
             idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/dog.png"
             action Jump("walkOut")
@@ -35,10 +41,10 @@ screen hubElements:
     
     if hubClickable["forest"] == 1:
         imagebutton:
-            xpos 1400
-            ypos 797
-            idle At('UI/imagebuttons/dog.png', outline_transform(6, "#ffffff", 4.0))
-            hover "UI/imagebuttons/dog.png"
+            xpos 665
+            ypos 540
+            idle At('UI/imagebuttons/forest.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/forest.png"
             action Jump("forest")
 
     if hubClickable["laptop"] == 1:
@@ -81,13 +87,13 @@ screen phoneDown :
         xalign 0.87
         yalign 0.95
         imagebutton:
-            if BluetoothState == True:
-                idle "UI/settingsIcons/BluetoothON.png"
-                hover "UI/settingsIcons/BluetoothOFF.png"
+            if WifiState == True:
+                idle "UI/settingsIcons/WifiON.png"
+                hover "UI/settingsIcons/WifiOFF.png"
             else:
-                idle "UI/settingsIcons/BluetoothOFF.png"
-                hover "UI/settingsIcons/BluetoothON.png"
-            action SetVariable("BluetoothState", not BluetoothState)
+                idle "UI/settingsIcons/WifiOFF.png"
+                hover "UI/settingsIcons/WifiON.png"
+            action SetVariable("WifiState", not WifiState)
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -153,12 +159,12 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     xalign 0.5
                     yalign 0.5
                     if A3:
-                        idle At("UI/applications/Icons/appOKDATA.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
-                        hover "UI/applications/Icons/appOKDATA.png"
-                        action Jump("searchInGallery")
+                        idle At("UI/applications/Icons/appDataBook.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appDataBook.png"
+                        action Jump("searchInDataBookDate")
                     else:
-                        idle "UI/applications/Icons/appOKDATA.png" at greyscale()
-                text "{color=#555}Recherche{/color}" xalign 0.5 size nameAppSize
+                        idle "UI/applications/Icons/appDataBook.png" at greyscale()
+                text "{color=#555}DataBook{/color}" xalign 0.5 size nameAppSize
             vbox:
                 imagebutton:
                     xalign 0.5
@@ -210,13 +216,13 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
         yalign 0.2
         spacing 20
         imagebutton:
-            if BluetoothState == True:
-                idle "UI/settingsIcons/BluetoothON.png"
-                hover "UI/settingsIcons/BluetoothOFF.png"
+            if WifiState == True:
+                idle "UI/settingsIcons/WifiON.png"
+                hover "UI/settingsIcons/WifiOFF.png"
             else:
-                idle "UI/settingsIcons/BluetoothOFF.png"
-                hover "UI/settingsIcons/BluetoothON.png"
-            action SetVariable("BluetoothState", not BluetoothState)
+                idle "UI/settingsIcons/WifiOFF.png"
+                hover "UI/settingsIcons/WifiON.png"
+            action SetVariable("WifiState", not WifiState)
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -346,3 +352,7 @@ screen selfie :
         idle "UI/applications/Icons/send_idle.png"
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
+
+screen countdown: 
+    text "[points[listePoints[0]][0]]"
+    timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])

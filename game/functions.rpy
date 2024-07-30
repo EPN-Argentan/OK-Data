@@ -88,15 +88,18 @@ label checkClueALL():
     python:
         for key, value in combinaisonClues.items():
             if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
+                #Check if this clue has been already discovered
                 if value[4] == False:
                     phrase = value[3]
                     renpy.say(e_nvl, phrase)
-                    cluesDisplay += value[2]
-                    value[4] = True
+                    cluesDisplay += value[2] #Add a text keyword to get a "trace" of previous clue
+                    value[4] = True #Mark this step has already discovered
+                    #Check if all steps have been checked
                     if categoriesIndex < len(combinaisonClues) :
                         categoriesIndex += 1
                     else:
                         renpy.jump('endAlgorithm')
+                #Clue already found
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
 
@@ -113,21 +116,6 @@ init python:
 label clearClues():
     $ whatInsideTop = ""
     $ whatInsideBottom = ""
-
-#Function to display information when click on specific word
-style infoStyle:
-    xalign 0.5  
-
-init python:
-  def information_display(txt):
-    renpy.call_in_new_context("infoLabel",txt)
-
-label infoLabel(txt):
-    info "[txt]"
-
-define config.hyperlink_handlers = {
-    "information": information_display
-}
 
 #Display information bubble clickable to go to ecternal URL
 
@@ -158,3 +146,19 @@ init python:
 
         # Convert the 0-1 range into a value in the right range.
         return rightMin + (valueScaled * rightSpan)
+
+#Function to display information when click on specific word
+style infoStyle:
+    xalign 0.5  
+
+init python:
+    def information_display(*txt):
+        renpy.call_in_new_context("infoLabel",txt)
+
+label infoLabel(*txt):
+    if txt:
+        info "[txt]"
+
+define config.hyperlink_handlers = {
+    "information": information_display
+}

@@ -77,13 +77,13 @@ screen PhoneDialogue(dialogue, items=None):
             xalign 0.5
             yalign -0.15 #top margin for settings buttons
             imagebutton:
-                if BluetoothState == True:
-                    idle "UI/settingsIcons/BluetoothON.png"
-                    hover "UI/settingsIcons/BluetoothOFF.png"
+                if WifiState == True:
+                    idle "UI/settingsIcons/WifiON.png"
+                    hover "UI/settingsIcons/WifiOFF.png"
                 else:
-                    idle "UI/settingsIcons/BluetoothOFF.png"
-                    hover "UI/settingsIcons/BluetoothON.png"
-                action SetVariable("BluetoothState", not BluetoothState)
+                    idle "UI/settingsIcons/WifiOFF.png"
+                    hover "UI/settingsIcons/WifiON.png"
+                action SetVariable("WifiState", not WifiState)
             imagebutton:
                 if DataState == True:
                     idle "UI/settingsIcons/DataON.png"

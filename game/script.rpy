@@ -27,15 +27,12 @@ define empty = Character(None,color="#00000000", window_background="gui/empty_te
 
 default dogInBasket = True
 
-
 label splashscreen:
     $ renpy.movie_cutscene("images/sprites/splashscreen.ogv")
     return
 
-
 # Initialisation du jeu
 label start:
-
 #Lancement du Tuto
 #jump tuto #To reactivate
 #jump browserLabel
@@ -43,10 +40,12 @@ label start:
 jump tuto
 #Lancement du Hub
 label hub:
+    #If total points is less than X, then forest branch is avaible
     if totalPoints() < 30 and visitedForest == False:
         $ hubClickable["forest"]= 1
     hide screen phoneDown
     hide screen mailx3
+    show screen countdown
     scene hub
     if dogInBasket == True:
         show loungeHubDogInBasket  

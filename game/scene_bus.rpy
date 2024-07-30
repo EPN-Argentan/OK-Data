@@ -1,8 +1,11 @@
-default whereYouStart = [False,False] #track wich application player has launched [Gallery,Cloud]
+default whereYouStart = [False,False,False] #track wich application player has launched [Gallery,Cloud]
 default findYearPic = False
 
 label bus:
 $ freeWifiActivate = False
+$ WifiState = False
+$ DataState = False
+
 hide screen hubElements
 stop music fadeout 1.0
 
@@ -25,14 +28,20 @@ window auto hide
 $ renpy.pause(3.0, hard=True)
 a "mais...mais..."
 a "C'est la photo des 30 ans de Pierre mon frère!"
-a "Mais comment c'est possible, c'est ma p  hoto en plus ! "
+a "Mais comment c'est possible, c'est ma photo en plus ! "
 a "Elle doit même encore être sur mon téléphone"
+a "Il faut que je la retrouve !"
 
 label homeScreen:
+    hide screen dataBookSearch
     scene busAdOnBus
     window auto hide
     play music "The World's Fair - Godmode.mp3"
-    show screen appsPhone(True,True,False,False,False,False,False,0.7)
+    show screen appsPhone(True,True,True,False,False,False,False,0.7)
+    if whereYouStart[2] == False:
+        a "Soit elle est dans ma galerie photos ou alors elle est sur mon cloud..."
+    else:
+        a "Je devrais trouver la date et la localisation de la photo ailleurs"
     while True:
         empty ""
 
@@ -57,13 +66,12 @@ label searchInGallery:
 label openDataCloud:
     nvl clear
     hide screen galeryNoFilter
-    if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
-        a "Mince, la photo doit être de l'année encore d'avant !"
-        a "Allons voir sur Datacloud"
-    elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
-        a "euh...de quand date la photo"
-    elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-        a "Elle doit dater d'il y a 5 ans"
+    #if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
+    #    a "Allons voir sur Datacloud"
+    #elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
+    #    a "euh...de quand date la photo"
+    #elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
+    #    a "Allons voir sur Datacloud"
     $ whereYouStart[1] = True
     if freeWifiActivate == False :
         $ freeWifiActivate = True
@@ -83,7 +91,6 @@ label openDataCloud:
 
 label inputDate:
     $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
-    $ birthdayYear = str(year-5)
     if dateInput == birthdayYear:
         hide screen dataCloudSearching
         jump searchInDataCloud
@@ -108,19 +115,34 @@ label searchInDataCloud:
     window auto hide
     $ renpy.pause(1.0)
 
-label searchInDataBook:
+label searchInDataBookDate:
+    $ whereYouStart[2] = True
     hide screen cloudNoFilter
     show screen dataBookOpening
     window auto hide
     $ renpy.pause(1.0, hard=True)
     show screen dataBookSearch
     hide screen dataBookOpening
-    $ dateInput = renpy.input("Entrez la localisation", "Paris", length = 12)
-    if dateInput == "Barcelone":
-        jump foundInDataBook
-        hide screen dataBookSearch
+    $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
+    $ birthdayYear = str(year-5)
+    if dateInput == birthdayYear :
+        a "Oui c'était l'année de ses 30 ans"
+        a "Mais c'était où ?"
+        jump searchInDataBookLocalisation
     else:
-        jump searchInDataBook
+        jump searchInDataBookDate
+
+label searchInDataBookLocalisation:
+    window auto hide
+    $ renpy.pause(1.0, hard=True)
+    show screen dataBookSearch
+    hide screen dataBookOpening
+    $ localisationInput = renpy.input("Entrez la localisation", "Paris", length = 12)
+    if localisationInput == "Barcelone" or dateInput =="barcelone" or dateInput == "barcelon" or dateInput == "Barcelon":
+            jump foundInDataBook
+            hide screen dataBookSearch
+    else:
+        jump searchInDataBookLocalisation
 
 label foundInDataBook:
     hide screen dataBookSearch
@@ -226,7 +248,13 @@ screen galeryOpening:
 screen galeryNoFilter:
     add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
-
+    hbox:
+            xalign 0.74
+            yalign 0.22
+            imagebutton:
+                idle "UI/applications/Exit.png"
+                hover "UI/applications/Exit.png"
+                action Jump("homeScreen")
     side "c b r":
          area (0.575, 0.3, 330, 500)
 
@@ -265,7 +293,12 @@ screen galeryNoFilter:
                     add "UI/applications/galery/001.jpeg"
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/001.jpeg"
-                textbutton "Retrouvez vos anciennes photos sur Datacloud" action Jump("openDataCloud")
+                text "[year-5]"  color "#000000"
+                grid 2 2:
+                    spacing 20
+                    add "UI/applications/galery/001.jpeg"
+                    add "UI/applications/galery/002.jpeg"
+                    add "UI/applications/galery/001.jpeg"
 
 
          bar value XScrollValue("vp")
@@ -317,22 +350,52 @@ screen birthdayPicture:
 screen notificationWinted:
     add "UI/Cadre/notificationWinted.png" xalign 0.75 yalign 0.8
 
+
 screen freeWifi:
     add "smartphone.png" xalign 0.7 yalign 0.5
     add "UI/applications/FreeWifi.png" xalign 0.6955 yalign 0.5
     hbox:
-        xalign 0.6955
-        yalign 0.65
-        spacing 10
+        spacing 20
+        xalign 0.69
+        yalign 0.22
         imagebutton:
-            idle "UI/applications/yes_idle.png"
-            hover "UI/applications/yes_hover.png"
-            action Call("addPoints",-5,"point_sociaux","","","Fais attention, sur des réseaux publics tu n'es pas protégé ! ","","openDataCloud")
+            if WifiState == True:
+                idle "UI/settingsIcons/WifiON.png"
+                hover "UI/settingsIcons/WifiOFF.png"
+            else:
+                idle "UI/settingsIcons/WifiOFF.png"
+                hover "UI/settingsIcons/WifiON.png"
+            action SetVariable("WifiState", not WifiState)
         imagebutton:
-            idle "UI/applications/no_idle.png"
-            hover "UI/applications/no_hover.png"
-            action Call("addPoints",5,"point_sociaux","","Bravo","Fais attention, sur des réseaux publics tu n'es pas protégé ! ","Dans la mesure du possible, évites les réseaux wifi publics","openDataCloud")
+            if DataState == True:
+                idle "UI/settingsIcons/DataON.png"
+                hover "UI/settingsIcons/DataOFF.png"
+            else:
+                idle "UI/settingsIcons/DataOFF.png"
+                hover "UI/settingsIcons/DataON.png"
+            action SetVariable("DataState", not DataState)
+        imagebutton:
+            if LocalisationState == True:
+                idle "UI/settingsIcons/LocalisationON.png"
+                hover "UI/settingsIcons/LocalisationOFF.png"
+            else:
+                idle "UI/settingsIcons/LocalisationOFF.png"
+                hover "UI/settingsIcons/LocalisationON.png"
+            action SetVariable("LocalisationState", not LocalisationState)
+    frame:
+        area (1000,500,450,250)
+        background Frame(
+            Text( "\u25A2", #### <--- this is a small rounded rectangle character
+                  background="#ffffff",  
+                  color="#ffffff", 
+                  font="DejaVuSans.ttf", 
+                  size=72), 
+            32, 32, 
+            tile=True)
 
+        text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
+
+        
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen cloudPhotos:
@@ -352,7 +415,7 @@ screen dataBookSearch:
         imagebutton:
             idle "UI/applications/Exit.png"
             hover "UI/applications/Exit.png"
-            action Jump("searchInDataCloud")
+            action Jump("homeScreen")
 
 
 screen dataBookFound:

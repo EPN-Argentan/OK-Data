@@ -222,3 +222,5 @@ init python:
 ## slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+#define config.rollback_enabled = False # enable rollback
