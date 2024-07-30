@@ -70,7 +70,7 @@ label Brouillon_phone_No:
     show screen barre_de_vie
 
     call addPoints(-2,'point_sociaux') from _call_addPoints_3
-    e_nvl "Il faut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
+    e_nvl "Il vaut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
     jump mailx3
 
     while True:
@@ -107,7 +107,7 @@ label feed_coli6mots :
 label Noformok :
     nvl clear
     call addPoints(+2,'point_administrative')
-    e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte"
+    e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte."
     jump mailx3
 
 label phonestopcoli6mots :
@@ -119,7 +119,7 @@ label phonestopcoli6mots :
     show screen barre_de_vie
     call addPoints(-2,'point_administrative') from _call_addPoints_4
     e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
-    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
+    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer !"
     jump mailx3
 
 
@@ -136,7 +136,7 @@ label superclerc:
     show screen superclerc
     with dissolve
     show screen barre_de_vie
-    a "ok, mon ticket de course... Pas d'importance."
+    a "Ok, mon ticket de course... Pas d'importance."
     jump mailx3
 
 
@@ -153,7 +153,7 @@ label mailsepharo :
     show screen mailsepharo
     with dissolve
     show screen barre_de_vie
-    a "Oh ? Ah oui c'est vrai j'avais laissé ma géolocalisation activée"
+    a "Oh ? Ah oui c'est vrai j'avais laissé ma géolocalisation activée !"
     jump mailx3
 
 label datazonmail :
@@ -202,7 +202,7 @@ label datazonsiteafternocookie :
     show screen datazonsiteafternocookie
     show screen barre_de_vie
     call addPoints(+1,'point_interet')
-    e_nvl "Bien joué ! pas besoin de donner des informations sur ta navigation"
+    e_nvl "Bien joué ! pas besoin de donner des informations sur ta navigation."
     jump datazonsiteok
 
 label datazonsiteaftercookieok :
@@ -212,7 +212,7 @@ label datazonsiteaftercookieok :
     show screen barre_de_vie
     call addPoints(-2,'point_conviction') from _call_addPoints_5
     call addPoints(-2,'point_interet') from _call_addPoints_6
-    e_nvl "En acceptant les cookies, tu fournies des informations sur ta façon de d'utiliser le site Internet a Datazon"
+    e_nvl "En acceptant les cookies, tu fournies des informations sur ta façon d'utiliser le site Internet a Datazon"
     jump datazonsiteok
 
 label datazonsiteok :
@@ -220,7 +220,7 @@ label datazonsiteok :
     show screen pc_vierge
     show screen datazonsiteok
     show screen barre_de_vie
-    a "ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
+    a "Ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
     while True :
         empty ""
 
@@ -239,7 +239,7 @@ label aspidatazon_page :
     show screen aspidatazon_page
     with dissolve
     show screen barre_de_vie
-    a "alors...."
+    a "Alors...."
     while True :
         empty ""
 
@@ -248,7 +248,7 @@ label aspidatazon_pagewithcookies :
     show screen pc_vierge
     show screen aspidatazon_pagewithcookies
     show screen barre_de_vie
-    a "alors...."
+    a "Alors...."
     while True :
         empty ""
 
@@ -271,7 +271,7 @@ label aspidatazon_afternocookie :
     show screen aspidatazon_afternocookie
     show screen barre_de_vie
 
-    e_nvl "Bien jouée, pas besoin de donner des informations sur ta navigation"
+    e_nvl "Bien joué ! pas besoin de donner des informations sur ta navigation"
     jump aspidatazon_page
     while True :
         empty ""
@@ -283,7 +283,7 @@ label aspicute :
     show screen aspicute
     show screen barre_de_vie
 
-    a "il est TROOOOP mignon !"
+    a "Il est TROOOOP mignon !"
     while True :
         empty ""
 
@@ -293,7 +293,7 @@ label McDyzon :
     show screen McDyzon
     show screen barre_de_vie
 
-    a "il est TROOOOP Badasssss !"
+    a "Il est TROOOOP Badasssss !"
     while True :
         empty ""
 
@@ -303,7 +303,7 @@ label achatAspiCute :
     show screen achatAspiCute
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "Ils pourraient m'offrir les frais de port quand même à ce prix..."
     while True :
         empty ""
 
@@ -313,7 +313,7 @@ label achatmcdyzon :
     show screen achatmcdyzon
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "Ils pourraient m'offrir les frais de port quand même à ce prix..."
     while True :
         empty ""
 
@@ -350,7 +350,7 @@ label validationachat :
     else :
         call addPoints(2,'point_administrative') from _call_addPoints_12
         e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable en effet de ne pas enregistrer celle-ci sur le site d'achat."
-    a "Voilà une bonne chose de faite"
+    a "Voilà une bonne chose de faite."
     jump mailconfirmation
 
 
