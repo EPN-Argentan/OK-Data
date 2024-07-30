@@ -75,6 +75,7 @@ label openDataCloud:
     $ whereYouStart[1] = True
     if freeWifiActivate == False :
         $ freeWifiActivate = True
+        hide screen appsPhone
         show screen freeWifi
         a "il me reste encore un peu de forfait"
         while True:
@@ -85,35 +86,15 @@ label openDataCloud:
         $ renpy.pause(1.0, hard=True)
         show screen dataCloudSearching
         hide screen dataCloudOpening
-        jump inputDate
+        jump searchInDataCloud
     while True:
         empty ""
 
-label inputDate:
-    $ dateInput = renpy.input("Entrez la date recherchée", "2000", length = 4)
-    if dateInput == birthdayYear:
-        hide screen dataCloudSearching
-        jump searchInDataCloud
-    else:
-        jump inputDate
 
 label searchInDataCloud:
     show screen cloudNoFilter
-    if findYearPic == False:
-        a "Bingo !"
-        a "plus qu'à trouver la bonne..."
-    else:
-        a "Je devrais pouvoir trouver un indice pour la localisation dans les autres photos"
-    window auto hide
-    $ renpy.pause(3.0)
-    if findYearPic == False:
-        a "arg..."
-        a "Mais j'ai du partager cette photo sur Databook !"
-    else :
-        a "Bon réessayons"
-    $ findYearPic = True
-    window auto hide
-    $ renpy.pause(1.0)
+    while True:
+        empty ""
 
 label searchInDataBookDate:
     $ whereYouStart[2] = True
@@ -318,7 +299,18 @@ screen cloudNoFilter:
                 text "[year-5]"  color "#000000"
                 grid 2 4:
                     spacing 10
-                    add "UI/applications/galery/Sagrada1.jpg"
+                    imagebutton:
+                        idle At('UI/applications/galery/Sagrada1.jpg', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/Sagrada1.jpg"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002358_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/002.jpeg', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/002.jpeg"
+                        hovered Show("metaData",None,"Métadonnées : \nParis \n002355_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
                     add "UI/applications/galery/002.jpeg"
                     add "UI/applications/galery/Sagrada2.jpg"
                     add "UI/applications/galery/004.jpeg"
@@ -327,6 +319,23 @@ screen cloudNoFilter:
                     add "UI/applications/galery/003.jpeg"
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
+         
+    hbox:
+        xalign 0.74
+        yalign 0.22
+        imagebutton:
+            idle "UI/applications/Exit.png"
+            hover "UI/applications/Exit.png"
+            action Jump("homeScreen")
+
+screen metaData(text):
+     frame:
+         xpadding 10
+         ypadding 10
+         xalign 0.5
+         yalign 0.8
+         has hbox
+         text "[text]"
 
 screen dataCloudOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
@@ -365,7 +374,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action SetVariable("WifiState", not WifiState)
+            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Évites les réseaux wifi publics, ils sont dangereux ","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -373,7 +382,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/DataOFF.png"
                 hover "UI/settingsIcons/DataON.png"
-            action SetVariable("DataState", not DataState)
+            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d'éviter le wifi public, c'est le maaaaal","openDataCloud")]
         imagebutton:
             if LocalisationState == True:
                 idle "UI/settingsIcons/LocalisationON.png"
