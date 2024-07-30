@@ -223,4 +223,4 @@ init python:
 
 # define build.itch_project = "renpytom/test-project"
 
-define config.rollback_enabled = False # enable rollback
+#define config.rollback_enabled = False # enable rollback

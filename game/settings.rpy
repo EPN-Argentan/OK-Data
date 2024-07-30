@@ -44,7 +44,8 @@ init -10 python:
                 value[0] = minPts
 
 
-    BluetoothState = True
+    #BluetoothState = True
+    WifiState = True
     LocalisationState = True
     DataState = True
     NeutralState = True #an invisible variable to add points without using settings

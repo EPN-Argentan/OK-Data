@@ -87,13 +87,13 @@ screen phoneDown :
         xalign 0.87
         yalign 0.95
         imagebutton:
-            if BluetoothState == True:
-                idle "UI/settingsIcons/BluetoothON.png"
-                hover "UI/settingsIcons/BluetoothOFF.png"
+            if WifiState == True:
+                idle "UI/settingsIcons/WifiON.png"
+                hover "UI/settingsIcons/WifiOFF.png"
             else:
-                idle "UI/settingsIcons/BluetoothOFF.png"
-                hover "UI/settingsIcons/BluetoothON.png"
-            action SetVariable("BluetoothState", not BluetoothState)
+                idle "UI/settingsIcons/WifiOFF.png"
+                hover "UI/settingsIcons/WifiON.png"
+            action SetVariable("WifiState", not WifiState)
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -159,12 +159,12 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     xalign 0.5
                     yalign 0.5
                     if A3:
-                        idle At("UI/applications/Icons/appOKDATA.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
-                        hover "UI/applications/Icons/appOKDATA.png"
-                        action Jump("searchInGallery")
+                        idle At("UI/applications/Icons/appDataBook.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                        hover "UI/applications/Icons/appDataBook.png"
+                        action Jump("searchInDataBookDate")
                     else:
-                        idle "UI/applications/Icons/appOKDATA.png" at greyscale()
-                text "{color=#555}Recherche{/color}" xalign 0.5 size nameAppSize
+                        idle "UI/applications/Icons/appDataBook.png" at greyscale()
+                text "{color=#555}DataBook{/color}" xalign 0.5 size nameAppSize
             vbox:
                 imagebutton:
                     xalign 0.5
@@ -216,13 +216,13 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
         yalign 0.2
         spacing 20
         imagebutton:
-            if BluetoothState == True:
-                idle "UI/settingsIcons/BluetoothON.png"
-                hover "UI/settingsIcons/BluetoothOFF.png"
+            if WifiState == True:
+                idle "UI/settingsIcons/WifiON.png"
+                hover "UI/settingsIcons/WifiOFF.png"
             else:
-                idle "UI/settingsIcons/BluetoothOFF.png"
-                hover "UI/settingsIcons/BluetoothON.png"
-            action SetVariable("BluetoothState", not BluetoothState)
+                idle "UI/settingsIcons/WifiOFF.png"
+                hover "UI/settingsIcons/WifiON.png"
+            action SetVariable("WifiState", not WifiState)
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
