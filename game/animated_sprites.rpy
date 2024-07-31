@@ -148,6 +148,33 @@ image loungeHandIn :
     "sprites/lounge/handIn/handIn017.png"
     pause 0.1
 
+
+image clic :
+    "sprites/clic/clic1.png"
+    pause 0.1
+    "sprites/clic/clic2.png"
+    pause 0.1
+    "sprites/clic/clic3.png"
+    pause 0.1
+    "sprites/clic/clic4.png"
+    pause 0.1
+    "sprites/clic/clic5.png"
+    pause 0.1
+    "sprites/clic/clic6.png"
+    pause 0.1
+    "sprites/clic/clic7.png"
+    pause 0.1
+    "sprites/clic/clic8.png"
+    pause 0.1
+    "sprites/clic/clic9.png"
+    pause 0.1
+    "sprites/clic/clic10.png"
+    pause 0.1
+    "sprites/clic/clic11.png"
+    pause 0.1
+    "sprites/clic/clic12.png"
+    repeat
+
 image walkInfinite = Movie(play="images/sprites/walking/infiniteWalk.ogv", size=(1920,1080), loop=False)
 image walkZoom = Movie(play="images/sprites/walking/walkZoom.ogv", size=(1920,1080), loop=False)
 image walkFix :
@@ -182,4 +209,3 @@ image receiveStore = Movie(play="images/sprites/store/receiveStore.ogv", size=(1
 image computerStore = Movie(play="images/sprites/store/computerStore.ogv", size=(1920,1080), loop=False)
 image zoomComputerStore :
     "images/sprites/store/freezeFrameComputerStore.jpeg"
-
