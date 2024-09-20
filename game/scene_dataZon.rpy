@@ -444,9 +444,9 @@ screen a_cci :
 
         vbox:
             button:
-                    text "A" style "texte_rouge"
+                    text "{a=information: Le champ A: dans un mail sous entend  A qui on envoie ce mail} A :{/a}" style "texte_rouge"
             button:
-                    text  "CCI" style "texte_rouge"
+                    text "{a=information: Le champ CCI: signifie Copie Carbonne Invisible. Ce champ permet que chaque destinataire d'un mail ne connaîtra pas l'adresse des autres destinataires} CCI :{/a}" 
 
 screen mailx3 :
     add "UI/datazon/mailx3.jpg"
