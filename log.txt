@@ -1,34 +1,34 @@
-2024-09-20 12:43:44 UTC
+2024-09-20 12:49:00 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.3.24061702
 
 Early init took 0.11s
-Loading error handling took 0.04s
-Loading script took 0.72s
+Loading error handling took 0.05s
+Loading script took 0.22s
 Loading save slot metadata took 0.05s
 Loading persistent took 0.00s
-Running init code took 0.10s
+Running init code took 0.07s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
 Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.06s
+Initial gc took 0.09s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.49s
+Creating interface object took 0.41s
 Cleaning stores took 0.00s
-Init translation took 0.20s
-Build styles took 0.05s
+Init translation took 0.21s
+Build styles took 0.04s
 Load screen analysis took 0.00s
 Analyze screens took 0.04s
-Save screen analysis took 0.04s
+Save screen analysis took 0.06s
 Prepare screens took 0.15s
-Save pyanalysis. took 0.04s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.04s
 Running _start took 0.00s
 Interface start took 0.10s
@@ -45,3 +45,472 @@ Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
+3
+catIntérêt
+Miniature Youtube
+Historique de recherche
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 273.52s
+Loading error handling took 0.04s
+Loading script took 0.23s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+
+File "game/functions.rpy", line 126: expected an indented block
+        renpy.call_in_new_context("infoLabel",txt)
+         ^
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.60s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 290.73s
+Loading error handling took 0.04s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.47s
+Cleaning stores took 0.00s
+Init translation took 0.25s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 304.93s
+Loading error handling took 0.03s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.40s
+Cleaning stores took 0.00s
+Init translation took 0.17s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 315.13s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.43s
+Cleaning stores took 0.00s
+Init translation took 0.18s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 322.33s
+Loading error handling took 0.04s
+Loading script took 0.50s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+Running init code took 0.09s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.18s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.45s
+Cleaning stores took 0.00s
+Init translation took 0.22s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.31s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 130, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 360.93s
+Loading error handling took 0.07s
+Loading script took 0.66s
+Loading save slot metadata took 0.11s
+Loading persistent took 0.00s
+Running init code took 0.17s
+Loading analysis data took 0.08s
+Analyze and compile ATL took 0.02s
+Reloading save slot metadata took 0.12s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.18s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.18s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.54s
+Cleaning stores took 0.00s
+Init translation took 0.21s
+Build styles took 0.06s
+Load screen analysis took 0.00s
+Analyze screens took 0.06s
+Save screen analysis took 0.08s
+Prepare screens took 0.31s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.01s
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\ast.py", line 766, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\parameter.py", line 283, in apply
+    raise TypeError(msg) # from None
+TypeError: missing a required argument: 'txt'
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 57, in script call
+    $ displayData()
+  File "game/functions.rpy", line 127, in script
+    label infoLabel(txt):
+TypeError: missing a required argument: 'txt'
+Resetting cache.
+Early init took 375.90s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.38s
+Cleaning stores took 0.00s
+Init translation took 0.14s
+Build styles took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'Quadro P1000/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 516.69'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+3
+catIntérêt
+Historique de recherche
+Miniature Youtube
+3
+catIntérêt
+Logged
+Historique de recherche
+3
+catIntérêt
+Miniature Youtube
+Historique de recherche
+3
+catIntérêt

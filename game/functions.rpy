@@ -124,8 +124,11 @@ init python:
   def information_display(txt):
     renpy.call_in_new_context("infoLabel",txt)
 
-label infoLabel(txt):
-    info "[txt]"
+label infoLabel(txt = ""):
+    if txt:
+        info "[txt]"
+    else:
+        pass
 
 define config.hyperlink_handlers = {
     "information": information_display
