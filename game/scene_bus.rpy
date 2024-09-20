@@ -43,7 +43,7 @@ label homeScreen:
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
     if whereYouStart[2] == False:
-        a "Je devrais pouvoir trouver ces infos dans ma galerie photos ou alors sur mon cloud..."
+        a "Je devrais pouvoir trouver ces infos dans ma galerie photos ou alors sur mon  {a=information:Le cloud est un espace de stockage en ligne, qui permet d'accèder à nos données depuis n'importe où}cloud{/a} ..."
     else:
         a "Je devrais trouver la date et la localisation de la photo ailleurs"
     while True:
