@@ -75,6 +75,9 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
+style texte_rouge:
+    color "#ff0000"  # Rouge
+
 
 
 ################################################################################
@@ -588,7 +591,7 @@ screen sources():
             text _("{a=https://www.facebook.com/watch/?v=612198476330499}Bande annonce du film documentaire de Jeff Orlowski (réalisateur){/a}\n\n")
             text _("{a=https://www.netflix.com/fr/title/81254224}film documentaire de Jeff Orlowski sur netflix{/a}\n\n")
 
-       
+
 
             text _("Entretien avec Marc Meillassoux")
             text _("{a=https://avenirdespixels.net/emisphere/emisphere-vieprivee/}Entretien autour des films documentaires de Marc Meillassoux (réalisateur) par Timothy Duquesne{/a}\n\n")
@@ -601,20 +604,20 @@ screen sources():
             text _("Ma femme a du crédit")
             text _("{a=hhttps://www.dailymotion.com/video/x8mah8k}Bande annonce du film documentaire de Sébastien Le Belzic (réalisateur){/a}\n\n")
             text _("{a=https://lcp.fr/programmes/ma-femme-a-du-credit-98413}version 52' du  film documentaire de Sébastien Le Belzic (réalisateur){/a}\n\n")
-            
+
 
             text _("The Internet's Original Sin")
             text _("{a=https://www.theatlantic.com/technology/archive/2014/08/advertising-is-the-internets-original-sin/376041}Article en anglais - L'invention du pop-up par Ethan Zuckerman et le modèle économique par défaut d'Internet, la surveillance, qui en a été la conséquence{/a}\n\n")
 
             text _("Ethan Zuckerman, l’homme qui regrette d’avoir inventé la pub pop up")
             text _("{a=https://www.radiofrance.fr/franceinter/podcasts/le-code-a-change/ethan-zuckerman-l-homme-qui-regrette-d-avoir-invente-la-pub-pop-up-7560331}Xavier de La Porte (produceur et animateur) avec Ethan Zuckerman (invité), une  légende d'Internet - Le pop-up évoqué à partir de 30'10 {/a}\n\n")
-            
+
             text _("Achats, déplacements, enregistrements de voix... J'ai fouillé dans les données que Google conserve sur moi depuis treize ans (et rien ne lui échappe) ")
             text _("{a=https://www.francetvinfo.fr/internet/google/achats-deplacements-enregistrements-de-voix-j-ai-fouille-dans-les-donnees-que-google-conserve-sur-moi-depuis-treize-ans-et-rien-ne-lui-echappe_3254425.html%20} Vincent Matalon - les données conservées par Google - Quelques conseils pour laisser moins de traces{/a}\n\n")
-             
+
             text _("Marc L***")
             text _("{a=http://www.le-tigre.net/marc-l.html} Raphaël Meltz- Ce que toutes nos traces numériques permettent de savoir sur nous - Portrait Google d'un internaute choisi au hasard par le journaliste, écrit à partir des informations trouvées en ligne et librement accessibles.{/a}\n\n")
-             
+
             text _("L'âge du profilage : épistémologie du numérique")
             text _("{a=https://www.radiofrance.fr/franceculture/podcasts/la-suite-dans-les-idees/l-age-du-profilage-epistemologie-du-numerique-6716097} podcast La Suite dans les idées - Sylvain Bourmeau (producteur et animateur) avec le philosophe Philippe Huneman - Aujourd'hui, à l'heure de l'alliance des Intelligences Artificielles et des algorithmes, sous le règne des Big Data et des Gafam qui les produisent et les exploitent, le philosophe Philippe Huneman propose de parler de sociétés du profilage.(invité){/a}\n\n")
 
@@ -631,34 +634,34 @@ screen sources():
 
             text _("Marketing politique : Démocra-ciblée")
             text _("{a=https://peertube.fr/w/rcVFXvkPFbgFjuk3DjZGbR}épisode de la série documentaire DataGueule - par Henri Poulain - Depuis l'arrivée des Big Data, le marketing a changé. Les nouvelles méthodes de micro-ciblage au débat démocratique représente un danger.{/a}\n\n")
-             
+
             text _("Les géants de la surveillance. Le modèle économique de Facebook et Google menace les droits humains")
             text _("{a=https://www.amnesty.org/fr/documents/pol30/1404/2019/fr}Amnesty International (2019) - De manière à jouir de leurs droits en ligne, les internautes doivent accepter d’être suivis en permanence. Le modèle économique fondé sur la surveillance mis en place par Facebook et Google est par nature incompatible avec le droit à la vie privée et représente une menace pour toute une série d’autres droits, notamment les droits à la liberté d’opinion, d’expression et de pensée, ainsi que les droits à l’égalité et à la nondiscrimination.{/a}\n\n")
-             
+
             text _("Global: Emerging Technology and AI Are Driving the Crisis of Widening Inequality Around the World")
             text _("{a=https://peertube.fr/w/rcVFXvkPFbgFjuk3DjZGbR}- Amnesty International (oct 2023) - Rapport complet téléchargeable{/a}\n\n")
 
             text _("Episode de la série Dopamine (Arte) consacré à YouTube")
             text _("{a=https://www.arte.tv/fr/videos/085801-005-A/dopamine/}Documentaire court (7') - par Léo Favier (réalisateur) - Explications du fonctionnement de l'algorithme de recommandation (nourri) de nos données et son impact délétère{/a}\n\n")
-             
+
             text _(" Episode de la série Dopamine (Arte) consacré à Tiktok")
             text _("{a=https://www.arte.tv/fr/videos/106608-004-A/dopamine}-Documentaire court (7') - Léo Favier et Arnaud Viémont (réalisateurs) - Décryptage du fonctionnement de l'application et de la façon dont elle crée de l'addiction et de la participation. {/a}\n\n")
-             
+
             text _(" L'affaire Snowden : techno-surveillance, dataworld ou l'insoluble question démocratique")
             text _("{a=https://www.radiofrance.fr/franceinter/podcasts/cyberpouvoirs/cyberpouvoirs-du-dimanche-09-juillet-2023-2968509}-Podcast CyberPouvoirs (34')-Asma Mhalla (productrice et animatrice) avec Olivier Tesquet (invité)- La démocratie à l’âge de la techno-surveillance, sur fond d’enjeux géopolitiques{/a}\n\n")
-             
+
             text _("Amy Plant, la Youtubeuse qui se débat avec l'algo")
             text _("{a=https://www.radiofrance.fr/franceinter/podcasts/le-code-a-change/amy-plant-la-youtubeuse-qui-se-debat-avec-l-algo-4641465}-Podcast Le code a changé (34') - Xavier de La Porte (produceur et animateur), Fabrice Laigle (réalisateur) - Conversation de Xavier de La Porte avec Amy Plant.{/a}\n\n")
-            
+
             text _(" Je crack l'algorithme YouTube")
             text _("{a=https://youtu.be/Np695V8lzeg}-Video de la chaîne de Amy Plant - Décryptage de l'algorithme de YouTube, de la façon dont il effectue les recommandations et de la puissance de ces recommandations (son influence sur le “succès” des videos){/a}\n\n")
-             
+
             text _(" L’ère de la confiance absolue dans le Big Data doit prendre fin")
             text _("{a=https://www.ted.com/talks/cathy_o_neil_the_era_of_blind_faith_in_big_data_must_end}-Conférence TED (13') - Cathy O'Neil - Mathématicienne, informaticienne et activiste pour une éthique des algorithmes, Cathy O’Neil alerte – dans son livre Algorithmes, La bombe à retardement – et dans cette conférence sur l'impact délétère de certains algorithmes.La video peut être visualisée avec les sous-titres en français et la retranscription en français est également disponible {/a}\n\n")
-             
+
             text _(" Liste de lecture augmentée de rencontre avec Timothy Duquesne « Des livres et des médias » à la Librairie Guillaume ")
             text _("{a=hhttps://avenirdespixels.net/librairieguillaume130623/}-Recommandations de plusieurs livres. Pour ce projet, je recommande Algorithmes – La bombe à retardement, de Cathy O’Neil, Toxic Data – Comment les réseaux manipulent nos opinions, de David Chavalarias et Agora toxica – La société incivile à l’ère d’Internet, de Stephanie Lamy /a}\n\n")
-             
+
 
 
             text _("Conçu avec {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")

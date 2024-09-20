@@ -2,6 +2,10 @@
 default lect_mail =[True,True,True]
 default cross_cb =True
 
+init:
+    style texte_rouge:
+        color "#ff0000"  # Rouge
+
 label dataZon :
   nvl clear
   $ default_clicks = 0
@@ -39,7 +43,9 @@ label brouillon :
 
     show screen pc_vierge
     show screen brouillon
+    show screen a_cci
     with dissolve
+
     show screen barre_de_vie
     a "Ah mais oui mon mail d'hier soir... Je dois le finir."
     a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
@@ -68,6 +74,7 @@ label Brouillon_phone_No:
     show screen pc_vierge
     show screen brouillon
     show screen barre_de_vie
+
 
     call addPoints(-2,'point_sociaux') from _call_addPoints_3
     e_nvl "Il faut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
@@ -428,6 +435,18 @@ screen brouillon :
         idle "UI/datazon/zone_envoi_idle.jpg"
         hover "UI/datazon/zone_envoi_hover.jpg"
         action Jump("Brouillon_phone_No")
+
+screen a_cci :
+
+    fixed:
+        xpos 750
+        ypos 330
+
+        vbox:
+            button:
+                    text "A" style "texte_rouge"
+            button:
+                    text  "CCI" style "texte_rouge"
 
 screen mailx3 :
     add "UI/datazon/mailx3.jpg"
