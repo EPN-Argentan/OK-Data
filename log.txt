@@ -1,179 +1,47 @@
-2024-09-20 14:25:17 UTC
+2024-09-20 14:42:08 UTC
 Windows-10-10.0.22631
-Ren'Py 8.2.3.24061702
+Ren'Py 8.3.2.24090902
 
-Early init took 0.11s
-Loading error handling took 0.05s
-Loading script took 0.31s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.07s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.48s
-Cleaning stores took 0.00s
-Init translation took 0.22s
-Build styles took 0.03s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.17s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
-Running _start took 0.00s
-Interface start took 0.43s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-3
-catIntérêt
-Miniature Youtube
-Historique de recherche
-3
-catSanté
-Logged
-Historique de recherche
-3
-catConviction
-Logged
-Miniature Youtube
-Resetting cache.
-Early init took 64.00s
+Early init took 0.09s
 Loading error handling took 0.04s
-Loading script took 0.26s
+Loading script took 0.43s
 Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.10s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.07s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.10s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.45s
-Cleaning stores took 0.00s
-Init translation took 0.24s
-Build styles took 0.03s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.04s
-Prepare screens took 0.19s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.31s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-3
-catIntérêt
-Historique de recherche
-Miniature Youtube
-
-Full traceback:
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  [Previous line repeated 8187 more times]
-  File "game/scene_algorithm.rpy", line 62, in script
-    $ displayData()
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\execution.py", line 61, in check_infinite_loop
-    raise Exception("Possible infinite loop.")
-Exception: Possible infinite loop.
-
-While running game code:
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  [Previous line repeated 8187 more times]
-  File "game/scene_algorithm.rpy", line 62, in script
-    $ displayData()
-Exception: Possible infinite loop.
-Resetting cache.
-Early init took 219.54s
-Loading error handling took 0.03s
-Loading script took 0.25s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.06s
+Running init code took 0.07s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Dump and make backups took 0.06s
+Backing up script files to 'C:\\Users\\germa\\AppData\\Roaming/RenPy/backups\\OK-Data':
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
+Initial gc took 0.06s
+DPI scale factor: 3.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.44s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.18s
-Build styles took 0.04s
-Load screen analysis took 0.11s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.22s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Init translation took 0.10s
+Build styles took 0.02s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.04s
 Running _start took 0.00s
-Interface start took 0.35s
+Interface start took 0.84s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 3840, 2160)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics 620'
+Version: b'4.6.0 - Build 27.20.100.9664'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Screen sizes: virtual=(1920, 1080) physical=(3840, 1949) drawable=(3840, 1949)
 Maximum texture size: 4096x4096
-3
-catIntérêt
-Historique de recherche
