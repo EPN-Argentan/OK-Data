@@ -35,6 +35,9 @@ a "Mais elle a été prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
     hide screen dataBookSearch
+    hide screen searchInGallery
+    hide screen dataCloudSearching
+    hide screen cloudNoFilter
     scene busAdOnBus
     window auto hide
     play music "The World's Fair - Godmode.mp3"
