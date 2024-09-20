@@ -11,9 +11,9 @@ label browserLabel:
 
 label browserLabelCall:
     show screen callPhoneAnswer
-    a "Ouiiiii maman"
-    m "Salut ma grande"
-    m "ça va ?, Excuse moi de t'appeler à nouveau pour des soucis d'ordinateur mais il faudrait que tu viennes m'aider, c'est pour l'anniversaire de ton frère ... "
+    a "Ouiiiii maman !"
+    m "Coucou, ma grande..."
+    m "Désolé de te déranger encore avec des problèmes d’ordinateur, mais j’aurais vraiment besoin de ton aide. C’est pour l’anniversaire de ton frère…"
     jump browserLabelAfterCall
     while True:
         empty ""
@@ -24,10 +24,10 @@ label browserLabelAfterCall:
     #scene lounge with fade
     show loungeIdle with fade
     show screen phoneDown
-    a "Alors Maman, qu’est-ce que je peux faire pour toi ?"
-    m "Un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, je ne sais pas comment ça marche … "
-    a "Mais tu n’as pas de compte Databook !? il va falloir t’en créer un."
-    m "Oh je préfère que tu le créé toi !Tiens voila mes papiers d’identité si tu en as besoin."
+    a "C'est quoi le problème ?"
+    m "Eh bien, un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, mais je ne sais pas comment faire !"
+    a "La première chose, c'est de te créer un compte Databook."
+    m "Ah bon, et tu pourrais le faire à ma place ? Je ne suis pas sûr de savoir le faire. Tiens, voici mes papiers d’identité si tu en as besoin."
     hide screen phoneDown
     show loungeZoom
     empty ""
@@ -38,7 +38,7 @@ label browserLabelAfterCall:
         empty ""
 
 label browserLabelFeed:
-    #call addPoints(5,'point_sociaux',GoodState,True,"Tu perds des points ! µEvitez de donner trop d’informations. Les champs obligatoires (indiquées par un astérisque) sont suffisants. µCela contribue à divulguer vos données personnelles d’identité.µDes grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite µ cela à des fins de marketing ou à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.µLes champs obligatoires (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité contribue à divulguer vos données personnelles d’identité.µ Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite \n soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.") from _call_addPoints_1
+    #call addPoints(5,'point_sociaux',GoodState,True,"Tu perds des points ! µEvitez de donner trop d’informations. Les champs obligatoires *(indiquées par un astérisque) sont suffisants. µTrop de précision sur ton identité peut entraîner la divulgation de données un peu trop personnellesµDes grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite µ cela à des fins de marketing ou à d’autres sociétés parfois peu scrupuleuses. ", "Bravo ! µ\n Il est parfois bon de ne pas trop en dire.µLes champs obligatoires *(indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité peut entraîner la divulgation de données un peu trop personnellesµ Des grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite \n soit à des fins de marketing soit à d’autres sociétés parfois peu scrupuleuses.") from _call_addPoints_1
     show loungeZoomFix
     show screen browserWindowFeed
     hide screen browserWindowSubscribe

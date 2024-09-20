@@ -23,7 +23,7 @@ label walkOut :
 
     sepharo_nvl "En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
     hide screen skipTuto
-    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_8
+    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires comme SEPHARO.", "Tu as bien désactivé la localisation") from _call_addPoints_8
     e_nvl "Tu as la possibilité d’activer ou non cette fonction en touchant l’icône en haut du téléphone. Penses-y à l’avenir et essaye dès maintenant."
     show screen phoneDown
     medBubble "Dès que le téléphone est visible, tu peux à tout moment désactiver un des paramètres"
