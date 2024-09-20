@@ -28,7 +28,7 @@ init -10 python:
         'laptop': 0 ,
         'photoFrame': 0,
         'watch': 0,
-        'tablet': 0,
+        'tablet': 1,
         'homeAssistant': 0,
         'phone': 0,
         'phoneCall': 0,

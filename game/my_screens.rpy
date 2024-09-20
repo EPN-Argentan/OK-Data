@@ -61,7 +61,7 @@ screen hubElements:
             ypos 765
             idle At('UI/imagebuttons/tablet.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/tablet.png"
-            action Jump("algorithmGame")
+            action Jump("openTablet")
     
     if hubClickable["photoFrame"] == 1:
         imagebutton:

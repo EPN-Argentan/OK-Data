@@ -50,8 +50,13 @@ init python:
         
         return True
 
-label algorithmGame:
+label openTablet:
+    nvl clear
+    hide screen hubElements
+    pass 
 
+label algorithmGame:
+    nvl clear
     hide screen barre_de_vie
     scene black
     $ displayData()
