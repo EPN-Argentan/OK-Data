@@ -103,14 +103,13 @@ label checkClueALL():
                     cluesDisplay += value[2]
                     value[4] = True
                     value[7] = False
-                    if categoriesIndex < len(combinaisonClues):
+                    if categoriesIndex < len(combinaisonClues)-1:
                         categoriesIndex += 1
                         # Vérifier si l'élément suivant existe
                         if i + 1 < len(combinaisonKey):
                             next_key = combinaisonKey[i + 1]
                             combinaisonClues[next_key][7] = True
                     else:
-                        
                         renpy.jump('endAlgorithm')
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
