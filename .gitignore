@@ -13,3 +13,4 @@ errors.txt
 log.txt
 *.txt
 log.txt
+/game/my_screens.rpy
