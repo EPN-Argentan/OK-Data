@@ -1,37 +1,36 @@
-2024-09-20 14:25:17 UTC
+2024-09-20 15:19:28 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.3.24061702
 
-Early init took 0.11s
-Loading error handling took 0.05s
-Loading script took 0.31s
-Loading save slot metadata took 0.05s
+Early init took 0.10s
+Loading error handling took 0.04s
+Loading script took 0.29s
+Loading save slot metadata took 0.09s
 Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.04s
+Running init code took 0.17s
+Loading analysis data took 0.14s
+Analyze and compile ATL took 0.03s
+Reloading save slot metadata took 0.07s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
-Dump and make backups took 0.06s
+Dump and make backups took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.07s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.48s
+Creating interface object took 0.55s
 Cleaning stores took 0.00s
-Init translation took 0.22s
-Build styles took 0.03s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.04s
-Prepare screens took 0.17s
+Init translation took 0.18s
+Build styles took 0.06s
+Load screen analysis took 0.13s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.18s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.43s
+Interface start took 0.40s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -47,8 +46,8 @@ Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
 Maximum texture size: 4096x4096
 3
 catIntérêt
-Miniature Youtube
 Historique de recherche
+Miniature Youtube
 3
 catSanté
 Logged
@@ -57,37 +56,63 @@ Historique de recherche
 catConviction
 Logged
 Miniature Youtube
+
+Full traceback:
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  [Previous line repeated 10302 more times]
+  File "game/scene_algorithm.rpy", line 62, in script
+    $ displayData()
+  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\execution.py", line 61, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
+
+While running game code:
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  File "game/scene_algorithm.rpy", line 72, in script call
+    call algorithmGame
+  [Previous line repeated 10302 more times]
+  File "game/scene_algorithm.rpy", line 62, in script
+    $ displayData()
+Exception: Possible infinite loop.
 Resetting cache.
-Early init took 64.00s
-Loading error handling took 0.04s
-Loading script took 0.26s
+Early init took 459.38s
+Loading error handling took 0.08s
+Loading script took 0.56s
 Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.10s
+Running init code took 0.08s
 Loading analysis data took 0.04s
 Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.07s
+Reloading save slot metadata took 0.05s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Informatique\\AppData\\Roaming/RenPy/backups\\OK Data':
 Dump and make backups took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.11s
+Initial gc took 0.12s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.45s
+Creating interface object took 0.43s
 Cleaning stores took 0.00s
-Init translation took 0.24s
-Build styles took 0.03s
+Init translation took 0.23s
+Build styles took 0.04s
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
-Save screen analysis took 0.04s
+Save screen analysis took 0.05s
 Prepare screens took 0.19s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.04s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.31s
+Interface start took 0.38s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -105,75 +130,3 @@ Maximum texture size: 4096x4096
 catIntérêt
 Historique de recherche
 Miniature Youtube
-
-Full traceback:
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  [Previous line repeated 8187 more times]
-  File "game/scene_algorithm.rpy", line 62, in script
-    $ displayData()
-  File "C:\Users\Informatique\Documents\renpy-8.1.3-sdk\renpy\execution.py", line 61, in check_infinite_loop
-    raise Exception("Possible infinite loop.")
-Exception: Possible infinite loop.
-
-While running game code:
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  File "game/scene_algorithm.rpy", line 73, in script call
-    call algorithmGame
-  [Previous line repeated 8187 more times]
-  File "game/scene_algorithm.rpy", line 62, in script
-    $ displayData()
-Exception: Possible infinite loop.
-Resetting cache.
-Early init took 219.54s
-Loading error handling took 0.03s
-Loading script took 0.25s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.01s
-Reloading save slot metadata took 0.04s
-Index archives took 0.00s
-Dump and make backups took 0.06s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.11s
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.44s
-Cleaning stores took 0.00s
-Init translation took 0.18s
-Build styles took 0.04s
-Load screen analysis took 0.11s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.22s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.35s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P1000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-3
-catIntérêt
-Historique de recherche

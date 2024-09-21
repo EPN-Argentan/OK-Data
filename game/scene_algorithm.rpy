@@ -62,7 +62,6 @@ label algorithmGame:
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
-
     #if droppable == "Drop Zone Top":
     #    $ whatInsideTop = draggable
     #if droppable == "Drop Zone Bottom":
@@ -74,11 +73,12 @@ label algorithmGame:
 
 label endAlgorithm:
     e_nvl "Analyse terminée"
+    a "un cours de cuisine japonnaise...super idée !"
+    jump hub
 
 
 screen catIntérêt:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
-    text "Catégorie Intéret"
     draggroup:
         drag:
             drag_name "Miniature Youtube"
@@ -112,7 +112,6 @@ screen catIntérêt:
 
 screen catSanté:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
-    text "Catégorie santé"
     draggroup:
         drag:
             drag_name "Historique de recherche"
