@@ -29,7 +29,7 @@ init -10 python:
         'photoFrame': 0,
         'watch': 0,
         'tablet': 1,
-        'homeAssistant': 0,
+        'homeAssistant': 1,
         'phone': 0,
         'phoneCall': 0,
         'forest' : 0
@@ -52,6 +52,3 @@ init -10 python:
 
     shareSelfie = False #check if Selfie has been shared or not
 
-    speakerState = True #does speaker is active
-    speakerTarget = -1 #Number array element points to target to remove a point 
-    current_category = 0 

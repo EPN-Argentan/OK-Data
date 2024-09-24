@@ -1,5 +1,6 @@
     
 define algo = Character("")
+image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg" 
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
@@ -53,11 +54,17 @@ label openTablet:
     nvl clear
     hide screen hubElements
     hide screen barre_de_vie
-    pass 
+    a "ça craint, je ne lui ai toujours rien trouvé comme cadeau..."
+    a "une tablette graphique...non il la laissera dans un coin"
+    a "Kickboxer !...Non il l'a déjà..."
+    a "'Un manque d'inspiration...demandez à notre IA de vous aider'"
+    a "pourquoi pas, ça me donnera surement une piste"
+    nvl clear
 
 label algorithmGame:
     nvl clear
     scene black
+    scene backgroundAlgorithm
     show screen algorithmnMenu
     $ displayData()
     #call screen catAdministrative
@@ -74,6 +81,8 @@ label algorithmGame:
 label endAlgorithm:
     e_nvl "Analyse terminée"
     a "un cours de cuisine japonnaise...super idée !"
+    hide screen algorithmnMenu
+    $ hubClickable["tablet"]= 0
     jump hub
 
 

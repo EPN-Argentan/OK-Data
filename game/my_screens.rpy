@@ -70,6 +70,14 @@ screen hubElements:
             idle At('UI/imagebuttons/photoFrame.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/photoFrame.png"
             action Jump("bus")
+    
+    if hubClickable["homeAssistant"] == 1:
+        imagebutton:
+            xpos 1650
+            ypos 516
+            idle At('UI/imagebuttons/homeAssistant.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/homeAssistant.png"
+            action Jump("homeAssistant")
 
     #...
     #add list of hub clickable elements here
@@ -353,6 +361,3 @@ screen selfie :
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
 
-screen countdown: 
-    text "[points[listePoints[0]][0]]"
-    timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])
