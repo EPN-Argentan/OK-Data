@@ -45,7 +45,7 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    a "Voila maman, il ne te reste plus qu'à lire l'évènement \n qu'ils ont créé pour l'anniversaire de Pierre ! "
+    a "C’est bon maman, ton compte est activé. On va pouvoir consulter l’événement créé pour l’anniversaire de Pierre."
     while True:
         empty ""
 
@@ -53,8 +53,7 @@ label insideEventPage:
     hide screen browserWindowFeed
     show screen insideEvent
     show screen barre_de_vie
-    a "Tu as vu ? Ils proposent de partager des photos"
-    m "C'est incroyable"
+    a "Regarde, tu descends un peu dans l’événement et tu trouveras un bouton pour partager des photos."
     while True:
         empty ""
 
@@ -77,10 +76,10 @@ screen insideEvent:
                     imagebutton:
                         idle At("UI/browser/sendPhotosDatabook.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Tu aurais dû envoyer tes photos via mail µEn partageant tes photos sur un réseau social, tu risques de ne plus savoir avec qui elles auront été partagées. µDe plus, DATABOOK en deviendra le copropriétaire, comme sur la pluspart des réseaux sociaux","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager les photos par mail. µEn publiant des photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d’Utilisation (CGU) sont les règles d’utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles te disent ce que tu peux faire, ce que tu ne peux pas faire, et ce que le site peut faire avec tes données, comme par exemple une photo.}(CGU){/a}. µCe qui leur permet de les afficher, de les partager et parfois même de les utiliser à des fins commerciales.","",'hub')
                     imagebutton:
                         idle At("UI/browser/sendPhotosMail.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosMail.png"
-                        action Call("addPoints",2,'point_administrative',"","","","tu as bien fait ! En partageant tes photos sur un réseau social, tu risquais de ne plus savoir avec qui elles ont été partagées. µDe plus, DATABOOK en deviendrait le copropriétaire, comme sur la pluspart des réseaux sociaux",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant des photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d’Utilisation (CGU) sont les règles d’utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles te disent ce que tu peux faire, ce que tu ne peux pas faire, et ce que le site peut faire avec tes données, comme par exemple une photo.}(CGU){/a}. µCe qui leur permet de les afficher, de les partager et parfois même de les utiliser à des fins commerciales.",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")
