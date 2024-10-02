@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\game"
+    "\\game",
+    "\\game\\tl"
   ],
-  "SelectedNode": "\\game\\my_screens.rpy",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\game\\functions.rpy",
+  "PreviewInSolutionExplorer": true
 }

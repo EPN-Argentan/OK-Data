@@ -1,12 +1,92 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_browser.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game\\scene_browser.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_walkOut.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game\\scene_walkOut.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_tuto.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game\\scene_tuto.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_homeAssistant.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game\\scene_homeAssistant.rpy||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "scene_browser.rpy",
+              "DocumentMoniker": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_browser.rpy",
+              "RelativeDocumentMoniker": "game\\scene_browser.rpy",
+              "ToolTip": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_browser.rpy",
+              "RelativeToolTip": "game\\scene_browser.rpy",
+              "ViewState": "AgIAADYAAAAAAAAAAAAswE4AAACxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-01T07:54:44.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "scene_walkOut.rpy",
+              "DocumentMoniker": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_walkOut.rpy",
+              "RelativeDocumentMoniker": "game\\scene_walkOut.rpy",
+              "ToolTip": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_walkOut.rpy",
+              "RelativeToolTip": "game\\scene_walkOut.rpy",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-01T07:55:32.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "scene_tuto.rpy",
+              "DocumentMoniker": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_tuto.rpy",
+              "RelativeDocumentMoniker": "game\\scene_tuto.rpy",
+              "ToolTip": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_tuto.rpy",
+              "RelativeToolTip": "game\\scene_tuto.rpy",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-01T07:55:08.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "scene_homeAssistant.rpy",
+              "DocumentMoniker": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_homeAssistant.rpy",
+              "RelativeDocumentMoniker": "game\\scene_homeAssistant.rpy",
+              "ToolTip": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_homeAssistant.rpy",
+              "RelativeToolTip": "game\\scene_homeAssistant.rpy",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-01T07:54:57.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

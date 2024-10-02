@@ -5,9 +5,9 @@ label tuto:
     show screen barre_de_vie
     show screen skipTuto
 
-    medBubble "Bienvenue dans ton salon Alexia !"
+    medBubble "Alexia, sois la bienvenue dans ton salon !"
     show clic 
-    medBubble "Pour jouer, tu as juste à cliquer sur l'écran pour avancer"
+    medBubble "Pour progresser, il te suffit de cliquer sur l’écran."
     hide clic
     medBubble "Tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
     medBubble "Les données de centre d’intérêt"
