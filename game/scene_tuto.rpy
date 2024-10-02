@@ -5,11 +5,13 @@ label tuto:
     show screen barre_de_vie
     show screen skipTuto
 
-    medBubble "Alexia, sois la bienvenue dans ton salon !"
-    show clic 
-    medBubble "Pour progresser, il te suffit de cliquer sur l’écran."
+    play sound "bonjour.mp3"
+    show clic
+    medBubble "Bonjour Alexia, bienvenue dans ton salon !"
+    play sound "cliquer.mp3"
+    medBubble "Pour progresser, il te suffira de cliquer sur l’écran."
     hide clic
-    medBubble "Tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
+    medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories distinctes."
     medBubble "Les données de centre d’intérêt"
     medBubble "Les données de santé"
     medBubble "Les données de convictions"

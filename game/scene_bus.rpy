@@ -13,24 +13,24 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "oh là là, ça date ça..."
+    a "Oh là là, ça remonte à loin !"
 else:
     show frame_slideshow_withselfie with moveinbottom
-    a "oh non pourvu que personne d'autre ne voit cette photo..."
+    a "Oh non, j’espère que personne d’autre ne verra cette photo…"
 
-winted_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
-a "Oh mince, j'avais complétement zappé !"
-a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
+winted_nvl "Vous avez reçu un colis Winted. N’oubliez pas de le récupérer à temps."
+a "Oh mince, j’avais complètement oublié !"
+a "Bon, j’y vais maintenant, sinon il va finir par être réexpédié."
 $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
 window auto hide
 $ renpy.pause(3.0, hard=True)
-a "mais...mais..."
-a "C'est la photo de Pierre mon frère!"
-a "Mais comment c'est possible, c'est ma photo en plus ! "
-a "Elle doit même encore être sur mon téléphone"
-a "Il faut que je la retrouve !"
+a "Ben ! Pierre, il joue les modèles maintenant ? "
+a "Comment mon frère a-t-il pu se retrouver là ?"
+a "C'est ma photo en plus ! "
+a "Je devrais encore l’avoir dans les photos de mon téléphone."
+a "Je dois pouvoir la retrouver !"
 a "Mais elle a été prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
@@ -43,7 +43,7 @@ label homeScreen:
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
     if whereYouStart[2] == False:
-        a "Je devrais pouvoir trouver ces infos dans ma galerie photos ou alors sur mon  {a=information:Le cloud est un espace de stockage en ligne, qui permet d'accèder à nos données depuis n'importe où}cloud{/a} ..."
+        a "Une petite recherche dans mes photos ou sur mon {a=information:Au lieu de garder tes documents ou tes photos sur ton ordinateur ou ton téléphone, tu les envoies dans le cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n’importe où, tant que tu as une connexion Internet.}cloud{/a} devrait me fournir ces informations."
     else:
         a "Je devrais trouver la date et la localisation de la photo ailleurs"
     while True:
@@ -385,7 +385,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Évites les réseaux wifi publics, ils sont dangereux ","","openDataCloud")]
+            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Il est conseillé d’éviter les réseaux Wi-Fi publics en raison des nombreux risques de sécurité qu’ils présentent.","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -393,7 +393,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/DataOFF.png"
                 hover "UI/settingsIcons/DataON.png"
-            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d'éviter le wifi public, c'est le maaaaal","openDataCloud")]
+            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
         imagebutton:
             if LocalisationState == True:
                 idle "UI/settingsIcons/LocalisationON.png"

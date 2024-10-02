@@ -37,7 +37,7 @@ label walkOut :
     nvl clear
     scene hub with fade
     hide screen hubElements
-    e_nvl "Maintenant, tu es prêt pour la grande aventure, le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
+    e_nvl "Maintenant, tu es prêt pour la grande aventure. Le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
     $ dogInBasket = False
     ##Set hub elements clickable
     $ hubClickable["dog"]= 0
