@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\game",
-    "\\game\\tl"
+    "\\game\\images\\UI\\applications\\Icons"
   ],
-  "SelectedNode": "\\game\\script.rpy",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": true
 }
