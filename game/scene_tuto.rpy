@@ -18,7 +18,7 @@ label tuto:
     play sound "TutoSante.mp3"
     medBubble "Les données de santé"
     play sound "TutoConvictions.mp3"
-    medBubble "Les données de convictions"
+    medBubble "Les données de conviction"
     play sound "TutoLocalisation.mp3"
     medBubble "Les données de localisation"
     play sound "TutoReseaux.mp3"
