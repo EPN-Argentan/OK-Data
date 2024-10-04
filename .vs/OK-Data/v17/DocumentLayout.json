@@ -38,8 +38,7 @@
               "RelativeToolTip": "game\\scene_walkOut.rpy",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-03T13:17:06.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T13:17:06.841Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "game\\scene_tuto.rpy",
               "ToolTip": "C:\\Users\\germa\\Documents\\GitHub\\OK-Data\\game\\scene_tuto.rpy",
               "RelativeToolTip": "game\\scene_tuto.rpy",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-10-02T15:57:16.534Z",
               "EditorCaption": ""
