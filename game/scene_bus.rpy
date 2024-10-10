@@ -13,7 +13,7 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "Oh là là, ça remonte à loin !"
+    a "Oh là là, c'est vraiment vieux ça !"
 else:
     show frame_slideshow_withselfie with moveinbottom
     a "Oh non, j’espère que personne d’autre ne verra cette photo…"
@@ -29,8 +29,7 @@ $ renpy.pause(3.0, hard=True)
 a "Ben ! Pierre, il joue les modèles maintenant ? "
 a "Comment mon frère a-t-il pu se retrouver là ?"
 a "C'est ma photo en plus ! "
-a "Je devrais encore l’avoir dans les photos de mon téléphone."
-a "Je dois pouvoir la retrouver !"
+a "Je devrais pouvoir la retrouver sur mon téléphone."
 a "Mais elle a été prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
@@ -136,7 +135,7 @@ label foundInDataBook:
     a "Ils n'ont pas le droit"
     e_nvl "Malheureusement si."
     e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux savoir connaître les endroits où elles sont utilisées  grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
+    e_nvl "Tu peux vérifier si une photo a été utilisée ailleurs grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound

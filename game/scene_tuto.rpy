@@ -7,17 +7,17 @@ label tuto:
 
     show clic
     play sound "TutoBonjour.mp3"
-    medBubble "Bonjour Alexia, bienvenue dans ton salon !"
+    medBubble "Bonjour Alexia, bienvenue à la maison !"
     play sound "TutoClic.mp3"
-    medBubble "Pour progresser, il te suffira de cliquer sur l’écran."
+    medBubble "Un simple clic te fera progresser dans le jeu."
     hide clic
-    play sound "TutoCategories.mp3"
-    medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories distinctes."
+    play sound "TutoBleu&Categories.mp3"
+    medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories."
     play sound "TutoInteret.mp3"
     medBubble "Les données de centre d’intérêt"
     play sound "TutoSante.mp3"
     medBubble "Les données de santé"
-    play sound "TutoConvictions.mp3"
+    play sound "TutoConviction.mp3"
     medBubble "Les données de conviction"
     play sound "TutoLocalisation.mp3"
     medBubble "Les données de localisation"
@@ -26,14 +26,14 @@ label tuto:
     play sound "TutoAdmin.mp3"
     medBubble "Les données administratives"
     play sound "TutoPoints.mp3"
-    medBubble "Au-dessus de chaque icône est indiqué le nombre de points restants."
+    medBubble "Au-dessus de chaque catégorie est indiqué ton nombre de points."
     call addPoints(-5,'point_administrative') from _call_addPoints_19
     play sound "TutoPerdre.mp3"
-    medBubble "Tu perds des points si tu ne prêtes pas attention à préserver ta vie privée."
+    medBubble "Tu perds des points si tu ne protèges pas ta vie privée."
 
     call addPoints(5,'point_administrative') from _call_addPoints_20
     play sound "TutoGagner.mp3"
-    medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant te promener !"
+    medBubble "Et tu gagneras des points en te divulguant le moins possible, en consultant les ressources ou tout simplement en allant te promener loin des réseaux."
     jump hub
 
 
