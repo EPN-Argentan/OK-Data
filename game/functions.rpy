@@ -109,10 +109,13 @@ label checkClueALL():
                         if i + 1 < len(combinaisonKey):
                             next_key = combinaisonKey[i + 1]
                             combinaisonClues[next_key][7] = True
+                        break
                     else:
                         renpy.jump('endAlgorithm')
+                        break
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+                    break
             else:
                 renpy.say(e_nvl, "Cela ne semble pas avoir de sens")
                 break

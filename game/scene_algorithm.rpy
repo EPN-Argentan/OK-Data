@@ -124,11 +124,32 @@ screen catIntérêt:
             child "images/UI/algorithm/likeSister.png"
             hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.3,0.5)
+            align(0.2,0.7)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/logCebo.png"
+            hover_child At("images/UI/algorithm/logCebo.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/logCebo.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/videoToy.png"
+            hover_child At("images/UI/algorithm/videoToy.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/videoToy.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
 
         drag:
             drag_name "Drop Zone Top"
@@ -168,6 +189,39 @@ screen catSanté:
             droppable False
             dragged drag_placed
             drag_raise True  
+        ###False clues display
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/likeSister.png"
+            hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.2,0.7)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/logCebo.png"
+            hover_child At("images/UI/algorithm/logCebo.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/logCebo.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/videoToy.png"
+            hover_child At("images/UI/algorithm/videoToy.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/videoToy.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
+
 
         drag:
             drag_name "Drop Zone Top"
@@ -207,6 +261,38 @@ screen catConviction:
             droppable False
             dragged drag_placed
             drag_raise True  
+        ###False clues display
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/likeSister.png"
+            hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.2,0.7)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/logCebo.png"
+            hover_child At("images/UI/algorithm/logCebo.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/logCebo.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/videoToy.png"
+            hover_child At("images/UI/algorithm/videoToy.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/videoToy.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
 
         drag:
             drag_name "Drop Zone Top"
