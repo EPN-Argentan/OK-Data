@@ -113,6 +113,10 @@ label checkClueALL():
                         renpy.jump('endAlgorithm')
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+            else:
+                renpy.say(e_nvl, "Cela ne semble pas avoir de sens")
+                break
+
 #Count total points
 init python:
     def totalPoints():

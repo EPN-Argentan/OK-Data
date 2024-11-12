@@ -61,6 +61,8 @@ label openTablet:
     a "Kickboxer !...Non il l'a déjà..."
     a "'Un manque d'inspiration...demandez à notre IA de vous aider'"
     a "pourquoi pas, ça me donnera surement une piste"
+    a "Vous êtes l'algorithme de recommendation"
+    a "Croisez les données afin d'en extraire des informations sensées"
     nvl clear
 
 label algorithmGame:
@@ -95,6 +97,7 @@ label endAlgorithm:
 screen catIntérêt:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
     draggroup:
+        ###True clues display
         drag:
             drag_name "Miniature Youtube"
             child "images/UI/algorithm/youtubeMini.png"
@@ -110,6 +113,17 @@ screen catIntérêt:
             child "images/UI/algorithm/searchHistory.png"
             hover_child At("images/UI/algorithm/searchHistory.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/searchHistory.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.3,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        ###False clues display
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/likeSister.png"
+            hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.3,0.5)
             draggable True
             droppable False
@@ -340,12 +354,13 @@ screen algorithmnMenu :
         yalign 0.1 
         textalign 0.5 
     vbox:
-        xalign 0.9
+        xalign 0.95
         yalign 0.3
         spacing 30
         #pastille d'intérêt
         for key, value in combinaisonClues.items():
             imagebutton :
+                xalign 0.5
                 if value[4] == False:
                     if value[7]:
                         idle "UI/barre_de_vie/"+value[6]+".png" at higlight_zoom
