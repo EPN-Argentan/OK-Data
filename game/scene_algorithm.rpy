@@ -4,9 +4,9 @@ image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg"
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Afrique' : ['Miniature Youtube','Historique de recherche',"Végétarien \n","mmmm...Il semblerait que cette personne aime la cuisine végé",False, 'catIntérêt', 'intérêt',True],
+    'Végétarien' : ['Miniature Youtube','Historique de recherche',"Végétarien \n","mmmm...Il semblerait que cette personne aime la cuisine végé",False, 'catIntérêt', 'intérêt',True],
     'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté', 'santé',False],
-    'Europe' : ['Logged','Miniature Youtube',"Cuisiner \n","mmmm...Il semblerait que cette personne aime cusiner",False, 'catConviction', 'conviction',False],
+    'Cuisine' : ['Logged','Miniature Youtube',"Cuisiner \n","mmmm...Il semblerait que cette personne aime cusiner",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found
@@ -35,6 +35,8 @@ init python:
         # Update the store variables
         if drop:
             drags[0].snap(drop.x,drop.y)
+            drags[0].draggable = False #avoid a droppable objet to be draggable
+            drop.droppable = False #avoid a drop zone to contain more than one object
             store.draggable = drags[0].drag_name
             store.droppable = drop.drag_name
             if droppable == "Drop Zone Top":
@@ -63,6 +65,8 @@ label openTablet:
 
 label algorithmGame:
     nvl clear
+    hide screen hubElements
+    hide screen barre_de_vie
     scene black
     scene backgroundAlgorithm
     show screen algorithmnMenu
@@ -85,6 +89,8 @@ label endAlgorithm:
     $ hubClickable["tablet"]= 0
     jump hub
 
+#####################################################################SCREENS#########################################################################
+
 
 screen catIntérêt:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
@@ -92,6 +98,8 @@ screen catIntérêt:
         drag:
             drag_name "Miniature Youtube"
             child "images/UI/algorithm/youtubeMini.png"
+            hover_child At("images/UI/algorithm/youtubeMini.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/youtubeMini.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.1,0.2)
             draggable True
             droppable False
@@ -100,6 +108,8 @@ screen catIntérêt:
         drag:
             drag_name "Historique de recherche"
             child "images/UI/algorithm/searchHistory.png"
+            hover_child At("images/UI/algorithm/searchHistory.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/searchHistory.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.3,0.5)
             draggable True
             droppable False
@@ -109,12 +119,14 @@ screen catIntérêt:
         drag:
             drag_name "Drop Zone Top"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.3)
             draggable False
             droppable True   
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.8)
             draggable False
             droppable True
@@ -125,6 +137,8 @@ screen catSanté:
         drag:
             drag_name "Historique de recherche"
             child "images/UI/algorithm/searchHistory.png"
+            hover_child At("images/UI/algorithm/searchHistory.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/searchHistory.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.3,0.5)
             draggable True
             droppable False
@@ -133,6 +147,8 @@ screen catSanté:
         drag:
             drag_name "Logged"
             child "images/UI/algorithm/logged.png"
+            hover_child At("images/UI/algorithm/logged.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/logged.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.6)
             draggable True
             droppable False
@@ -142,12 +158,14 @@ screen catSanté:
         drag:
             drag_name "Drop Zone Top"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.3)
             draggable False
             droppable True   
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.8)
             draggable False
             droppable True
@@ -158,6 +176,8 @@ screen catConviction:
         drag:
             drag_name "Miniature Youtube"
             child "images/UI/algorithm/youtubeMini.png"
+            hover_child At("images/UI/algorithm/youtubeMini.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/youtubeMini.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.1,0.2)
             draggable True
             droppable False
@@ -166,6 +186,8 @@ screen catConviction:
         drag:
             drag_name "Logged"
             child "images/UI/algorithm/logged.png"
+            hover_child At("images/UI/algorithm/logged.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/logged.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.6)
             draggable True
             droppable False
@@ -175,12 +197,14 @@ screen catConviction:
         drag:
             drag_name "Drop Zone Top"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.3)
             draggable False
             droppable True   
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.5,0.8)
             draggable False
             droppable True
@@ -313,7 +337,8 @@ screen algorithmnMenu :
     add "UI/algorithm/+.png" xpos 936 ypos 536
     text "{font=fonts/FiraCode-Bold.ttf}{size=*2}{color=#00B6ED}Croisez les\ndonnées{/color}{/size}{/font}":
         xalign 0.5
-        yalign 0.1  
+        yalign 0.1 
+        textalign 0.5 
     vbox:
         xalign 0.9
         yalign 0.3
