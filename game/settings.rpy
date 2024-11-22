@@ -52,3 +52,5 @@ init -10 python:
 
     shareSelfie = False #check if Selfie has been shared or not
 
+
+    speakerState = True #does smart speaker is active or not
