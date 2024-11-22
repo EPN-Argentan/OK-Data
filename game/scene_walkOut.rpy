@@ -46,6 +46,7 @@ label walkOut :
     $ hubClickable["laptop"]= 1
     $ hubClickable["walkout"]= 1
     $ hubClickable["forest"]= 0
+    $ hubClickable["homeAssistant"]= 0
     $ hubClickable["photoFrame"]= 1
 
     jump hub
