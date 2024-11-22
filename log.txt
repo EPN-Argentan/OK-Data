@@ -1,16 +1,15 @@
-2024-11-22 12:14:46 UTC
+2024-11-22 15:20:53 UTC
 Windows-10-10.0.22631
 Ren'Py 8.3.2.24090902
 
 Early init took 0.10s
-Loading error handling took 0.03s
-Loading script took 0.46s
+Loading error handling took 0.04s
+Loading script took 0.17s
 Loading save slot metadata took 0.05s
 Loading persistent took 0.00s
-Homme assistant activé
-Running init code took 0.09s
+Running init code took 0.07s
 Loading analysis data took 0.03s
-Analyze and compile ATL took 0.01s
+Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Dump and make backups took 0.06s
@@ -20,18 +19,18 @@ Initial gc took 0.10s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.45s
+Creating interface object took 0.40s
 Cleaning stores took 0.00s
-Init translation took 0.13s
+Init translation took 0.16s
 Build styles took 0.02s
-Load screen analysis took 0.05s
+Load screen analysis took 0.06s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.13s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.34s
+Interface start took 0.30s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -41,618 +40,45 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'Quadro P1000/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 516.69'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Screen sizes: virtual=(1920, 1080) physical=(1760, 990) drawable=(1760, 990)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Homme assistant activé
-3
+4
+catLocalisation
+whatInsideTop updated to: BonLocalisation
+whatInsideBottom updated to: Mauvais indice
+i :  0
+Checking clue: Caen
+whatInsideTop: BonLocalisation, whatInsideBottom: Mauvais indice
+value[0]: BonLocalisation, value[1]: BonLocalisation
+4
+catLocalisation
+whatInsideBottom updated to: BonLocalisation
+whatInsideTop updated to: BonLocalisation
+i :  0
+Checking clue: Caen
+whatInsideTop: BonLocalisation, whatInsideBottom: BonLocalisation
+value[0]: BonLocalisation, value[1]: BonLocalisation
+4
 catIntérêt
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-3
-catIntérêt
-Mauvais indice
-Homme assistant activé
-Video Noodle
-3
-catIntérêt
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Homme assistant activé
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
-Maximum texture size: 4096x4096
-Homme assistant activé
-Homme assistant activé
+whatInsideTop updated to: BonInteret
+whatInsideBottom updated to: BonInteret
+i :  1
+Checking clue: Cuisine
+whatInsideTop: BonInteret, whatInsideBottom: BonInteret
+value[0]: BonInteret, value[1]: BonInteret
+4
+catSociaux
+whatInsideTop updated to: BonSociaux
+whatInsideBottom updated to: BonSociaux
+i :  2
+Checking clue: Asie
+whatInsideTop: BonSociaux, whatInsideBottom: BonSociaux
+value[0]: BonSociaux, value[1]: BonSociaux
+4
+catConviction
+whatInsideTop updated to: BonConviction
+whatInsideBottom updated to: BonConviction
+i :  3
+Checking clue: Végétarisme
+whatInsideTop: BonConviction, whatInsideBottom: BonConviction
+value[0]: BonConviction, value[1]: BonConviction

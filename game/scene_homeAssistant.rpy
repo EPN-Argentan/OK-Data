@@ -44,4 +44,4 @@ init python:
             print("Home assistant désactivé")
 
 
-    printit()
+    #printit()

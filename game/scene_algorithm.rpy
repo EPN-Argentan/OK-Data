@@ -4,9 +4,10 @@ image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg"
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Cuisine' : ['Like Burger','Video Noodle',"Cuisine \n","mmmm...Il semblerait que cette personne apprécie la cuisine",False, 'catIntérêt', 'intérêt',True],
-    'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne apprécie l'Asie",False, 'catSanté', 'santé',False],
-    'Végétarisme' : ['Logged','Miniature Youtube',"Végétarien \n","mmmm...Il semblerait que cette personne ait une affinité avec le végétarisme",False, 'catConviction', 'conviction',False],
+    'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Il semblerait que cette personne vivie vers Caen",False, 'catLocalisation', 'localisation',True],
+    'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","mmmm...Il semblerait que cette personne apprécie la cuisine",False, 'catIntérêt', 'intérêt',False],
+    'Asie' : ['BonSociaux','BonSociaux',"Asie \n","mmmm...Il semblerait que cette personne apprécie l'Asie",False, 'catSociaux', 'sociaux',False],
+    'Végétarisme' : ['BonConviction','BonConviction',"Végétarien \n","mmmm...Il semblerait que cette personne ait une affinité avec le végétarisme",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found
@@ -30,7 +31,7 @@ init python:
     def drag_placed(drags, drop):
         global whatInsideTop
         global whatInsideBottom
-        if not drop: 
+        if not drop:
             return
         # Update the store variables
         if drop:
@@ -41,15 +42,15 @@ init python:
             store.droppable = drop.drag_name
             if droppable == "Drop Zone Top":
                 whatInsideTop = drags[0].drag_name
-                print(whatInsideTop)    
+                print(f"whatInsideTop updated to: {whatInsideTop}")
             if droppable == "Drop Zone Bottom":
                 whatInsideBottom = drags[0].drag_name
-                print(whatInsideBottom)
+                print(f"whatInsideBottom updated to: {whatInsideBottom}")
             if whatInsideBottom != "" and whatInsideTop != "":
                 renpy.call('checkClueALL')
                 renpy.call('clearClues')
             return
-        
+
         return True
 
 label openTablet:
@@ -86,33 +87,32 @@ label algorithmGame:
 
 label endAlgorithm:
     e_nvl "Analyse terminée"
-    a "un cours de cuisine japonnaise...super idée !"
+    a "un cours de cuisine japonnaise végétarienne sur caen"
+    a " Super idée !"
     hide screen algorithmnMenu
     $ hubClickable["tablet"]= 0
     jump hub
 
 #####################################################################SCREENS#########################################################################
-
-
-screen catIntérêt:
+screen catLocalisation:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
     draggroup:
         ###True clues display
         drag:
-            drag_name "Like Burger"
-            child "images/UI/algorithm/likeBurger.png"
-            hover_child At("images/UI/algorithm/likeBurger.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/likeBurger.png", outline_transform(10, "#16ec4f", 4.0))
+            drag_name "BonLocalisation"
+            child "images/UI/algorithm/LogBonneReponse.png"
+            hover_child At("images/UI/algorithm/LogBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/LogBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.1,0.2)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
         drag:
-            drag_name "Video Noodle"
-            child "images/UI/algorithm/videoNoodle.png"
-            hover_child At("images/UI/algorithm/videoNoodle.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/videoNoodle.png", outline_transform(10, "#16ec4f", 4.0))
+            drag_name "BonLocalisation"
+            child "images/UI/algorithm/CarteBonneReponse.png"
+            hover_child At("images/UI/algorithm/CarteBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/CarteBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.3,0.5)
             draggable True
             droppable False
@@ -121,9 +121,9 @@ screen catIntérêt:
         ###False clues display
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/likeSister.png"
-            hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Log1.png"
+            hover_child At("images/UI/algorithm/Log1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Log1.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.2,0.7)
             draggable True
             droppable False
@@ -131,9 +131,9 @@ screen catIntérêt:
             drag_raise True
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/logCebo.png"
-            hover_child At("images/UI/algorithm/logCebo.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/logCebo.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Log2.png"
+            hover_child At("images/UI/algorithm/Log2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Log2.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.5)
             draggable True
             droppable False
@@ -141,10 +141,103 @@ screen catIntérêt:
             drag_raise True
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/videoToy.png"
-            hover_child At("images/UI/algorithm/videoToy.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/videoToy.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Carte1.png"
+            hover_child At("images/UI/algorithm/Carte1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Carte1.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
+
+        drag:
+            drag_name "Drop Zone Top"
+            child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            align(0.5,0.3)
+            draggable False
+            droppable True   
+        drag:
+            drag_name "Drop Zone Bottom"
+            child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            align(0.5,0.8)
+            draggable False
+            droppable True
+
+
+screen catIntérêt:
+    text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    draggroup:
+        ###True clues display
+        drag:
+            drag_name "BonInteret"
+            child "images/UI/algorithm/SearchBonneReponse.png"
+            hover_child At("images/UI/algorithm/SearchBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/SearchBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.1,0.2)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "BonInteret"
+            child "images/UI/algorithm/VideoBonneReponse.png"
+            hover_child At("images/UI/algorithm/VideoBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/VideoBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.3,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        ###False clues display
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Search1.png"
+            hover_child At("images/UI/algorithm/Search1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Search1.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.2,0.7)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Search2.png"
+            hover_child At("images/UI/algorithm/Search2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Search2.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Search3.png"
+            hover_child At("images/UI/algorithm/Search3.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Search3.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Video1.png"
+            hover_child At("images/UI/algorithm/Video1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Video1.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.4,0.3)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Video2.png"
+            hover_child At("images/UI/algorithm/Video2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Video2.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.8)
             draggable True
             droppable False
             dragged drag_placed
@@ -238,24 +331,24 @@ screen catSanté:
             draggable False
             droppable True
 
-screen catConviction:
+screen catSociaux:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
     draggroup:
         drag:
-            drag_name "Miniature Youtube"
-            child "images/UI/algorithm/youtubeMini.png"
-            hover_child At("images/UI/algorithm/youtubeMini.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/youtubeMini.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.1,0.2)
+            drag_name "BonSociaux"
+            child "images/UI/algorithm/GroupeBonneReponse.png"
+            hover_child At("images/UI/algorithm/GroupeBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/GroupeBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.3,0.5)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
         drag:
-            drag_name "Logged"
-            child "images/UI/algorithm/logged.png"
-            hover_child At("images/UI/algorithm/logged.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/logged.png", outline_transform(10, "#16ec4f", 4.0))
+            drag_name "BonSociaux"
+            child "images/UI/algorithm/CommentBonneReponse.png"
+            hover_child At("images/UI/algorithm/CommentBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/CommentBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.6)
             draggable True
             droppable False
@@ -264,9 +357,9 @@ screen catConviction:
         ###False clues display
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/likeSister.png"
-            hover_child At("images/UI/algorithm/likeSister.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/likeSister.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Comment1.png"
+            hover_child At("images/UI/algorithm/Comment1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Comment1.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.2,0.7)
             draggable True
             droppable False
@@ -274,9 +367,9 @@ screen catConviction:
             drag_raise True
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/logCebo.png"
-            hover_child At("images/UI/algorithm/logCebo.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/logCebo.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Groupe1.png"
+            hover_child At("images/UI/algorithm/Groupe1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Groupe1.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.5)
             draggable True
             droppable False
@@ -284,14 +377,25 @@ screen catConviction:
             drag_raise True
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/videoToy.png"
-            hover_child At("images/UI/algorithm/videoToy.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/videoToy.png", outline_transform(10, "#16ec4f", 4.0))
+            child "images/UI/algorithm/Groupe2.png"
+            hover_child At("images/UI/algorithm/Groupe2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Groupe2.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.5)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Groupe3.png"
+            hover_child At("images/UI/algorithm/Groupe3.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Groupe3.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.1,0.5)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
 
 
         drag:
@@ -309,125 +413,53 @@ screen catConviction:
             draggable False
             droppable True
 
-screen catLocalisation:
+screen catConviction:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
     draggroup:
         drag:
-            drag_name "Miniature Youtube"
-            child "images/UI/algorithm/youtubeMini.png"
+            drag_name "BonConviction"
+            child "images/UI/algorithm/LikeBonneReponse.png"
+            hover_child At("images/UI/algorithm/LikeBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/LikeBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.1,0.2)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
         drag:
-            drag_name "Historique de recherche"
-            child "images/UI/algorithm/searchHistory.png"
-            align(0.3,0.5)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Logged"
-            child "images/UI/algorithm/logged.png"
+            drag_name "BonConviction"
+            child "images/UI/algorithm/CommentBonneReponse.png"
+            hover_child At("images/UI/algorithm/CommentBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/CommentBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
             align(0.8,0.6)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True  
+        ###False clues display
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Like1.png"
+            hover_child At("images/UI/algorithm/Like1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Like1.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.2,0.7)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+
 
         drag:
             drag_name "Drop Zone Top"
             child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
             droppable True   
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
-            align(0.5,0.8)
-            draggable False
-            droppable True
-
-screen catSociaux:
-    text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
-    draggroup:
-        drag:
-            drag_name "Miniature Youtube"
-            child "images/UI/algorithm/youtubeMini.png"
-            align(0.1,0.2)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Historique de recherche"
-            child "images/UI/algorithm/searchHistory.png"
-            align(0.3,0.5)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Logged"
-            child "images/UI/algorithm/logged.png"
-            align(0.8,0.6)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True  
-
-        drag:
-            drag_name "Drop Zone Top"
-            child "images/UI/algorithm/dropZone.png"
-            align(0.5,0.3)
-            draggable False
-            droppable True   
-        drag:
-            drag_name "Drop Zone Bottom"
-            child "images/UI/algorithm/dropZone.png"
-            align(0.5,0.8)
-            draggable False
-            droppable True
-
-screen catAdministrative:
-    text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
-    draggroup:
-        drag:
-            drag_name "Miniature Youtube"
-            child "images/UI/algorithm/youtubeMini.png"
-            align(0.1,0.2)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Historique de recherche"
-            child "images/UI/algorithm/searchHistory.png"
-            align(0.3,0.5)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Logged"
-            child "images/UI/algorithm/logged.png"
-            align(0.8,0.6)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True  
-
-        drag:
-            drag_name "Drop Zone Top"
-            child "images/UI/algorithm/dropZone.png"
-            align(0.5,0.3)
-            draggable False
-            droppable True   
-        drag:
-            drag_name "Drop Zone Bottom"
-            child "images/UI/algorithm/dropZone.png"
+            selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.8)
             draggable False
             droppable True
