@@ -23,7 +23,7 @@ label walkOut :
 
     sepharo_nvl "En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
     hide screen skipTuto
-    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra les données à ses partenaires comme SEPHARO.", "Tu as bien désactivé la localisation") from _call_addPoints_8
+    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation sur ton portable, tu peux être localisé par OK DATA, qui revendra cette information à ses partenaires, comme par exemple SEPHARO.", "Tu as bien désactivé la localisation") from _call_addPoints_8
     e_nvl "Tu as la possibilité d’activer ou non cette fonction en touchant l’icône en haut du téléphone. Penses-y à l’avenir et essaye dès maintenant."
     show screen phoneDown
     medBubble "Dès que le téléphone est visible, tu peux à tout moment désactiver un des paramètres"
@@ -37,7 +37,9 @@ label walkOut :
     nvl clear
     scene hub with fade
     hide screen hubElements
-    e_nvl "Maintenant, tu es prêt pour la grande aventure. Le but étant de garder le plus possible de données personnelles. \n À toi de jouer !"
+    e_nvl "Maintenant, tu es prêt pour la grande aventure. Pour réussir, il te faudra divulguer le moins possible de données personnelles."
+    e_nvl "À toi de jouer !"
+
     $ dogInBasket = False
     ##Set hub elements clickable
     $ hubClickable["dog"]= 0

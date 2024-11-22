@@ -16,11 +16,11 @@ if shareSelfie == False:
     a "Oh là là, c'est vraiment vieux ça !"
 else:
     show frame_slideshow_withselfie with moveinbottom
-    a "Oh non, j’espère que personne d’autre ne verra cette photo…"
+    a "Comment cette photo a-t-elle pu se retrouver là ? J’espère que personne d’autre ne l’aura vue !"
 
-winted_nvl "Vous avez reçu un colis Winted. N’oubliez pas de le récupérer à temps."
+winted_nvl "Rappel : Votre colis Winsted vous attend ! Pensez à venir le récupérer à temps."
 a "Oh mince, j’avais complètement oublié !"
-a "Bon, j’y vais maintenant, sinon il va finir par être réexpédié."
+a "Bon, j’y vais tout de suite."
 $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
@@ -107,7 +107,7 @@ label searchInDataBookDate:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
-    $ birthdayYear = str(year-3)
+    $ birthdayYear = str(year-30)
     if dateInput == birthdayYear :
         a "Oui c'était l'année de ses 30 ans"
         a "Mais c'était où ?"
@@ -141,8 +141,7 @@ label foundInDataBook:
     hide screen dataBookFound
     show screen outOfBattery
     hide screen appsPhone
-    a "Mince !"
-    a "Et en plus j'ai oublié mon chargeur"
+    a "Ah, mince ! Et en plus, je n’ai rien pour le recharger."
     hide screen outOfBattery
 
 label travelToStore:
@@ -172,17 +171,16 @@ label insideStore:
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Voilà votre colis"
+    vendeuse "Bonjour Madame, voici votre colis."
     a "Merci"
-    vendeuse "N'hésitez pas à profiter de notre promotion sur l'impression sur mug"
-    a "C'est vrai, on peut faire ça ici ?"
-    a "Je pourrais en profiter pour customiser une tasse pour mon frère!"
+    vendeuse "Ça pourrait peut-être vous intéresser : aujourd'hui, nous faisons une promotion sur l'impression de MUG."
+    a "Ah d'accord, je pourrais peut-être en profiter pour en faire un pour mon frère."
     show computerStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show zoomComputerStore
     show screen storeCustomPage
-    a "Bon, alors qu'est ce que je pourrai mettre dessus ?"
+    a "Bon, alors, qu'est-ce que je vais pouvoir y mettre ?"
     while True:
         empty ""
 
@@ -495,10 +493,10 @@ screen logViaPopup:
         hover "UI/store/logViaOK.png"
         xalign 0.5
         yalign 0.51
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique","",'')]
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'')]
     imagebutton:
         idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaMail.png"
         xalign 0.5
         yalign 0.6
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique",'')]
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'')]

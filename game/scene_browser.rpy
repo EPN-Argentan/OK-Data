@@ -13,7 +13,7 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
-    m "Désolé de te déranger encore avec des problèmes d’ordinateur, mais j’aurais vraiment besoin de ton aide. C’est pour l’anniversaire de ton frère…"
+    m "Je suis désolé de te solliciter encore une fois pour un problème d'ordinateur, mais j'ai vraiment besoin de ton aide. C'est pour l'anniversaire de ton frère..."
     jump browserLabelAfterCall
     while True:
         empty ""
@@ -27,7 +27,7 @@ label browserLabelAfterCall:
     a "C'est quoi le problème ?"
     m "Eh bien, un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, mais je ne sais pas comment faire !"
     a "La première chose, c'est de te créer un compte Databook."
-    m "Ah bon, et tu pourrais le faire à ma place ? Je ne suis pas sûr de savoir le faire. Tiens, voici mes papiers d’identité si tu en as besoin."
+    m "Ah bon, j'ai bien peur de ne pas savoir faire ça. Ça ne te dérangerait pas de le faire à ma place ? Je te laisse mes papiers d'identité si besoin."
     hide screen phoneDown
     show loungeZoom
     empty ""
@@ -76,10 +76,10 @@ screen insideEvent:
                     imagebutton:
                         idle At("UI/browser/sendPhotosDatabook.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager les photos par mail. µEn publiant des photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d’Utilisation (CGU) sont les règles d’utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles te disent ce que tu peux faire, ce que tu ne peux pas faire, et ce que le site peut faire avec tes données, comme par exemple une photo.}(CGU){/a}. µCe qui leur permet de les afficher, de les partager et parfois même de les utiliser à des fins commerciales.","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager ses photos par e-mail. µEn publiant tes photos, tu accordes souvent au réseau social une licence d'utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.","",'hub')
                     imagebutton:
                         idle At("UI/browser/sendPhotosMail.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosMail.png"
-                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant des photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d’Utilisation (CGU) sont les règles d’utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles te disent ce que tu peux faire, ce que tu ne peux pas faire, et ce que le site peut faire avec tes données, comme par exemple une photo.}(CGU){/a}. µCe qui leur permet de les afficher, de les partager et parfois même de les utiliser à des fins commerciales.",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant tes photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")
