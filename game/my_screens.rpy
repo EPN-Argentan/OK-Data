@@ -36,9 +36,9 @@ screen hubElements:
             ypos 838
             idle At('UI/imagebuttons/watch.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/watch.png"
-            action OpenURL("http://reddit.com/")
-            #action Jump("browserLabel")dataZon
-    
+            action Jump("dataWatch")
+
+
     if hubClickable["forest"] == 1:
         imagebutton:
             xpos 665
@@ -62,7 +62,7 @@ screen hubElements:
             idle At('UI/imagebuttons/tablet.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/tablet.png"
             action Jump("algorithmGame")
-    
+
     if hubClickable["photoFrame"] == 1:
         imagebutton:
             xpos 435
@@ -353,6 +353,6 @@ screen selfie :
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
 
-screen countdown: 
+screen countdown:
     text "[points[listePoints[0]][0]]"
     timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])
