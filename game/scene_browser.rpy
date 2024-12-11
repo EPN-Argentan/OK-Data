@@ -13,7 +13,7 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
-    m "Désolé de te déranger encore avec des problèmes d’ordinateur, mais j’aurais vraiment besoin de ton aide. C’est pour l’anniversaire de ton frère…"
+    m "Je suis désolé de te solliciter encore une fois pour un problème d'ordinateur, mais j'ai vraiment besoin de ton aide. C'est pour l'anniversaire de ton frère..."
     jump browserLabelAfterCall
     while True:
         empty ""
@@ -27,7 +27,7 @@ label browserLabelAfterCall:
     a "C'est quoi le problème ?"
     m "Eh bien, un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, mais je ne sais pas comment faire !"
     a "La première chose, c'est de te créer un compte Databook."
-    m "Ah bon, et tu pourrais le faire à ma place ? Je ne suis pas sûr de savoir le faire. Tiens, voici mes papiers d’identité si tu en as besoin."
+    m "Ah bon, j'ai bien peur de ne pas savoir faire ça. Ça ne te dérangerait pas de le faire à ma place ? Je te laisse mes papiers d'identité si besoin."
     hide screen phoneDown
     show loungeZoom
     empty ""
@@ -45,7 +45,7 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    a "Voila maman, il ne te reste plus qu'à lire l'évènement \n qu'ils ont créé pour l'anniversaire de Pierre ! "
+    a "C’est bon maman, ton compte est activé. On va pouvoir consulter l’événement créé pour l’anniversaire de Pierre."
     while True:
         empty ""
 
@@ -53,8 +53,7 @@ label insideEventPage:
     hide screen browserWindowFeed
     show screen insideEvent
     show screen barre_de_vie
-    a "Tu as vu ? Ils proposent de partager des photos"
-    m "C'est incroyable"
+    a "Regarde, tu descends un peu dans l’événement et tu trouveras un bouton pour partager des photos."
     while True:
         empty ""
 
@@ -77,10 +76,10 @@ screen insideEvent:
                     imagebutton:
                         idle At("UI/browser/sendPhotosDatabook.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Tu aurais dû envoyer tes photos via mail µEn partageant tes photos sur un réseau social, tu risques de ne plus savoir avec qui elles auront été partagées. µDe plus, DATABOOK en deviendra le copropriétaire, comme sur la pluspart des réseaux sociaux","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager ses photos par e-mail. µEn publiant tes photos, tu accordes souvent au réseau social une licence d'utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.","",'hub')
                     imagebutton:
                         idle At("UI/browser/sendPhotosMail.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosMail.png"
-                        action Call("addPoints",2,'point_administrative',"","","","tu as bien fait ! En partageant tes photos sur un réseau social, tu risquais de ne plus savoir avec qui elles ont été partagées. µDe plus, DATABOOK en deviendrait le copropriétaire, comme sur la pluspart des réseaux sociaux",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant tes photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.",'hub')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")

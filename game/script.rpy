@@ -45,7 +45,6 @@ label hub:
         $ hubClickable["forest"]= 1
     hide screen phoneDown
     hide screen mailx3
-    show screen countdown
     scene hub
     if dogInBasket == True:
         show loungeHubDogInBasket  

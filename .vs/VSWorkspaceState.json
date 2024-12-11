@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\game"
+    "\\game",
+    "\\src"
   ],
-  "SelectedNode": "\\game\\my_screens.rpy",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\game\\scene_bar.rpy",
+  "PreviewInSolutionExplorer": true
 }

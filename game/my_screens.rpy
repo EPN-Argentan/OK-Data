@@ -70,6 +70,14 @@ screen hubElements:
             idle At('UI/imagebuttons/photoFrame.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/photoFrame.png"
             action Jump("bus")
+    
+    if hubClickable["homeAssistant"] == 1:
+        imagebutton:
+            xpos 1650
+            ypos 516
+            idle At('UI/imagebuttons/homeAssistant.png', outline_transform(6, "#ffffff", 4.0))
+            hover "UI/imagebuttons/homeAssistant.png"
+            action Jump("homeAssistant")
 
     #...
     #add list of hub clickable elements here
@@ -258,13 +266,13 @@ screen browserWindowFeed:
                     action Jump("insideEventPage")
                 imagebutton:
                     idle "UI/browser/alarmArticle.png"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
                 imagebutton:
                     idle "UI/browser/chickenArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
                 imagebutton:
                     idle "UI/browser/burgerArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Des liens vers des articles peuvent vous emmener vers des sites frauduleuxµ Attention aux articles racoleurs","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
             #add "UI/browser/feedDataBook.png"
 
         bar value XScrollValue("vp")
@@ -281,11 +289,11 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/fakeInformation_idle.png"
                 hover "UI/browser/fakeInformation_hover.png"
-                action [Show("browserWindowSubscribeFake"),Call("addPoints",5,"point_sociaux","","","","Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires * (indiquées par un astérisque) sont suffisants. µTrop de précision sur votre identité peut entraîner la divulgation de données personnelles.µ Des grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","browserLabelFeed")]
+                action [Show("browserWindowSubscribeFake"),Call("addPoints",5,"point_sociaux","","","","Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires * (indiquées par un astérisque) sont suffisants. µTrop de détails sur ton identité peuvent entraîner des fuites de données personnelles de plus en plus précises.µ Des grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","browserLabelFeed")]
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Evites de donner trop d’informations ou de vraies informations.\nLes champs obligatoires * (indiquées par un astérisque) sont suffisants.µCela contribue à divulguer vos données personnelles d’identité. µDes grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","","browserLabelFeed")]
+                action [Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Evites de donner trop d’informations ou de vraies informations.\nLes champs obligatoires * (indiquées par un astérisque) sont suffisants.µTrop de détails sur ton identité peuvent entraîner des fuites de données personnelles de plus en plus précises.µDes grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","","browserLabelFeed")]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
@@ -353,6 +361,3 @@ screen selfie :
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
 
-screen countdown: 
-    text "[points[listePoints[0]][0]]"
-    timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])

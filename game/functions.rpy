@@ -95,26 +95,37 @@ label checkClueALL():
         for i in range(len(combinaisonKey)):
             key = combinaisonKey[i]
             value = combinaisonClues[key]
-
-            if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
-                if value[4] == False:
-                    phrase = value[3]
-                    renpy.say(e_nvl, phrase)
-                    cluesDisplay += value[2]
-                    value[4] = True
-                    value[7] = False
-
-
-                    if categoriesIndex < len(combinaisonClues):
-                        categoriesIndex += 1
-                        # Vérifier si l'élément suivant existe
-                        if i + 1 < len(combinaisonKey):
-                            next_key = combinaisonKey[i + 1]
-                            combinaisonClues[next_key][7] = True
+            if value[7] == True:
+                print(f"i :  {i}")
+                print(f"Checking clue: {key}")
+                print(f"whatInsideTop: {whatInsideTop}, whatInsideBottom: {whatInsideBottom}")
+                print(f"value[0]: {value[0]}, value[1]: {value[1]}")
+                if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
+                    if value[4] == False:
+                        phrase = value[3]
+                        renpy.say(e_nvl, phrase)
+                        cluesDisplay += value[2]
+                        value[4] = True
+                        value[7] = False
+                        if categoriesIndex < len(combinaisonClues)-1:
+                            categoriesIndex += 1
+                            whatInsideTop = ""
+                            whatInsideBottom = ""
+                            # Vérifier si l'élément suivant existe
+                            if i + 1 < len(combinaisonKey):
+                                next_key = combinaisonKey[i + 1]
+                                combinaisonClues[next_key][7] = True
+                            break
+                        else:
+                            renpy.jump('endAlgorithm')
+                            break
                     else:
-                        renpy.jump('endAlgorithm')
+                        renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+                        break
                 else:
-                    renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+                    renpy.say(e_nvl, "Cela ne semble pas avoir de sens")
+                    break
+
 #Count total points
 init python:
     def totalPoints():
