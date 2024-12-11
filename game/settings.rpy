@@ -27,9 +27,15 @@ init -10 python:
         'dog': 1,
         'laptop': 0 ,
         'photoFrame': 0,
+<<<<<<< HEAD
         'watch': 1,
         'tablet': 0,
         'homeAssistant': 0,
+=======
+        'watch': 0,
+        'tablet': 1,
+        'homeAssistant': 1,
+>>>>>>> 068ec1ae3e7e0dae5091d8554da0460e5406c527
         'phone': 0,
         'phoneCall': 0,
         'forest' : 0
@@ -52,6 +58,11 @@ init -10 python:
 
     shareSelfie = False #check if Selfie has been shared or not
 
+<<<<<<< HEAD
     speakerState = True #does speaker is active
     speakerTarget = -1 #Number array element points to target to remove a point
     current_category = 0
+=======
+
+    speakerState = True #does smart speaker is active or not
+>>>>>>> 068ec1ae3e7e0dae5091d8554da0460e5406c527

@@ -5,23 +5,35 @@ label tuto:
     show screen barre_de_vie
     show screen skipTuto
 
-    medBubble "Bienvenue dans ton salon Alexia !"
-    show clic 
-    medBubble "Pour jouer, tu as juste à cliquer sur l'écran pour avancer"
+    show clic
+    play sound "TutoBonjour.mp3"
+    medBubble "Bonjour Alexia, bienvenue à la maison !"
+    play sound "TutoClic.mp3"
+    medBubble "Un simple clic te fera progresser dans le jeu."
     hide clic
-    medBubble "Tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} sont réparties en 6 catégories"
+    play sound "TutoBleu&Categories.mp3"
+    medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories."
+    play sound "TutoInteret.mp3"
     medBubble "Les données de centre d’intérêt"
+    play sound "TutoSante.mp3"
     medBubble "Les données de santé"
-    medBubble "Les données de convictions"
+    play sound "TutoConviction.mp3"
+    medBubble "Les données de conviction"
+    play sound "TutoLocalisation.mp3"
     medBubble "Les données de localisation"
+    play sound "TutoReseaux.mp3"
     medBubble "Les données de réseaux sociaux"
+    play sound "TutoAdmin.mp3"
     medBubble "Les données administratives"
-    medBubble "Au-dessus de chaque icône est indiqué le nombre de points restants."
+    play sound "TutoPoints.mp3"
+    medBubble "Au-dessus de chaque catégorie est indiqué ton nombre de points."
     call addPoints(-5,'point_administrative') from _call_addPoints_19
-    medBubble "Tu perds des points si tu ne prêtes pas attention à préserver ta vie privée."
+    play sound "TutoPerdre.mp3"
+    medBubble "Tu perds des points si tu ne protèges pas ta vie privée."
 
     call addPoints(5,'point_administrative') from _call_addPoints_20
-    medBubble "Au contraire, tu gagneras des points : \n- En faisant les bons choix, \n- En regardant les contenus supplémentaires,\n- En allant te promener !"
+    play sound "TutoGagner.mp3"
+    medBubble "Et tu gagneras des points en te divulguant le moins possible, en consultant les ressources ou tout simplement en allant te promener loin des réseaux."
     jump hub
 
 

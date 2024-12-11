@@ -13,33 +13,36 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "oh là là, ça date ça..."
+    a "Oh là là, c'est vraiment vieux ça !"
 else:
     show frame_slideshow_withselfie with moveinbottom
-    a "oh non pourvu que personne d'autre ne voit cette photo..."
+    a "Comment cette photo a-t-elle pu se retrouver là ? J’espère que personne d’autre ne l’aura vue !"
 
-winted_nvl "Vous avez reçu un colis Winted, pensez à le récupérer à temps"
-a "Oh mince, j'avais complétement zappé !"
-a "Allez !  je vais le chercher tout de suite sinon il va encore repartir"
+winted_nvl "Rappel : Votre colis Winsted vous attend ! Pensez à venir le récupérer à temps."
+a "Oh mince, j’avais complètement oublié !"
+a "Bon, j’y vais tout de suite."
 $ renpy.scene(layer = "screens")
 scene busAdFreeze
 show busAdReveal
 window auto hide
 $ renpy.pause(3.0, hard=True)
-a "mais...mais..."
-a "C'est la photo des 30 ans de Pierre mon frère!"
-a "Mais comment c'est possible, c'est ma photo en plus ! "
-a "Elle doit même encore être sur mon téléphone"
-a "Il faut que je la retrouve !"
+a "Ben ! Pierre, il joue les modèles maintenant ? "
+a "Comment mon frère a-t-il pu se retrouver là ?"
+a "C'est ma photo en plus ! "
+a "Je devrais pouvoir la retrouver sur mon téléphone."
+a "Mais elle a été prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
     hide screen dataBookSearch
+    hide screen searchInGallery
+    hide screen dataCloudSearching
+    hide screen cloudNoFilter
     scene busAdOnBus
     window auto hide
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
     if whereYouStart[2] == False:
-        a "Soit elle est dans ma galerie photos ou alors elle est sur mon cloud..."
+        a "Une petite recherche dans mes photos ou sur mon {a=information:Au lieu de garder tes documents ou tes photos sur ton ordinateur ou ton téléphone, tu les envoies dans le cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n’importe où, tant que tu as une connexion Internet.}cloud{/a} devrait me fournir ces informations."
     else:
         a "Je devrais trouver la date et la localisation de la photo ailleurs"
     while True:
@@ -55,10 +58,9 @@ label searchInGallery:
         a "Commençons par ici"
         a "Il faut vraiment que je fasse le tri !"
     elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
-        a "Bon, sinon, je devrais pouvoir la retrouver dans mes photos"
         a "Il faut vraiment que je fasse le tri !"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-        a "J'ai du louper une info"
+        a "J'ai du louper une info, peut être la date..."
     $ whereYouStart[0] = True
     while True:
         empty ""
@@ -66,12 +68,12 @@ label searchInGallery:
 label openDataCloud:
     nvl clear
     hide screen galeryNoFilter
-    #if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
-    #    a "Allons voir sur Datacloud"
-    #elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
-    #    a "euh...de quand date la photo"
-    #elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-    #    a "Allons voir sur Datacloud"
+    if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
+        a "Allons voir sur Datacloud"
+    elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
+        a "Allons voir sur Datacloud"
+    elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
+        a "Je devrais au moins pouvoir retrouver le lieu ici"
     $ whereYouStart[1] = True
     if freeWifiActivate == False :
         $ freeWifiActivate = True
@@ -84,7 +86,7 @@ label openDataCloud:
         show screen dataCloudOpening
         window auto hide
         $ renpy.pause(1.0, hard=True)
-        show screen dataCloudSearching
+        #show screen dataCloudSearching
         hide screen dataCloudOpening
         jump searchInDataCloud
     while True:
@@ -105,7 +107,7 @@ label searchInDataBookDate:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
-    $ birthdayYear = str(year-5)
+    $ birthdayYear = str(year-30)
     if dateInput == birthdayYear :
         a "Oui c'était l'année de ses 30 ans"
         a "Mais c'était où ?"
@@ -133,13 +135,13 @@ label foundInDataBook:
     a "Ils n'ont pas le droit"
     e_nvl "Malheureusement si."
     e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux savoir connaître les endroits où elles sont utilisées  grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
+    e_nvl "Tu peux vérifier si une photo a été utilisée ailleurs grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
     show screen outOfBattery
-    a "Mince !"
-    a "Et en plus j'ai oublié mon chargeur"
+    hide screen appsPhone
+    a "Ah, mince ! Et en plus, je n’ai rien pour le recharger."
     hide screen outOfBattery
 
 label travelToStore:
@@ -169,17 +171,16 @@ label insideStore:
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Voilà votre colis"
+    vendeuse "Bonjour Madame, voici votre colis."
     a "Merci"
-    vendeuse "N'hésitez pas à profiter de notre promotion sur l'impression sur mug"
-    a "C'est vrai, on peut faire ça ici ?"
-    a "Je pourrais en profiter pour customiser une tasse pour mon frère!"
+    vendeuse "Ça pourrait peut-être vous intéresser : aujourd'hui, nous faisons une promotion sur l'impression de MUG."
+    a "Ah d'accord, je pourrais peut-être en profiter pour en faire un pour mon frère."
     show computerStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show zoomComputerStore
     show screen storeCustomPage
-    a "Bon, alors qu'est ce que je pourrai mettre dessus ?"
+    a "Bon, alors, qu'est-ce que je vais pouvoir y mettre ?"
     while True:
         empty ""
 
@@ -246,40 +247,23 @@ screen galeryNoFilter:
                 text "[year]"  color "#000000"
                 grid 2 1:
                     spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/003.jpeg"
+                    add "UI/applications/galery/dog001.jpg"
+                    add "UI/applications/galery/dog002.jpg"
                 text "[year-1]" color "#000000"
                 grid 2 3:
                     spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
+                    add "UI/applications/galery/motherSister.png"
+                    add "UI/applications/galery/sisterBeach.png"
+                    add "UI/applications/galery/brotherInParis001.png"
+                    add "UI/applications/galery/brotherSelfie.png"
                     add "UI/applications/galery/003.jpeg"
                 text "[year-2]"  color "#000000"
                 grid 2 2:
                     spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                text "[year-3]"  color "#000000"
-                grid 2 2:
-                    spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                text "[year-4]"  color "#000000"
-                grid 2 2:
-                    spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                text "[year-5]"  color "#000000"
-                grid 2 2:
-                    spacing 20
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/001.jpeg"
+                    add "UI/applications/galery/motherBarcelona001.png"
+                    add "UI/applications/galery/brotherInBarcelona001.png"
+                    add "UI/applications/galery/in_barcelone_en_mode_winner.png"
+                    add "UI/applications/galery/brotherInBarcelona002.png"
 
 
          bar value XScrollValue("vp")
@@ -296,27 +280,62 @@ screen cloudNoFilter:
             draggable True
             vbox:
                 spacing 20
-                text "[year-5]"  color "#000000"
-                grid 2 4:
-                    spacing 10
+                grid 2 5:
+                    spacing 20
                     imagebutton:
-                        idle At('UI/applications/galery/Sagrada1.jpg', outline_transform(6, "#ff0000", 4.0))
-                        hover "UI/applications/galery/Sagrada1.jpg"
+                        idle At('UI/applications/galery/barcelona001.jpg', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/barcelona001.jpg"
                         hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002358_01")
                         unhovered Hide("metaData")
                         action NullAction()
                     imagebutton:
-                        idle At('UI/applications/galery/002.jpeg', outline_transform(6, "#ff0000", 4.0))
-                        hover "UI/applications/galery/002.jpeg"
-                        hovered Show("metaData",None,"Métadonnées : \nParis \n002355_01")
+                        idle At('UI/applications/galery/jump_with_sister_in_the_street.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/jump_with_sister_in_the_street.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002555_12")
                         unhovered Hide("metaData")
                         action NullAction()
-                    add "UI/applications/galery/002.jpeg"
-                    add "UI/applications/galery/Sagrada2.jpg"
-                    add "UI/applications/galery/004.jpeg"
-                    add "UI/applications/galery/001.jpeg"
-                    add "UI/applications/galery/Sagrada3.jpg"
-                    add "UI/applications/galery/003.jpeg"
+                    imagebutton:
+                        idle At('UI/applications/galery/barcelona002.jpg', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/barcelona002.jpg"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002355_17")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/motherBarcelona001.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/motherBarcelona001.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002455_05")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/Sagrada3.jpg', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/Sagrada3.jpg"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002300_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/brotherInBarcelona001.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/brotherInBarcelona001.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n003055_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/brotherInBarcelona002.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/brotherInBarcelona002.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002355_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/sisterBeach.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/sisterBeach.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002355_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
+                    imagebutton:
+                        idle At('UI/applications/galery/in_barcelone_en_mode_winner.png', outline_transform(6, "#ff0000", 4.0))
+                        hover "UI/applications/galery/in_barcelone_en_mode_winner.png"
+                        hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002355_01")
+                        unhovered Hide("metaData")
+                        action NullAction()
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
          
@@ -342,17 +361,6 @@ screen dataCloudOpening:
     add "UI/applications/Icons/appCloud.png" xalign 0.6955 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
-screen dataCloudSearching:
-    add "UI/applications/cloudDateInput.png" xalign 0.6955 yalign 0.5
-    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
-    hbox:
-        xalign 0.74
-        yalign 0.22
-        imagebutton:
-            idle At("UI/applications/Exit.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
-            hover "UI/applications/Exit.png"
-            action Jump("homeScreen")
-
 screen birthdayPicture:
     add "UI/Cadre/frameBirthday.png" xalign 0.5 yalign 0.5
 
@@ -374,7 +382,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Évites les réseaux wifi publics, ils sont dangereux ","","openDataCloud")]
+            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Il est conseillé d’éviter les réseaux Wi-Fi publics en raison des nombreux risques de sécurité qu’ils présentent.","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -382,7 +390,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/DataOFF.png"
                 hover "UI/settingsIcons/DataON.png"
-            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d'éviter le wifi public, c'est le maaaaal","openDataCloud")]
+            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
         imagebutton:
             if LocalisationState == True:
                 idle "UI/settingsIcons/LocalisationON.png"
@@ -391,19 +399,28 @@ screen freeWifi:
                 idle "UI/settingsIcons/LocalisationOFF.png"
                 hover "UI/settingsIcons/LocalisationON.png"
             action SetVariable("LocalisationState", not LocalisationState)
+    # frame:
+    #     area (1100,500,350,350)
+    #     background Frame(
+    #         Text( "\u25A2", #### <--- this is a small rounded rectangle character
+    #               background="#ffffff",  
+    #               color="#ffffff", 
+    #               font="DejaVuSans.ttf", 
+    #               size=72), 
+    #         32, 32, 
+    #         tile=True)
+
+    #     text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
+
     frame:
-        area (1000,500,450,250)
-        background Frame(
-            Text( "\u25A2", #### <--- this is a small rounded rectangle character
-                  background="#ffffff",  
-                  color="#ffffff", 
-                  font="DejaVuSans.ttf", 
-                  size=72), 
-            32, 32, 
-            tile=True)
+        background "#fff"
+        pos (1100,400)
+        padding (12, 8)
+        xysize (325, 300)
 
-        text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
-
+        has vbox:
+            align (0.5, 0.5)
+            text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
         
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
@@ -432,6 +449,7 @@ screen dataBookFound:
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen outOfBattery:
+
     add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
@@ -475,10 +493,10 @@ screen logViaPopup:
         hover "UI/store/logViaOK.png"
         xalign 0.5
         yalign 0.51
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique","",'')]
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'')]
     imagebutton:
-        idle "UI/store/logViaMail.png"
+        idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaMail.png"
         xalign 0.5
         yalign 0.6
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Il vaut mieux éviter la connexion via un service tiers (SSO)µ Ce système donne accès à ces services à de nombreuses informations personnelles relatives au site parcouruµ Vous ne voudriez pas que votre boite mail connaisse vos goûts en matière de consommation ou de lecture politique",'')]
+        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'')]

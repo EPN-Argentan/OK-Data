@@ -330,7 +330,7 @@ screen navigation():
             textbutton _("Menu principal") action MainMenu()
 
         textbutton _("Sources") action ShowMenu("sources")
-
+        textbutton _("Image Tools") action ShowMenu("image_tools")
 
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
