@@ -50,5 +50,6 @@ label walkOut :
     $ hubClickable["forest"]= 0
     $ hubClickable["homeAssistant"]= 0
     $ hubClickable["photoFrame"]= 1
+    $ hubClickable["watch"]= 1
 
     jump hub

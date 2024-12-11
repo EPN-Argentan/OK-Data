@@ -61,13 +61,8 @@ screen hubElements:
             ypos 765
             idle At('UI/imagebuttons/tablet.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/tablet.png"
-<<<<<<< HEAD
-            action Jump("algorithmGame")
-
-=======
             action Jump("openTablet")
     
->>>>>>> 068ec1ae3e7e0dae5091d8554da0460e5406c527
     if hubClickable["photoFrame"] == 1:
         imagebutton:
             xpos 435
@@ -366,9 +361,9 @@ screen selfie :
         hover "UI/applications/Icons/send_hover.png"
         action Jump("barOutAfter")
 
-<<<<<<< HEAD
+
 screen countdown:
     text "[points[listePoints[0]][0]]"
     timer 1.0 repeat True action SetDict(points, listePoints[0], [points[listePoints[0]][0] - 1, points[listePoints[0]][1]])
-=======
->>>>>>> 068ec1ae3e7e0dae5091d8554da0460e5406c527
+
+

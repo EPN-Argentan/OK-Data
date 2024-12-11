@@ -113,7 +113,7 @@ label feed_coli6mots :
 
 label Noformok :
     nvl clear
-    call addPoints(+2,'point_administrative')
+    call addPoints(+2,'point_administrative') from _call_addPoints_22
     e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte"
     jump mailx3
 
@@ -208,7 +208,7 @@ label datazonsiteafternocookie :
     show screen pc_vierge
     show screen datazonsiteafternocookie
     show screen barre_de_vie
-    call addPoints(+1,'point_interet')
+    call addPoints(+1,'point_interet') from _call_addPoints_23
     e_nvl "Bien joué ! pas besoin de donner des informations sur ta navigation"
     jump datazonsiteok
 

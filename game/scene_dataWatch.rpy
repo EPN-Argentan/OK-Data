@@ -138,7 +138,7 @@ label resultat :
     #action Jump "resultat_Data_Sport"
 #else:
     e_nvl "Lorsque l'on utilise ce type d'application il faut avoir conscience que vos données de santé son en jeux"
-    call addPoints(DS_points,'point_sante')
+    call addPoints(DS_points,'point_sante') from _call_addPoints_21
     e_nvl "Si vous scéder toutes les informations, celles-ci peuvent être utiliser sans que vous sachiez à quelle fin"
     e_nvl "Et même si vous donner juste une partie de celles-ci"
     e_nvl "Donner vos informations permet il est vrai d'utiliser pleinement les fonctions de l'application et des montres connectées"
