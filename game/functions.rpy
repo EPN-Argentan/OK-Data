@@ -88,20 +88,33 @@ transform bounce:
 #Algortihmn function
 label checkClueALL():
     python:
-        for key, value in combinaisonClues.items():
+        # Stocker toutes les clés dans une liste
+        combinaisonKey = list(combinaisonClues.keys())
+
+        # Parcourir les clés dans l'ordre défini
+        for i in range(len(combinaisonKey)):
+            key = combinaisonKey[i]
+            value = combinaisonClues[key]
+
             if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
                 if value[4] == False:
                     phrase = value[3]
                     renpy.say(e_nvl, phrase)
                     cluesDisplay += value[2]
                     value[4] = True
-                    if categoriesIndex < len(combinaisonClues) :
+                    value[7] = False
+
+
+                    if categoriesIndex < len(combinaisonClues):
                         categoriesIndex += 1
+                        # Vérifier si l'élément suivant existe
+                        if i + 1 < len(combinaisonKey):
+                            next_key = combinaisonKey[i + 1]
+                            combinaisonClues[next_key][7] = True
                     else:
                         renpy.jump('endAlgorithm')
                 else:
                     renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
-
 #Count total points
 init python:
     def totalPoints():

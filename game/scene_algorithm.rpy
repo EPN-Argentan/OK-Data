@@ -3,9 +3,9 @@ define algo = Character("")
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Afrique' : ['Miniature Youtube','Historique de recherche',"Afrique \n","mmmm...Il semblerait que cette personne aime l'Afrique",False, 'catIntérêt', 'intérêt',True],
+    'Afrique' : ['Miniature Youtube','Historique de recherche',"Végétarien \n","mmmm...Il semblerait que cette personne aime la cuisine végé",False, 'catIntérêt', 'intérêt',True],
     'Asie' : ['Logged','Historique de recherche',"Asie \n","mmmm...Il semblerait que cette personne aime l'asie",False, 'catSanté', 'santé',False],
-    'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction', 'conviction',False],
+    'Europe' : ['Logged','Miniature Youtube',"Cuisiner \n","mmmm...Il semblerait que cette personne aime cusiner",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found
@@ -19,7 +19,6 @@ define whatInsideBottom = ""
 
 #Function to check wich draggable object is on which
 init python:
-
     def displayData() :
         for key, value in combinaisonClues.items():
             if value[7] == True:
@@ -53,12 +52,13 @@ init python:
 label openTablet:
     nvl clear
     hide screen hubElements
+    hide screen barre_de_vie
     pass 
 
 label algorithmGame:
     nvl clear
-    hide screen barre_de_vie
     scene black
+    show screen algorithmnMenu
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
@@ -78,6 +78,7 @@ label endAlgorithm:
 
 screen catIntérêt:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    text "Catégorie Intéret"
     draggroup:
         drag:
             drag_name "Miniature Youtube"
@@ -95,14 +96,6 @@ screen catIntérêt:
             droppable False
             dragged drag_placed
             drag_raise True
-        drag:
-            drag_name "Logged"
-            child "images/UI/algorithm/logged.png"
-            align(0.8,0.6)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True  
 
         drag:
             drag_name "Drop Zone Top"
@@ -119,15 +112,8 @@ screen catIntérêt:
 
 screen catSanté:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
+    text "Catégorie santé"
     draggroup:
-        drag:
-            drag_name "Miniature Youtube"
-            child "images/UI/algorithm/youtubeMini.png"
-            align(0.1,0.2)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
         drag:
             drag_name "Historique de recherche"
             child "images/UI/algorithm/searchHistory.png"
@@ -165,14 +151,6 @@ screen catConviction:
             drag_name "Miniature Youtube"
             child "images/UI/algorithm/youtubeMini.png"
             align(0.1,0.2)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Historique de recherche"
-            child "images/UI/algorithm/searchHistory.png"
-            align(0.3,0.5)
             draggable True
             droppable False
             dragged drag_placed
@@ -324,6 +302,10 @@ screen catAdministrative:
 
 # Side menu to display all categories
 screen algorithmnMenu :
+    add "UI/algorithm/+.png" xpos 936 ypos 536
+    text "{font=fonts/FiraCode-Bold.ttf}{size=*2}{color=#00B6ED}Croisez les\ndonnées{/color}{/size}{/font}":
+        xalign 0.5
+        yalign 0.1  
     vbox:
         xalign 0.9
         yalign 0.3
@@ -332,10 +314,17 @@ screen algorithmnMenu :
         for key, value in combinaisonClues.items():
             imagebutton :
                 if value[4] == False:
-                    idle "UI/barre_de_vie/"+value[6]+".png"
+                    if value[7]:
+                        idle "UI/barre_de_vie/"+value[6]+".png" at higlight_zoom
+                    else:
+                        idle "UI/barre_de_vie/"+value[6]+".png" at greyscale(), custom_zoom
                 else:
                     idle At("UI/barre_de_vie/"+value[6]+".png", outline_transform(20, "#ffffff", 4.0))
                 at custom_zoom
                 action NullAction()
 transform custom_zoom:
     zoom 0.7
+
+transform higlight_zoom:
+    zoom 0.4
+    
