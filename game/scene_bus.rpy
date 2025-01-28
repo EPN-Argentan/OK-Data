@@ -107,7 +107,7 @@ label searchInDataBookDate:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
-    $ birthdayYear = str(year-30)
+    $ birthdayYear = str(year-4)
     if dateInput == birthdayYear :
         a "Oui c'était l'année de ses 30 ans"
         a "Mais c'était où ?"
