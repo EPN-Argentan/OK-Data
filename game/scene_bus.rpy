@@ -27,10 +27,10 @@ show busAdReveal
 window auto hide
 $ renpy.pause(3.0, hard=True)
 a "Ben ! Pierre, il joue les modèles maintenant ? "
-a "Comment mon frère a-t-il pu se retrouver là ?"
-a "C'est ma photo en plus ! "
+a "Comment mon frère a-t-il pu se retrouver sur cette pub !?"
+a "C'est moi qui ai pris cette photo en plus ! "
 a "Je devrais pouvoir la retrouver sur mon téléphone."
-a "Mais elle a été prise {b}où{/b} et {b}quand{/b} cette photo ?"
+a "Mais je l'ai prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
     hide screen dataBookSearch
@@ -41,40 +41,46 @@ label homeScreen:
     window auto hide
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
-    if whereYouStart[2] == False:
-        a "Une petite recherche dans mes photos ou sur mon {a=information:Au lieu de garder tes documents ou tes photos sur ton ordinateur ou ton téléphone, tu les envoies dans le cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n’importe où, tant que tu as une connexion Internet.}cloud{/a} devrait me fournir ces informations."
-    else:
-        a "Je devrais trouver la date et la localisation de la photo ailleurs"
+    if whereYouStart[0] == False and whereYouStart[1] == False: #Player launch gallery at first
+        a "En cherchant sur mes photos ou mon {a=information: Au lieu de garder tes données ou tes photos sur ton ordinateur, ou ton téléphone, tu les envoies dans le Cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n'importe où, tant que tu as une connection internet. }cloud{/a}, je devrais retrouver la date et le lieu de prise de vue."
+    elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
+        a "je dois chercher dans la galerie"
+    elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
+        a "je dois chercher dans le cloud"
+    elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
+        a "Maintenant que je me rappelle de la date et du lieu je vais pouvoir retrouver la photo dans Databook"
     while True:
         empty ""
 
 label searchInGallery:
+    $ whereYouStart[0] = True
+    hide screen dataBookSearch
     hide screen dataCloudSearching
+    hide screen cloudNoFilter
     show screen galeryOpening
-    a "Allons voir dans la galerie"
+    a "Commençons par les photos enregistrées directement sur le téléphone"
     show screen galeryNoFilter
     hide screen galeryOpening
     if whereYouStart[0] == False and whereYouStart[1] == False: #Player launch gallery at first
-        a "Commençons par ici"
         a "Il faut vraiment que je fasse le tri !"
     elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
         a "Il faut vraiment que je fasse le tri !"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
         a "J'ai du louper une info, peut être la date..."
-    $ whereYouStart[0] = True
     while True:
         empty ""
 
 label openDataCloud:
     nvl clear
+    $ whereYouStart[1] = True
     hide screen galeryNoFilter
+    show screen dataCloudOpening
     if whereYouStart[0] == True and whereYouStart[1] == False: #Player launch gallery at first
         a "Allons voir sur Datacloud"
     elif whereYouStart[0] == False and whereYouStart[1] == False: #Player launched cloud at first
         a "Allons voir sur Datacloud"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
         a "Je devrais au moins pouvoir retrouver le lieu ici"
-    $ whereYouStart[1] = True
     if freeWifiActivate == False :
         $ freeWifiActivate = True
         hide screen appsPhone
@@ -94,6 +100,7 @@ label openDataCloud:
 
 
 label searchInDataCloud:
+    hide screen dataBookSearch
     show screen cloudNoFilter
     while True:
         empty ""
@@ -107,7 +114,7 @@ label searchInDataBookDate:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
-    $ birthdayYear = str(year-4)
+    $ birthdayYear = str(year-2)
     if dateInput == birthdayYear :
         a "Oui c'était l'année de ses 30 ans"
         a "Mais c'était où ?"
@@ -121,7 +128,7 @@ label searchInDataBookLocalisation:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ localisationInput = renpy.input("Entrez la localisation", "Paris", length = 12)
-    if localisationInput == "Barcelone" or dateInput =="barcelone" or dateInput == "barcelon" or dateInput == "Barcelon":
+    if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon":
             jump foundInDataBook
             hide screen dataBookSearch
     else:
