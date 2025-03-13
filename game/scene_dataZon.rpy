@@ -13,7 +13,10 @@ label dataZon :
   hide screen phoneDown
   stop music fadeout 1.0
   show zoomPC
+  show curseurTexte
   show screen barre_de_vie
+  stop music fadeout 1.0
+  play music "Trickling Up - Godmode.mp3"
   a "allors... mes mails ?"
   window auto hide
   $ renpy.pause(2.0, hard=True)
@@ -43,11 +46,15 @@ label brouillon :
 
     show screen pc_vierge
     show screen brouillon
+
     show screen a_cci
+
     with dissolve
 
     show screen barre_de_vie
+
     a "Ah mais oui mon mail d'hier soir... Je dois le finir."
+
     a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
 
     while True:
@@ -421,6 +428,7 @@ screen pc_vierge :
 
 screen brouillon :
     add "UI/datazon/brouillon.png" xalign 0.5 yalign 0.5
+
 #bouton CCI
     imagebutton:
         xalign 0.515
@@ -435,6 +443,8 @@ screen brouillon :
         idle "UI/datazon/zone_envoi_idle.jpg"
         hover "UI/datazon/zone_envoi_hover.jpg"
         action Jump("Brouillon_phone_No")
+
+
 
 screen a_cci :
 
