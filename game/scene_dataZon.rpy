@@ -446,7 +446,7 @@ screen a_cci :
             button:
                     text "{a=information: Le champ A: dans un mail sous entend  A qui on envoie ce mail} A :{/a}" style "texte_rouge"
             button:
-                    text "{a=information: Le champ CCI: signifie Copie Carbonne Invisible. Ce champ permet que chaque destinataire d'un mail ne connaîtra pas l'adresse des autres destinataires} CCI :{/a}" 
+                    text "{a=information: Le champ CCI: signifie Copie Carbonne Invisible. Ce champ permet que chaque destinataire d'un mail ne connaîtra pas l'adresse des autres destinataires} CCI :{/a}"
 
 screen mailx3 :
     add "UI/datazon/mailx3.jpg"
@@ -748,22 +748,41 @@ screen achatAspiCute:
 
 screen paiementmcdyzon:
     add "UI/datazon/paiementmcdyzon.png" xalign 0.5 yalign 0.5
+    add "UI/datazon/formCBrempli.png" xalign 0.665 yalign 0.600
     imagebutton :
         xalign 0.670
         yalign 0.600
         idle "UI/datazon/buttonCB_idle.png"
         hover "UI/datazon/buttonCB_hover.png"
         action Jump ("CBmcdyson")
+    imagebutton :
+        xalign 0.4075
+        yalign 0.682
+        action SetVariable("cross_cb",not cross_cb)
+        if cross_cb ==False :
+            idle "UI/datazon/checkboxoff.png"
+        else :
+            idle "UI/datazon/checkboxon.png"
 
 
 screen paiementAspiCute:
     add "UI/datazon/paiementAspiCute.png" xalign 0.5 yalign 0.5
+    add "UI/datazon/formCBrempli.png" xalign 0.665 yalign 0.600
     imagebutton :
         xalign 0.670
         yalign 0.600
         idle "UI/datazon/buttonCB_idle.png"
         hover "UI/datazon/buttonCB_hover.png"
         action Jump ("CBaspicute")
+    imagebutton :
+        xalign 0.4075
+        yalign 0.682
+        action SetVariable("cross_cb",not cross_cb)
+        if cross_cb ==False :
+            idle "UI/datazon/checkboxoff.png"
+        else :
+            idle "UI/datazon/checkboxon.png"
+
 
 
 
@@ -781,10 +800,10 @@ screen CBmcdyson:
         yalign 0.682
         if cross_cb ==True :
             idle "UI/datazon/checkboxon.png"
-            action SetVariable("cross_cb", "False")
+            action SetVariable("cross_cb", False)
         else :
             idle "UI/datazon/checkboxoff.png"
-            action SetVariable("cross_cb", "True")
+            action SetVariable("cross_cb", True)
 
 
 screen CBaspicute:
@@ -799,12 +818,12 @@ screen CBaspicute:
     imagebutton :
         xalign 0.4075
         yalign 0.682
-        if cross_cb ==True :
+        if cross_cb ==True:
             idle "UI/datazon/checkboxon.png"
-            action SetVariable("cross_cb", "False")
-        else :
+            action SetVariable("cross_cb", False)
+        elif cross_cb ==False:
             idle "UI/datazon/checkboxoff.png"
-            action SetVariable("cross_cb", "True")
+            action SetVariable("cross_cb", True)
 
 
 
