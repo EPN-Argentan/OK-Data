@@ -100,18 +100,18 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## fois.
 
 ## La hauteur de la fenêtre contenant les dialogues.
-define gui.textbox_height = 278
+define gui.textbox_height = None
 
 ## L’emplacement vertical de la zone de texte à l’écran. 0.0 pour le haut, 0.5
 ## pour le centre et 1.0 pour le bas.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.9
 
 
 ## L’emplacement relatif à la zone de texte du nom du personnage en train de
 ## parler. La valeur peut être un nombre entier de pixels depuis la gauche ou le
 ## haut ou 0.5 pour le centre.
-define gui.name_xpos = 0.3
-define gui.name_ypos = 0
+define gui.name_xpos = 70
+define gui.name_ypos = None
 
 ## L’alignement horizontal du nom du personnage. La valeur peut être 0.0 pour un
 ## alignement à gauche, 0.5 pour le centrer et 1.0 pour un alignement à droite.
@@ -133,11 +133,11 @@ define gui.namebox_tile = False
 
 ## L’emplacement du dialogue relatif à la zone de texte. La valeur peut être un
 ## nombre entier de pixels depuis la gauche ou le haut ou 0.5 pour le centre.
-define gui.dialogue_xpos = 0.3
-define gui.dialogue_ypos = 0.4
+define gui.dialogue_xpos = None
+define gui.dialogue_ypos = None
 
 ## La largeur maximale en pixels de la zone de dialogue.
-define gui.dialogue_width = 820
+define gui.dialogue_width = 0.5
 
 ## L’alignement horizontal de la zone de dialogue. La valeur peut être 0.0 pour
 ## un alignement à gauche, 0.5 pour le centrer et 1.0 pour un alignement à

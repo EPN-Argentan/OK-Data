@@ -103,7 +103,7 @@ screen say(who, what):
 
     window:
         id "window"
-
+        has vbox
         if who is not None:
 
             window:
@@ -135,11 +135,15 @@ style namebox_label is say_label
 
 style window:
     xalign 0.5
-    xfill True
+    ypadding 50
+    xpadding 50
     yalign gui.textbox_yalign
-    ysize gui.textbox_height
-
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    yminimum 0.1
+    ymaximum 1.0
+    xminimum 0.1
+    xmaximum 1.0
+    #background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Frame("gui/textbox.png",44,44)
 
 style namebox:
     xpos gui.name_xpos
