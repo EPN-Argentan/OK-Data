@@ -1,4 +1,5 @@
 #image backgroundSpeaker = "images/UI/homeAssistant/homeAssistant.jpeg"
+default switchOnHomeAssistant = False
 
 label homeAssistant:
     nvl clear
@@ -10,15 +11,21 @@ label homeAssistant:
 
 
     define d = Character("DATASSISTANTE")
-    $ printit()
-    a "Dis DATASSISANTE, peux-tu me rappeler les événements de la journée ?"
-    d "Bonjour Alexia, oui, pas de problème, je suis là pour toi."
-    d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
-    d "Vous avez aussi demandé que je vous rappel que votre maman compte sur vous pour trouver le cadeau qu'elle doit lui offrir"
-    d "Puis-continuer à vous aider ?"
+    #First time you click on home assistant
+    if switchOnHomeAssistant == False :
+        $ switchOnHomeAssistant = True
+        $ printit()
+        a "Dis DATASSISANTE, peux-tu me rappeler les événements de la journée ?"
+        d "Bonjour Alexia, oui, pas de problème, je suis là pour toi."
+        d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
+        d "Vous avez aussi demandé que je vous rappel que votre maman compte sur vous pour trouver le cadeau qu'elle doit lui offrir"
+        d "Puis-continuer à vous aider ?"
+    else :
+    #Second time you click on home assistant
+        $ switchOnHomeAssistant = False
+        show screen homeAssistantButton # Display interface home assistant button
 
-    while True:
-        empty ""
+    jump hub
     nvl clear
 
 screen homeAssistantButton:
@@ -37,6 +44,7 @@ label endHomeAssitant:
 
 init python:
     import threading
+
 
     current_category = 0
 
