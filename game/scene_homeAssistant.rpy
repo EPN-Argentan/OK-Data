@@ -1,16 +1,27 @@
-image backgroundSpeaker = "images/UI/homeAssistant/homeAssistant.jpeg"
+#image backgroundSpeaker = "images/UI/homeAssistant/homeAssistant.jpeg"
 
 label homeAssistant:
+    nvl clear
     hide screen hubElements
+    hide screen phoneDown
+    stop music fadeout 1.0
+    show home_assistant
     show screen barre_de_vie
-    scene backgroundSpeaker
-    show screen homeAssistantButton
-    a "voilà mon enceinte"
+
+
+    define d = Character("DATASSISTANTE")
+
+    a "Dis DATASSISANTE, peux-tu me rappeler les événements de la journée ?"
+    d "Bonjour Alexia, oui, pas de problème, je suis là pour toi."
+    d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
+    d "Vous avez aussi demandé que je vous rappel que votre maman compte sur vous pour trouver le cadeau qu'elle doit lui offrir"
+    d "Puis-continuer à vous aider ?"
+
     while True:
         empty ""
     nvl clear
 
-screen homeAssistantButton:     
+screen homeAssistantButton:
     imagebutton:
         xalign 0.46
         yalign 0.7
@@ -18,7 +29,7 @@ screen homeAssistantButton:
         hover "images/UI/homeAssistant/homeAssistantBtn.png"
         action [SetVariable("speakerState", "False"),Jump("endHomeAssitant")]
 
-label endHomeAssitant: 
+label endHomeAssitant:
     hide screen homeAssistantButton
     $ hubClickable["homeAssistant"]= 0
     e_nvl "Les enceintes connectées, comme la plupart des objets connectés, sont sources de récolte de données les plus intimes et intrusives"
@@ -27,8 +38,8 @@ label endHomeAssitant:
 init python:
     import threading
 
-    current_category = 0 
-    
+    current_category = 0
+
     def printit():
         global current_category  # Utiliser la variable globale
         if speakerState==True:
@@ -44,4 +55,4 @@ init python:
             print("Home assistant désactivé")
 
 
-    #printit()
+    printit()

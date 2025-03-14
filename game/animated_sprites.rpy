@@ -175,6 +175,14 @@ image clic :
     "sprites/clic/clic12.png"
     repeat
 
+
+image curseurTexte :
+    "sprites/curseurtexte/curseurTexteOn.png"
+    pause 0.3
+    "sprites/curseurtexte/curseurTexteOff.png"
+    pause 0.3
+    repeat
+
 image walkInfinite = Movie(play="images/sprites/walking/infiniteWalk.ogv", size=(1920,1080), loop=False)
 image walkZoom = Movie(play="images/sprites/walking/walkZoom.ogv", size=(1920,1080), loop=False)
 image walkFix :
@@ -211,3 +219,5 @@ image zoomComputerStore :
     "images/sprites/store/freezeFrameComputerStore.jpeg"
 
 image runwatch = Movie(play="images/sprites/run&watch/run&Watch.ogv", size=(1920,1080), loop=True)
+
+image home_assistant = Movie(play="images/sprites/home_assistant/home_assistant.ogv", size=(1920,1080), loop=True)
