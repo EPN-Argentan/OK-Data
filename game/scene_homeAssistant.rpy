@@ -10,7 +10,7 @@ label homeAssistant:
 
 
     define d = Character("DATASSISTANTE")
-
+    $ printit()
     a "Dis DATASSISANTE, peux-tu me rappeler les événements de la journée ?"
     d "Bonjour Alexia, oui, pas de problème, je suis là pour toi."
     d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
@@ -55,4 +55,4 @@ init python:
             print("Home assistant désactivé")
 
 
-    printit()
+  
