@@ -261,7 +261,7 @@ screen browserWindowFeed:
                 imagebutton:
                     idle "UI/browser/eventBanner.png"
                 imagebutton:
-                    idle At("UI/browser/eventBirtdhay.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
+                    idle At("UI/browser/eventBirtdhay.png", outline_transform(0, "#8080804f", 10.0, offset=(5, 5)))
                     hover "UI/browser/eventBirtdhay.png"
                     action Jump("insideEventPage")
                 imagebutton:

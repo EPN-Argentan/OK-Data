@@ -72,7 +72,7 @@ screen insideEvent:
                 imagebutton:
                     idle "UI/browser/EventPage.png"
                 hbox:
-                    ypos -175
+                    ypos -195
                     xalign 1.0
                     spacing 5
                     imagebutton:
