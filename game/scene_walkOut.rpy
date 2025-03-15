@@ -6,6 +6,7 @@ label walkOut :
     e_nvl "D'ailleurs, il serait grand temps de sortir promener ton chien."
     e_nvl "C'est parti !"
     nvl clear
+    window hide
     hide screen hubElements
     scene street
     show walkInfinite
