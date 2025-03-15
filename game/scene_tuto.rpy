@@ -34,6 +34,7 @@ label tuto:
     call addPoints(5,'point_administrative') from _call_addPoints_20
     play sound "TutoGagner.mp3"
     medBubble "Et tu gagneras des points en te divulguant le moins possible, en consultant les ressources ou tout simplement en allant te promener loin des réseaux."
+    window hide
     jump hub
 
 

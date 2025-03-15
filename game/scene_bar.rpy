@@ -8,7 +8,8 @@ label barOut:
     show screen dataMap
     window auto hide
     show screen phoneDown
-    window auto hide
+    #window auto hide
+    window hide
     empty ""
     while LocalisationState == False:
         empty ""

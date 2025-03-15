@@ -30,11 +30,13 @@ label browserLabelAfterCall:
     m "Ah bon, j'ai bien peur de ne pas savoir faire ça. Ça ne te dérangerait pas de le faire à ma place ? Je te laisse mes papiers d'identité si besoin."
     hide screen phoneDown
     show loungeZoom
-    empty ""
+    $ renpy.pause(2.5, hard=True) #Wait zoom animation has been finished before to show laptop screen on
     show screen browserWindowSubscribe
     show loungeHandIn onlayer overlay
+    $ renpy.pause(1.5, hard=True) #Wait for hand in animation stop
     hide loungeIdle
     while True:
+        show handInFixed onlayer overlay
         empty ""
 
 label browserLabelFeed:

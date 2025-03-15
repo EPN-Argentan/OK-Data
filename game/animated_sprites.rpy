@@ -148,7 +148,9 @@ image loungeHandIn :
     "sprites/lounge/handIn/handIn017.png"
     pause 0.1
 
-
+image handInFixed :
+    "sprites/lounge/handIn/handIn017.png"
+    
 image clic :
     "sprites/clic/clic1.png"
     pause 0.1
