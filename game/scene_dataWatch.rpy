@@ -8,26 +8,75 @@ label dataWatch:
     stop music fadeout 1.0
     show runwatch
     show screen barre_de_vie
-    a "ouh ouh ouh"
+    a "Courir, c'est ma bulle, loin de tout."
     window auto hide
 
-    a "allons-y !"
+    a "Allez, on garde le rythme !"
 
 # Déclaration du personnage pour les dialogues (facultatif)
-define e = Character("Emily")
+    define e = Character("Emily")
+
+    e "Waouh, t'as la pêche ! T'as déjà connecté ta montre ?"
+    a "Pas encore... Tu pourrais m'aider ?"
+    e "Bien sûr ! Commence par ouvrir l'appli DATA SPORT."
+
+label Data_Sport :
+    $ renpy.scene(layer="screens")
+    show screen Data_Sport
+    e "Une fois lancée, connecte-toi."
+    while True :
+        empty ""
+
+label consentement1 :
+    $ renpy.scene(layer="screens")
+    show screen consentement1
+    a "Il va suivre mon rythme cardiaque. C'est précis comme info santé ?" # déf rythme cardiaque
+    while True :
+        empty ""
+
+label consentement2 :
+    $ renpy.scene(layer="screens")
+    show screen consentement2
+    a "Les données podométriques ? C'est juste mon nombre de pas ! Ils vont être fiers de moi chez OK Data."
+    while True :
+        empty ""
+
+label consentement3 :
+    $ renpy.scene(layer="screens")
+    show screen consentement3
+    a "Mon temps d'effort... fini les pauses discrètes à l'abri des regards !"
+    while True :
+        empty ""
+
+label resultat :
+    $ renpy.scene(layer="screens")
+
+#if DS_points ==3:
+    #action Jump "resultat_Data_Sport"
+#else:
+    e_nvl "Quand tu utilises ce genre d'application, garde à l'esprit que tes données de santé sont en jeu."
+    call addPoints(DS_points,'point_sante') from _call_addPoints_21
+    e_nvl "Si tu partages toutes tes infos, elles peuvent être utilisées sans que tu saches vraiment pourquoi." #e_nvl "Et même si vous donner juste une partie de celles-ci"
+    e_nvl "C'est vrai que partager tes données permet de profiter à fond des fonctionnalités de ta  montre connectée."
+
+
+    scene black
+    with fade
+    $ hubClickable["watch"]= 0
+
 
 # Label de démarrage du mini-jeu
 label game:
     show runwatch
-    e "Alexia, pour courir de façon régulière il faut être précis."
-    e "Clique 8 fois d'affilée sur le rouge pour réussir !"
+    e "Garde le rythme et sois précise."
+    e "Appuie quatre fois de suite sur le bouton rouge pour rester dans le tempo !"
 
     # Initialisation des variables du jeu
     $ bar_color = "yellow"  # Couleur initiale de la barre
     $ game_active = True  # Détermine si le mini-jeu est actif
     $ result_message = ""  # Message affiché après le clic
     $ correct_clicks = 0  # Compteur de clics corrects
-    $ required_clicks = 8  # Nombre de clics requis pour gagner
+    $ required_clicks = 4  # Nombre de clics requis pour gagner
 
     # Interface utilisateur pour afficher la barre colorée
     screen color_bar_game():
@@ -69,7 +118,7 @@ label game:
             if bar_color == "red":
                 correct_clicks += 1
                 if correct_clicks >= required_clicks:
-                    result_message = "Super !"
+                    result_message = "Excellent !"
                     game_active = False
             else:
                 correct_clicks = 0  # Réinitialise le compteur si clic incorrect
@@ -92,61 +141,20 @@ label game:
     # Attends que le mini-jeu se termine
     while game_active:
         $ renpy.pause(0.1)
+     # Affiche le résultat après le mini-jeu
+    e "Bien joué, t'es dans rythme !"
+    jump resultat_final
 
     # Affiche le résultat après le clic
-    e "[result_message]"
 
-
-
-    e "waouhh tu gères, tu veux voir ton score ?"
-    a "C'est possible ça ?"
-    e "Mais oui regarde dans l'application qui gère ta montre connecté"
-    a "Je pense jamais à la regarder... ok"
-
-label Data_Sport :
+label resultat_final:
     $ renpy.scene(layer="screens")
-    show screen Data_Sport
-    a "Ah oui Data Sport... je me connecte"
-    while True :
-        empty ""
+    show screen resultat_Data_Sport  # Affiche l'écran contenant l'image du résultat
+    e "Bien joué, t'es dans rythme !"
+    e_nvl "Mais fais attention : ne donne pas ton consentement pour tout. Limite les autorisations à ce qui est vraiment utile, et utilise l'appli seulement quand tu en as besoin."
+    e_nvl "Pense à fermer les applis après les avoir utilisées, et vérifie le potentiel de fuite des données avec des outils comme Exodus Privacy."
+    hide screen resultat_Data_Sport
 
-label consentement1 :
-    $ renpy.scene(layer="screens")
-    show screen consentement1
-    "mon rythme cardiaque ?"
-    while True :
-        empty ""
-
-label consentement2 :
-    $ renpy.scene(layer="screens")
-    show screen consentement2
-    "mes données podométrique ? C'est le nombre de pas en fait ! Ils ont du vocabulaire chez OK Data."
-    while True :
-        empty ""
-
-label consentement3 :
-    $ renpy.scene(layer="screens")
-    show screen consentement3
-    "Et mon temps d'effort maintenant..."
-    while True :
-        empty ""
-
-label resultat :
-    $ renpy.scene(layer="screens")
-
-#if DS_points ==3:
-    #action Jump "resultat_Data_Sport"
-#else:
-    e_nvl "Lorsque l'on utilise ce type d'application il faut avoir conscience que vos données de santé son en jeux"
-    call addPoints(DS_points,'point_sante') from _call_addPoints_21
-    e_nvl "Si vous scéder toutes les informations, celles-ci peuvent être utiliser sans que vous sachiez à quelle fin"
-    e_nvl "Et même si vous donner juste une partie de celles-ci"
-    e_nvl "Donner vos informations permet il est vrai d'utiliser pleinement les fonctions de l'application et des montres connectées"
-    e_nvl "C'est à vous de décidez ce que vous voulez dire ou ne pas dire."
-    
-    scene black
-    with fade
-    $ hubClickable["watch"]= 0
     jump hub
 
 #label resultat_Data_Sport :
