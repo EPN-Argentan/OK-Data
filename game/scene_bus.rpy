@@ -1,5 +1,6 @@
 default whereYouStart = [False,False,False] #track wich application player has launched [Gallery,Cloud]
 default findYearPic = False
+default birthdayYear = year-2
 
 label bus:
 $ freeWifiActivate = False
@@ -115,11 +116,13 @@ label searchInDataBookDate:
     hide screen dataBookOpening
     $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
     $ birthdayYear = year-2
+    $ dateInput = int(dateInput)
     if dateInput == birthdayYear :
         a "Oui c'était l'année de ses 30 ans"
         a "Mais c'était où ?"
         jump searchInDataBookLocalisation
     else:
+        a "Non ce n'est pas ça...je devrais peut être retourné dans ma galerie photos"
         jump searchInDataBookDate
 
 label searchInDataBookLocalisation:

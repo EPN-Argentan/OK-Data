@@ -1,3 +1,5 @@
+default youSharedTruePic = False
+
 label browserLabel:
     $ hubClickable["phoneCall"]= 0
     scene hub
@@ -59,6 +61,16 @@ label insideEventPage:
     while True:
         empty ""
 
+label photosShared:
+    hide screen browserWindowFeed
+    hide screen insideEvent
+    show screen barre_de_vie
+    show screen sharedPic
+    a "Voilà, c'est fait !"
+    jump hub
+
+
+
 #Screens used in scene_browser
 
 screen insideEvent:
@@ -78,10 +90,22 @@ screen insideEvent:
                     imagebutton:
                         idle At("UI/browser/sendPhotosDatabook.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosDatabook.png"
-                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager ses photos par e-mail. µEn publiant tes photos, tu accordes souvent au réseau social une licence d'utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.","",'hub')
+                        action Call("addPoints",-2,'point_administrative',"","","Il est préférable de partager ses photos par e-mail. µEn publiant tes photos, tu accordes souvent au réseau social une licence d'utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.","",'photosShared')
                     imagebutton:
                         idle At("UI/browser/sendPhotosMail.png", outline_transform(0, "#8080805f", 4.0, offset=(5, 5)))
                         hover "UI/browser/sendPhotosMail.png"
-                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant tes photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.",'hub')
+                        action Call("addPoints",2,'point_administrative',"","","","Tu as bien fait ! µCar en publiant tes photos, tu accordes souvent au réseau social une licence d’utilisation {a=information: Les Conditions Générales d'Utilisation (CGU) sont les règles d'utilisation auxquelles tu as donné ton accord lors de la création de ton compte. Elles t'informent de ce que tu peux ou pas faire et de ce que le réseau social peut faire avec tes données, comme par exemple avec le contenu de tes publications.}(CGU){/a} µqui leur donne le libre choix de les afficher, de les partager, et parfois même de les utiliser à des fins commerciales.",'photosShared')
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")
+
+screen sharedPic:
+    #add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    hbox:
+        ypos 97
+        xpos 42
+        spacing 5
+        imagebutton:
+            if youSharedTruePic:
+                idle "UI/browser/sharedPictureTruePic.png"
+            else:
+                idle "UI/browser/sharedPictureFalsePic.png"
