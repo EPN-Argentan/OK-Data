@@ -152,7 +152,7 @@ label resultat_final:
     show screen resultat_Data_Sport  # Affiche l'écran contenant l'image du résultat
     e "Bien joué, t'es dans rythme !"
     e_nvl "Mais fais attention : ne donne pas ton consentement pour tout. Limite les autorisations à ce qui est vraiment utile, et utilise l'appli seulement quand tu en as besoin."
-    e_nvl "Pense à fermer les applis après les avoir utilisées, et vérifie le potentiel de fuite des données avec des outils comme Exodus Privacy."
+    e_nvl "Pense à fermer les applis après les avoir utilisées, et vérifie le potentiel de fuite des données avec des outils comme {a=https://www.exodus-privacy.eu.org/fr/}Exodus Privacy.{/a}"
     hide screen resultat_Data_Sport
 
     jump hub

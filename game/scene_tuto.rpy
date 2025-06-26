@@ -6,10 +6,10 @@ label tuto:
     show screen skipTuto
 
     show clic
-    play sound "TutoBonjour.mp3"
-    medBubble "Bonjour Alexia, bienvenue à la maison !"
-    play sound "TutoClic.mp3"
-    medBubble "Un simple clic te fera progresser dans le jeu."
+    play sound "PetitMomentEnsemble.mp3"
+    medBubble "Salut Alexia, prête pour un petit moment ensemble ? car on va t'aider à protéger tes données !"
+    play sound "SimpleClic.mp3"
+    medBubble "un simple clic te fait progresser dans le jeu."
     hide clic
     play sound "TutoBleu&Categories.mp3"
     medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories."
