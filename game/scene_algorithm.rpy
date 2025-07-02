@@ -57,6 +57,7 @@ label openTablet:
     nvl clear
     hide screen hubElements
     hide screen barre_de_vie
+    show SearchScreen
     a "ça craint, je ne lui ai toujours rien trouvé comme cadeau..."
     a "une tablette graphique...non il la laissera dans un coin"
     a "Kickboxer !...Non il l'a déjà..."
@@ -92,7 +93,10 @@ label endAlgorithm:
     hide screen algorithmnMenu
     $ hubClickable["tablet"]= 0
     jump hub
-
+#####################################################################SCREEN#####################################################################
+#All scenes elements used in this label
+image SearchScreen:
+    "UI/algorithm/SearchScreen.png"
 #####################################################################SCREENS#########################################################################
 screen catLocalisation:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
