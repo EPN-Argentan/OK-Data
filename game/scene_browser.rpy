@@ -67,6 +67,7 @@ label photosShared:
     show screen barre_de_vie
     show screen sharedPic
     a "Voilà, c'est fait !"
+    hide screen sharedPic
     jump hub
 
 
