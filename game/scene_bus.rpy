@@ -49,7 +49,7 @@ label homeScreen:
     elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
         a "je dois chercher dans le cloud"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-        a "Maintenant que je me rappelle de la date et du lieu je vais pouvoir retrouver la photo dans Databook"
+        a "J’ai la date et le lieu, mais je n’ai pas encore retrouvé la photo. Elle devrait être sur un {a=information: Un post, c’est un petit bout de vie qu’on partage sur les réseaux sociaux — une pensée, une image, une vidéo… bref, c’est un petit instant qu’on choisit de rendre public ou de partager avec ses amis.}post{/a} Databook, allons vérifier !"
     while True:
         empty ""
 
@@ -144,8 +144,8 @@ label foundInDataBook:
     a "Mais comment ils ont fait ?!"
     a "Ils n'ont pas le droit"
     e_nvl "Malheureusement si."
-    e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux vérifier si une photo a été utilisée ailleurs grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
+    e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon ses conditions."
+    e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
