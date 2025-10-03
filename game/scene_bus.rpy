@@ -21,7 +21,7 @@ else:
     e_nvl "Quand tu prends une photo avec ton téléphone, si celui-ci est connecté à ton cloud, la photo peut être automatiquement sauvegardée en ligne."
     e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
     e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
-winted_nvl "Rappel : Votre colis Winsted vous attend ! Pensez à venir le récupérer à temps."
+winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
 a "Oh mince, j’avais complètement oublié !"
 a "Bon, j’y vais tout de suite."
 $ renpy.scene(layer = "screens")
@@ -401,7 +401,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Se connecter à un Wi-Fi public peut sembler pratique, mais c’est un vrai terrain de jeu pour les pirates.","","openDataCloud")]
+            action [Hide("freeWifi"),SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Se connecter à un Wi-Fi public peut sembler pratique, mais c’est un vrai terrain de jeu pour les pirates.","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -409,7 +409,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/DataOFF.png"
                 hover "UI/settingsIcons/DataON.png"
-            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
+            action [Hide("freeWifi"),SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
         imagebutton:
             if LocalisationState == True:
                 idle "UI/settingsIcons/LocalisationON.png"
