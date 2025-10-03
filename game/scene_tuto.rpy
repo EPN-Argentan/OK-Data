@@ -12,7 +12,7 @@ label tuto:
     medBubble "un simple clic te fait progresser dans le jeu."
     hide clic
     play sound "TutoBleu&Categories.mp3"
-    medBubble "Nous avons classé tes {a=information: C'est une information qui permet d’identifier directement ou indirectement une personne.}données personnelles{/a} en six catégories."
+    medBubble "Nous avons classé tes {a=information: Les données personnelles, c’est ton double numérique : ton prénom, ton âge, ton adresse, ou encore tes goûts et préférences. Ce sont des infos qui permettent de te définir en profondeur. Elles sont précieuses, comme un journal intime. Il faut les protéger, comme on protège un trésor : avec attention, discernement, et une bonne dose de prudence.}données personnelles{/a} en six catégories."
     play sound "TutoInteret.mp3"
     medBubble "Les données de centre d’intérêt"
     play sound "TutoSante.mp3"

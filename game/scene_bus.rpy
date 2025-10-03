@@ -14,11 +14,13 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "Oh là là, c'est vraiment vieux ça !"
+    a "Ouah, c’est vieux ça !"
 else:
     show frame_slideshow_withselfie with moveinbottom
-    a "Comment cette photo a-t-elle pu se retrouver là ? J’espère que personne d’autre ne l’aura vue !"
-
+    a "Mais qu’est-ce que cette photo fait là ? Pourvu que personne ne tombe dessus !"
+    e_nvl "Quand tu prends une photo avec ton téléphone, si celui-ci est connecté à ton cloud, la photo peut être automatiquement sauvegardée en ligne."
+    e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
+    e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
 winted_nvl "Rappel : Votre colis Winsted vous attend ! Pensez à venir le récupérer à temps."
 a "Oh mince, j’avais complètement oublié !"
 a "Bon, j’y vais tout de suite."
@@ -49,7 +51,7 @@ label homeScreen:
     elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
         a "je dois chercher dans le cloud"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-        a "Maintenant que je me rappelle de la date et du lieu je vais pouvoir retrouver la photo dans Databook"
+        a "J’ai la date et le lieu, mais je n’ai pas encore retrouvé la photo. Elle devrait être sur un {a=information: Un post, c’est un petit bout de vie qu’on partage sur les réseaux sociaux — une pensée, une image, une vidéo… bref, c’est un petit instant qu’on choisit de rendre public ou de partager avec ses amis.}post{/a} Databook, allons vérifier !"
     while True:
         empty ""
 
@@ -131,7 +133,7 @@ label searchInDataBookLocalisation:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ localisationInput = renpy.input("Entrez la localisation", "Paris", length = 12)
-    if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon":
+    if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon" or localisationInput == "BARCELONE":
             jump foundInDataBook
             hide screen dataBookSearch
     else:
@@ -140,18 +142,18 @@ label searchInDataBookLocalisation:
 label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
-    a "Voilà, c'est celle là"
+    a "Voilà, c'est celle là."
     a "Mais comment ils ont fait ?!"
-    a "Ils n'ont pas le droit"
+    a "Ils n'ont pas le droit !"
     e_nvl "Malheureusement si."
-    e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux vérifier si une photo a été utilisée ailleurs grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
+    e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon leurs conditions."
+    e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
     show screen outOfBattery
     hide screen appsPhone
-    a "Ah, mince ! Et en plus, je n’ai rien pour le recharger."
+    a "Ah, la poisse ! Plus de batterie…"
     hide screen outOfBattery
 
 label travelToStore:
@@ -177,32 +179,39 @@ label insideStore:
     show askStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    show freezeReceive
+    a "Bonjour ! Je viens pour récupérer un colis."
+    vendeuse "Bonjour ! C’est à quel nom, s’il vous plaît ?"
+    a "Mme Alexia."
+    vendeuse "Parfait, je vous le prépare…"
     show receiveStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Bonjour Madame, voici votre colis."
-    a "Merci"
-    vendeuse "Ça pourrait peut-être vous intéresser : aujourd'hui, nous faisons une promotion sur l'impression de MUG."
-    a "Ah d'accord, je pourrais peut-être en profiter pour en faire un pour mon frère."
+    vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs !"
+    a "Oh chouette ! Justement, c’est l’anniversaire de mon frère."
+    vendeuse "Il suffit de choisir une photo et de la glisser sur le mug.\n On a des ordis juste là."
     show computerStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show zoomComputerStore
+    $ renpy.pause(3.0, hard=True)
     show screen storeCustomPage
-    a "Bon, alors, qu'est-ce que je vais pouvoir y mettre ?"
+    a "Top, J’ai sûrement une photo rigolote sur mon téléphone…"
+    a "Ah mince, bien sûr… plus de batterie."
+    a "Heureusement, je peux me connecter à mon cloud direct depuis l’ordi."
     while True:
         empty ""
 
 label outStore:
     show screen storeCustomPage
-    a "Ce sera du plus bel effet !"
+    a "Ça va faire son petit effet !"
     window auto hide
     $ hubClickable["photoFrame"]= 0
     menu:
         "Récupérer votre mug":
-            call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub") from _call_addPoints_1
-        "Rester sur la session":
+            call addPoints(-5,'point_sociaux',"","","Toujours se déconnecter, c’est une bonne habitude !µUn ordi laissé connecté, c’est comme laisser sa porte ouverte : niveau sécurité, c’est moyen...", "","hub") from _call_addPoints_1
+        "Un petit truc en plus !":
             a "J'ai du oublier quelquechose"
     while True:
         empty ""
@@ -392,7 +401,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Il est conseillé d’éviter les réseaux Wi-Fi publics en raison des nombreux risques de sécurité qu’ils présentent.","","openDataCloud")]
+            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Se connecter à un Wi-Fi public peut sembler pratique, mais c’est un vrai terrain de jeu pour les pirates.","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -494,7 +503,7 @@ screen storeCustomPage:
             hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
             xalign 0.77
             yalign 0.15
-            action [Call("addPoints",5,'point_sociaux',"","","","Vous avez raison, il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui",'hub')]
+            action [Call("addPoints",5,'point_sociaux',"","","","Toujours se déconnecter, c’est une bonne habitude !",'hub')]
 
 screen logViaPopup:
     add "UI/store/logVia.png" xalign 0.5 yalign 0.5
