@@ -154,6 +154,7 @@ label foundInDataBook:
     show screen outOfBattery
     hide screen appsPhone
     a "Ah, la poisse ! Plus de batterie…"
+    a "...et mon bus qui arrive"
     hide screen outOfBattery
 
 label travelToStore:
@@ -192,10 +193,11 @@ label insideStore:
     a "Oh chouette ! Justement, c’est l’anniversaire de mon frère."
     vendeuse "Il suffit de choisir une photo et de la glisser sur le mug.\n On a des ordis juste là."
     show computerStore
+    hide freezeReceive
     window auto hide
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.5, hard=True)
     show zoomComputerStore
-    $ renpy.pause(3.0, hard=True)
+    hide receiveStore
     show screen storeCustomPage
     a "Top, J’ai sûrement une photo rigolote sur mon téléphone…"
     a "Ah mince, bien sûr… plus de batterie."

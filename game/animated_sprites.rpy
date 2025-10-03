@@ -216,7 +216,7 @@ image freezeReceive :
 image getInStore = Movie(play="images/sprites/store/getInStore.ogv", size=(1920,1080), loop=False)
 image askStore = Movie(play="images/sprites/store/askStore.ogv", size=(1920,1080), loop=False)
 image receiveStore = Movie(play="images/sprites/store/receiveStore.ogv", size=(1920,1080), loop=False)
-image computerStore = Movie(play="images/sprites/store/computerStore.ogv", size=(1920,1080), loop=False)
+image computerStore = Movie(play="images/sprites/store/zoom_zoom.ogv", size=(1920,1080), loop=False)
 image zoomComputerStore :
     "images/sprites/store/freezeFrameComputerStore.jpeg"
 
