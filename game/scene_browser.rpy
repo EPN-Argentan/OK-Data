@@ -67,9 +67,17 @@ label photosShared:
     show screen barre_de_vie
     show screen sharedPic
     a "Voilà, c'est fait !"
+    hide loungeZoomFix
     hide screen sharedPic
+    #scene lounge with fade
+    hide loungeZoom
+    show loungeIdle with fade
+    hide loungeZoomFix
+    a "Tu vois maman c'était pas si compliqué !"
+    m "Merci ma grande, tu restes manger ce midi ?"
+    a "Ok maman mais après j'y vais, j'ai encore beaucoup de choses à préparer"
+    show black with fade
     jump hub
-
 
 
 ###########################Screens used in scene_browser################################""
