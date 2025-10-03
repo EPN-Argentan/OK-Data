@@ -43,7 +43,7 @@ screen skipTuto:
         idle At("UI/imagebuttons/skipTuto.png", outline_transform(6, "#ffffff", 4.0))
         hover "UI/imagebuttons/skipTuto.png"
         #at bounce
-        action [Hide("skipTuto"),Jump("hub")]
+        action [Function(set_hub_at_Start),Hide("skipTuto"),Jump("hub")]
         xalign 0.9
         yalign 0.05
         xpadding 20

@@ -58,6 +58,8 @@ label openTablet:
     hide screen hubElements
     hide screen barre_de_vie
     show SearchScreen
+    show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
+
     a "ça craint, je ne lui ai toujours rien trouvé comme cadeau..."
     a "une tablette graphique...non il la laissera dans un coin"
     a "Kickboxer !...Non il l'a déjà..."

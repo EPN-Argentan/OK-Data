@@ -72,7 +72,7 @@ label photosShared:
 
 
 
-#Screens used in scene_browser
+###########################Screens used in scene_browser################################""
 
 screen insideEvent:
     add "UI/browser/frameDataBook.png" xpos 42 ypos 97
@@ -110,3 +110,56 @@ screen sharedPic:
                 idle "UI/browser/sharedPictureTruePic.png"
             else:
                 idle "UI/browser/sharedPictureFalsePic.png"
+
+screen browserWindowFeed:
+    add "UI/browser/frameDataBook.png" xpos 42 ypos 97
+    side "c b r":
+        area (358, 160, 675, 800)
+
+        viewport id "vp":
+            draggable True
+            vbox:
+                spacing 30
+                imagebutton:
+                    idle "UI/browser/eventBanner.png"
+                imagebutton:
+                    idle At("UI/browser/eventBirtdhay.png", outline_transform(0, "#8080804f", 10.0, offset=(5, 5)))
+                    hover "UI/browser/eventBirtdhay.png"
+                    action Jump("insideEventPage")
+                imagebutton:
+                    idle "UI/browser/alarmArticle.png"
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+                imagebutton:
+                    idle "UI/browser/chickenArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+                imagebutton:
+                    idle "UI/browser/burgerArticle.jpg"
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+            #add "UI/browser/feedDataBook.png"
+
+        bar value XScrollValue("vp")
+        vbar value YScrollValue("vp")
+
+screen browserWindowSubscribe:
+    add "UI/browser/DataBookToSubscribe.png" xpos 42 ypos 97
+    vbox:
+        spacing 30
+        hbox:
+            spacing 15
+            xpos 380
+            ypos 805
+            imagebutton:
+                idle "UI/browser/fakeInformation_idle.png"
+                hover "UI/browser/fakeInformation_hover.png"
+                action [Hide("browserWindowSubscribe"), Show("browserWindowSubscribeFake"),Call("addPoints",5,"point_sociaux","","","","Bravo ! µ Il est parfois bon de ne pas trop en dire.µLes champs obligatoires * (indiquées par un astérisque) sont suffisants. µTrop de détails sur ton identité peuvent entraîner des fuites de données personnelles de plus en plus précises.µ Des grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","browserLabelFeed")]
+            imagebutton:
+                idle "UI/browser/trueInformation_idle.png"
+                hover "UI/browser/trueInformation_hover.png"
+                action [Hide("browserWindowSubscribe"),Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Evites de donner trop d’informations ou de vraies informations.\nLes champs obligatoires * (indiquées par un astérisque) sont suffisants.µTrop de détails sur ton identité peuvent entraîner des fuites de données personnelles de plus en plus précises.µDes grandes sociétés du {a=information: Les GAFAM sont un groupe de cinq grandes entreprises technologiques américaines : Google, Apple, Facebook (maintenant Meta), Amazon et Microsoft. Elles dominent de nombreux aspects du monde numérique, de la recherche en ligne aux réseaux sociaux, en passant par les achats en ligne et les logiciels.}GAFAM{/a}, comme DATABOOK, récoltent ces données et les revendent ensuite à des fins de marketing ou autres.","","browserLabelFeed"),SetVariable("youSharedTruePic",True)]
+        #add "UI/browser/feedDataBook.png"
+
+screen browserWindowSubscribeTrue:
+    add "UI/browser/DataBookTrueInformation.png" xpos 42 ypos 97
+
+screen browserWindowSubscribeFake:
+    add "UI/browser/DataBookFakeInformation.png" xpos 42 ypos 97

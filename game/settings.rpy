@@ -56,3 +56,14 @@ init -10 python:
     speakerTarget = -1 #Number array element points to target to remove a point
     current_category = 0
 
+
+    def set_hub_at_Start():
+        hubClickable["dog"] = 0
+        hubClickable["phone"] = 1
+        hubClickable["tablet"] = 1
+        hubClickable["laptop"] = 1
+        hubClickable["walkout"] = 1
+        hubClickable["forest"] = 0
+        hubClickable["homeAssistant"] = 1
+        hubClickable["photoFrame"] = 1
+        hubClickable["watch"] = 1
