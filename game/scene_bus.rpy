@@ -205,8 +205,26 @@ label insideStore:
     while True:
         empty ""
 
-label outStore:
-    show screen storeCustomPage
+label outStoreLogOut:
+    show screen readyToPrintLogout
+    show screen windowImportImage
+    a "Quelle photo rendrais le mieux ?"
+    hide screen windowImportImage
+    a "Ça va faire son petit effet !"
+    window auto hide
+    $ hubClickable["photoFrame"]= 0
+    menu:
+        "Récupérer votre mug":
+            jump hub
+    while True:
+        empty ""
+    jump printed
+
+label outStoreLogin:
+    show screen readyToPrintLogin
+    show screen windowImportImage
+    a "Quelle photo rendrais le mieux ?"
+    hide screen windowImportImage
     a "Ça va faire son petit effet !"
     window auto hide
     $ hubClickable["photoFrame"]= 0
@@ -217,6 +235,11 @@ label outStore:
             a "J'ai du oublier quelquechose"
     while True:
         empty ""
+    jump printed
+
+label printed:
+    a "Ça fera un petit cadeau en plus !"
+    a "Allez, je rentre"
     jump hub
 
 
@@ -474,38 +497,46 @@ screen outOfBattery:
     add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
-default profilPic = False
 
 screen storeCustomPage:
     add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
-    if profilPic == False:
-        imagebutton:
-            idle At("UI/store/importPicture.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/importPicture.png"
-            xalign 0.72
-            yalign 0.8
-            action Show("logViaPopup")
-        imagebutton:
-            idle "UI/store/profilPicLogOut.png"
-            hover "UI/store/profilPicLogOut.png"
-            xalign 0.77
-            yalign 0.15
-            action NullAction()
-    else:
-        add "UI/store/customMugShot.png" xalign 0.33 yalign 0.71
-        imagebutton:
-            idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/printBtn.png"
-            xalign 0.70
-            yalign 0.8
-            action Call("outStore")
-        imagebutton:
-            idle At("UI/store/profilPicLogIn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/profilPicLogIn.png"
-            hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
-            xalign 0.77
-            yalign 0.15
-            action [Call("addPoints",5,'point_sociaux',"","","","Toujours se déconnecter, c’est une bonne habitude !",'hub')]
+    imagebutton:
+        idle At("UI/store/importPicture.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/importPicture.png"
+        xalign 0.72
+        yalign 0.8
+        action Show("logViaPopup")
+    imagebutton:
+        idle "UI/store/profilPicLogOut.png"
+        hover "UI/store/profilPicLogOut.png"
+        xalign 0.77
+        yalign 0.15
+        action NullAction()
+
+screen windowImportImage:
+    add "UI/store/importImage.png" xalign 0.33 yalign 0.62
+
+
+screen readyToPrintLogin :
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    add "UI/store/customMugShot.png" xalign 0.33 yalign 0.72
+    imagebutton:
+        idle At("UI/store/profilPicLogIn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/profilPicLogIn.png"
+        hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
+        xalign 0.77
+        yalign 0.15
+        action [Call("addPoints",5,'point_sociaux',"","","","Toujours se déconnecter, c’est une bonne habitude !",'hub')]
+
+screen readyToPrintLogout:
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    add "UI/store/customMugShot.png" xalign 0.33 yalign 0.72
+    imagebutton:
+        idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/printBtn.png"
+        xalign 0.70
+        yalign 0.8
+        action Call("outStore")
 
 screen logViaPopup:
     add "UI/store/logVia.png" xalign 0.5 yalign 0.5
@@ -514,10 +545,10 @@ screen logViaPopup:
         hover "UI/store/logViaOK.png"
         xalign 0.5
         yalign 0.51
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'')]
+        action [Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'outStoreLogin')]
     imagebutton:
         idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaMail.png"
         xalign 0.5
         yalign 0.6
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'')]
+        action [Hide("logViaPopup"), Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'outStoreLogOut')]
