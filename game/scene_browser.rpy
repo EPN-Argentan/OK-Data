@@ -15,7 +15,8 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
-    m "Je suis désolé de te solliciter encore une fois pour un problème d'ordinateur, mais j'ai vraiment besoin de ton aide. C'est pour l'anniversaire de ton frère..."
+    m "Super la photo avec ta sœur ! Ça m’a rappelé que j’ai besoin de toi pour envoyer les photos de ton frère pour la surprise."
+    a "Ah oui, c’est vrai ! J’arrive, je n’en ai pas pour très longtemps."
     jump browserLabelAfterCall
     while True:
         empty ""
@@ -26,10 +27,10 @@ label browserLabelAfterCall:
     #scene lounge with fade
     show loungeIdle with fade
     show screen phoneDown
-    a "C'est quoi le problème ?"
-    m "Eh bien, un ami de ton frère m'a demandé de lui envoyer des photos sur Databook, mais je ne sais pas comment faire !"
-    a "La première chose, c'est de te créer un compte Databook."
-    m "Ah bon, j'ai bien peur de ne pas savoir faire ça. Ça ne te dérangerait pas de le faire à ma place ? Je te laisse mes papiers d'identité si besoin."
+    a "Tu dois faire quoi exactement ?"
+    m "Un ami de ton frère m’a demandé de lui envoyer des photos de Pierrot sur Databook, mais je sais pas du tout m’en servir ! "
+    a "Bon, première étape : faut que tu te crées un compte sur Databook."
+    m "Ah bon ? Ça te dérangerait de le faire pour moi ? Je te laisse ma carte d’identité si jamais."
     hide screen phoneDown
     show loungeZoom
     $ renpy.pause(2.5, hard=True) #Wait zoom animation has been finished before to show laptop screen on
