@@ -19,8 +19,8 @@ label barOut:
     stop music fadeout 1.0
     play music "ambi_bar.mp3"
     empty ""
-    s "Ça fait longtemps, je suis heureuse de te revoir ! Ce texte devrait être super long pour que je teste la longueur de la bulle mon gars, yeah. Encore plus de texte pour avoir beaucoup, beaucoup de longueur "
-    s "Allez, on se fait un {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}Selfie{/a} et on l’envoie à Pierrot, ça l’amusera de revoir ses sœurettes ! "
+    s "Wouhouuu, ça faisait une éternité !"
+    s "Ca vaut bien un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}Selfie{/a} ! \n Pierrot va kiffer de revoir ses frangines. "
     s "Mais attention ! Pas de gaffes sur son anniversaire surprise ! "
     a "OK, je prends mon téléphone."
     show screen selfie

@@ -307,6 +307,15 @@
         ],
         "properties": "bottom_left"
     },
+    "walkOut_52f98c08": {
+        "area": [
+            960,
+            585,
+            560,
+            225
+        ],
+        "properties": "bottom_right"
+    },
     "walkOut_ee8e62ec": {
         "area": [
             1200,

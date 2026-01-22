@@ -14,12 +14,14 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "Oh là là, c'est vraiment vieux ça !"
+    a "Ouah, c’est vieux ça !"
 else:
     show frame_slideshow_withselfie with moveinbottom
-    a "Comment cette photo a-t-elle pu se retrouver là ? J’espère que personne d’autre ne l’aura vue !"
-
-winted_nvl "Rappel : Votre colis Winsted vous attend ! Pensez à venir le récupérer à temps."
+    a "Mais qu’est-ce que cette photo fait là ? Pourvu que personne ne tombe dessus !"
+    e_nvl "Quand tu prends une photo avec ton téléphone, si celui-ci est connecté à ton cloud, la photo peut être automatiquement sauvegardée en ligne."
+    e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
+    e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
+winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
 a "Oh mince, j’avais complètement oublié !"
 a "Bon, j’y vais tout de suite."
 $ renpy.scene(layer = "screens")
@@ -49,7 +51,7 @@ label homeScreen:
     elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
         a "je dois chercher dans le cloud"
     elif whereYouStart[0] == True and whereYouStart[1] == True: #Player launched both applications
-        a "Maintenant que je me rappelle de la date et du lieu je vais pouvoir retrouver la photo dans Databook"
+        a "J’ai la date et le lieu, mais je n’ai pas encore retrouvé la photo. Elle devrait être sur un {a=information: Un post, c’est un petit bout de vie qu’on partage sur les réseaux sociaux — une pensée, une image, une vidéo… bref, c’est un petit instant qu’on choisit de rendre public ou de partager avec ses amis.}post{/a} Databook, allons vérifier !"
     while True:
         empty ""
 
@@ -131,7 +133,7 @@ label searchInDataBookLocalisation:
     show screen dataBookSearch
     hide screen dataBookOpening
     $ localisationInput = renpy.input("Entrez la localisation", "Paris", length = 12)
-    if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon":
+    if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon" or localisationInput == "BARCELONE":
             jump foundInDataBook
             hide screen dataBookSearch
     else:
@@ -140,18 +142,19 @@ label searchInDataBookLocalisation:
 label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
-    a "Voilà, c'est celle là"
+    a "Voilà, c'est celle là."
     a "Mais comment ils ont fait ?!"
-    a "Ils n'ont pas le droit"
+    a "Ils n'ont pas le droit !"
     e_nvl "Malheureusement si."
-    e_nvl "Quand tu partages une photo sur un réseau social, celle-ci ne t'appartient plus."
-    e_nvl "Tu peux vérifier si une photo a été utilisée ailleurs grâce à des outils de recherche inversée comme {a=https://lens.google/intl/fr/}google lens{/a}."
+    e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon leurs conditions."
+    e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
     window auto hide
     $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
     show screen outOfBattery
     hide screen appsPhone
-    a "Ah, mince ! Et en plus, je n’ai rien pour le recharger."
+    a "Ah, la poisse ! Plus de batterie…"
+    a "...et mon bus qui arrive"
     hide screen outOfBattery
 
 label travelToStore:
@@ -177,35 +180,66 @@ label insideStore:
     show askStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    show freezeReceive
+    a "Bonjour ! Je viens pour récupérer un colis."
+    vendeuse "Bonjour ! C’est à quel nom, s’il vous plaît ?"
+    a "Mme Alexia."
+    vendeuse "Parfait, je vous le prépare…"
     show receiveStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Bonjour Madame, voici votre colis."
-    a "Merci"
-    vendeuse "Ça pourrait peut-être vous intéresser : aujourd'hui, nous faisons une promotion sur l'impression de MUG."
-    a "Ah d'accord, je pourrais peut-être en profiter pour en faire un pour mon frère."
+    vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs !"
+    a "Oh chouette ! Justement, c’est l’anniversaire de mon frère."
+    vendeuse "Il suffit de choisir une photo et de la glisser sur le mug.\n On a des ordis juste là."
     show computerStore
+    hide freezeReceive
     window auto hide
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(1.5, hard=True)
     show zoomComputerStore
+    hide receiveStore
     show screen storeCustomPage
-    a "Bon, alors, qu'est-ce que je vais pouvoir y mettre ?"
+    a "Top, J’ai sûrement une photo rigolote sur mon téléphone…"
+    a "Ah mince, bien sûr… plus de batterie."
+    a "Heureusement, je peux me connecter à mon cloud direct depuis l’ordi."
     while True:
         empty ""
 
-label outStore:
-    show screen storeCustomPage
-    a "Ce sera du plus bel effet !"
+label outStoreLogOut:
+    show screen readyToPrintLogout
+    show screen windowImportImage
+    a "Quelle photo rendrais le mieux ?"
+    hide screen windowImportImage
+    a "Ça va faire son petit effet !"
     window auto hide
     $ hubClickable["photoFrame"]= 0
     menu:
         "Récupérer votre mug":
-            call addPoints(-5,'point_sociaux',"","","Il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui", "","hub") from _call_addPoints_1
-        "Rester sur la session":
+            jump hub
+    while True:
+        empty ""
+    jump printed
+
+label outStoreLogin:
+    show screen readyToPrintLogin
+    show screen windowImportImage
+    a "Quelle photo rendrais le mieux ?"
+    hide screen windowImportImage
+    a "Ça va faire son petit effet !"
+    window auto hide
+    $ hubClickable["photoFrame"]= 0
+    menu:
+        "Récupérer votre mug":
+            call addPoints(-5,'point_sociaux',"","","Toujours se déconnecter, c’est une bonne habitude !µUn ordi laissé connecté, c’est comme laisser sa porte ouverte : niveau sécurité, c’est moyen...", "","hub") from _call_addPoints_1
+        "Un petit truc en plus !":
             a "J'ai du oublier quelquechose"
     while True:
         empty ""
+    jump printed
+
+label printed:
+    a "Ça fera un petit cadeau en plus !"
+    a "Allez, je rentre"
     jump hub
 
 
@@ -392,7 +426,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/WifiOFF.png"
                 hover "UI/settingsIcons/WifiON.png"
-            action [SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Il est conseillé d’éviter les réseaux Wi-Fi publics en raison des nombreux risques de sécurité qu’ils présentent.","","openDataCloud")]
+            action [Hide("freeWifi"),SetVariable("WifiState", not WifiState),Call("addPoints",-5,"point_localisation","","","Se connecter à un Wi-Fi public peut sembler pratique, mais c’est un vrai terrain de jeu pour les pirates.","","openDataCloud")]
         imagebutton:
             if DataState == True:
                 idle "UI/settingsIcons/DataON.png"
@@ -400,7 +434,7 @@ screen freeWifi:
             else:
                 idle "UI/settingsIcons/DataOFF.png"
                 hover "UI/settingsIcons/DataON.png"
-            action [SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
+            action [Hide("freeWifi"),SetVariable("DataState", not DataState),Call("addPoints",+5,"point_localisation","",""," ","Tu as bien fait d’éviter le Wi-Fi public, car il présente de nombreux risques de sécurité.","openDataCloud")]
         imagebutton:
             if LocalisationState == True:
                 idle "UI/settingsIcons/LocalisationON.png"
@@ -463,38 +497,46 @@ screen outOfBattery:
     add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
-default profilPic = False
 
 screen storeCustomPage:
     add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
-    if profilPic == False:
-        imagebutton:
-            idle At("UI/store/importPicture.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/importPicture.png"
-            xalign 0.72
-            yalign 0.8
-            action Show("logViaPopup")
-        imagebutton:
-            idle "UI/store/profilPicLogOut.png"
-            hover "UI/store/profilPicLogOut.png"
-            xalign 0.77
-            yalign 0.15
-            action NullAction()
-    else:
-        add "UI/store/customMugShot.png" xalign 0.33 yalign 0.71
-        imagebutton:
-            idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/printBtn.png"
-            xalign 0.70
-            yalign 0.8
-            action Call("outStore")
-        imagebutton:
-            idle At("UI/store/profilPicLogIn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-            hover "UI/store/profilPicLogIn.png"
-            hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
-            xalign 0.77
-            yalign 0.15
-            action [Call("addPoints",5,'point_sociaux',"","","","Vous avez raison, il vaut mieux toujours prendre l'habitude de se déconnecter de n'importe quelle sessionµ Un ordinateur resté connecté est une porte ouverte pour n'importe qui",'hub')]
+    imagebutton:
+        idle At("UI/store/importPicture.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/importPicture.png"
+        xalign 0.72
+        yalign 0.8
+        action Show("logViaPopup")
+    imagebutton:
+        idle "UI/store/profilPicLogOut.png"
+        hover "UI/store/profilPicLogOut.png"
+        xalign 0.77
+        yalign 0.15
+        action NullAction()
+
+screen windowImportImage:
+    add "UI/store/importImage.png" xalign 0.33 yalign 0.62
+
+
+screen readyToPrintLogin :
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    add "UI/store/customMugShot.png" xalign 0.33 yalign 0.72
+    imagebutton:
+        idle At("UI/store/profilPicLogIn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/profilPicLogIn.png"
+        hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Déconnexion"))]
+        xalign 0.77
+        yalign 0.15
+        action [Call("addPoints",5,'point_sociaux',"","","","Toujours se déconnecter, c’est une bonne habitude !",'hub')]
+
+screen readyToPrintLogout:
+    add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
+    add "UI/store/customMugShot.png" xalign 0.33 yalign 0.72
+    imagebutton:
+        idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/printBtn.png"
+        xalign 0.70
+        yalign 0.8
+        action Call("outStore")
 
 screen logViaPopup:
     add "UI/store/logVia.png" xalign 0.5 yalign 0.5
@@ -503,10 +545,10 @@ screen logViaPopup:
         hover "UI/store/logViaOK.png"
         xalign 0.5
         yalign 0.51
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'')]
+        action [Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'outStoreLogin')]
     imagebutton:
         idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaMail.png"
         xalign 0.5
         yalign 0.6
-        action [SetVariable("profilPic","True"),Hide("logViaPopup"),Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'')]
+        action [Hide("logViaPopup"), Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'outStoreLogOut')]
