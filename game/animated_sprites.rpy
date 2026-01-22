@@ -150,7 +150,7 @@ image loungeHandIn :
 
 image handInFixed :
     "sprites/lounge/handIn/handIn017.png"
-    
+
 image clic :
     "sprites/clic/clic1.png"
     pause 0.1
@@ -222,4 +222,6 @@ image zoomComputerStore :
 
 image runwatch = Movie(play="images/sprites/run&watch/run&Watch.ogv", size=(1920,1080), loop=True)
 
-image home_assistant = Movie(play="images/sprites/home_assistant/home_assistant.ogv", size=(1920,1080), loop=True)
+image home_assistant = Movie(play="images/sprites/home_assistant/zoom-enceinte.ogv", size=(1920,1080), loop=False, image = "images/sprites/home_assistant/lastFrameImage_zoom_enceinte.png")
+
+image zoomEnceinte = Movie(play="images/sprites/home_assistant/zoom-enceinte_1.ogv", size=(1920,1080), loop=False)

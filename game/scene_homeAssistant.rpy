@@ -23,15 +23,20 @@ label homeAssistant:
     else :
     #Second time you click on home assistant
         $ switchOnHomeAssistant = False
+
         show screen homeAssistantButton # Display interface home assistant button
+        
+        #show zoomEnceinte
 
     jump hub
     nvl clear
 
 screen homeAssistantButton:
+    add "images/sprites/home_assistant/lastFrameImage_zoom_enceinte.png"
+
     imagebutton:
-        xalign 0.46
-        yalign 0.7
+        xalign 0.63
+        yalign 0.46
         idle At("images/UI/homeAssistant/homeAssistantBtn.png", outline_transform(6, "#ffffff", 4.0))
         hover "images/UI/homeAssistant/homeAssistantBtn.png"
         action [SetVariable("speakerState", "False"),Jump("endHomeAssitant")]
@@ -61,6 +66,3 @@ init python:
             threading.Timer(10.0, printit).start()
         else:
             print("Home assistant désactivé")
-
-
-  
