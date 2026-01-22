@@ -3,9 +3,9 @@ label barOut:
     #show screen phoneDown
     hide screen phoneDown
 
-    syrielle_nvl "Salut frangine ! \n Ça va arriver vite, faut qu’on s’organise pour la surprise du fréro. T’es dispo ? On pourrait se retrouver au bar Chez Thon Thon, rue du Port."
-    syrielle_nvl "Yes, t’as raison. On peut s’y retrouver maintenant."
-    syrielle_nvl "Un coup de téléportation et j’arrive !"
+    syrielle_nvl "Salut frangine 👋 ! \n Ça va arriver vite, faut qu’on s’organise pour la surprise 🎉 du fréro. T’es dispo ? On pourrait se retrouver au bar Chez Thon Thon 🐟, rue du Port."
+    syrielle_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant.💕"
+    syrielle_nvl "Un coup de téléportation et j’arrive !😜"
     a "J’me souviens plus trop comment y aller, on check ça sur Data Maps."
     hide screen hubElements
     show screen dataMap

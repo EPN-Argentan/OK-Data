@@ -17,7 +17,7 @@ label dataZon :
   show screen barre_de_vie
   stop music fadeout 1.0
   play music "Trickling Up - Godmode.mp3"
-  a "allors... mes mails ?"
+  a "alors... mes mails ?"
   window auto hide
   $ renpy.pause(2.0, hard=True)
   show screen desktopbutton
