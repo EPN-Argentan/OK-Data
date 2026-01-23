@@ -308,6 +308,7 @@ screen selfie :
         yalign 0.8
         idle "UI/applications/Icons/send_idle.png"
         hover "UI/applications/Icons/send_hover.png"
+        sensitive not mediateurDisplayMessage
         action Jump("barOutAfter")
 
 

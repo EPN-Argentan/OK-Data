@@ -1,12 +1,15 @@
 #life bar set
 init:
     define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'ontop' ]
+    
 
 init -10 python:
 
     import time
     year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
 
+    mediateurDisplayMessage = False #Track if mediateur is talking
+    
     maxPts = 20
     minPts = 0
     initPts = 10

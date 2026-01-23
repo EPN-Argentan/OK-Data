@@ -62,5 +62,6 @@ init python:
             renpy.restart_interaction() #Refresh screen to show variable modification
             renpy.redraw("barre_de_vie",0)
             threading.Timer(10.0, printit).start()
+            renpy.play("audio/pop.mp3")
         else:
             print("Home assistant désactivé")
