@@ -20,20 +20,18 @@ label homeAssistant:
         d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
         d "Vous avez aussi demandé que je vous rappel que votre maman compte sur vous pour trouver le cadeau qu'elle doit lui offrir"
         d "Puis-continuer à vous aider ?"
+        jump hub
     else :
     #Second time you click on home assistant
         $ switchOnHomeAssistant = False
-
         show screen homeAssistantButton # Display interface home assistant button
-        
         #show zoomEnceinte
-
-    jump hub
-    nvl clear
+        while True:
+            empty ""
+nvl clear
 
 screen homeAssistantButton:
     add "images/sprites/home_assistant/lastFrameImage_zoom_enceinte.png"
-
     imagebutton:
         xalign 0.63
         yalign 0.46
