@@ -50,7 +50,7 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    a "C’est bon maman, ton compte est activé. On va pouvoir consulter l’événement créé pour l’anniversaire de Pierre."
+    a "C’est bon maman, ton compte est activé. On va pouvoir consulter l’événement pour l’anniversaire de Pierre."
     while True:
         empty ""
 
@@ -164,7 +164,7 @@ screen browserWindowSubscribe:
             imagebutton:
                 idle "UI/browser/trueInformation_idle.png"
                 hover "UI/browser/trueInformation_hover.png"
-                action [Hide("browserWindowSubscribe"),Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Evitez de donner trop d’informations. Les champs obligatoires *(indiqués par un astérisque) sont suffisants. µTrop de précision sur ton identité peut entraîner la divulgation de données un peu trop personnellesµDes grandes Société comme ici DATABOOK récoltent ces données et les revendent ensuite µ cela à des fins de marketing ou à d’autres sociétés parfois peu scrupuleuses.","","browserLabelFeed"),SetVariable("youSharedTruePic",True)]
+                action [Hide("browserWindowSubscribe"),Show("browserWindowSubscribeTrue"),Call("addPoints",-5,"point_sociaux","","","Évite de fournir plus d’informations que nécessaire. Les champs obligatoires (indiqués par un astérisque) suffisent généralement.µDonner trop de détails sur ton identité peut conduire à partager des données personnelles sensibles.µCertaines plateformes comme DATABOOK collectent ces informations pour les utiliser à des fins d’analyse ou de marketing,µvoire les transmettre à des sociétés peu scrupuleuses.","","browserLabelFeed"),SetVariable("youSharedTruePic",True)]
         #add "UI/browser/feedDataBook.png"
 
 screen browserWindowSubscribeTrue:
