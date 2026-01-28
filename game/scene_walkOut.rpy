@@ -2,9 +2,9 @@ label walkOut :
     scene hub
     hide screen hubElements
     play sound "TutoAdmin.mp3"
-    e_nvl "Hey ! Moi c’est ton {a=information: Le médiateur numérique est un super-héros du monde digital ! Il a pour mission d’accompagner les publics vers une autonomie des usages du numérique.}médiateur numérique{/a}, prêt à t’accompagner, te guider et te filer quelques bons tuyaux."
-    e_nvl "D'ailleurs, il serait grand temps de sortir promener ton chien."
-    e_nvl "On y vaaa !"
+    e_nvl "👋 Hey ! Moi c’est ton {a=information: Le médiateur numérique est un super-héros du monde digital ! Il a pour mission d’accompagner les publics vers une autonomie des usages du numérique.}médiateur numérique{/a}, prêt à t’accompagner, te guider et te filer quelques bons tuyaux."
+    e_nvl "D'ailleurs, il serait grand temps de sortir promener ton 🐶"
+    e_nvl "On y vaaa ! 🏃‍➡️"
     nvl clear
     window hide
     hide screen hubElements
@@ -20,9 +20,9 @@ label walkOut :
     empty ""
     #hide screen phoneDown
     hide clic
-    sepharo_nvl "Ça fait longtemps que vous n'êtes pas venu nous voir !"
+    sepharo_nvl "✨ Ça fait longtemps que vous n'êtes pas venu nous voir !"
 
-    sepharo_nvl "En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
+    sepharo_nvl "🎁 En ce moment pour l'achat d'un parfum, vous avez le deuxième à moitié prix !"
     hide screen skipTuto
     call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée ta {a=information: La géolocalisation, c’est la capacité de repérer ta position sur une carte en temps réel, grâce aux satellites, au Wi-Fi ou aux réseaux mobiles. En gros, ton téléphone sait où tu es… et ça permet de trouver ton chemin, recevoir la météo locale, retrouver ton resto préféré… mais aussi pour OK DATA de savoir ce que tu fais.}géolocalisation{/a}, tu peux être localisé par OK DATA, qui revendra cette information à ses partenaires, comme SEPHARO.", "Bien joué, t’as eu le bon réflexe en désactivant ta localisation !") from _call_addPoints_8
     show screen phoneDown
@@ -37,8 +37,8 @@ label walkOut :
     nvl clear
     scene hub with fade
     hide screen hubElements
-    e_nvl "Maintenant, tu es prêt pour la grande aventure des données personnelles."
-    e_nvl "À toi de jouer !"
+    e_nvl "Maintenant, tu es prêt pour la grande aventure 👩‍🚀 des données personnelles."
+    e_nvl "À toi de jouer 🕹️ !"
 
     $ dogInBasket = False
     ##Set hub elements clickable

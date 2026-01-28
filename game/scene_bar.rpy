@@ -3,10 +3,10 @@ label barOut:
     #show screen phoneDown
     hide screen phoneDown
 
-    syrielle_nvl "Salut frangine 👋 ! \n Ça va arriver vite, faut qu’on s’organise pour la surprise 🎉 du fréro. T’es dispo ? On pourrait se retrouver au bar Chez Thon Thon 🐟, rue du Port."
-    syrielle_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant.💕"
+    syrielle_nvl "Salut frangine ! \nÇa va arriver vite, faut qu’on s’organise pour la surprise 🎉 du fréro. T’es dispo ? On pourrait se retrouver au bar Chez Thon Thon 🐟, rue du Port."
+    syrielle_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant."
     syrielle_nvl "Un coup de téléportation et j’arrive !😜"
-    a "J’me souviens plus trop comment y aller, on check ça sur Data Maps."
+    a "J’me souviens plus trop comment y aller, on vérifie ça sur Data Maps."
     hide screen hubElements
     show screen dataMap
     window auto hide
@@ -23,7 +23,7 @@ label barOut:
     play music "ambi_bar.mp3"
     empty ""
     s "Wouhouuu ! Ça fait une éternité qu’on ne s’est pas vus, il faut l’anniversaire de Pierrot pour qu’on se retrouve !"
-    s "Tu as raison, on va immortaliser ça. On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie{/a} ! J’enverrai la photo à maman, ça va lui faire plaisir de nous voir ensemble."
+    s "Tu as raison, on va immortaliser ça. On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie !{/a}  J’enverrai la photo à maman, ça va lui faire plaisir de nous voir ensemble."
     show screen selfie
     with dissolve
     while True:
