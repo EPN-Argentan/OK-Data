@@ -38,6 +38,8 @@ init -10 python:
         'forest' : 0
     }
 
+    ressourceReward = True
+    
     #avoid to go upper than maximum points or lower than minimum points
     def checkMinMax():
         for key, value in points.items():

@@ -70,6 +70,10 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
     if not labelNext:
         $ mediateurDisplayMessage = False
         return
+    elif labelNext == "sources":
+        $ mediateurDisplayMessage = False
+        $ renpy.scene(layer = "menu")
+        $ renpy.call_screen("sources")
     else:
         $ mediateurDisplayMessage = False
         $ renpy.scene(layer = "screens")
@@ -162,7 +166,7 @@ define config.hyperlink_handlers = {
     "information": information_display
 }
 
-#Display information bubble clickable to go to ecternal URL
+#Display information bubble clickable to go to external URL
 
 screen sourcesDisplay(title,URL,categorie):
     hbox:
