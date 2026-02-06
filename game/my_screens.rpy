@@ -5,7 +5,12 @@ screen hubElements:
         idle At('UI/imagebuttons/sources.png', outline_transform(6, "#ffffff", 4.0))
         hover "UI/imagebuttons/sources.png"
         hovered [SetField(mtt, 'redraw', True), mtt.Action(Text("Sources"))]
-        action ShowMenu("sources")
+        #action ShowMenu("sources")
+        if ressourceReward :
+            #Quand je joueur ouvre l'écran des Sources pour la première fois
+            action [SetVariable("ressourceReward", False),ShowMenu("sources"), Call("addPoints",5,'point_conviction',"","","","Bravo, il est important de consulter les sources d'informations")]
+        else :
+            action ShowMenu("sources")
     if hubClickable["dog"] == 1:
         imagebutton:
             xpos 1467
@@ -308,6 +313,7 @@ screen selfie :
         yalign 0.8
         idle "UI/applications/Icons/send_idle.png"
         hover "UI/applications/Icons/send_hover.png"
+        sensitive not mediateurDisplayMessage
         action Jump("barOutAfter")
 
 
