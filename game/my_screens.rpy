@@ -74,7 +74,7 @@ screen hubElements:
             ypos 145
             idle At('UI/imagebuttons/photoFrame.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/photoFrame.png"
-            action Jump("bus")
+            action Jump("photoFrameCheck")
     
     if hubClickable["homeAssistant"] == 1:
         imagebutton:
