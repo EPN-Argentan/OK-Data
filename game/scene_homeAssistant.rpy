@@ -25,7 +25,7 @@ label homeAssistant:
         $ switchOnHomeAssistant = False
 
         show screen homeAssistantButton # Display interface home assistant button
-        
+
         #show zoomEnceinte
 
     jump hub
@@ -33,7 +33,7 @@ label homeAssistant:
 
 screen homeAssistantButton:
     add "images/sprites/home_assistant/lastFrameImage_zoom_enceinte.png"
-
+    
     imagebutton:
         xalign 0.63
         yalign 0.46
