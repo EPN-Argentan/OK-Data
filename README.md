@@ -301,4 +301,8 @@ Il faudra alors reporter ces positions dans les variables correspondantes :
   default goodKeyCode2 = [0]
   default goodKeyCode3 = [0]
 ```
-Dans cette exemple, il y a deux combinaisons possible : ["skis","neige","montagne"] ou ["voiture rouge","neige","montagne"].
+Dans cette exemple, il y a deux combinaisons possible : 
+
+```python
+["skis","neige","montagne"] ou ["voiture rouge","neige","montagne"]
+```
