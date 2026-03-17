@@ -15,7 +15,7 @@ label browserLabelCall:
     show screen callPhoneAnswer
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
-    m "Super la photo avec ta sœur ! Ça m’a rappelé que j’ai besoin de toi pour envoyer des photos de ton frère."
+    m "Super, la photo avec ta sœur ! Ça m’a rappelé\nque j’aurai besoin de toi pour envoyer des photos."
     a "Ah oui, c’est vrai ! J’arrive, à tout de suite."
     jump browserLabelAfterCall
     while True:
@@ -28,9 +28,9 @@ label browserLabelAfterCall:
     show loungeIdle with fade
     show screen phoneDown
     a "Tu dois faire quoi exactement ?"
-    m "Un ami de ton frère m’a demandé de lui envoyer des photos de Pierrot sur Databook, mais je ne sais pas du tout m’en servir ! "
+    m "Un ami de ton frère m’a demandé de lui envoyer des photos\nde Pierrot sur Databook, mais je ne sais pas m’en servir ! "
     a "Bon, la première étape, c’est de créer un compte."
-    m "Ah bon ? Ça ne te dérangerait pas de le faire pour moi ? Je te laisse ma carte d’identité si besoin."
+    m "Ah bon ? Ça ne te dérangerait pas de le faire pour moi ? \nJe te laisse ma carte d’identité si besoin."
     hide screen phoneDown
     show loungeZoom
     $ renpy.pause(2.5, hard=True) #Wait zoom animation has been finished before to show laptop screen on
@@ -50,7 +50,7 @@ label browserLabelFeed:
     hide screen browserWindowSubscribeFake
     hide screen browserWindowSubscribeTrue
     show screen barre_de_vie
-    a "C’est bon maman, ton compte est activé. On va pouvoir consulter l’évènement pour l’anniversaire."
+    a "C’est bon maman, ton compte est activé.\nOn va pouvoir consulter l’évènement de l’anniversaire."
     while True:
         empty ""
 
@@ -58,7 +58,7 @@ label insideEventPage:
     hide screen browserWindowFeed
     show screen insideEvent
     show screen barre_de_vie
-    a "Regarde, tu descends un peu avec l’ascenseur bleu, et tu trouveras un bouton pour partager des photos."
+    a "Regarde, tu descends un peu avec l’ascenseur bleu,\net tu trouveras un bouton pour partager des photos."
     while True:
         empty ""
 
@@ -76,7 +76,7 @@ label photosShared:
     hide loungeZoomFix
     a "Tu vois maman ce n'était pas si compliqué !"
     m "Merci ma grande, tu restes manger ce midi ?"
-    a "Ok maman mais après j'y vais, j'ai encore beaucoup de choses à préparer."
+    a "Ok maman, mais après j'y vais,\nj'ai encore beaucoup de choses à préparer."
     show black with fade
     jump hub
 
@@ -137,13 +137,13 @@ screen browserWindowFeed:
                     action Jump("insideEventPage")
                 imagebutton:
                     idle "UI/browser/alarmArticle.png"
-                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens d’articles racoleurs peuvent vous rediriger vers des sites frauduleux.","",'')
                 imagebutton:
                     idle "UI/browser/chickenArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens d’articles racoleurs peuvent vous rediriger vers des sites frauduleux.","",'')
                 imagebutton:
                     idle "UI/browser/burgerArticle.jpg"
-                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens des articles racoleurs peuvent vous diriger vers des sites frauduleux.","",'')
+                    action Call("addPoints",-1,'point_conviction',"","","Attention, les liens d’articles racoleurs peuvent vous rediriger vers des sites frauduleux.","",'')
             #add "UI/browser/feedDataBook.png"
 
         bar value XScrollValue("vp")

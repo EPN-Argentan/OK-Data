@@ -17,11 +17,11 @@ label dataZon :
   show screen barre_de_vie
   stop music fadeout 1.0
   play music "Trickling Up - Godmode.mp3"
-  a "alors... mes mails ?"
+  a "Ah tiens, il serait temps que je check un peu mes mails !"
   window auto hide
   $ renpy.pause(2.0, hard=True)
   show screen desktopbutton
-  a "allons-y !"
+  a "Voyons voir ce que j’ai reçu !"
   while True:
       empty ""
 
@@ -35,7 +35,7 @@ label mailx3 :
     show screen barre_de_vie
     if default_clicks >= 3:
         show screen notifMail
-    a "hum... je lis quel mail"
+    a "Bon… on fait quoi maintenant !"
 
     while True:
         empty ""
@@ -53,9 +53,9 @@ label brouillon :
 
     show screen barre_de_vie
 
-    a "Ah mais oui mon mail d'hier soir... Je dois le finir."
+    a "Ah tiens, c’est vrai, j’avais commencé ce mail hier…\nIl serait peut-être temps de l’envoyer ! "
 
-    a "Bon je l'envoi à tous mes contacts. J'envoi en A ou en CCI ?"
+    a "Je vais l’envoyer à tous mes contacts…\nmais je choisis quoi, moi ? En A ou en CCI ?"
 
     while True:
         empty ""
@@ -68,7 +68,8 @@ label Brouillon_phone_ok :
     show screen brouillon
     show screen barre_de_vie
     call addPoints(2,'point_sociaux') from _call_addPoints_2
-    e_nvl "Bravo, En effet rien ne sert de communiquer les mails de tes proches à tous"
+    e_nvl "Bravo ! En effet, les personnes en CCI reçoivent bien le message, mais personne ne voit qu’elles y sont."
+    e_nvl "Du coup, tu ne diffuses pas les adresses de tout le monde sans leur autorisation."
     jump mailx3
 
     while True:
@@ -84,7 +85,8 @@ label Brouillon_phone_No:
 
 
     call addPoints(-2,'point_sociaux') from _call_addPoints_3
-    e_nvl "Il faut mieux éviter de placer tous tes contacts dans A car tu communiques les adresses à tous."
+    e_nvl "Si tu mets plusieurs adresses dans le champ A, tu risques de partager les adresses de tout le monde sans leur accord."
+    e_nvl "Quand on écrit à plusieurs personnes en même temps, c’est mieux de mettre les adresses en caché, dans le champ CCI (Copie Carbone Invisible)."
     jump mailx3
 
     while True:
@@ -105,7 +107,7 @@ label mail_coli6mots :
     show screen mail_coli6mots
     with dissolve
     show screen barre_de_vie
-    a "Hum un colis ?"
+    a "Tiens, je ne me souviens même plus\nde ce que j’ai bien pu commander."
 
     while True:
         empty ""
@@ -116,12 +118,13 @@ label feed_coli6mots :
 
     show screen feed_coli6mots
     show screen barre_de_vie
-    a "Oh Zut !"
+    a "C’est bien la première fois qu’on me demande\nde payer des frais supplémentaires."
 
 label Noformok :
     nvl clear
     call addPoints(+2,'point_administrative') from _call_addPoints_22
-    e_nvl "Bravo, il ne faut pas en effet répondre à ce genre de mail. L'adresse mail était suspecte"
+    e_nvl "Bon réflexe ! L’adresse mail de l’expéditeur était suspecte."
+    e_nvl "Au moindre doute, évite de cliquer sur des liens ou des boutons." 
     jump mailx3
 
 label phonestopcoli6mots :
@@ -132,8 +135,9 @@ label phonestopcoli6mots :
     show screen feed_coli6mots_statique
     show screen barre_de_vie
     call addPoints(-2,'point_administrative') from _call_addPoints_4
-    e_nvl "Zut, voici un mail du type phishing qui cherche à dérober des informations et à t'extorquer de l'argent."
-    e_nvl "Penses à vérifier l'adresse de l'expéditeur avant de cliquer"
+    e_nvl "Adopte le bon réflexe, vérifie toujours l’adresse de l’expéditeur."
+    e_nvl "Elle te donne souvent un indice précieux pour repérer une tentative de phishing."
+    e_nvl "Les fraudeurs imitent l’apparence d’un message officiel, ta banque, un service de livraison, une administration, pour t’inciter à cliquer, à donner des informations personnelles ou à t’extorquer de l’argent."
     jump mailx3
 
 
@@ -150,7 +154,7 @@ label superclerc:
     show screen superclerc
     with dissolve
     show screen barre_de_vie
-    a "ok, mon ticket de course... Pas d'importance."
+    a "L’adresse me semble correcte — …@superclerc.com\nGrace a ma carte fidélité, je peux recevoir mon ticket par mail,\nmais du coup ils ont accès à tout l’historique de mes achats."
     jump mailx3
 
 
@@ -167,7 +171,7 @@ label mailsepharo :
     show screen mailsepharo
     with dissolve
     show screen barre_de_vie
-    a "Oh ? Ah oui c'est vrai j'avais laissé ma géolocalisation activée"
+    a "Tiens, on n’est jamais tranquille : que tu promènes ton chien\nou que tu sois affalé sur ton canapé, il ne t’oublie jamais."
     jump mailx3
 
 label datazonmail :

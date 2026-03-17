@@ -6,7 +6,7 @@ label barOut:
     syrielle_nvl "Salut frangine ! \nFaut qu’on s’organise pour la surprise 🎉 \ndu fréro. T’es dispo ?\nOn pourrait se\nretrouver au bar\nChez Thon Thon 🐟,\nrue du Port."
     syrielle_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant."
     syrielle_nvl "Un coup\nde téléportation,\net j’y suis ! 😜"
-    a "J’me souviens plus trop comment y aller, on vérifie ça sur Data Maps."
+    a "J’me souviens plus trop comment y aller, \non vérifie ça sur Data Maps."
     hide screen hubElements
     show screen dataMap
     #medBubble "Petite idée de Germain :\nÀ ce moment là, on pourrait peut être afficher une fenêtre proposant quatre choix sur l’utilisation de la localisation par DATA Maps :\n- « Autoriser uniquement si l’application est en cours d’utilisation » \n- « Toujours autoriser » \n-« Demander à chaque fois » \n- « Refuser »"
@@ -27,8 +27,9 @@ label barOut:
     #medBubble "Germain : J'ai ajouté une flèche clic car j'ai remarqué une attente de la part des joueurs."
     empty ""
     hide clic
-    s "Wouhouuu ! Ça fait une éternité qu’on ne s’est pas vues, il faut l’anniversaire de Pierrot pour qu’on se croise !"
-    s "Tu as raison, on va immortaliser ça. On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie !{/a}  J’enverrai la photo à maman, ça va lui faire plaisir de nous voir ensemble."
+    a "Wouhouuu ! Ça fait une éternité qu’on ne s’est pas vues,\nil faut l’anniversaire de Pierrot pour qu’on se croise !"
+    s "Tu as raison, on va immortaliser ça."
+    a "On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie ?{/a}  et je l’enverrai à maman,\nça lui fera plaisir de nous voir ensemble."
     show screen selfie
     with dissolve
     while True:
