@@ -36,7 +36,7 @@ label homeScreen:
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
     if whereYouStart[0] == False and whereYouStart[1] == False: #Player launch gallery at first
-        a "En cherchant sur mes photos ou mon {a=information: Au lieu de garder tes données ou tes photos sur ton ordinateur, ou ton téléphone, tu les envoies dans le Cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n'importe où, tant que tu as une connection internet. }cloud{/a}, je devrais retrouver la date et le lieu de prise de vue."
+        a "En cherchant sur mes photos ou mon {a=information: Au lieu de garder tes données ou tes photos sur ton ordinateur, ou ton téléphone, tu les envoies dans le Cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n'importe où, tant que tu as une connection internet. }cloud{/a}, Vu la tête qu’il fait et ses lunettes, je devrais retrouver la date et le lieu facilement."
     elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
         a "je dois chercher dans la galerie"
     elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
@@ -190,9 +190,9 @@ label insideStore:
     show zoomComputerStore
     hide receiveStore
     show screen storeCustomPage
-    a "Top, J’ai sûrement une photo rigolote sur mon téléphone…"
+    a "Top, je vais prendre la photo au ski, ça va faire marrer tout le monde."
     a "Ah mince, bien sûr… plus de batterie."
-    a "Heureusement, je peux me connecter à mon cloud direct depuis l’ordi."
+    a "Heureusement, je peux me connecter à mon compte directement sur l’ordi."
     while True:
         empty ""
 

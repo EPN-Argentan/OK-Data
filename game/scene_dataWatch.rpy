@@ -8,6 +8,8 @@ label dataWatch:
     stop music fadeout 1.0
     show runwatch
     show screen barre_de_vie
+    stop music fadeout 1.0
+    play music "Test your fight - Rod Kim.mp3"
     a "Courir, c'est ma bulle, loin de tout."
     window auto hide
 
