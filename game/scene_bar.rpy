@@ -19,7 +19,10 @@ label barOut:
     while LocalisationState == False:
         empty ""
     hide screen dataMap
-    scene bar
+    scene black
+    with dissolve
+
+    #scene bar
     show barSister
     stop music fadeout 1.0
     play music "ambi_bar.mp3"
@@ -36,7 +39,7 @@ label barOut:
 
 label barOutAfter:
     nvl clear
-
+    hide screen selfie
     #check if selfie has been shared to be display or not on photo frame
     if LocalisationState :
         $ shareSelfie = True
@@ -45,4 +48,5 @@ label barOutAfter:
     hide screen selfie
     $ hubClickable["phone"]= 0
     $ hubClickable["phoneCall"]= 1
+
     jump hub

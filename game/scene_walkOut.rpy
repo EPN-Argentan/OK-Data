@@ -8,12 +8,11 @@ label walkOut :
     nvl clear
     window hide
     hide screen hubElements
-    scene street
-    show walkInfinite
+    #scene street
+    show walkInfinite with fade
     stop music fadeout 1.0
-    $ renpy.pause(2.0, hard=True)
-    show walkZoom
-    $ renpy.pause(1.0, hard=False)
+    $ renpy.pause(4.0, hard=True)
+
     show walkFix
     show clic
     #show screen phoneDown
