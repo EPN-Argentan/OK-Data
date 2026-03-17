@@ -44,6 +44,27 @@ label consent:
     while True:
         empty ""
 
+label IAsearch:
+    hide screen consentScreen
+    show screen IASearch
+    show screen blankPrompt
+    a "Comment décrire cette image ?"
+    hide screen blankPrompt
+    show screen miniGamePrompt
+    while True:
+        empty ""
+
+label endPrompt:
+    hide screen IASearch
+    hide screen miniGamePrompt
+    a "Oui c'est ça !"
+    show screen brotherPictureDisplay
+    a "Voilà, c'est celle là"
+    a "MercIA"
+    $ hubClickable["photoFrame"]= 0
+    hide screen brotherPictureDisplay
+    jump hub
+
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
 
@@ -139,12 +160,120 @@ screen consentScreen:
         imagebutton:
             idle At('UI/Cadre/FullConsent.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/FullConsent.png"
-            action [Call("addPoints",-5,'point_sociaux',"","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse","",'')]
+            action [Call("addPoints",-5,'point_sociaux',"","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse","",'IAsearch')]
         imagebutton:
             idle At('UI/Cadre/PartialConsent.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/PartialConsent.png"
-            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'')]
+            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'IAsearch')]
         imagebutton:
             idle At('UI/Cadre/Deny.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/Deny.png"
-            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'')]
+            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'IAsearch')]
+
+screen IASearch:
+    add "UI/Cadre/IAHomePage.png" xalign 0.6955 yalign 0.5
+    text "{color=#000}Bonjour, comment puis-je vous aider ? Vous cherchez une photo ?{/color}" xalign 0.5 yalign 0.4
+
+style textButton_arrowIA:
+    size 125
+
+
+default keywordList1 = ["neige","skis","chien","voiture rouge","sapin"] #Change goodKeyCode1 combinaison to specify wich answers are good
+default keywordList2 = ["neige","skis","frere","vache","sourire"] #Change goodKeyCode2 combinaison to specify wich answers are good
+default keywordList3 = ["montagne","Pyréenneés"] #Change goodKeyCode3 combinaison to specify wich answers are good
+default keyword1Value = 0
+default keyword2Value = 0
+default keyword3Value = 0
+default keyword1 = keywordList1[keyword1Value]
+default keyword2 = keywordList2[keyword2Value]
+default keyword3 = keywordList3[keyword3Value]
+default goodKeyCode1 = [1,3]
+default goodKeyCode2 = [0]
+default goodKeyCode3 = [0]
+
+style promptStyle_text is text:
+    color "#000000"
+
+style promptKey_text is text :
+    color "#5996E0"
+
+
+screen blankPrompt:
+    frame:
+        background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+        xalign 0.5
+        yalign 0.55
+        padding (50,50)
+        text "🔎 {color=#999}Je cherche une image où on voit{/color}" yalign 0.5 style_prefix "promptStyle"
+
+#Game where player has to choose between keyword in prompt
+screen miniGamePrompt:
+    imagebutton:
+        xalign 0.9
+        yalign 0.9
+        idle At("UI/applications/sendIA.png", outline_transform(6, "#5996E0", 4.0))
+        hover "UI/applications/sendIA.png"
+        action Call("promptChecker",keyword1Value,keyword2Value,keyword3Value)
+    frame:
+        background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+        xalign 0.5
+        yalign 0.55
+        padding (50,0)
+        hbox:
+            text "🔎 Je cherche une image où on voit  " yalign 0.5 style_prefix "promptStyle"
+            vbox:
+                textbutton "↑":
+                    style_prefix "promptStyle"
+                    action [SetScreenVariable("keyword1Value", min(len(keywordList1)-1, keyword1Value+1)), Function(renpy.restart_interaction)]
+                    xalign 0.5
+                text "[keywordList1[keyword1Value]]" style_prefix "promptKey"
+                textbutton "↓":
+                    style_prefix "promptStyle"
+                    action SetScreenVariable("keyword1Value",max(0, keyword1Value - 1))
+                    xalign 0.5
+            text " avec " yalign 0.5 style_prefix "promptStyle"
+            vbox:
+                textbutton "↑":
+                    style_prefix "promptStyle"
+                    action [SetScreenVariable("keyword2Value", min(len(keywordList2)-1, keyword2Value+1)), Function(renpy.restart_interaction)]
+                    xalign 0.5
+                text "[keywordList2[keyword2Value]]" style_prefix "promptKey"
+                textbutton "↓":
+                    style_prefix "promptStyle"
+                    action SetScreenVariable("keyword2Value",max(0, keyword2Value - 1))
+                    xalign 0.5
+            text " la scène se passe " yalign 0.5 style_prefix "promptStyle"
+            vbox:
+                textbutton "↑":
+                    style_prefix "promptStyle"
+                    action [SetScreenVariable("keyword3Value", min(len(keywordList3)-1, keyword3Value+1)), Function(renpy.restart_interaction)]
+                    xalign 0.5
+                text "[keywordList3[keyword3Value]]" style_prefix "promptKey"
+                textbutton "↓":
+                    style_prefix "promptStyle"
+                    action SetScreenVariable("keyword3Value",max(0, keyword3Value - 1))
+                    xalign 0.5
+
+label promptChecker(key1=0,key2=0,key3=0):
+    $ isCorrect = True
+
+    if key1 not in goodKeyCode1:
+        $ isCorrect = False
+
+    if key2 not in goodKeyCode2:
+        $ isCorrect = False
+
+    if key3 not in goodKeyCode3:
+        $ isCorrect = False
+
+    if isCorrect:
+        jump endPrompt
+        # Tu peux ajouter score, suite du jeu, etc.
+    else:
+        a "Je ne me souviens pas de ça..."
+
+    return
+
+screen brotherPictureDisplay:
+    add "ui/Cadre/brotherDisplayPhone.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
