@@ -51,6 +51,7 @@ label IAsearch:
     a "Comment décrire cette image ?"
     hide screen blankPrompt
     show screen miniGamePrompt
+    a "Bon, de quoi je me souviens ?"
     while True:
         empty ""
 
@@ -103,10 +104,6 @@ screen galery:
     hbox:
             xalign 0.74
             yalign 0.22
-            imagebutton:
-                idle "UI/applications/Exit.png"
-                hover "UI/applications/Exit.png"
-                action Jump("homeScreen")
     side "c b r":
          area (0.575, 0.3, 330, 500)
 

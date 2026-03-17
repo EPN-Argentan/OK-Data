@@ -280,3 +280,25 @@ define combinaisonClues = {
     'Europe' : ['Logged','Miniature Youtube',"Europe \n","mmmm...Il semblerait que cette personne aime l'europe",False, 'catConviction', 'conviction',False],
 }
 ```
+
+#### Mini jeu du prompt
+Dans le jeu, dans l'embranchement du cadre photo, vous jouez à un jeu de prompting. Le but du jeu est de trouver le bon prompt.
+Si vous souhaitez éditer ce jeu, il suffit de vous rendre dans le fichier *scene_photoFrame.rpy*.
+
+Le jeu se décompose ainsi :
+
+```python
+  default keywordList1 = ["neige","skis","chien","voiture rouge","sapin"]
+  default keywordList2 = ["neige","skis","frere","vache","sourire"]
+  default keywordList3 = ["montagne","Pyréenneés"] 
+```
+
+Chaque liste de keyword correspond à un des trois mots clés du prompt. Dans cette liste il faut énumérer tous les mots clés possibles (vrais ou faux). Une fois cette liste établit, il faut identifier la position (dans la liste) des bonnes réponses.
+Il faudra alors reporter ces positions dans les variables correspondantes :
+
+```python
+  default goodKeyCode1 = [1,3]
+  default goodKeyCode2 = [0]
+  default goodKeyCode3 = [0]
+```
+Dans cette exemple, il y a deux combinaisons possible : ["skis","neige","montagne"] ou ["voiture rouge","neige","montagne"].
