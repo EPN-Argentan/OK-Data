@@ -8,6 +8,7 @@
 # Exemple d'usage de la fonction :
 # addPoints(5,'point_sante',BluetoothState,True,"Tu n'as pas désactivé le bluetooth", "Tu as bien pensé à désactiver le bluetooth")
 label addPoints(values = 0, key = '', condition = '', conditionValue = True, losemessage='', winmessage='', labelNext= ''):
+    $ mediateurDisplayMessage = True
     $ oldValue = points[key][0]
     #start bounce effect
     $ points[key][1] = 1
@@ -67,10 +68,17 @@ label addPoints(values = 0, key = '', condition = '', conditionValue = True, los
             $ points[key][1] = 0
     #If needed, after text messages, jump to this label if needed
     if not labelNext:
+        $ mediateurDisplayMessage = False
         return
+    elif labelNext == "sources":
+        $ mediateurDisplayMessage = False
+        $ renpy.scene(layer = "menu")
+        $ renpy.call_screen("sources")
     else:
+        $ mediateurDisplayMessage = False
         $ renpy.scene(layer = "screens")
         $ renpy.jump(labelNext)
+
 
 #Bounce imagebutton from lifebar
 transform bounce:
@@ -158,7 +166,7 @@ define config.hyperlink_handlers = {
     "information": information_display
 }
 
-#Display information bubble clickable to go to ecternal URL
+#Display information bubble clickable to go to external URL
 
 screen sourcesDisplay(title,URL,categorie):
     hbox:
@@ -174,6 +182,7 @@ screen sourcesDisplay(title,URL,categorie):
         imagebutton:
             idle "UI/imagebuttons/InfoUrl.png"
             action NullAction()
+
 
 #Map function
 init python:

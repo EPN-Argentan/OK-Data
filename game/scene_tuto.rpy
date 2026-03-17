@@ -5,35 +5,38 @@ label tuto:
     show screen barre_de_vie
     show screen skipTuto
 
-    show clic
     play sound "PetitMomentEnsemble.mp3"
-    medBubble "Salut Alexia, prête pour un petit moment ensemble ? car on va t'aider à protéger tes données !"
-    play sound "SimpleClic.mp3"
-    medBubble "un simple clic te fait progresser dans le jeu."
+    show clic
+    play sound "Coucou.mp3"
+    medBubble "Coucou ! Pour commencer, pense à cliquer pour progresser dans le jeu."
     hide clic
-    play sound "TutoBleu&Categories.mp3"
-    medBubble "Nous avons classé tes {a=information: Les données personnelles, c’est ton double numérique : ton prénom, ton âge, ton adresse, ou encore tes goûts et préférences. Ce sont des infos qui permettent de te définir en profondeur. Elles sont précieuses, comme un journal intime. Il faut les protéger, comme on protège un trésor : avec attention, discernement, et une bonne dose de prudence.}données personnelles{/a} en six catégories."
-    play sound "TutoInteret.mp3"
+    play sound "Bleu.mp3"
+    medBubble "Et si tu vois un mot en {a=information: Bleu (n. m.) : Couleur souvent évoquée dans les livres, parfois aperçue sur les cartes postales, mais considérée comme espèce protégée en Normandie.}bleu,{/a} tu peux cliquer dessus pour obtenir une définition."
+    play sound "Topo.mp3"
+    medBubble "Moi, c’est DogGPT, le chien qui parle. Mon job, c’est de te faire un petit topo du jeu."
+    play sound "Alexia.mp3"
+    medBubble "Là, sur le canapé, c’est Alexia, ma maîtresse. Elle est sympa, mais elle ne fait pas super attention à ses données. Du coup, on va essayer de l’aider un peu."
+    play sound "Cookies.mp3"
+    medBubble "Faut savoir que, sans t’en rendre compte, à chaque connexion tu laisses des petites traces… et les cookies adorent ça."
+    play sound "Miettes.mp3"
+    medBubble "Ton rôle, ça va être de limiter au maximum ces petites miettes, tout en profitant à fond des avantages du numérique."
+    play sound "Donnees.mp3"
+    medBubble "On a classé les {a=information: Les données personnelles, c’est ton double numérique : ton prénom, ton âge, ton adresse, ou encore tes goûts et préférences. Ce sont des infos qui permettent de te définir en profondeur. Elles sont précieuses, comme un journal intime. Il faut les protéger, comme on protège un trésor : avec attention, discernement, et une bonne dose de prudence.}données personnelles{/a} en six catégories."
     medBubble "Les données de centre d’intérêt"
-    play sound "TutoSante.mp3"
     medBubble "Les données de santé"
-    play sound "TutoConviction.mp3"
     medBubble "Les données de conviction"
-    play sound "TutoLocalisation.mp3"
     medBubble "Les données de localisation"
-    play sound "TutoReseaux.mp3"
     medBubble "Les données de réseaux sociaux"
-    play sound "TutoAdmin.mp3"
     medBubble "Les données administratives"
-    play sound "TutoPoints.mp3"
-    medBubble "Au-dessus de chaque catégorie est indiqué ton nombre de points."
+    play sound "Score.mp3"
+    medBubble "Au-dessus de chacune d’elles, tu verras ton score."
     call addPoints(-5,'point_administrative') from _call_addPoints_19
-    play sound "TutoPerdre.mp3"
-    medBubble "Tu perds des points si tu ne protèges pas ta vie privée."
+    play sound "Perdre.mp3"
+    medBubble "Évidemment, tu perds des points si tu ne protèges pas ta vie privée."
 
     call addPoints(5,'point_administrative') from _call_addPoints_20
-    play sound "TutoGagner.mp3"
-    medBubble "Et tu gagneras des points en te divulguant le moins possible, en consultant les ressources ou tout simplement en allant te promener loin des réseaux."
+    play sound "Gagner.mp3"
+    medBubble "Et tu en gagnes si tu restes discret, si tu vas piocher dans les ressources… ou même si tu vas te promener loin des réseaux."
     window hide
     jump hub
 

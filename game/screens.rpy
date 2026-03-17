@@ -562,7 +562,7 @@ style return_button:
 screen sources():
 
     tag menu
-
+      
     ## Cette déclaration concerne l’écran game_menu. L’élément vbox est ensuite
     ## inclus dans la fenêtre de l'écran game_menu.
     use game_menu(_("Sources"), scroll="viewport"):

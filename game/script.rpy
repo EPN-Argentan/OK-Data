@@ -22,6 +22,10 @@ define vendeuse = Character('Vendeuse', color="#DE843A")
 
 define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
+#Custom mouse
+define config.mouse = {}
+define config.mouse['default'] = [("gui/3DCursorIdle.png",0,0)]
+
 #Empty character display nothing
 define empty = Character(None,color="#00000000", window_background="gui/empty_textbox.png")
 

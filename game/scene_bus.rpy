@@ -12,15 +12,6 @@ stop music fadeout 1.0
 
 #display photo without sister selie or with it depending of previous events (see bar scene)
 nvl clear
-if shareSelfie == False:
-    show frame_slideshow_noselfie with moveinbottom
-    a "Ouah, c’est vieux ça !"
-else:
-    show frame_slideshow_withselfie with moveinbottom
-    a "Mais qu’est-ce que cette photo fait là ? Pourvu que personne ne tombe dessus !"
-    e_nvl "Quand tu prends une photo avec ton téléphone, si celui-ci est connecté à ton cloud, la photo peut être automatiquement sauvegardée en ligne."
-    e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
-    e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
 winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
 a "Oh mince, j’avais complètement oublié !"
 a "Bon, j’y vais tout de suite."
@@ -45,7 +36,7 @@ label homeScreen:
     play music "The World's Fair - Godmode.mp3"
     show screen appsPhone(True,True,True,False,False,False,False,0.7)
     if whereYouStart[0] == False and whereYouStart[1] == False: #Player launch gallery at first
-        a "En cherchant sur mes photos ou mon {a=information: Au lieu de garder tes données ou tes photos sur ton ordinateur, ou ton téléphone, tu les envoies dans le Cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n'importe où, tant que tu as une connection internet. }cloud{/a}, je devrais retrouver la date et le lieu de prise de vue."
+        a "En cherchant sur mes photos ou mon {a=information: Au lieu de garder tes données ou tes photos sur ton ordinateur, ou ton téléphone, tu les envoies dans le Cloud. Ainsi, quand tu en as besoin, tu peux les récupérer de n'importe où, tant que tu as une connection internet. }cloud{/a}, Vu la tête qu’il fait et ses lunettes, je devrais retrouver la date et le lieu facilement."
     elif whereYouStart[0] == False and whereYouStart[1] == True: #Player launched cloud at first
         a "je dois chercher dans la galerie"
     elif whereYouStart[0] == True and whereYouStart[1] == False: #Player launched cloud at first
@@ -199,9 +190,9 @@ label insideStore:
     show zoomComputerStore
     hide receiveStore
     show screen storeCustomPage
-    a "Top, J’ai sûrement une photo rigolote sur mon téléphone…"
+    a "Top, je vais prendre la photo au ski, ça va faire marrer tout le monde."
     a "Ah mince, bien sûr… plus de batterie."
-    a "Heureusement, je peux me connecter à mon cloud direct depuis l’ordi."
+    a "Heureusement, je peux me connecter à mon compte directement sur l’ordi."
     while True:
         empty ""
 
@@ -247,23 +238,6 @@ label printed:
 #All scenes elements used in this label
 image emptyPhone:
     "smartphone.png"
-image frame_slideshow_noselfie:
-   "/UI/Cadre/slideshowFrame_001.png"
-   pause 2.5
-   "UI/Cadre/slideshowFrame_002.png"
-   pause 2.5
-   "UI/Cadre/slideshowFrame_003.png"
-   pause 2.5
-   repeat
-
-image frame_slideshow_withselfie:
-   "/UI/Cadre/slideshowFrame_015.png"
-   pause 2.5
-   "UI/Cadre/slideshowFrame_002.png"
-   pause 2.5
-   "UI/Cadre/slideshowFrame_003.png"
-   pause 2.5
-   repeat
 
 
 screen galeryOpening:

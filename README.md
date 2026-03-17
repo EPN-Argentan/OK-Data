@@ -157,6 +157,13 @@ Puis pour le faire parler, il suffira d'écrire à l'endroit souhaité :
 ```python
 nomDuPersonnage_nvl "Le texte à faire dire à votre personnage"
 ```
+
+### Bloquer les autres boutons
+Si vous souhaité désactiver les autres boutons tant que un personnage parle au téléphone pour éviter de cliquer sur ces derniers à travers le téléphone il faudra ajouter aux boutons ce code :
+```python
+sensitive not mediateurDisplayMessage
+```
+
 ### Retirer les messages précédents
 Pour éviter que les anciens messages du téléphone soient visibles au moment de la réception d'un nouveau message, il faut ajouter en amont :
 ```python
