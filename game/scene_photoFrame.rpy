@@ -27,12 +27,20 @@ a "Elle doit être sur mon cloud !"
 label searchBrotherPicInPhone:
     show screen galeryOpeningLogo
     a "Je dois l'avoir quelquepart..."
+    hide frame_slideshow_noselfie with moveoutbottom
+    hide frame_slideshow_withselfie with moveoutbottom
     show screen galery
     hide screen galeryOpeningLogo
     a "Voilà, il n'y a plus qu'à chercher"
     window auto hide
     $ renpy.pause(2.0, hard=False)
     show screen popUpAI
+    while True:
+        empty ""
+
+label consent:
+    hide screen galery
+    show screen consentScreen
     while True:
         empty ""
 
@@ -112,8 +120,31 @@ screen galery:
 
 screen popUpAI:
     hbox:
-        xalign 0.6955
+        xalign 0.685
         yalign 0.2
         imagebutton:
-            idle "UI/Cadre/popUpAI.png"
-            action Jump("homeScreen")
+            idle At("UI/Cadre/popUpAI.png", outline_transform(6, "#d44343", 4.0))
+            hover "UI/Cadre/popUpAI.png"
+            action Jump("consent")
+
+screen consentScreen:
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
+    vbox :
+        xalign 0.690
+        yalign 0.45
+        spacing 8
+        imagebutton:
+            idle "UI/Cadre/Consent.png"
+        imagebutton:
+            idle At('UI/Cadre/FullConsent.png', outline_transform(6, "#ffffff86", 4.0))
+            hover "UI/Cadre/FullConsent.png"
+            action [Call("addPoints",-5,'point_sociaux',"","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse","",'')]
+        imagebutton:
+            idle At('UI/Cadre/PartialConsent.png', outline_transform(6, "#ffffff86", 4.0))
+            hover "UI/Cadre/PartialConsent.png"
+            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'')]
+        imagebutton:
+            idle At('UI/Cadre/Deny.png', outline_transform(6, "#ffffff86", 4.0))
+            hover "UI/Cadre/Deny.png"
+            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'')]
