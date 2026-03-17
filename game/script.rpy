@@ -45,13 +45,14 @@ jump tuto
 #Lancement du Hub
 label hub:
     #If total points is less than X, then forest branch is avaible
+
     if totalPoints() < 30 and visitedForest == False:
         $ hubClickable["forest"]= 1
     hide screen phoneDown
     hide screen mailx3
     scene hub
     if dogInBasket == True:
-        show loungeHubDogInBasket  
+        show loungeHubDogInBasket
     else:
         show loungeHubDogInCouch
     show screen barre_de_vie
@@ -69,4 +70,3 @@ label hub:
     #    call screen telephoneplayer(False,True,False,True,True,True)
 
     return
-
