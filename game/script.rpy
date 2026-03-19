@@ -15,7 +15,7 @@ define s = Character('Syrielle', color="#ae3f5b")
 define a = Character('Alexia', color="#7A1EBB")
 
 define m = Character('Maman', color="#5833ae")
-
+ 
 define med = Character('Mediateur', color="#209792")
 
 define vendeuse = Character('Vendeuse', color="#DE843A")
@@ -44,10 +44,16 @@ label start:
 jump tuto
 #Lancement du Hub
 label hub:
-    #If total points is less than X, then forest branch is avaible
-
+    #If total points is less than X, then forest branch is avaible to earn bonus points
     if totalPoints() < 30 and visitedForest == False:
         $ hubClickable["forest"]= 1
+    python:
+        allBranchSolved = True
+        for x in hubClickable:
+            if hubClickable[x] == 1:
+                allBranchSolved = False
+        if allBranchSolved == True:
+            hubClickable["robot"] = 1
     hide screen phoneDown
     hide screen mailx3
     scene hub
