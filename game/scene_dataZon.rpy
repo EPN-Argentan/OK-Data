@@ -17,7 +17,7 @@ label dataZon :
   show screen barre_de_vie
   stop music fadeout 1.0
   play music "Trickling Up - Godmode.mp3"
-  a "Ah tiens, il serait temps que je check un peu mes mails !"
+  a "Il serait temps que je check mes mails !"
   window auto hide
   $ renpy.pause(2.0, hard=True)
   show screen desktopbutton
@@ -35,7 +35,7 @@ label mailx3 :
     show screen barre_de_vie
     if default_clicks >= 3:
         show screen notifMail
-    a "Bon… on fait quoi maintenant !"
+    a "Bon… qu’y a-t-il d’autre !"
 
     while True:
         empty ""
@@ -53,7 +53,7 @@ label brouillon :
 
     show screen barre_de_vie
 
-    a "Ah tiens, c’est vrai, j’avais commencé ce mail hier…\nIl serait peut-être temps de l’envoyer ! "
+    a "Ah tiens, j’avais commencé ce mail hier soir…\nIl serait temps de l’envoyer ! "
 
     a "Je vais l’envoyer à tous mes contacts…\nmais je choisis quoi, moi ? En A ou en CCI ?"
 
@@ -107,7 +107,7 @@ label mail_coli6mots :
     show screen mail_coli6mots
     with dissolve
     show screen barre_de_vie
-    a "Tiens, je ne me souviens même plus\nde ce que j’ai bien pu commander."
+    a "Étrange… je ne me rappelle même plus ce que j’ai bien pu commander."
 
     while True:
         empty ""
@@ -154,7 +154,7 @@ label superclerc:
     show screen superclerc
     with dissolve
     show screen barre_de_vie
-    a "L’adresse me semble correcte — …@superclerc.com\nGrace a ma carte fidélité, je peux recevoir mon ticket par mail,\nmais du coup ils ont accès à tout l’historique de mes achats."
+    a "L’adresse me semble correcte …@superclerc.com\nGrace a ma carte fidélité, je peux recevoir mon ticket par mail,\nmais du coup ils ont accès à tout l’historique de mes achats."
     jump mailx3
 
 
@@ -183,7 +183,7 @@ label datazonmail :
     scene black
     with dissolve
 
-    a "Oh, c'est gentil de penser à me le rappeler..."
+    a "Ça vaut le coup d’essayer, ça me donnera\npeut-être des idées, qui sait."
 
     while True:
         empty ""
@@ -210,7 +210,7 @@ label datazonsite :
     show screen cookies
     with dissolve
     show screen barre_de_vie
-    a "Encore les cookies...."
+    a "C’est dingue, on ne peut plus rien faire sans ces fichus cookies."
     while True :
         empty ""
 
@@ -230,7 +230,9 @@ label datazonsiteaftercookieok :
     show screen barre_de_vie
     call addPoints(-2,'point_conviction') from _call_addPoints_5
     call addPoints(-2,'point_interet') from _call_addPoints_6
-    e_nvl "En acceptant les cookies, tu fournies des informations sur ta façon de d'utiliser le site Internet a Datazon"
+    e_nvl "Attention : en acceptant les cookies (ou traceurs), tu autorises une petite armée d’espions numériques à suivre tes moindres faits et gestes ainsi que les informations que tu transmets."
+    e_nvl "Cela dit, tous les cookies ne sont pas à jeter, parmi les « nécessaires », certains sont vraiment utiles."
+    e_nvl "Par exemple pour conserver le contenu d’un panier d’achat pendant ta navigation sur un site marchand."
     jump datazonsiteok
 
 label datazonsiteok :
@@ -238,7 +240,7 @@ label datazonsiteok :
     show screen pc_vierge
     show screen datazonsiteok
     show screen barre_de_vie
-    a "ah je peux enfin acheter un truc, allons dans la petite barre de recherche."
+    a "Faisons une petite recherche pour voir ce qu’il nous propose… "
     while True :
         empty ""
 
@@ -394,7 +396,7 @@ label searchaspi :
     show screen pc_vierge
     show screen searchaspi
     show screen barre_de_vie
-    a "oui, un aspirateur connecté. Bonne idée !"
+    a "Oh, pas mal du tout : un aspirateur connecté !"
     while True :
         empty ""
 
