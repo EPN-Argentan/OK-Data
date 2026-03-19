@@ -3,28 +3,54 @@ default findYearPic = False
 default birthdayYear = year-2
 
 label bus:
-$ freeWifiActivate = False
-$ WifiState = False
-$ DataState = False
+    $ freeWifiActivate = False
+    $ WifiState = False
+    $ DataState = False
 
-hide screen hubElements
-stop music fadeout 1.0
+    hide screen hubElements
+    stop music fadeout 1.0
 
-#display photo without sister selie or with it depending of previous events (see bar scene)
-nvl clear
-winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
-a "Oh mince, j’avais complètement oublié !"
-a "Bon, j’y vais tout de suite."
-$ renpy.scene(layer = "screens")
-scene busAdFreeze
-show busAdReveal
-window auto hide
-$ renpy.pause(3.0, hard=True)
-a "Ben ! Pierre, il joue les modèles maintenant ? "
-a "Comment mon frère a-t-il pu se retrouver sur cette pub !?"
-a "C'est moi qui ai pris cette photo en plus ! "
-a "Je devrais pouvoir la retrouver sur mon téléphone."
-a "Mais je l'ai prise {b}où{/b} et {b}quand{/b} cette photo ?"
+    #display photo without sister selie or with it depending of previous events (see bar scene)
+    nvl clear
+    winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
+    a "Oh mince, j’avais complètement oublié !"
+    a "Bon, j’y vais tout de suite."
+    show screen dataMap
+    window auto hide
+    show screen phoneDown
+    window hide
+    empty ""
+    while LocalisationState == False:
+        empty ""
+    hide screen dataMap
+    show screen mapApp
+    a "Ah oui, c'est là-bas !"
+    hide screen mapApp
+    $ renpy.scene(layer = "screens")
+    scene busAdFreeze
+    show busAdReveal
+    window auto hide
+    $ renpy.pause(3.0, hard=True)
+    a "Mais c'est Pierre !"
+    show screen freezeFrameBusAd
+    a "Bah, il joue les modèles maintenant ? "
+    a "Comment mon frère a-t-il pu se retrouver sur une pub !?"
+    a "Il faut que je lui envoie"
+    show screen camera with moveinbottom
+    show screen phoneDown with moveinbottom
+    a "Je vais lui envoyer !"
+    window hide
+    while True:
+        empty ""
+
+label afterFlash :
+    define flash = Fade(0.1, 0.0, 0.5, color="#fff") 
+    hide screen camera with flash
+    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.")    
+    hide screen phoneDown with moveoutbottom
+    a "C'est moi qui ai pris cette photo en plus ! "
+    a "Je devrais pouvoir la retrouver sur mon téléphone."
+    a "Mais je l'ai prise {b}où{/b} et {b}quand{/b} cette photo ?"
 
 label homeScreen:
     hide screen dataBookSearch
@@ -145,6 +171,12 @@ label foundInDataBook:
     show screen outOfBattery
     hide screen appsPhone
     a "Ah, la poisse ! Plus de batterie…"
+    hide screen outOfBattery
+    show screen phishing
+    a "mm mm"
+
+label busComing:
+    hide screen phishing
     a "...et mon bus qui arrive"
     hide screen outOfBattery
 
@@ -239,6 +271,36 @@ label printed:
 image emptyPhone:
     "smartphone.png"
 
+screen camera:
+    add "UI/bus/smartphoneCamera.png" xalign 0.5 yalign 0.5
+    imagebutton:
+        idle At("UI/bus/buttonCamera.png", outline_transform(6, "#5996E0", 4.0))
+        hover "UI/bus/buttonCamera.png" xalign 0.685 yalign 0.5
+        action Jump("afterFlash")
+
+screen freezeFrameBusAd:
+    add "sprites/bus/adOnBus.png"
+
+screen mapApp:
+    add "UI/bus/dataMap.png" xalign 0.5 yalign 0.5
+    add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+screen phishing:
+    add "smartphone.png" xalign 0.5 yalign 0.5
+    frame:
+        background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+        xalign 0.5
+        yalign 0.3
+        padding (15,15)
+        text "Winted,\nVotre colis est arrivé, \ncliquez sur le lien :" yalign 0.5 style_prefix "promptStyle"
+    frame:
+        background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+        xalign 0.5
+        yalign 0.45
+        padding (15,15)
+        textbutton "http://packages.u9...":
+            action [Call("addPoints",-5,'point_sociaux',"","","Attention, le phishing est constant", "",""),Jump("busComing")]
+            
 
 screen galeryOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5

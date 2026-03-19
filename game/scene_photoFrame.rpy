@@ -61,6 +61,8 @@ label endPrompt:
     a "Oui c'est ça !"
     show screen brotherPictureDisplay
     a "Voilà, c'est celle là"
+    nvl clear
+    e_nvl "Les IAs, c'est pas bien"
     a "MercIA"
     $ hubClickable["photoFrame"]= 0
     hide screen brotherPictureDisplay

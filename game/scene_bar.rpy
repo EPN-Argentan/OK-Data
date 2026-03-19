@@ -49,5 +49,5 @@ label barOutAfter:
     hide screen selfie
     $ hubClickable["phone"]= 0
     $ hubClickable["phoneCall"]= 1
-
+    $ hubClickable["dog"]=0
     jump hub
