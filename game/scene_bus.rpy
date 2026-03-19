@@ -299,7 +299,7 @@ screen phishing:
         yalign 0.45
         padding (15,15)
         textbutton "http://packages.u9...":
-            action Jump("busComing")
+            action [Call("addPoints",-5,'point_sociaux',"","","Attention, le phishing est constant", "",""),Jump("busComing")]
             
 
 screen galeryOpening:
