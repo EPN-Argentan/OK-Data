@@ -300,54 +300,84 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
+    if main_menu:
+        hbox:
+            style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        if main_menu:
+            xalign 0.5
+            yalign 0.9
+            spacing gui.navigation_spacing
 
             textbutton _("Nouvelle partie") action Start()
+            
+            textbutton _("Sources") action ShowMenu("sources")
 
-        else:
+            textbutton _("Préférences") action ShowMenu("preferences")
+
+            if _in_replay:
+
+                textbutton _("Fin de la rediffusion") action EndReplay(confirm=True)
+
+            #textbutton _("Image Tools") action ShowMenu("image_tools")
+
+
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+                ## L'aide n’est ni nécessaire ni pertinente sur les appareils
+                ## mobiles.
+                textbutton _("Aide") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+            ## Le bouton pour quitter est banni sur iOS et inutile sur Android
+            ## et sur le Web.
+            textbutton _("Quitter") :
+                xalign 0.95
+                yalign 0.05          
+                action Quit(confirm=not main_menu)
+    else:
+        vbox:
+            style_prefix "navigation"
+
+            xpos gui.navigation_xpos
+            yalign 0.5
+
+            spacing gui.navigation_spacing
+
+            textbutton _("Nouvelle partie") action Start()
 
             textbutton _("Historique") action ShowMenu("history")
 
             textbutton _("Sauvegarde") action ShowMenu("save")
 
+            textbutton _("Charger") action ShowMenu("load")
 
-        textbutton _("Charger") action ShowMenu("load")
-
-        textbutton _("Préférences") action ShowMenu("preferences")
-
+            textbutton _("Préférences") action ShowMenu("preferences")
 
 
-        if _in_replay:
 
-            textbutton _("Fin de la rediffusion") action EndReplay(confirm=True)
+            if _in_replay:
 
-        elif not main_menu:
+                textbutton _("Fin de la rediffusion") action EndReplay(confirm=True)
 
-            textbutton _("Menu principal") action MainMenu()
+            elif not main_menu:
 
-        textbutton _("Sources") action ShowMenu("sources")
-        textbutton _("Image Tools") action ShowMenu("image_tools")
+                textbutton _("Menu principal") action MainMenu()
+
+            textbutton _("Sources") action ShowMenu("sources")
+            textbutton _("Image Tools") action ShowMenu("image_tools")
 
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## L'aide n’est ni nécessaire ni pertinente sur les appareils
-            ## mobiles.
-            textbutton _("Aide") action ShowMenu("help")
+                ## L'aide n’est ni nécessaire ni pertinente sur les appareils
+                ## mobiles.
+                textbutton _("Aide") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+            if renpy.variant("pc"):
 
-            ## Le bouton pour quitter est banni sur iOS et inutile sur Android
-            ## et sur le Web.
-            textbutton _("Quitter") action Quit(confirm=not main_menu)
+                ## Le bouton pour quitter est banni sur iOS et inutile sur Android
+                ## et sur le Web.
+                textbutton _("Quitter") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -404,7 +434,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

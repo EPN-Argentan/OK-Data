@@ -28,7 +28,7 @@ define gui.accent_color = '#0099cc'
 
 ## La couleur utilisée pour le texte d’un bouton quand il n’a jamais été
 ## sélectionné ou survolé.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#fff'
 
 ## La petite couleur est utilisé pour les textes courts qui nécessitent d’être
 ## assombris ou éclairés pour obtenir le même effet.
@@ -66,7 +66,7 @@ define gui.text_font = "fonts/FiraSans-Regular.ttf"
 define gui.name_text_font = "fonts/FiraSans-Bold.ttf"
 
 ## Les polices utilisées pour les textes « hors du jeu ».
-define gui.interface_text_font = "fonts/FiraSans-Regular.ttf"
+define gui.interface_text_font = "fonts/FiraSans-Bold.ttf"
 
 ## La taille normale pour les dialogues.
 define gui.text_size = 30
