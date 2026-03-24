@@ -83,7 +83,14 @@ screen hubElements:
             idle At('UI/imagebuttons/homeAssistant.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/homeAssistant.png"
             action Jump("homeAssistant")
-    
+            
+#Last scenario 
+    if hubClickable["robot"] == 0:
+        imagebutton:
+            xpos 900
+            ypos 900
+            idle 'UI/imagebuttons/robot.png'
+            action Jump("areYouSure")
     if hubClickable["robot"] == 1:
         imagebutton:
             xpos 900

@@ -49,8 +49,8 @@ label hub:
         $ hubClickable["forest"]= 1
     python:
         allBranchSolved = True
-        for x in hubClickable:
-            if hubClickable[x] == 1:
+        for x in trackScenarios:
+            if trackScenarios[x] == False:
                 allBranchSolved = False
         if allBranchSolved == True:
             hubClickable["robot"] = 1

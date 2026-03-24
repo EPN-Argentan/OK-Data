@@ -2,6 +2,12 @@ default whereYouStart = [False,False,False] #track wich application player has l
 default findYearPic = False
 default birthdayYear = year-2
 
+label areYouSure:
+    hide screen hubElements
+    show screen areYouSurePopUp with moveintop
+    while True:
+        empty ""
+
 label bus:
     $ freeWifiActivate = False
     $ WifiState = False
@@ -268,6 +274,30 @@ label printed:
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
+style buttonBlack:
+    idle_color "#5996E0"
+    hover_color "#000"
+    font "fonts/FiraSans-Bold.ttf"
+    size 45
+
+screen areYouSurePopUp: 
+    frame:
+        background Frame("UI/conversation/phone_received_frame.png", 43,43,43,43)
+        xalign 0.5
+        yalign 0.5
+        padding (15,15)
+        vbox :
+            text "Vous vous apprêtez à lancer le dernier scénario \nmais vous n'avez pas encore fini les autres,\n êtes vous sûr ?" yalign 0.5 style_prefix "promptStyle"
+            hbox:
+                xalign 0.5
+                spacing 200
+                textbutton "Oui":
+                    text_style "buttonBlack" 
+                    action [Hide("areYouSurePopUp"),Jump("bus")]
+                textbutton "Non": 
+                    text_style "buttonBlack" 
+                    action [Hide("areYouSurePopUp"),Jump("hub")]
+
 image emptyPhone:
     "smartphone.png"
 

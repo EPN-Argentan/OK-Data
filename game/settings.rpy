@@ -35,7 +35,7 @@ init -10 python:
         'homeAssistant': 0,
         'phone': 0,
         'phoneCall': 0,
-        'robot':1,
+        'robot':0,
         'forest' : 0
     }
 
