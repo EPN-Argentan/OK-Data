@@ -53,8 +53,7 @@ label brouillon :
 
     show screen barre_de_vie
 
-    a "Ah tiens, j’avais commencé ce mail hier soir…\nIl serait temps de l’envoyer ! "
-
+    a "Ah tiens, j’avais commencé ce mail hier soir…\nIl faudrait vraiment que je l’envoie !"
     a "Je vais l’envoyer à tous mes contacts…\nmais je choisis quoi, moi ? En A ou en CCI ?"
 
     while True:
@@ -220,7 +219,9 @@ label datazonsiteafternocookie :
     show screen datazonsiteafternocookie
     show screen barre_de_vie
     call addPoints(+1,'point_interet') from _call_addPoints_23
-    e_nvl "Bien joué ! pas besoin de donner des informations sur ta navigation"
+    e_nvl "Oui, c’est toujours mieux de limiter les logiciels espions."
+    e_nvl "Si les sites te demandent ton accord, c’est parce que l’Europe les y oblige."
+    e_nvl "On en est arrivé là parce que certaines boîtes abusaient des cookies pour récupérer un maximum de données sans aucun scrupule."
     jump datazonsiteok
 
 label datazonsiteaftercookieok :
@@ -313,7 +314,7 @@ label McDyzon :
     show screen McDyzon
     show screen barre_de_vie
 
-    a "il est TROOOOP Badasssss !"
+    a "Il est trop badass !"
     while True :
         empty ""
 
@@ -323,7 +324,7 @@ label achatAspiCute :
     show screen achatAspiCute
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "À ce prix-là, il pourrait au moins offrir les frais de port."
     while True :
         empty ""
 
@@ -333,7 +334,7 @@ label achatmcdyzon :
     show screen achatmcdyzon
     show screen barre_de_vie
 
-    a "Il pourrait m'offrir les frais de port quand même à ce prix..."
+    a "À ce prix-là, il pourrait au moins offrir les frais de port."
     while True :
         empty ""
 
@@ -364,13 +365,13 @@ label validationachat :
     nvl clear
     if cross_cb == True :
         call addPoints(-4,'point_administrative') from _call_addPoints_11
-        e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable de ne pas enregistrer celle-ci sur le site d'achat."
-        e_nvl "En cas de piratage cela pourrait être délicat..."
-        a "oh zut"
+        e_nvl "Reste prudent : même si les informations de ta carte bancaire sont chiffrées, il est généralement préférable de ne pas les enregistrer sur un site."
+        e_nvl "En cas de piratage, ces données pourraient être compromises, ce qui rendrait les choses délicates."
+        a "On n’est jamais trop méfiant."
     else :
         call addPoints(2,'point_administrative') from _call_addPoints_12
-        e_nvl "Même si tes données de carte bleu sont cryptées, il est préférable en effet de ne pas enregistrer celle-ci sur le site d'achat."
-    a "Voilà une bonne chose de faite"
+        e_nvl "C’est vrai que ne pas enregistrer sa carte rend les achats un peu moins rapides, mais c’est plus sûr et on garde la main."
+        a "On n’achète pas un aspirateur pour laisser traîner nos poussières."
     jump mailconfirmation
 
 
@@ -396,7 +397,7 @@ label searchaspi :
     show screen pc_vierge
     show screen searchaspi
     show screen barre_de_vie
-    a "Oh, pas mal du tout : un aspirateur connecté !"
+    a "Tiens, un aspirateur connecté ! Pas bête comme idée."
     while True :
         empty ""
 
@@ -406,7 +407,7 @@ label mailconfirmation :
     show screen mailconfirmation
     with dissolve
     show screen barre_de_vie
-    a "Bon, voilà pour le moment. Allez hop je ferme l'ordinateur !"
+    a "Ouf, c’est validé, un truc en moins à faire, passons au reste !"
     hide screen mailconfirmation
     scene black
     with fade

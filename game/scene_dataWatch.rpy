@@ -71,7 +71,7 @@ label resultat :
 label game:
     show runwatch
     e "Garde le rythme et sois précise."
-    e "Appuie quatre fois de suite sur le bouton rouge pour rester dans le tempo !"
+    e "Clique quatre fois d’affilée quand le bouton devient rouge, pour rester dans le tempo !"
 
     # Initialisation des variables du jeu
     $ bar_color = "yellow"  # Couleur initiale de la barre
