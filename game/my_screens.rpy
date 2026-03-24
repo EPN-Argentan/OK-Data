@@ -178,7 +178,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if A1:
                         idle At("UI/applications/Icons/appGallery.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appGallery.png"
-                        action [Hide("appsPhone"),Jump("searchInGallery")]
+                        action [Hide("appsPhone"),Hide("openDataCloud"),Hide("searchInDataBookDate"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appGallery.png" at greyscale()
                 text "{color=#555}Photos{/color}" xalign 0.5 size nameAppSize
@@ -189,7 +189,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if A2:
                         idle At("UI/applications/Icons/appCloud.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appCloud.png"
-                        action Jump("openDataCloud")
+                        action [Hide("appsPhone"),Hide("searchInDataBookDate"),Hide("searchInGallery"),Jump("openDataCloud")]
                     else:
                         idle "UI/applications/Icons/appCloud.png" at greyscale()
                 text "{color=#555}Data Cloud{/color}" xalign 0.5 size nameAppSize
@@ -200,7 +200,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if A3:
                         idle At("UI/applications/Icons/appDataBook.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appDataBook.png"
-                        action Jump("searchInDataBookDate")
+                        action [Hide("appsPhone"),Hide("openDataCloud"),Hide("searchInGallery"),Jump("searchInDataBookDate")]
                     else:
                         idle "UI/applications/Icons/appDataBook.png" at greyscale()
                 text "{color=#555}DataBook{/color}" xalign 0.5 size nameAppSize
@@ -211,7 +211,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if B1:
                         idle At("UI/applications/Icons/appMail.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appMail.png"
-                        action Jump("searchInGallery")
+                        action [Hide("appsPhone"),Hide("openDataCloud"),Hide("searchInDataBookDate"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appMail.png" at greyscale()
                 text "{color=#555}Mail{/color}" xalign 0.5 size nameAppSize
@@ -222,7 +222,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if B2:
                         idle At("UI/applications/Icons/appLocalisation.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appLocalisation.png"
-                        action Jump("searchInGallery")
+                        action [Hide("appsPhone"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appLocalisation.png" at greyscale()
                 text "{color=#555}Carte{/color}" xalign 0.5 size nameAppSize
@@ -233,7 +233,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if B3   :
                         idle At("UI/applications/Icons/appNoCo.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appNoCo.png"
-                        action Jump("searchInGallery")
+                        action [Hide("appsPhone"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appNoCo.png" at greyscale()
                 text "{color=#555}Normandie{/color}" xalign 0.5 size nameAppSize
@@ -244,7 +244,7 @@ screen appsPhone(A1=True,A2=True,A3=True,B1=True,B2=True,B3=True,C1=True,posY=0.
                     if C1   :
                         idle At("UI/applications/Icons/appSettings.png", outline_transform(0, "#8080804f", 4.0, offset=(5, 5)))
                         hover "UI/applications/Icons/appSettings.png"
-                        action Jump("searchInGallery")
+                        action [Hide("appsPhone"),Jump("searchInGallery")]
                     else:
                         idle "UI/applications/Icons/appSettings.png" at greyscale()
                 text "{color=#555}Paramètres{/color}" xalign 0.5 size nameAppSize
