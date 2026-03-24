@@ -278,7 +278,6 @@ style buttonBlack:
     idle_color "#5996E0"
     hover_color "#000"
     font "fonts/FiraSans-Bold.ttf"
-    size 45
 
 screen areYouSurePopUp: 
     frame:
@@ -287,6 +286,7 @@ screen areYouSurePopUp:
         yalign 0.5
         padding (15,15)
         vbox :
+            spacing 20
             text "Vous vous apprêtez à lancer le dernier scénario \nmais vous n'avez pas encore fini les autres,\n êtes vous sûr ?" yalign 0.5 style_prefix "promptStyle"
             hbox:
                 xalign 0.5
@@ -329,6 +329,7 @@ screen phishing:
         yalign 0.45
         padding (15,15)
         textbutton "http://packages.u9...":
+            text_style "buttonBlack"
             action [Call("addPoints",-5,'point_sociaux',"","","Attention, le phishing est constant", "",""),Jump("busComing")]
             
 
