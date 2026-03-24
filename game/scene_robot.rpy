@@ -41,7 +41,7 @@ label bus:
     show screen freezeFrameBusAd
     a "Bah, il joue les modèles maintenant ? "
     a "Comment mon frère a-t-il pu se retrouver sur une pub !?"
-    a "Il faut que je lui envoie"
+    a "Il faut que je montre ça à Syrielle"
     show screen camera with moveinbottom
     show screen phoneDown with moveinbottom
     a "Je vais lui envoyer !"
@@ -165,9 +165,12 @@ label searchInDataBookLocalisation:
 label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
-    a "Voilà, c'est celle là."
-    a "Mais comment ils ont fait ?!"
-    a "Ils n'ont pas le droit !"
+    a "Voilà, c'est celle là. J'envoie tout de suite à syrielle"
+    alexia_nvl "Regarde ce que j'ai trouvé tout à l'heure !"
+    syrielle_nvl "What ?! 😮"
+    syrielle_nvl "C'est toi qui a fait ça ?"
+    alexia_nvl "nope"
+    syrielle_nvl "Mais ils n'ont pas le droit ! 😡"
     e_nvl "Malheureusement si."
     e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon leurs conditions."
     e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"

@@ -2,6 +2,7 @@
 define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
 define e_nvl = Character("Médiateur", kind=nvl, callback=Phone_ReceiveSound)
 define syrielle_nvl = Character("Syrielle", kind=nvl, callback=Phone_ReceiveSound)
+define alexia_nvl = Character("Alexia", kind=nvl, callback=Phone_ReceiveSound)
 define sepharo_nvl = Character("Sepharo", kind=nvl, callback=Phone_ReceiveSound)
 define winted_nvl = Character("Winted", kind=nvl, callback=Phone_ReceiveSound)
 
