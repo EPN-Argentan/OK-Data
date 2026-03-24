@@ -60,13 +60,12 @@ label openTablet:
     show SearchScreen
     show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
 
-    a "ça craint, je ne lui ai toujours rien trouvé comme cadeau..."
-    a "une tablette graphique...non il la laissera dans un coin"
-    a "Kickboxer !...Non il l'a déjà..."
-    a "'Un manque d'inspiration...demandez à notre IA de vous aider'"
+    a "Maman veut que je trouve un cadeau original pour mon frère."
+    a "Mais j’ai zéro inspi."
+    a "On ne va quand même pas lui filer un bouquet de fleurs ou une bouteille de vin."
+    a "Et si je passais par l’IA pour voir ?"
     a "pourquoi pas, ça me donnera surement une piste"
-    a "Vous êtes l'algorithme de recommendation"
-    a "Croisez les données afin d'en extraire des informations sensées"
+    a "Si je croisais toutes les infos que j’ai sur mon frère, un peu comme un algorithme, je devrais en apprendre assez pour être sûr de tomber juste."
     nvl clear
 
 label algorithmGame:
