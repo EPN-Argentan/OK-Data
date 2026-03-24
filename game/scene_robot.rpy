@@ -348,9 +348,9 @@ screen galeryNoFilter:
                 hover "UI/applications/Exit.png"
                 action Jump("homeScreen")
     side "c b r":
-         area (0.575, 0.3, 330, 500)
+        area (0.575, 0.3, 330, 500)
 
-         viewport id "vp":
+        viewport id "vp":
             draggable True
             vbox:
                 spacing 20
@@ -376,17 +376,17 @@ screen galeryNoFilter:
                     add "UI/applications/galery/brotherInBarcelona002.png"
 
 
-         bar value XScrollValue("vp")
-         vbar value YScrollValue("vp")
+        bar value XScrollValue("vp")
+        vbar value YScrollValue("vp")
 
 screen cloudNoFilter:
     add "UI/applications/cloudNoFilter.png" xalign 0.6955 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
     side "c b r":
-         area (0.57, 0.3, 330, 550)
+        area (0.57, 0.3, 330, 550)
 
-         viewport id "vp":
+        viewport id "vp":
             draggable True
             vbox:
                 spacing 20
@@ -446,8 +446,8 @@ screen cloudNoFilter:
                         hovered Show("metaData",None,"Métadonnées : \nBarcelone \n002355_01")
                         unhovered Hide("metaData")
                         action NullAction()
-         bar value XScrollValue("vp")
-         vbar value YScrollValue("vp")
+        bar value XScrollValue("vp")
+        vbar value YScrollValue("vp")
          
     hbox:
         xalign 0.74
@@ -458,13 +458,13 @@ screen cloudNoFilter:
             action Jump("homeScreen")
 
 screen metaData(text):
-     frame:
-         xpadding 10
-         ypadding 10
-         xalign 0.5
-         yalign 0.8
-         has hbox
-         text "[text]"
+    frame:
+        xpadding 10
+        ypadding 10
+        xalign 0.5
+        yalign 0.8
+        has hbox
+        text "[text]"
 
 screen dataCloudOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
