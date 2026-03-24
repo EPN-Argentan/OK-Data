@@ -177,7 +177,7 @@ define gui.button_text_insensitive_color = gui.insensitive_color
 
 ## L'alignement horizontal du texte des boutons. (0.0 est à gauche, 0.5 est au
 ## centre, 1.0 est à droite).
-define gui.button_text_xalign = 0.0
+define gui.button_text_xalign = 0.5
 
 
 ## Ces variables surchargent les paramètres par défaut pour différents types de
