@@ -65,6 +65,7 @@ label endPrompt:
     e_nvl "Les IAs, c'est pas bien"
     a "MercIA"
     $ hubClickable["photoFrame"]= 0
+    $ trackScenarios["photoFrame"] = True
     hide screen brotherPictureDisplay
     jump hub
 

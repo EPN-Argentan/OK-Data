@@ -94,7 +94,18 @@ screen hubElements:
 
     #...
     #add list of hub clickable elements here
+    #then add in trackscenarios file in settings.rpy
 
+#A variable that track main scenarios (avoid bonus scenarios) to check if they have been already made if that's the case, enable last scenario
+$ trackScenarios = {
+    "dog" : False,
+    "phone" : False,
+    "phoneCall" : False,
+    "watch" : False,
+    "laptop" : False,
+    "tablet" : False,
+    "photoFrame" : False
+}
 
 #Screen when head phone is just visible with settings icons
 screen phoneDown :

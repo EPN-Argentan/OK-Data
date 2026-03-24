@@ -65,6 +65,7 @@ label resultat :
     scene black
     with fade
     $ hubClickable["watch"]= 0
+    $ trackScenarios["watch"] = True
 
 
 # Label de démarrage du mini-jeu

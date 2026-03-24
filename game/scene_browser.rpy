@@ -1,7 +1,6 @@
 default youSharedTruePic = False
 
 label browserLabel:
-    $ hubClickable["phoneCall"]= 0
     scene hub
     hide screen hubElements
     hide screen phoneDown
@@ -78,6 +77,8 @@ label photosShared:
     m "Merci ma grande, tu restes manger ce midi ?"
     a "Ok maman, mais après j'y vais,\nj'ai encore beaucoup de choses à préparer."
     show black with fade
+    $ hubClickable["phoneCall"]= 0
+    $ trackScenarios["phoneCall"] = True 
     jump hub
 
 

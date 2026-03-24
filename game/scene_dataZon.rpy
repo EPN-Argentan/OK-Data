@@ -411,6 +411,7 @@ label mailconfirmation :
     scene black
     with fade
     $ hubClickable["laptop"]= 0
+    $ trackScenarios["laptop"] = True
     jump hub
 
 

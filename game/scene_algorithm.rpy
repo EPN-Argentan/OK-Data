@@ -94,6 +94,7 @@ label endAlgorithm:
     a " Super idée !"
     hide screen algorithmnMenu
     $ hubClickable["tablet"]= 0
+    $ trackScenarios["tablet"] = True
     jump hub
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label

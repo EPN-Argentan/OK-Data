@@ -17,12 +17,31 @@ Ce fichier doit commencer avec l'élément suivant :
   label leNomDeVotreScene:
     empty "" #cette ligne permet d'éviter que cela entraine des erreurs en affichant un premier texte vide à l'ouverture du label
 ```
+Ensuite, dans le fichier *settings.rpy*, il faut ajouter à la suite de la variable hubCLickable, un mot clé rattaché à votre objet. Dans le jeu, le mot clé correspond à l'objet cliquable :
+```python
+    hubClickable = {
+        'dog': 1,
+        'laptop': 0 ,
+        ...
+        'le_nom_de_votre_element_cliquable': 0
+    }
+```
+Enfin, pour finir, si vous souhaitez rendre ce contenu obligatoire pour débloquer la fin du jeu, il faut ajouter, toujours dans le fichier *settings.rpy*, dans la variable *trackScenarios* votre mot clé précédemment définit associé à *False*:
+```python
+    trackScenarios = {
+        "dog" : False,
+        "phone" : False,
+        ...
+        "le_nom_de_votre_element_cliquable" : False
+    }
+```
+
 #### Image de l'objet cliquable
-Ensuite, il faut créer les images cliquables. Pour cela il faut exporter deux image de l'élément en png transparent, l'une avec un contour blanc de **3px** et l'autre sans contour blanc. **Ces deux images doivent avoir exactement la même taille à l'export.**
+Ensuite, il faut créer l'image cliquable. Pour cela il faut exporter l'image de l'élément en png transparent en gardant bien une marge de 10px tout autour de votre image pour laissé la place au liseret blanc.
 
 ![Example d'élément cliquable en version hover et idle](https://github.com/EPN-Argentan/OK-Data/blob/main/src/example_imageButtons.png)
 
-Afin de faciliter le stockage, ces images doivent être stockées dans *OK Data\game\images\UI\imagebuttons* sous l'appelation : nomDeLElement_hover.png (sans contour blanc) et nomDeLElement_idle.png (avec contour blanc)
+Afin de faciliter le stockage, cette image doit être stockée dans *OK Data\game\images\UI\imagebuttons* sous l'appelation : nomDeLElement.png 
 
 #### Placement de l'objet
 Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le screen *HubElements* :
@@ -31,8 +50,8 @@ Ensuite, il faut créer l'élément dans le fichier *my_screens.rpy* dans le scr
     imagebutton:
       xpos 1400 #la position X du bord supérieur gauche
       ypos 797 #la position Y du bord supérieur gauche
-      idle "UI/imagebuttons/dog_idle.png" #chemin de l'image de l'élément cliquable avec un contour blanc
-      hover "UI/imagebuttons/dog_hover.png" #chemin de l'image de l'élément cliquable sans un contour blanc
+      idle At("UI/imagebuttons/dog.png", outline_transform(6, "#ffffff", 4.0)) #chemin de l'image de l'élément cliquable avec un contour blanc dynamique
+      hover "UI/imagebuttons/dog.png" #chemin de l'image de l'élément cliquable
       action Jump("leNomDeVotreScene") #le nom du label où est la scène
 ```
 #### Mise en fonctionnement de l'objet
@@ -43,8 +62,17 @@ Afin de rendre l'élément cliquable, il faut au moment opportun du scénario é
 Cela peut être définit à n'importe quel moment
 Si vous souhaitez que l'élément soit cliquable dés le début du jeu, il faut dans "script.rpy", dans la liste "$ hubClickable = {" ajouter une ligne :
 ```python
-le_nom_de_votre_element_cliquable: 1,
+    'le_nom_de_votre_element_cliquable': 1,
 ```
+#### Fin de scénario
+Quand le joueur a fini le scénario que vous avez implémenté, dans votre fichier "scene_leNomDeVotreScene.rpy", à la fin de celui-ci (dans le dernier label appellé) vous devez écrire ceci : 
+```python
+    show black with fade #permet une transition en fondu au noir vers le hub
+    $ hubClickable["le_nom_de_votre_element_cliquable"]= 0 #permet de rendre inactif le clic sur l'objet
+    $ trackScenarios["le_nom_de_votre_element_cliquable"] = True  #si votre scénario est obligatoire (voir 'Initialisation du scénario') permet de notifier que le scénario a été fait
+    jump hub #retour au hub principale
+```
+
 
 ## Gestion des bulles
 Pour modifier la dimension et l'emplacement des bulles il suffit de se place dans le jeu sur la bulle correspondante et faire shift+R. ensuite, en haut à gauche cliquer sur "AREA... " puis faire un cliquer glisser pour placer et dimensionner la bulle.

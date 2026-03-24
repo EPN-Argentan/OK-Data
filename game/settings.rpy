@@ -39,6 +39,17 @@ init -10 python:
         'forest' : 0
     }
 
+    #A variable that track main scenarios (avoid bonus scenarios) to check if they have been already made if that's the case, enable last scenario
+    trackScenarios = {
+        "dog" : False,
+        "phone" : False,
+        "phoneCall" : False,
+        "watch" : False,
+        "laptop" : False,
+        "tablet" : False,
+        "photoFrame" : False
+    }
+
     ressourceReward = True
     
     #avoid to go upper than maximum points or lower than minimum points
