@@ -3,6 +3,7 @@
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Nighten" ##The name of the main character, used to place them on the screen
 define Syrielle = "Syrielle"
+define Alexia = "Alexia"
 define Sepharo = "Sepharo"
 define Winted = "Winted"
 
@@ -139,6 +140,8 @@ screen nvl_phonetext(dialogue):
                         $ message_icon = "UI/conversation/sepharo_phone_icon.png"
                     elif d.who == Winted:
                         $ message_icon = "UI/conversation/winted_phone_icon.png"
+                    elif d.who == Alexia:
+                        $ message_icon = "UI/conversation/alexia_phone_icon.png"
                     else:
                         $ message_icon = "UI/conversation/mediateur_phone_icon.png"
 

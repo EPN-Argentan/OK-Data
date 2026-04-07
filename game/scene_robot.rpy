@@ -175,18 +175,17 @@ label foundInDataBook:
     e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon leurs conditions."
     e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
     window auto hide
-    $ renpy.pause(1.0, hard=True)
     hide screen dataBookFound
-    show screen outOfBattery
-    hide screen appsPhone
-    a "Ah, la poisse ! Plus de batterie…"
-    hide screen outOfBattery
     show screen phishing
-    a "mm mm"
+    a "mm mm"    
+    while True:
+        empty ""
+    
 
 label busComing:
     hide screen phishing
-    a "...et mon bus qui arrive"
+    hide screen appsPhone
+    a "voilà mon bus qui arrive"
     hide screen outOfBattery
 
 label travelToStore:
@@ -221,9 +220,15 @@ label insideStore:
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
-    vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs !"
+    vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs si vous voulez"
+    vendeuse "Vous pouvez prendre n'importe quelle photo"
     a "Oh chouette ! Justement, c’est l’anniversaire de mon frère."
-    vendeuse "Il suffit de choisir une photo et de la glisser sur le mug.\n On a des ordis juste là."
+    a "Attendez je viens de retrouver une superbe photo de lui !"
+    show screen outOfBattery
+    a "Ah, la poisse ! Plus de batterie…"
+    hide screen outOfBattery
+    vendeuse "Si vous voulez, vous pouvez vous connecter sur un de nos ordis et télécharger votre photo"
+    a "Oui, merci !"
     show computerStore
     hide freezeReceive
     window auto hide
@@ -333,7 +338,13 @@ screen phishing:
         padding (15,15)
         textbutton "http://packages.u9...":
             text_style "buttonBlack"
-            action [Call("addPoints",-5,'point_sociaux',"","","Attention, le phishing est constant", "",""),Jump("busComing")]
+            action Call("addPoints",-5,'point_sociaux',"","","Attention, le phishing est constant", "","busComing")
+    imagebutton:
+        xalign 0.6
+        yalign 0.15
+        idle At("UI/applications/Exit.png", outline_transform(6, "#ffffff", 4.0))
+        hover "UI/applications/Exit.png"
+        action Call("addPoints",5,'point_sociaux',"","","", "Bravo, tu as évité le phishing !","busComing")
             
 
 screen galeryOpening:
