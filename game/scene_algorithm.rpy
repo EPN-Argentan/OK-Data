@@ -4,10 +4,10 @@ image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg"
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Il semblerait que cette personne vivie vers Caen",False, 'catLocalisation', 'localisation',True],
-    'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","mmmm...Il semblerait que cette personne apprécie la cuisine",False, 'catIntérêt', 'intérêt',False],
-    'Asie' : ['BonSociaux','BonSociaux',"Asie \n","mmmm...Il semblerait que cette personne apprécie l'Asie",False, 'catSociaux', 'sociaux',False],
-    'Végétarisme' : ['BonConviction','BonConviction',"Végétarien \n","mmmm...Il semblerait que cette personne ait une affinité avec le végétarisme",False, 'catConviction', 'conviction',False],
+    'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Idéalement, plutôt vers Caen.",False, 'catLocalisation', 'localisation',True],
+    'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","Mmmm… il s’intéresse de près à la cuisine.",False, 'catIntérêt', 'intérêt',False],
+    'Asie' : ['BonSociaux','BonSociaux',"Asie \n","Ah, il a un petit faible pour l’Asie…",False, 'catSociaux', 'sociaux',False],
+    'Végétarisme' : ['BonConviction','BonConviction',"Végétarien \n","Tiens, il a une vraie tendance végétarienne.",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found
@@ -60,12 +60,11 @@ label openTablet:
     show SearchScreen
     show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
 
-    a "Maman veut que je trouve un cadeau original pour mon frère."
-    a "Mais j’ai zéro inspi."
+    a "Comme toujours, j’ai dit oui… et me voilà à devoir dénicher un nouveau cadeau pour Pierre."
+    a "J’ai zéro inspi"
     a "On ne va quand même pas lui filer un bouquet de fleurs ou une bouteille de vin."
-    a "Et si je passais par l’IA pour voir ?"
-    a "pourquoi pas, ça me donnera surement une piste"
-    a "Si je croisais toutes les infos que j’ai sur mon frère, un peu comme un algorithme, je devrais en apprendre assez pour être sûr de tomber juste."
+    a "Et si on devenait l’IA, juste pour voir ?"
+    a "En croisant toutes les infos récoltées sur mon frère, et en jouant les algorithmes, je devrais en apprendre assez pour viser juste."
     nvl clear
 
 label algorithmGame:
@@ -88,9 +87,9 @@ label algorithmGame:
     call algorithmGame from _call_algorithmGame 
 
 label endAlgorithm:
-    e_nvl "Analyse terminée"
-    a "un cours de cuisine japonnaise végétarienne sur caen"
-    a " Super idée !"
+    e_nvl "Ça nous fait déjà pas mal d’infos."
+    a "Avec un cours de cuisine japonaise végétarienne à Caen, je devrais viser juste !"
+    a "L’IA connaît mieux mon frère que moi… Il serait temps qu’il se méfie un peu de ce qu’il partage !"
     hide screen algorithmnMenu
     $ hubClickable["tablet"]= 0
     $ trackScenarios["tablet"] = True

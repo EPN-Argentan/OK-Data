@@ -11,7 +11,7 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "Ouah, c’est vieux ça !"
+    a "Waouh ! Elle est vraiment marrante, cette photo de Pierre !"
 else:
     show frame_slideshow_withselfie with moveinbottom
     # a "Mais qu’est-ce que cette photo fait là ? Pourvu que personne ne tombe dessus !"
@@ -19,19 +19,19 @@ else:
     # e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
     # e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
 
-a "Ah oui c'est vrai, j'avais oublié cette histoire !"
-a "On avait bien rit...Tiens ça ferait un super cadeau souvenir ça"
-a "Elle doit être sur mon cloud !"
+a "On pourrait faire un truc sympa avec pour son anniversaire."
+a "Il faut que je la retrouve, mais comme elle est dans le cloud ☁️, ça ne devrait pas être compliqué."
 
 #Alexa open his phone to find funny brother's picture
 label searchBrotherPicInPhone:
     show screen galeryOpeningLogo
-    a "Je dois l'avoir quelquepart..."
+    a "En plus, je peux le faire directement sur mon téléphone."
     hide frame_slideshow_noselfie with moveoutbottom
+
     hide frame_slideshow_withselfie with moveoutbottom
     show screen galery
     hide screen galeryOpeningLogo
-    a "Voilà, il n'y a plus qu'à chercher"
+    a "Il s’en est passé, des trucs, depuis… Ça ne va pas être si simple."
     window auto hide
     $ renpy.pause(2.0, hard=False)
     show screen popUpAI
@@ -48,10 +48,10 @@ label IAsearch:
     hide screen consentScreen
     show screen IASearch
     show screen blankPrompt
-    a "Comment décrire cette image ?"
+    a "C’est fou, l’IA arrive à analyser tous les éléments de mes photos."
     hide screen blankPrompt
     show screen miniGamePrompt
-    a "Bon, de quoi je me souviens ?"
+    a "Il faut que je me rappelle ce qu’il y a sur cette fameuse photo !"
     while True:
         empty ""
 
@@ -270,7 +270,7 @@ label promptChecker(key1=0,key2=0,key3=0):
         jump endPrompt
         # Tu peux ajouter score, suite du jeu, etc.
     else:
-        a "Je ne me souviens pas de ça..."
+        a "Oh zut, ce n’était pas assez précis."
 
     return
 
