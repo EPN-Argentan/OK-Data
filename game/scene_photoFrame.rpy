@@ -25,7 +25,7 @@ a "Il faut que je la retrouve, mais comme elle est dans le cloud ☁️, ça ne 
 #Alexa open his phone to find funny brother's picture
 label searchBrotherPicInPhone:
     show screen galeryOpeningLogo
-    a "En plus, je peux le faire directement sur mon téléphone."
+    a "En plus, je peux le faire directement sur mon smartphone."
     hide frame_slideshow_noselfie with moveoutbottom
 
     hide frame_slideshow_withselfie with moveoutbottom
@@ -48,10 +48,10 @@ label IAsearch:
     hide screen consentScreen
     show screen IASearch
     show screen blankPrompt
-    a "C’est fou, l’IA arrive à analyser tous les éléments de mes photos."
+    a "Incroyable comme l’IA est capable d’analyser chaque détail de mes photos."
     hide screen blankPrompt
     show screen miniGamePrompt
-    a "Il faut que je me rappelle ce qu’il y a sur cette fameuse photo !"
+    a "Qu’est ce qu’il y avait sur cette photo ?"
     while True:
         empty ""
 
@@ -160,15 +160,15 @@ screen consentScreen:
         imagebutton:
             idle At('UI/Cadre/FullConsent.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/FullConsent.png"
-            action [Call("addPoints",-5,'point_sociaux',"","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse","",'IAsearch')]
+            action [Call("addPoints",-5,'point_sociaux',"","","Avant de dire oui à une appli, demande toi vraiment si elle a besoin de cette autorisation pour fonctionner.µEn gros, accepter une permission, c’est un peu comme donner accès à toutes tes photos au premier inconnu croisé dans la rue.µTu ne sais pas ce qu’il va en faire… et pour une appli, c’est rarement gratuit,µil y a souvent un intérêt caché, bien souvent financier.","",'IAsearch')]
         imagebutton:
             idle At('UI/Cadre/PartialConsent.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/PartialConsent.png"
-            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'IAsearch')]
+            action [Call("addPoints",5,'point_sociaux',"","","","L’autorisation “uniquement pendant l’utilisation”, c’est déjà une bonne façon de limiter les fuites de données,µparce que l’appli n’y accède que quand tu t’en sers. Mais dans notre exemple,µon ne voit pas trop pourquoi une appli de recherche de photos aurait besoin d’accéder aux contacts.µDonc il faut toujours se demander : de quoi l’appli a-t-elle vraiment besoin pour fonctionner ?µEt ne lui donner que des accès raisonnables aux données du téléphone.",'IAsearch')]
         imagebutton:
             idle At('UI/Cadre/Deny.png', outline_transform(6, "#ffffff86", 4.0))
             hover "UI/Cadre/Deny.png"
-            action [Call("addPoints",5,'point_sociaux',"","","","Il est important de toujours de demander si les permissions demandées sont cohérentes avec les fonctionnalités de l'app demandeuse",'IAsearch')]
+            action [Call("addPoints",5,'point_sociaux',"","","","Bravo ! La vraie question, c’est : de quoi l’appli a-t elle vraiment besoin pour fonctionner ?µEt dans notre cas, une appli de recherche photo n’a clairement pas besoin d’accéder aux contacts pour être opérationnelle.",'IAsearch')]
 
 screen IASearch:
     add "UI/Cadre/IAHomePage.png" xalign 0.6955 yalign 0.5

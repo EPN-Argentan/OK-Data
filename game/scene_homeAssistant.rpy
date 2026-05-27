@@ -15,11 +15,11 @@ label homeAssistant:
     if switchOnHomeAssistant == False :
         $ switchOnHomeAssistant = True
         $ printit()
-        a "Dis DATASSISANTE, peux-tu me rappeler les événements de la journée ?"
-        d "Bonjour Alexia, oui, pas de problème, je suis là pour toi."
-        d "Aujourd'hui, vous avez l'anniversaire de votre frère, vous aviez noté qu'il fallait lui touver un cadeau"
-        d "Vous avez aussi demandé que je vous rappel que votre maman compte sur vous pour trouver le cadeau qu'elle doit lui offrir"
-        d "Puis-continuer à vous aider ?"
+        a "Dis, DATASSISTANTE, peux tu me dire quels sont les trucs à faire aujourd’hui ?"
+        d "Bonjour Alexia, bien sûr. Je suis là pour t’aider à ne rien oublier."
+        d "Aujourd’hui, tu dois t’occuper de l’organisation de l’anniversaire de ton frère Pierre, et il faut aussi lui trouver un cadeau."
+        d "Je te rappelle également que ta maman compte sur toi pour envoyer des photos et trouver quelque chose pour ton frère, car elle n’a pas d’idées."
+        d "As tu besoin d’autre chose ? Je reste attentive et à l’écoute de la moindre de tes demandes."
         jump hub
     else :
     #Second time you click on home assistant
@@ -42,7 +42,8 @@ screen homeAssistantButton:
 label endHomeAssitant:
     hide screen homeAssistantButton
     $ hubClickable["homeAssistant"]= 0
-    e_nvl "Les enceintes connectées, comme la plupart des objets connectés, sont sources de récolte de données les plus intimes et intrusives"
+    e_nvl "Oui, tu as eu le bon réflexe. Les enceintes connectées, comme beaucoup d’objets connectés, collectent énormément d’informations sur notre vie quotidienne."
+    e_nvl "Et parfois, ce sont des données très personnelles, voire intrusives."
     jump hub
 
 init python:

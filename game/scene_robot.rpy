@@ -165,7 +165,7 @@ label searchInDataBookLocalisation:
 label foundInDataBook:
     hide screen dataBookSearch
     show screen dataBookFound
-    a "Voilà, c'est celle là. J'envoie tout de suite à syrielle"
+    a "Voilà, c'est celle là. J'envoie tout de suite à Syrielle"
     alexia_nvl "Regarde ce que j'ai trouvé tout à l'heure !"
     syrielle_nvl "What ?! 😮"
     syrielle_nvl "C'est toi qui a fait ça ?"
