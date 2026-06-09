@@ -19,19 +19,19 @@ else:
     # e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
     # e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
 
-a "On pourrait faire un truc sympa avec pour son anniversaire."
-a "Il faut que je la retrouve, mais comme elle est dans le cloud ☁️, ça ne devrait pas être compliqué."
+a "On devrait pouvoir faire un truc sympa avec."
+a "Comme elle traîne dans mon petit nuage ☁️, je devrais bien réussir à la retrouver."
 
 #Alexa open his phone to find funny brother's picture
 label searchBrotherPicInPhone:
     show screen galeryOpeningLogo
-    a "En plus, je peux le faire directement sur mon smartphone."
+    a "Avec mon smartphone, ça devrait le faire !"
     hide frame_slideshow_noselfie with moveoutbottom
 
     hide frame_slideshow_withselfie with moveoutbottom
     show screen galery
     hide screen galeryOpeningLogo
-    a "Il s’en est passé, des trucs, depuis… Ça ne va pas être si simple."
+    a "C’est agréable de replonger dans ses photos de temps en temps."
     window auto hide
     $ renpy.pause(2.0, hard=False)
     show screen popUpAI
@@ -48,7 +48,7 @@ label IAsearch:
     hide screen consentScreen
     show screen IASearch
     show screen blankPrompt
-    a "Incroyable comme l’IA est capable d’analyser chaque détail de mes photos."
+    a "Au vu de tout ce qu’on en dit, j’espère que cette fameuse IA sera efficace."
     hide screen blankPrompt
     show screen miniGamePrompt
     a "Qu’est ce qu’il y avait sur cette photo ?"
@@ -58,11 +58,15 @@ label IAsearch:
 label endPrompt:
     hide screen IASearch
     hide screen miniGamePrompt
-    a "Oui c'est ça !"
+    a "Incroyable comme l’IA est capable d’analyser chaque détail de mes photos."
     show screen brotherPictureDisplay
-    a "Voilà, c'est celle là"
+    a "Ça y est… enfin ! Je l’ai !"
     nvl clear
-    e_nvl "Les IAs, c'est pas bien"
+    e_nvl "Il faut être encore plus vigilant avec l’IA, car elle peut analyser très vite de grandes quantités de données personnelles et repérer des corrélations que nous, humains, mettrions beaucoup plus de temps à identifier."
+    e_nvl "L’IA n’est pas un « cerveau autonome » : elle n’a ni intention, ni désir, ni volonté propre. Ce sont les humains qui décident comment elle est entraînée, déployée et surveillée."
+    e_nvl "Malheureusement, l’actualité nous montre chaque jour que l’humain n’a pas toujours les meilleures intentions, surtout quand le profit entre en jeu."
+
+
     a "MercIA"
     $ hubClickable["photoFrame"]= 0
     $ trackScenarios["photoFrame"] = True
