@@ -41,6 +41,6 @@ label walkOut :
 
     $ dogInBasket = False
     ##Set hub elements clickable
-    $ set_hub_at_Start()
+    $ set_hub_afterWAlkout()
 
     jump hub

@@ -36,7 +36,8 @@ init -10 python:
         'phone': 0,
         'phoneCall': 0,
         'robot':0,
-        'forest' : 0
+        'forest' : 0,
+        'sources' : 0
     }
 
     #A variable that track main scenarios (avoid bonus scenarios) to check if they have been already made if that's the case, enable last scenario
@@ -73,10 +74,23 @@ init -10 python:
     speakerTarget = -1 #Number array element points to target to remove a point
     current_category = 0
 
+    def set_hub_afterWAlkout():
+        hubClickable["dog"] = 0
+        hubClickable["phone"] = 1
+        hubClickable["phoneCall"] = 0
+        hubClickable["tablet"] = 0
+        hubClickable["laptop"] = 0
+        hubClickable["walkout"] = 0
+        hubClickable["forest"] = 0
+        hubClickable["homeAssistant"] = 0
+        hubClickable["photoFrame"] = 0
+        hubClickable["watch"] = 0
+        hubClickable["sources"] = 0
 
     def set_hub_at_Start():
         hubClickable["dog"] = 0
-        hubClickable["phone"] = 1
+        hubClickable["phone"] = 0
+        hubClickable["phoneCall"] = 1
         hubClickable["tablet"] = 1
         hubClickable["laptop"] = 1
         hubClickable["walkout"] = 1
@@ -84,3 +98,4 @@ init -10 python:
         hubClickable["homeAssistant"] = 1
         hubClickable["photoFrame"] = 1
         hubClickable["watch"] = 1
+        hubClickable["sources"] = 1
