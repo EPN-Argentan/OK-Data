@@ -13,13 +13,13 @@ label dataZon :
   hide screen phoneDown
   stop music fadeout 1.0
   show zoomPC
-  show curseurTexte
+  #show curseurTexte
   show screen barre_de_vie
   stop music fadeout 1.0
   play music "Trickling Up - Godmode.mp3"
-  a "Il serait temps que je check mes mails !"
   window auto hide
   $ renpy.pause(2.0, hard=True)
+  a "Il serait temps que je check mes mails !"
   show screen desktopbutton
   a "Voyons voir ce que j’ai reçu !"
   while True:
