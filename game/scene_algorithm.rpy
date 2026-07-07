@@ -58,7 +58,7 @@ label openTablet:
     hide screen hubElements
     hide screen barre_de_vie
     show SearchScreen
-    show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
+    #show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
 
     a "Comme toujours, j’ai dit oui… et me voilà à devoir dénicher un nouveau cadeau pour Pierre."
     a "J’ai zéro inspi"
@@ -108,7 +108,7 @@ screen catLocalisation:
             child "images/UI/algorithm/LogBonneReponse.png"
             hover_child At("images/UI/algorithm/LogBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/LogBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.1,0.2)
+            align(renpy.random.randint(0,10)/10,0.2)
             draggable True
             droppable False
             dragged drag_placed
@@ -199,16 +199,6 @@ screen catIntérêt:
         ###False clues display
         drag:
             drag_name "Mauvais indice"
-            child "images/UI/algorithm/Search1.png"
-            hover_child At("images/UI/algorithm/Search1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/Search1.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.2,0.7)
-            draggable True
-            droppable False
-            dragged drag_placed
-            drag_raise True
-        drag:
-            drag_name "Mauvais indice"
             child "images/UI/algorithm/Search2.png"
             hover_child At("images/UI/algorithm/Search2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/Search2.png", outline_transform(10, "#16ec4f", 4.0))
@@ -222,7 +212,7 @@ screen catIntérêt:
             child "images/UI/algorithm/Search3.png"
             hover_child At("images/UI/algorithm/Search3.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/Search3.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.8,0.5)
+            align(0.8,0.15)
             draggable True
             droppable False
             dragged drag_placed
@@ -232,7 +222,7 @@ screen catIntérêt:
             child "images/UI/algorithm/Video1.png"
             hover_child At("images/UI/algorithm/Video1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/Video1.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.4,0.3)
+            align(0.10,0.9)
             draggable True
             droppable False
             dragged drag_placed
@@ -242,7 +232,17 @@ screen catIntérêt:
             child "images/UI/algorithm/Video2.png"
             hover_child At("images/UI/algorithm/Video2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/Video2.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.8,0.8)
+            align(0.9,0.9)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Search1.png"
+            hover_child At("images/UI/algorithm/Search1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Search1.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.2,0.7)
             draggable True
             droppable False
             dragged drag_placed
@@ -344,7 +344,7 @@ screen catSociaux:
             child "images/UI/algorithm/GroupeBonneReponse.png"
             hover_child At("images/UI/algorithm/GroupeBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/GroupeBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.3,0.5)
+            align(0.3,0.1)
             draggable True
             droppable False
             dragged drag_placed
@@ -354,7 +354,7 @@ screen catSociaux:
             child "images/UI/algorithm/CommentBonneReponse.png"
             hover_child At("images/UI/algorithm/CommentBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/CommentBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.8,0.6)
+            align(0.88,0.9)
             draggable True
             droppable False
             dragged drag_placed
@@ -385,7 +385,7 @@ screen catSociaux:
             child "images/UI/algorithm/Groupe2.png"
             hover_child At("images/UI/algorithm/Groupe2.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/Groupe2.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.8,0.5)
+            align(0.75,0.15)
             draggable True
             droppable False
             dragged drag_placed
@@ -426,21 +426,21 @@ screen catConviction:
             child "images/UI/algorithm/LikeBonneReponse.png"
             hover_child At("images/UI/algorithm/LikeBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             selected_child At("images/UI/algorithm/LikeBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.1,0.2)
+            align(0.1,0.9)
             draggable True
             droppable False
             dragged drag_placed
             drag_raise True
         drag:
             drag_name "BonConviction"
-            child "images/UI/algorithm/CommentBonneReponse.png"
-            hover_child At("images/UI/algorithm/CommentBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
-            selected_child At("images/UI/algorithm/CommentBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
-            align(0.8,0.6)
+            child "images/UI/algorithm/Groupe3.png"
+            hover_child At("images/UI/algorithm/Groupe3.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Groupe3.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.1,0.2)
             draggable True
             droppable False
             dragged drag_placed
-            drag_raise True  
+            drag_raise True
         ###False clues display
         drag:
             drag_name "Mauvais indice"
@@ -452,6 +452,26 @@ screen catConviction:
             droppable False
             dragged drag_placed
             drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/Groupe1.png"
+            hover_child At("images/UI/algorithm/Groupe1.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/Groupe1.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.1)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True
+        drag:
+            drag_name "Mauvais indice"
+            child "images/UI/algorithm/CommentBonneReponse.png"
+            hover_child At("images/UI/algorithm/CommentBonneReponse.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
+            selected_child At("images/UI/algorithm/CommentBonneReponse.png", outline_transform(10, "#16ec4f", 4.0))
+            align(0.8,0.6)
+            draggable True
+            droppable False
+            dragged drag_placed
+            drag_raise True  
 
 
         drag:

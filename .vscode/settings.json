@@ -113,15 +113,15 @@
                 }
             },
             {
-                "scope": "renpy.meta.color.#999",
-                "settings": {
-                    "foreground": "#999"
-                }
-            },
-            {
                 "scope": "renpy.meta.color.#000",
                 "settings": {
                     "foreground": "#000"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#999",
+                "settings": {
+                    "foreground": "#999"
                 }
             },
             {
@@ -158,6 +158,12 @@
                 "scope": "renpy.meta.color.#00b6ed",
                 "settings": {
                     "foreground": "#00b6ed"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#f00",
+                "settings": {
+                    "foreground": "#f00"
                 }
             }
         ]

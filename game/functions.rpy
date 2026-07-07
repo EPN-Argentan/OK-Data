@@ -183,7 +183,6 @@ screen sourcesDisplay(title,URL,categorie):
             idle "UI/imagebuttons/InfoUrl.png"
             action NullAction()
 
-
 #Map function
 init python:
     def translate(value, leftMin, leftMax, rightMin, rightMax):
