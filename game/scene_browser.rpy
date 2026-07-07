@@ -20,6 +20,9 @@ label browserLabelCall:
     while True:
         empty ""
 
+label hangupCall: 
+    a "elle allait encore parler des heures"
+
 label browserLabelAfterCall:
     hide screen callPhoneIncoming
     hide screen callPhoneAnswer

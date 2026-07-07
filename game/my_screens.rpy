@@ -302,7 +302,7 @@ screen callPhoneAnswer:
         yalign 0.69
         idle "UI/call/hangup_hover.png"
         hover "UI/call/hangup_idle.png"
-        action NullAction()
+        action [Jump("hangupCall")]
 
 
 style bubble_tuto:
