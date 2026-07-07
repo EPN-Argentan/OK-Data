@@ -11,7 +11,7 @@ stop music fadeout 1.0
 nvl clear
 if shareSelfie == False:
     show frame_slideshow_noselfie with moveinbottom
-    a "Waouh ! Elle est vraiment marrante, cette photo de Pierre !"
+    # a "Waouh ! Elle est vraiment marrante, cette photo de Pierre !"
 else:
     show frame_slideshow_withselfie with moveinbottom
     # a "Mais qu’est-ce que cette photo fait là ? Pourvu que personne ne tombe dessus !"
@@ -19,6 +19,7 @@ else:
     # e_nvl "Et là… toute personne ou appareil ayant accès à ce cloud peut aussi y jeter un œil."
     # e_nvl "Pratique pour retrouver tes souvenirs, mais mieux vaut garder un œil sur les paramètres de partage !"
 
+a "Waouh ! Elle est vraiment marrante, cette photo de Pierre !"
 a "On devrait pouvoir faire un truc sympa avec."
 a "Comme elle traîne dans mon petit nuage ☁️, je devrais bien réussir à la retrouver."
 
