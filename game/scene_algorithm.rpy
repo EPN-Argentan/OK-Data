@@ -4,10 +4,10 @@ image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg"
 
 #List clues that has to be found to resolve algorithmn mini game 
 define combinaisonClues = {
-    'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Idéalement, plutôt vers Caen.",False, 'catLocalisation', 'localisation',True],
-    'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","Mmmm… il s’intéresse de près à la cuisine.",False, 'catIntérêt', 'intérêt',False],
-    'Asie' : ['BonSociaux','BonSociaux',"Asie \n","Ah, il a un petit faible pour l’Asie…",False, 'catSociaux', 'sociaux',False],
-    'Végétarisme' : ['BonConviction','BonConviction',"Végétarien \n","Tiens, il a une vraie tendance végétarienne.",False, 'catConviction', 'conviction',False],
+    'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Le regroupement dessine une présence bien centrée autour de Caen.",False, 'catLocalisation', 'localisation',True],
+    'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","La deuxième tendance dévoile un vrai goût pour les fourneaux.",False, 'catIntérêt', 'intérêt',False],
+    'Asie' : ['BonSociaux','BonSociaux',"Asie \n","La troisième laisse entrevoir un doux penchant pour l’Asie…",False, 'catSociaux', 'sociaux',False],
+    'Végétarisme' : ['BonConviction','BonConviction',"Végétarien \n","Et pour finir, on repère un bel engouement pour la cuisine végétarienne.",False, 'catConviction', 'conviction',False],
 }
 
 #Track how many clues have been found

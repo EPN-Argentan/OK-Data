@@ -131,7 +131,7 @@ label checkClueALL():
                         renpy.say(algo, "Cette association de données a déjà été trouvée")
                         break
                 else:
-                    renpy.say(algo, "Cette association de données ne produit aucune corrélation")
+                    renpy.say(algo, "Cette association de données ne fait ressortir aucune tendance particulière.")
                     break
 
 #Count total points
