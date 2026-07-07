@@ -111,7 +111,7 @@ label checkClueALL():
                 if (whatInsideTop == value[0] and whatInsideBottom == value[1]) or (whatInsideTop == value[1] and whatInsideBottom == value[0]):
                     if value[4] == False:
                         phrase = value[3]
-                        renpy.say(e_nvl, phrase)
+                        renpy.say(algo, phrase)
                         cluesDisplay += value[2]
                         value[4] = True
                         value[7] = False
@@ -128,10 +128,10 @@ label checkClueALL():
                             renpy.jump('endAlgorithm')
                             break
                     else:
-                        renpy.say(e_nvl, "Tu as déjà trouvé cet indice")
+                        renpy.say(algo, "Cette association de données a déjà été trouvée")
                         break
                 else:
-                    renpy.say(e_nvl, "Cela ne semble pas avoir de sens")
+                    renpy.say(algo, "Cette association de données ne produit aucune corrélation")
                     break
 
 #Count total points

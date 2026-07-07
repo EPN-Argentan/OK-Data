@@ -21,6 +21,8 @@ define med = Character('Mediateur', color="#209792")
 
 define vendeuse = Character('Vendeuse', color="#DE843A")
 
+define algo = Character('OkAI', color="#16ec4f")
+
 define medBubble = Character(None, image="lucy", kind=bubble)   #Lucy
 
 #Custom mouse
