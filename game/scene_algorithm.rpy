@@ -60,7 +60,7 @@ label openTablet:
     show SearchScreen
     #show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
 
-    a "Comme toujours, j’ai dit oui… et me voilà à devoir dénicher un nouveau cadeau pour Pierre."
+    a "Comme toujours, maman me sollicite, je dis oui… et me voilà parti à chercher un nouveau cadeau pour Pierre."
     a "J’ai zéro inspi"
     a "On ne va quand même pas lui filer un bouquet de fleurs ou une bouteille de vin."
     a "Et si on devenait l’IA, juste pour voir ?"
