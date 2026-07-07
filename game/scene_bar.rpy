@@ -26,7 +26,9 @@ label barOut:
     show barSister
     stop music fadeout 1.0
     play music "ambi_bar.mp3"
-    show clic
+    transform offset_middle:
+        xpos -250
+    show clic at offset_middle
     #medBubble "Germain : J'ai ajouté une flèche clic car j'ai remarqué une attente de la part des joueurs."
     empty ""
     hide clic
