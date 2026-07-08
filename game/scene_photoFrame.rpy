@@ -91,7 +91,7 @@ image frame_slideshow_noselfie:
 
 image frame_slideshow_withselfie:
    "/UI/Cadre/frameFunnyPhoto.png"
-   pause 2.5
+   pause 5
    "/UI/Cadre/slideshowFrame_015.png"
    pause 2.5
    "UI/Cadre/slideshowFrame_002.png"
@@ -228,34 +228,34 @@ screen miniGamePrompt:
             text "🔎 Je cherche une image où on voit  " yalign 0.5 style_prefix "promptStyle"
             vbox:
                 textbutton "↑":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action [SetScreenVariable("keyword1Value", min(len(keywordList1)-1, keyword1Value+1)), Function(renpy.restart_interaction)]
                     xalign 0.5
                 text "[keywordList1[keyword1Value]]" style_prefix "promptKey"
                 textbutton "↓":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action SetScreenVariable("keyword1Value",max(0, keyword1Value - 1))
                     xalign 0.5
             text " avec " yalign 0.5 style_prefix "promptStyle"
             vbox:
                 textbutton "↑":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action [SetScreenVariable("keyword2Value", min(len(keywordList2)-1, keyword2Value+1)), Function(renpy.restart_interaction)]
                     xalign 0.5
                 text "[keywordList2[keyword2Value]]" style_prefix "promptKey"
                 textbutton "↓":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action SetScreenVariable("keyword2Value",max(0, keyword2Value - 1))
                     xalign 0.5
             text " la scène se passe " yalign 0.5 style_prefix "promptStyle"
             vbox:
                 textbutton "↑":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action [SetScreenVariable("keyword3Value", min(len(keywordList3)-1, keyword3Value+1)), Function(renpy.restart_interaction)]
                     xalign 0.5
                 text "[keywordList3[keyword3Value]]" style_prefix "promptKey"
                 textbutton "↓":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action SetScreenVariable("keyword3Value",max(0, keyword3Value - 1))
                     xalign 0.5
 

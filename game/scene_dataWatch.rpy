@@ -62,8 +62,7 @@ label resultat :
     e_nvl "C'est vrai que partager tes données permet de profiter à fond des fonctionnalités de ta  montre connectée."
 
 
-    scene black
-    with fade
+
     $ hubClickable["watch"]= 0
     $ trackScenarios["watch"] = True
 
@@ -72,7 +71,7 @@ label resultat :
 label game:
     show runwatch
     e "Garde le rythme et sois précise."
-    e "Clique quatre fois d’affilée quand le bouton devient rouge, pour rester dans le tempo !"
+    e "Clique quatre fois d’affilée quand le bouton devient vert, pour rester dans le tempo !"
 
     # Initialisation des variables du jeu
     $ bar_color = "yellow"  # Couleur initiale de la barre
@@ -91,7 +90,7 @@ label game:
                 background (
                     "images/yellow_bar.png" if bar_color == "yellow" else
                     "images/orange_bar.png" if bar_color == "orange" else
-                    "images/red_bar.png"  # Utilise l'image correspondant à la couleur
+                    "images/green_bar.png"  # Utilise l'image correspondant à la couleur
                 )
                 text "Clique ici !" align (0.9, 0.5) size 30
 
@@ -118,7 +117,7 @@ label game:
     python:
         def check_click():
             global bar_color, game_active, result_message, correct_clicks, required_clicks
-            if bar_color == "red":
+            if bar_color == "green":
                 correct_clicks += 1
                 if correct_clicks >= required_clicks:
                     result_message = "Excellent !"
@@ -134,8 +133,8 @@ label game:
             if bar_color == "yellow":
                 bar_color = "orange"  # Change l'état vers "orange"
             elif bar_color == "orange":
-                bar_color = "red"  # Change l'état vers "rouge"
-            elif bar_color == "red":
+                bar_color = "green"  # Change l'état vers "rouge"
+            elif bar_color == "green":
                 bar_color = "yellow"  # Change l'état vers "jaune"
 
     # Affiche l'écran du mini-jeu
@@ -157,7 +156,8 @@ label resultat_final:
     e_nvl "Mais fais attention : ne donne pas ton consentement pour tout. Limite les autorisations à ce qui est vraiment utile, et utilise l'appli seulement quand tu en as besoin."
     e_nvl "Pense à fermer les applis après les avoir utilisées, et vérifie le potentiel de fuite des données avec des outils comme {a=https://www.exodus-privacy.eu.org/fr/}Exodus Privacy.{/a}"
     hide screen resultat_Data_Sport
-
+    scene black
+    with dissolve
     jump hub
 
 #label resultat_Data_Sport :

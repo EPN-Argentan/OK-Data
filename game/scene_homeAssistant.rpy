@@ -39,11 +39,14 @@ screen homeAssistantButton:
         hover "images/UI/homeAssistant/homeAssistantBtn.png"
         action [SetVariable("speakerState", "False"),Jump("endHomeAssitant")]
 
+
 label endHomeAssitant:
     hide screen homeAssistantButton
     $ hubClickable["homeAssistant"]= 0
     e_nvl "Oui, tu as eu le bon réflexe. Les enceintes connectées, comme beaucoup d’objets connectés, collectent énormément d’informations sur notre vie quotidienne."
     e_nvl "Et parfois, ce sont des données très personnelles, voire intrusives."
+    scene black
+    with dissolve
     jump hub
 
 init python:
