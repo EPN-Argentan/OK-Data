@@ -216,7 +216,7 @@ screen miniGamePrompt:
     imagebutton:
         xalign 0.9
         yalign 0.9
-        idle At("UI/applications/sendIA.png", outline_transform(6, "#5996E0", 4.0))
+        idle At("UI/applications/sendIA.png", outline_transform(6, "#16ec4f", 4.0))
         hover "UI/applications/sendIA.png"
         action Call("promptChecker",keyword1Value,keyword2Value,keyword3Value)
     frame:
@@ -300,7 +300,7 @@ label promptChecker(key1=0,key2=0,key3=0):
         jump endPrompt
         # Tu peux ajouter score, suite du jeu, etc.
     else:
-        a "Oh zut, ce n’était pas assez précis."
+        algo "Aucune image ne semble correspondre à votre requête"
 
     return
 
