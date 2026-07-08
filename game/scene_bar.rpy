@@ -50,4 +50,10 @@ label barOutAfter:
     call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.") from _call_addPoints
     hide screen selfie
     $ set_hub_at_Start()
+
+    a "De ton côté les préparatifs sont fait pour l'anniversaire surprise de Pierro ?"
+    s "Oui, et pour toi ? Tu as un cadeau ?"
+    a "Non, pas encore... j'ai la journée pour trouver un truc..."
+    scene black
+    with dissolve
     jump hub
