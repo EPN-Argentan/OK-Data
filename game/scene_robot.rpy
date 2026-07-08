@@ -50,9 +50,9 @@ label bus:
         empty ""
 
 label afterFlash :
-    define flash = Fade(0.1, 0.0, 0.5, color="#fff") 
+    define flash = Fade(0.1, 0.0, 0.5, color="#fff")
     hide screen camera with flash
-    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.")    
+    call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.")
     hide screen phoneDown with moveoutbottom
     a "C'est moi qui ai pris cette photo en plus ! "
     a "Je devrais pouvoir la retrouver sur mon téléphone."
@@ -139,7 +139,7 @@ label searchInDataBookDate:
     $ renpy.pause(1.0, hard=True)
     show screen dataBookSearch
     hide screen dataBookOpening
-    $ dateInput = renpy.input("Entrez la date", "1990", length = 12)   
+    $ dateInput = renpy.input("Entrez la date", "1990", length = 12)
     $ birthdayYear = year-2
     $ dateInput = int(dateInput)
     if dateInput == birthdayYear :
@@ -176,11 +176,20 @@ label foundInDataBook:
     e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
     window auto hide
     hide screen dataBookFound
-    show screen phishing
-    a "mm mm"    
+
+label AfterPhoto:
+    show bus_go
+    #scene black
+    #with dissolve
+
+
+    show screen arret_bus
+    a "Bon, il me reste plus qu'a attendre mon bus... et essayer de digérer tout ça..."
+    show screen phishing with moveinbottom
+    a "mm mm"
     while True:
         empty ""
-    
+
 
 label busComing:
     hide screen phishing
@@ -287,7 +296,7 @@ style buttonBlack:
     hover_color "#000"
     font "fonts/FiraSans-Bold.ttf"
 
-screen areYouSurePopUp: 
+screen areYouSurePopUp:
     frame:
         background Frame("UI/conversation/phone_received_frame.png", 43,43,43,43)
         xalign 0.5
@@ -300,10 +309,10 @@ screen areYouSurePopUp:
                 xalign 0.5
                 spacing 200
                 textbutton "Oui":
-                    text_style "buttonBlack" 
+                    text_style "buttonBlack"
                     action [Hide("areYouSurePopUp"),Jump("bus")]
-                textbutton "Non": 
-                    text_style "buttonBlack" 
+                textbutton "Non":
+                    text_style "buttonBlack"
                     action [Hide("areYouSurePopUp"),Jump("hub")]
 
 image emptyPhone:
@@ -322,6 +331,11 @@ screen freezeFrameBusAd:
 screen mapApp:
     add "UI/bus/dataMap.png" xalign 0.5 yalign 0.5
     add "smartphoneFrameTransparent.png" xalign 0.5 yalign 0.5
+
+
+screen arret_bus:
+    add "sprites/bus/arretBus.jpeg" xalign 0.5 yalign 0.5
+
 
 screen phishing:
     add "smartphone.png" xalign 0.5 yalign 0.5
@@ -345,7 +359,7 @@ screen phishing:
         idle At("UI/applications/Exit.png", outline_transform(6, "#ffffff", 4.0))
         hover "UI/applications/Exit.png"
         action Call("addPoints",5,'point_sociaux',"","","", "Bravo, tu as évité le phishing !","busComing")
-            
+
 
 screen galeryOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
@@ -463,7 +477,7 @@ screen cloudNoFilter:
                         action NullAction()
         bar value XScrollValue("vp")
         vbar value YScrollValue("vp")
-         
+
     hbox:
         xalign 0.74
         yalign 0.22
@@ -528,11 +542,11 @@ screen freeWifi:
     #     area (1100,500,350,350)
     #     background Frame(
     #         Text( "\u25A2", #### <--- this is a small rounded rectangle character
-    #               background="#ffffff",  
-    #               color="#ffffff", 
-    #               font="DejaVuSans.ttf", 
-    #               size=72), 
-    #         32, 32, 
+    #               background="#ffffff",
+    #               color="#ffffff",
+    #               font="DejaVuSans.ttf",
+    #               size=72),
+    #         32, 32,
     #         tile=True)
 
     #     text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
@@ -546,7 +560,7 @@ screen freeWifi:
         has vbox:
             align (0.5, 0.5)
             text "{color=#000}Afin d’accéder à votre Data Cloud, veuillez vous connecter à un réseau via vos données mobiles ou un réseau wifi public.{/color}"
-        
+
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen cloudPhotos:

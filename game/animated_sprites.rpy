@@ -206,6 +206,7 @@ image walkingForest = Movie(play="images/sprites/forest/walkingForest.ogv", size
 image busAdReveal = Movie(play="images/sprites/bus/busAdReveal.ogv", size=(1920,1080), loop=False)
 image busAdFreeze = "images/sprites/bus/busAdFreeze.jpeg"
 image busAdOnBus = "images/sprites/bus/adOnBus.png"
+image bus_go = Movie(play="images/sprites/bus/bus_go.ogv", size=(1920,1080), loop=False)
 
 image getInsideBus = Movie(play="images/sprites/bus/getInsideBus.ogv", size=(1920,1080), loop=False)
 image insideBus = Movie(play="images/sprites/bus/insideBus.ogv", size=(1920,1080), loop=False)
