@@ -38,8 +38,8 @@ screen hubElements:
 
     if hubClickable["watch"] == 1:
         imagebutton:
-            xpos 230
-            ypos 838
+            xpos 220
+            ypos 830
             idle At('UI/imagebuttons/watch.png', outline_transform(6, "#ffffff", 4.0))
             hover "UI/imagebuttons/watch.png"
             action Jump("dataWatch")

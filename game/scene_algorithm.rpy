@@ -87,9 +87,10 @@ label algorithmGame:
     call algorithmGame from _call_algorithmGame 
 
 label endAlgorithm:
-    e_nvl "Ça nous fait déjà pas mal d’infos."
-    a "Avec un cours de cuisine japonaise végétarienne à Caen, je devrais viser juste !"
+    e_nvl "Bravo, Alexia. Comme tu viens de le constater, l’IA capte tout. Chaque clic, chaque recherche, chaque hésitation au clavier, même une photo anodine devient une source d’information."
+    e_nvl "Et cela lui permet, par exemple, de comprendre qu’une publicité pour la viande charolaise ne sera pas pertinente pour ton frère."
     a "L’IA connaît mieux mon frère que moi… Il serait temps qu’il se méfie un peu de ce qu’il partage !"
+    a "Bon, si je fais un petit bilan, ça nous offre un joli cours de cuisine végétarienne asiatique, à Caen. Tout cela s’annonce délicieusement prometteur. Et la prochaine fois que nous serons invités chez lui, on risque de se régaler. "
     hide screen algorithmnMenu
     $ hubClickable["tablet"]= 0
     $ trackScenarios["tablet"] = True
