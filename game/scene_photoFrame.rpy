@@ -216,7 +216,7 @@ screen miniGamePrompt:
     imagebutton:
         xalign 0.9
         yalign 0.9
-        idle At("UI/applications/sendIA.png", outline_transform(6, "#5996E0", 4.0))
+        idle At("UI/applications/sendIA.png", outline_transform(6, "#16ec4f", 4.0))
         hover "UI/applications/sendIA.png"
         action Call("promptChecker",keyword1Value,keyword2Value,keyword3Value)
     frame:
@@ -227,37 +227,62 @@ screen miniGamePrompt:
         hbox:
             text "🔎 Je cherche une image où on voit  " yalign 0.5 style_prefix "promptStyle"
             vbox:
-                textbutton "↑":
-                    text_style "buttonBlack"
-                    action [SetScreenVariable("keyword1Value", min(len(keywordList1)-1, keyword1Value+1)), Function(renpy.restart_interaction)]
-                    xalign 0.5
+                if keyword1Value < len(keywordList1)-1 :
+                    textbutton "↑":
+                        text_style "buttonBlack"
+                        action [SetScreenVariable("keyword1Value", min(len(keywordList1)-1, keyword1Value+1)), Function(renpy.restart_interaction)]
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
                 text "[keywordList1[keyword1Value]]" style_prefix "promptKey"
-                textbutton "↓":
-                    text_style "buttonBlack"
-                    action SetScreenVariable("keyword1Value",max(0, keyword1Value - 1))
-                    xalign 0.5
+                if keyword1Value > 0 :
+                    textbutton "↓":
+                        text_style "buttonBlack"
+                        action SetScreenVariable("keyword1Value",max(0, keyword1Value - 1))
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
+
             text " avec " yalign 0.5 style_prefix "promptStyle"
             vbox:
-                textbutton "↑":
-                    text_style "buttonBlack"
-                    action [SetScreenVariable("keyword2Value", min(len(keywordList2)-1, keyword2Value+1)), Function(renpy.restart_interaction)]
-                    xalign 0.5
+                if keyword2Value < len(keywordList2)-1  :
+                    textbutton "↑":
+                        text_style "buttonBlack"
+                        action [SetScreenVariable("keyword2Value", min(len(keywordList2)-1, keyword2Value+1)), Function(renpy.restart_interaction)]
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
                 text "[keywordList2[keyword2Value]]" style_prefix "promptKey"
-                textbutton "↓":
-                    text_style "buttonBlack"
-                    action SetScreenVariable("keyword2Value",max(0, keyword2Value - 1))
-                    xalign 0.5
+                if keyword2Value > 0 :
+                    textbutton "↓":
+                        text_style "buttonBlack"
+                        action SetScreenVariable("keyword2Value",max(0, keyword2Value - 1))
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
             text " la scène se passe " yalign 0.5 style_prefix "promptStyle"
             vbox:
-                textbutton "↑":
-                    text_style "buttonBlack"
-                    action [SetScreenVariable("keyword3Value", min(len(keywordList3)-1, keyword3Value+1)), Function(renpy.restart_interaction)]
-                    xalign 0.5
+                if keyword3Value < len(keywordList3)-1  :
+                    textbutton "↑":
+                        text_style "buttonBlack"
+                        action [SetScreenVariable("keyword3Value", min(len(keywordList3)-1, keyword3Value+1)), Function(renpy.restart_interaction)]
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
                 text "[keywordList3[keyword3Value]]" style_prefix "promptKey"
-                textbutton "↓":
-                    text_style "buttonBlack"
-                    action SetScreenVariable("keyword3Value",max(0, keyword3Value - 1))
-                    xalign 0.5
+                if keyword3Value > 0  :
+                    textbutton "↓":
+                        text_style "buttonBlack"
+                        action SetScreenVariable("keyword3Value",max(0, keyword3Value - 1))
+                        xalign 0.5
+                else:
+                    textbutton "":
+                        xalign 0.5
 
 label promptChecker(key1=0,key2=0,key3=0):
     $ isCorrect = True
@@ -275,7 +300,7 @@ label promptChecker(key1=0,key2=0,key3=0):
         jump endPrompt
         # Tu peux ajouter score, suite du jeu, etc.
     else:
-        a "Oh zut, ce n’était pas assez précis."
+        algo "Aucune image ne semble correspondre à votre requête"
 
     return
 
