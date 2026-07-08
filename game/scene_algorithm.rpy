@@ -57,14 +57,21 @@ label openTablet:
     nvl clear
     hide screen hubElements
     hide screen barre_de_vie
-    show SearchScreen
+    show tabletMockup with moveinbottom :
+        truecenter
+    show SearchScreen :
+        truecenter
     #show text "{color=#f00}{cps=20}C'est du texte sans dialogue{/cps}{/color}"
 
     a "Comme toujours, maman me sollicite, je dis oui… et me voilà parti à chercher un nouveau cadeau pour Pierre."
     a "J’ai zéro inspi"
     a "On ne va quand même pas lui filer un bouquet de fleurs ou une bouteille de vin."
     a "Et si on devenait l’IA, juste pour voir ?"
+    hide SearchScreen
+    show AISearchScreen :
+        truecenter
     a "En croisant toutes les infos récoltées sur mon frère, et en jouant les algorithmes, je devrais en apprendre assez pour viser juste."
+    hide AISearchScreen
     nvl clear
 
 label algorithmGame:
@@ -99,6 +106,10 @@ label endAlgorithm:
 #All scenes elements used in this label
 image SearchScreen:
     "UI/algorithm/SearchScreen.png"
+image AISearchScreen:
+    "UI/algorithm/AiSearchScreen.png"
+image tabletMockup:
+    "UI/algorithm/tablet.png"
 #####################################################################SCREENS#########################################################################
 screen catLocalisation:
     text '{font=fonts/FiraCode-Bold.ttf}[cluesDisplay]{/font}'
