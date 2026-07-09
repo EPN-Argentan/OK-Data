@@ -4,6 +4,7 @@ default birthdayYear = year-2
 
 label areYouSure:
     hide screen hubElements
+    play music "Test your fight - Rod Kim.mp3"
     show screen areYouSurePopUp with moveintop
     while True:
         empty ""
@@ -14,13 +15,13 @@ label bus:
     $ DataState = False
 
     hide screen hubElements
-    stop music fadeout 1.0
+
 
     #display photo without sister selie or with it depending of previous events (see bar scene)
     nvl clear
-    winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps."
+    winted_nvl "Rappel : Votre colis Winted vous attend ! Pensez à venir le récupérer à temps dans votre relais DataColis (HobbyFab)"
     a "Oh mince, j’avais complètement oublié !"
-    a "Bon, j’y vais tout de suite."
+    a "Bon, j’y vais tout de suite. Mais où est ce relais DataColis ?"
     show screen dataMap
     window auto hide
     show screen phoneDown
@@ -36,8 +37,11 @@ label bus:
     scene black
     with dissolve
     show busAdReveal
+    stop music fadeout 1.0
+    play sound "audio/bus_arrive.ogg"
     window auto hide
     $ renpy.pause(3.0, hard=True)
+    show screen freezeAlexia
     a "Mais c'est Pierre !"
     show screen freezeFrameBusAd
     a "Bah, il joue les modèles maintenant ? "
@@ -52,6 +56,7 @@ label bus:
 
 label afterFlash :
     define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+    play sound "audio/bipphoto.mp3"
     hide screen camera with flash
     call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.")
     hide screen phoneDown with moveoutbottom
@@ -178,18 +183,26 @@ label foundInDataBook:
 
     window auto hide
     hide screen dataBookFound
-    show busGo # ici ça ne fonctionne pas et je ne comprends pas pourquoi ?
+     # ici ça ne fonctionne pas et je ne comprends pas pourquoi ?
     scene black
     with dissolve
 
 
+
 label AfterPhoto:
-    nvl clear
+    $ renpy.scene(layer = "screens")
+    show busGo
+    play sound "audio/bus_boost.ogg"
 
+    a "on en apprend des choses..."
 
-    show screen arret_bus
+    stop music fadeout 1.0
+
+    show screen arret_bus with fade
+    play music "Spring Field - Godmode.mp3"
     a "Bon, il me reste plus qu'a attendre mon bus... et essayer de digérer tout ça..."
     show screen phishing with moveinbottom
+    play sound "audio/ReceiveText.ogg"
     a "mm mm"
     while True:
         empty ""
@@ -206,38 +219,51 @@ label travelToStore:
     hide screen galeryFilter
     stop music fadeout 1.0
     show getInsideBus
+    play sound "audio/bus_arrive_pars.ogg"
+
     window auto hide
     $ renpy.pause(3.0, hard=True)
     #empty ""
+    stop sound fadeout 1.0
     show insideBus
+    play sound "audio/inside_bus.ogg"
     window auto hide
     $ renpy.pause(3.0, hard=True)
     #empty ""
+    stop sound fadeout 1.0
     show exitBus
+    play sound "audio/bus_arrive_pars.ogg"
     window auto hide
     $ renpy.pause(3.0, hard=True)
 
 label insideStore:
+    stop sound fadeout 1.0
     show getInStore
     window auto hide
-    $ renpy.pause(3.0, hard=True)
-    show askStore
+    $ renpy.pause(4.0, hard=True)
+    #show askStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
     show freezeReceive
     a "Bonjour ! Je viens pour récupérer un colis."
     vendeuse "Bonjour ! C’est à quel nom, s’il vous plaît ?"
     a "Mme Alexia."
-    vendeuse "Parfait, je vous le prépare…"
+    vendeuse "Ah oui, ça me parle... le voici"
     show receiveStore
     window auto hide
     $ renpy.pause(3.0, hard=True)
-    show freezeReceive
+    show freezeReceive2
     vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs si vous voulez"
     vendeuse "Vous pouvez prendre n'importe quelle photo"
     a "Oh chouette ! Justement, c’est l’anniversaire de mon frère."
     a "Attendez je viens de retrouver une superbe photo de lui !"
+    show screen galeryOpening with moveinbottom
+    a "C'est dans ma galerie photo sur le cloud"
+    hide screen galeryOpening
+    #define flash = Fade(0.1, 0.0, 0.5, color="#fff")
     show screen outOfBattery
+
+    play sound "audio/batterie_end.mp3"
     a "Ah, la poisse ! Plus de batterie…"
     hide screen outOfBattery
     vendeuse "Si vous voulez, vous pouvez vous connecter sur un de nos ordis et télécharger votre photo"
@@ -328,6 +354,10 @@ screen camera:
         idle At("UI/bus/buttonCamera.png", outline_transform(6, "#5996E0", 4.0))
         hover "UI/bus/buttonCamera.png" xalign 0.685 yalign 0.5
         action Jump("afterFlash")
+
+
+screen freezeAlexia:
+    add "sprites/bus/busAdFreeze.jpeg"
 
 screen freezeFrameBusAd:
     add "sprites/bus/adOnBus.png"

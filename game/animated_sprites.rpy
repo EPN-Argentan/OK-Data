@@ -214,6 +214,8 @@ image exitBus = Movie(play="images/sprites/bus/exitBus.ogv", size=(1920,1080), l
 
 image freezeReceive :
     "images/sprites/store/freezeReceive.jpg"
+image freezeReceive2 :
+        "images/sprites/store/freezepcstore.jpg"
 image getInStore = Movie(play="images/sprites/store/getInStore.ogv", size=(1920,1080), loop=False)
 image askStore = Movie(play="images/sprites/store/askStore.ogv", size=(1920,1080), loop=False)
 image receiveStore = Movie(play="images/sprites/store/receiveStore.ogv", size=(1920,1080), loop=False)
