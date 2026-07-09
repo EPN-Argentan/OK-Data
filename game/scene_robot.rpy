@@ -33,7 +33,8 @@ label bus:
     a "Ah oui, c'est là-bas !"
     hide screen mapApp
     $ renpy.scene(layer = "screens")
-    scene busAdFreeze
+    scene black
+    with dissolve
     show busAdReveal
     window auto hide
     $ renpy.pause(3.0, hard=True)
@@ -174,13 +175,16 @@ label foundInDataBook:
     e_nvl "Malheureusement si."
     e_nvl "Quand tu publies une photo sur un réseau social, tu acceptes que la plateforme ait certains droits dessus, selon leurs conditions."
     e_nvl "Il est toujours possible de vérifier si une photo a été utilisée en effectuant une {a=information: Une recherche inversée d’image revient à demander à Internet : Où cette photo a-t-elle déjà été vue ? L’outil analyse alors le web pour repérer des pages contenant la même image ou des versions similaires.}recherche inversée.{/a}"
+
     window auto hide
     hide screen dataBookFound
+    show busGo # ici ça ne fonctionne pas et je ne comprends pas pourquoi ?
+    scene black
+    with dissolve
+
 
 label AfterPhoto:
-    show bus_go
-    #scene black
-    #with dissolve
+    nvl clear
 
 
     show screen arret_bus
