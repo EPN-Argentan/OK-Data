@@ -160,6 +160,7 @@ label searchInDataBookLocalisation:
     window auto hide
     $ renpy.pause(1.0, hard=True)
     show screen dataBookSearch
+    show screen displayDateAnswer
     hide screen dataBookOpening
     $ localisationInput = renpy.input("Entrez la localisation", "Paris", length = 12)
     if localisationInput == "Barcelone" or localisationInput =="barcelone" or localisationInput == "barcelon" or localisationInput == "Barcelon" or localisationInput == "BARCELONE":
@@ -639,6 +640,15 @@ screen dataBookSearch:
             hover "UI/applications/Exit.png"
             action Jump("homeScreen")
 
+screen displayDateAnswer:
+    frame:
+        align (0.5, 0.5)
+        background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+        xalign 0.6
+        yalign 0.33
+        xmaximum 350
+        padding (10,10)
+        text "{color=#000}× [year-2]{/color}" 
 
 screen dataBookFound:
     add "UI/applications/dataBookInFeed.png" xalign 0.6955 yalign 0.5
