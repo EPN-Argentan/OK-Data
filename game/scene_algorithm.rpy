@@ -55,7 +55,7 @@ init python:
 
 label openTablet:
     nvl clear
-    define fadeOut = Fade(0.1, 2.0, 0.5, color="#000000")
+    define fadeOut = Fade(0.1, 1.0, 0.5, color="#000000")
     hide screen hubElements
     hide screen barre_de_vie
     show tabletMockup with moveinbottom :
@@ -80,7 +80,7 @@ label algorithmGame:
     hide screen barre_de_vie
     scene black
     scene backgroundAlgorithm with fadeOut
-    show screen algorithmnMenu with dissolve
+    show screen algorithmnMenu with pixellate
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
