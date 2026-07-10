@@ -230,3 +230,9 @@ image runwatch = Movie(play="images/sprites/run&watch/run&Watch.ogv", size=(1920
 image home_assistant = Movie(play="images/sprites/home_assistant/zoom-enceinte.ogv", size=(1920,1080), loop=False, image = "images/sprites/home_assistant/lastFrameImage_zoom_enceinte.png")
 
 image zoomEnceinte = Movie(play="images/sprites/home_assistant/zoom-enceinte_1.ogv", size=(1920,1080), loop=False)
+
+
+image end1 = Movie(play="images/sprites/end/end1.ogv", size=(1920,1080), loop=False)
+image freezeTV :
+    "images/sprites/end/freezeTV.jpeg"
+image end2 = Movie(play="images/sprites/end/end2.ogv", size=(1920,1080), loop=False)

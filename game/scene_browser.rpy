@@ -7,11 +7,13 @@ label browserLabel:
     stop music fadeout 1.0
     #show Player_Sitting
     show screen callPhoneIncoming
+    play sound "audio/call_mum.mp3"
     while True:
         empty ""
 
 label browserLabelCall:
     show screen callPhoneAnswer
+    stop sound 
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
     m "Super, la photo avec ta sœur ! Ça m’a rappelé\nque j’aurai besoin de toi pour envoyer des photos."
@@ -20,7 +22,7 @@ label browserLabelCall:
     while True:
         empty ""
 
-label hangupCall: 
+label hangupCall:
     a "elle allait encore parler des heures"
 
 label browserLabelAfterCall:
@@ -81,7 +83,7 @@ label photosShared:
     a "Ok maman, mais après j'y vais,\nj'ai encore beaucoup de choses à préparer."
     show black with fade
     $ hubClickable["phoneCall"]= 0
-    $ trackScenarios["phoneCall"] = True 
+    $ trackScenarios["phoneCall"] = True
     jump hub
 
 

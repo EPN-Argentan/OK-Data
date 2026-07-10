@@ -260,8 +260,8 @@ label insideStore:
     show screen galeryOpening with moveinbottom
     a "C'est dans ma galerie photo sur le cloud"
     hide screen galeryOpening
-    #define flash = Fade(0.1, 0.0, 0.5, color="#fff")
-    show screen outOfBattery
+
+    show screen outOfBattery with Fade(0.1, 0.0, 0.2, color="#fff")
 
     play sound "audio/batterie_end.mp3"
     a "Ah, la poisse ! Plus de batterie…"
@@ -291,7 +291,7 @@ label outStoreLogOut:
     $ hubClickable["photoFrame"]= 0
     menu:
         "Récupérer votre mug":
-            jump hub
+            jump endGame #(hub)
     while True:
         empty ""
     jump printed
@@ -316,8 +316,29 @@ label outStoreLogin:
 label printed:
     a "Ça fera un petit cadeau en plus !"
     a "Allez, je rentre"
-    jump hub
+    jump endGame  #(hub)
+##########################################THE end
 
+label endGame:
+    $ renpy.scene(layer="screens")
+    show end1 with fade
+    play sound "audio/Keep It Movin' - Jahdean.ogg"
+
+
+    $ renpy.pause(14.0, hard=True)
+    #a "trop classe cette tasse"
+    hide screen hubElements
+    show freezeTV
+    med "Bravo, tu as réussi à faire tout ce que tu devais faire aujourd'hui et au passage, j'espère que tu as appris de nombreuses informations quand à la protection de tes données..."
+    show end2
+    $ renpy.pause(4.0, hard=True)
+    show freezeTV
+    med " Ce jeu a été réalisé par les EPN de...."
+    med " Merci à ..."
+    med " crédit musique"
+    med " EN vrai on en a chier pour faire ce jeu"
+
+    jump hub
 
 #####################################################################SCREEN#####################################################################
 #All scenes elements used in this label
