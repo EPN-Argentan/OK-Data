@@ -79,7 +79,7 @@ label algorithmGame:
     hide screen hubElements
     hide screen barre_de_vie
     scene black
-    scene backgroundAlgorithm with fadeOut
+    scene backgroundAlgorithm 
     show screen algorithmnMenu with pixellate
     $ displayData()
     #call screen catAdministrative

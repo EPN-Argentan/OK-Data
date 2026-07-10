@@ -363,7 +363,6 @@ screen areYouSurePopUp:
                 xalign 0.5
                 spacing 200
                 textbutton "Oui":
-                    text_style "buttonBlack"
                     action [Hide("areYouSurePopUp"),Jump("bus")]
                 textbutton "Non":
                     text_style "buttonBlack"

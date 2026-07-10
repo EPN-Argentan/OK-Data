@@ -35,7 +35,7 @@ label searchBrotherPicInPhone:
     a "C’est agréable de replonger dans ses photos de temps en temps."
     window auto hide
     $ renpy.pause(2.0, hard=False)
-    show screen popUpAI
+    show screen popUpAI with dissolve
     while True:
         empty ""
 
@@ -144,14 +144,29 @@ screen galery:
          bar value XScrollValue("vp")
          vbar value YScrollValue("vp")
 
+style notif_Phone:
+    size 24
+    idle_color "#5996E0"
+    hover_color "#000"
+    font "fonts/FiraSans-Bold.ttf"
+
 screen popUpAI:
-    hbox:
+    vbox:
         xalign 0.685
         yalign 0.2
-        imagebutton:
-            idle At("UI/Cadre/popUpAI.png", outline_transform(6, "#d44343", 4.0))
-            hover "UI/Cadre/popUpAI.png"
-            action Jump("consent")
+        frame:
+            background Frame("UI/conversation/phone_received_frame.png", 23,23,23,23)
+            xalign 0.5
+            yalign 0.45
+            xmaximum 350
+            padding (15,15)
+            textbutton "✨ Tu n'arrives pas à retrouver une photo ? Essayes la nouvelle fonctionnalité boostée à l'IA !":
+                text_style "notif_Phone"
+                action Jump("consent")
+        #imagebutton:
+        #    idle At("UI/Cadre/popUpAI.png", outline_transform(6, "#d44343", 4.0))
+        #    hover "UI/Cadre/popUpAI.png"
+        #    action Jump("consent")
 
 screen consentScreen:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
