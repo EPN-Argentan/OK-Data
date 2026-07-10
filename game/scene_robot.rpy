@@ -282,7 +282,8 @@ label insideStore:
         empty ""
 
 label outStoreLogOut:
-    show screen readyToPrintLogout
+    #show screen readyToPrintLogout
+    show screen readyToPrintLogin
     show screen windowImportImage
     a "Quelle photo rendrais le mieux ?"
     hide screen windowImportImage
@@ -292,6 +293,8 @@ label outStoreLogOut:
     menu:
         "Récupérer votre mug":
             jump endGame #(hub)
+        "Un petit truc en plus !":
+            a "J'ai du oublier quelquechose"
     while True:
         empty ""
     jump printed
@@ -677,6 +680,12 @@ screen readyToPrintLogin :
         xalign 0.77
         yalign 0.15
         action [Call("addPoints",5,'point_sociaux',"","","","Toujours se déconnecter, c’est une bonne habitude !",'hub')]
+    imagebutton:
+        idle At("UI/store/printBtn.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
+        hover "UI/store/printBtn.png"
+        xalign 0.70
+        yalign 0.8
+        action Call("outStoreLogin")
 
 screen readyToPrintLogout:
     add "UI/store/hobbyFabCustompage.png" xalign 0.44 yalign 0.42
@@ -686,19 +695,21 @@ screen readyToPrintLogout:
         hover "UI/store/printBtn.png"
         xalign 0.70
         yalign 0.8
-        action Call("outStore")
+        action Call("outStoreLogOut")
 
 screen logViaPopup:
     add "UI/store/logVia.png" xalign 0.5 yalign 0.5
     imagebutton:
         idle At("UI/store/logViaOK.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
         hover "UI/store/logViaOK.png"
+        sensitive not mediateurDisplayMessage
         xalign 0.5
         yalign 0.51
         action [Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'outStoreLogin')]
     imagebutton:
         idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-        hover "UI/store/logViaMail.png"
+        hover "UI/store/logViaMail.png"   
+        sensitive not mediateurDisplayMessage
         xalign 0.5
         yalign 0.6
         action [Hide("logViaPopup"), Call("addPoints",2,'point_sociaux',"","","","Bravo, en évitant la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a},µtu limites la diffusion des données personnelles aux autres services proposés par un SSO.",'outStoreLogOut')]

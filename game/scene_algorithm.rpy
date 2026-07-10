@@ -55,6 +55,7 @@ init python:
 
 label openTablet:
     nvl clear
+    define fadeOut = Fade(0.1, 2.0, 0.5, color="#000000")
     hide screen hubElements
     hide screen barre_de_vie
     show tabletMockup with moveinbottom :
@@ -72,15 +73,14 @@ label openTablet:
         truecenter
     a "En croisant toutes les infos récoltées sur mon frère, et en jouant les algorithmes, je devrais en apprendre assez pour viser juste."
     hide AISearchScreen
-    nvl clear
 
 label algorithmGame:
     nvl clear
     hide screen hubElements
     hide screen barre_de_vie
     scene black
-    scene backgroundAlgorithm
-    show screen algorithmnMenu
+    scene backgroundAlgorithm with fadeOut
+    show screen algorithmnMenu with dissolve
     $ displayData()
     #call screen catAdministrative
     #Enounce all combinaison possible and results
