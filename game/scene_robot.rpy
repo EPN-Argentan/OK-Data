@@ -239,6 +239,7 @@ label travelToStore:
 label insideStore:
     stop sound fadeout 1.0
     show getInStore
+    play music "audio/Wehrmut - Godmode.mp3"
     window auto hide
     $ renpy.pause(4.0, hard=True)
     #show askStore

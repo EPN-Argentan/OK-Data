@@ -8,7 +8,7 @@ label barOut:
     syrielle_nvl "Un coup\nde téléportation,\net j’y suis ! 😜"
     a "J’me souviens plus trop comment y aller, \non vérifie ça sur Data Maps."
     hide screen hubElements
-    show screen dataMap
+    show screen dataMap with moveintop
     #medBubble "Petite idée de Germain :\nÀ ce moment là, on pourrait peut être afficher une fenêtre proposant quatre choix sur l’utilisation de la localisation par DATA Maps :\n- « Autoriser uniquement si l’application est en cours d’utilisation » \n- « Toujours autoriser » \n-« Demander à chaque fois » \n- « Refuser »"
 
     window auto hide

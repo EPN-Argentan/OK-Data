@@ -1,8 +1,8 @@
-    
-define algo = Character("")
-image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg" 
 
-#List clues that has to be found to resolve algorithmn mini game 
+define algo = Character("")
+image backgroundAlgorithm = "images/UI/algorithm/backgroundAlgorithm.jpg"
+
+#List clues that has to be found to resolve algorithmn mini game
 define combinaisonClues = {
     'Caen': ['BonLocalisation','BonLocalisation',"Caen \n","Le regroupement dessine une présence bien centrée autour de Caen.",False, 'catLocalisation', 'localisation',True],
     'Cuisine' : ['BonInteret','BonInteret',"Cuisine \n","La deuxième tendance dévoile un vrai goût pour les fourneaux.",False, 'catIntérêt', 'intérêt',False],
@@ -76,6 +76,8 @@ label openTablet:
 
 label algorithmGame:
     nvl clear
+    stop music fadeout 1.0
+    play music "To Pass Time - Godmode.mp3"
     hide screen hubElements
     hide screen barre_de_vie
     scene black
@@ -91,7 +93,7 @@ label algorithmGame:
     #if whatInsideTop != "" and whatInsideBottom != "":
     #    call checkClueALL()
     #    call clearClues()
-    call algorithmGame from _call_algorithmGame 
+    call algorithmGame from _call_algorithmGame
 
 label endAlgorithm:
     e_nvl "Bravo, Alexia. Comme tu viens de le constater, l’IA capte tout. Chaque clic, chaque recherche, chaque hésitation au clavier, même une photo anodine devient une source d’information."
@@ -174,7 +176,7 @@ screen catLocalisation:
             selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
-            droppable True   
+            droppable True
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
@@ -267,7 +269,7 @@ screen catIntérêt:
             selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
-            droppable True   
+            droppable True
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
@@ -298,7 +300,7 @@ screen catSanté:
             draggable True
             droppable False
             dragged drag_placed
-            drag_raise True  
+            drag_raise True
         ###False clues display
         drag:
             drag_name "Mauvais indice"
@@ -339,7 +341,7 @@ screen catSanté:
             selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
-            droppable True   
+            droppable True
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
@@ -370,7 +372,7 @@ screen catSociaux:
             draggable True
             droppable False
             dragged drag_placed
-            drag_raise True  
+            drag_raise True
         ###False clues display
         drag:
             drag_name "Mauvais indice"
@@ -421,7 +423,7 @@ screen catSociaux:
             selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
-            droppable True   
+            droppable True
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
@@ -483,7 +485,7 @@ screen catConviction:
             draggable True
             droppable False
             dragged drag_placed
-            drag_raise True  
+            drag_raise True
 
 
         drag:
@@ -492,7 +494,7 @@ screen catConviction:
             selected_child At("images/UI/algorithm/dropZone.png", glow_outline(25, "#16ec4f", num_passes=15, smoothstep=False))
             align(0.5,0.3)
             draggable False
-            droppable True   
+            droppable True
         drag:
             drag_name "Drop Zone Bottom"
             child "images/UI/algorithm/dropZone.png"
@@ -507,8 +509,8 @@ screen algorithmnMenu :
     add "UI/algorithm/+.png" xpos 936 ypos 536
     text "{font=fonts/FiraCode-Bold.ttf}{size=*2}{color=#00B6ED}Croisez les\ndonnées{/color}{/size}{/font}":
         xalign 0.5
-        yalign 0.1 
-        textalign 0.5 
+        yalign 0.1
+        textalign 0.5
     vbox:
         xalign 0.95
         yalign 0.3
@@ -531,4 +533,3 @@ transform custom_zoom:
 
 transform higlight_zoom:
     zoom 0.4
-    
