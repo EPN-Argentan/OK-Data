@@ -13,7 +13,7 @@ label browserLabel:
 
 label browserLabelCall:
     show screen callPhoneAnswer
-    stop sound 
+    stop sound
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
     m "Super, la photo avec ta sœur ! Ça m’a rappelé\nque j’aurai besoin de toi pour envoyer des photos."
@@ -37,7 +37,8 @@ label browserLabelAfterCall:
     m "Ah bon ? Ça ne te dérangerait pas de le faire pour moi ? \nJe te laisse ma carte d’identité si besoin."
     hide screen phoneDown
     show loungeZoom
-    $ renpy.pause(2.5, hard=True) #Wait zoom animation has been finished before to show laptop screen on
+    $ renpy.pause(1.4, hard=True) #Wait zoom animation has been finished before to show laptop screen on
+    show loungeZoomFix
     show screen browserWindowSubscribe
     show loungeHandIn onlayer overlay
     $ renpy.pause(1.5, hard=True) #Wait for hand in animation stop

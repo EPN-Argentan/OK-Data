@@ -253,7 +253,7 @@ label insideStore:
     vendeuse "Ah oui, ça me parle... le voici"
     show receiveStore
     window auto hide
-    $ renpy.pause(3.0, hard=True)
+    $ renpy.pause(5.0, hard=True)
     show freezeReceive2
     vendeuse "Aujourd’hui, on a une petite offre sympa sur l'impression de photos sur des mugs si vous voulez"
     vendeuse "Vous pouvez prendre n'importe quelle photo"
@@ -421,7 +421,7 @@ screen phishing:
 
 
 screen galeryOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "UI/applications/Icons/appGallery.png" xalign 0.675 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
@@ -649,7 +649,7 @@ screen displayDateAnswer:
         yalign 0.33
         xmaximum 350
         padding (10,10)
-        text "{color=#000}× [year-2]{/color}" 
+        text "{color=#000}× [year-2]{/color}"
 
 screen dataBookFound:
     add "UI/applications/dataBookInFeed.png" xalign 0.6955 yalign 0.5
@@ -657,7 +657,7 @@ screen dataBookFound:
 
 screen outOfBattery:
 
-    add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/outBattery.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 
@@ -718,7 +718,7 @@ screen logViaPopup:
         action [Hide("logViaPopup"),Call("addPoints",-2,'point_sociaux',"","","Il vaut mieux éviter la connexion via un {a=information: ou Single Sign-On, est un système qui permet à un utilisateur d'accéder à plusieurs applications ou services avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). L'utilisateur s'authentifie auprès d'un seul service et peut accéder à d'autres services sans avoir besoin de se reconnecter à chaque fois.}SSO{/a}.µLa simplification de la connexion à une série de services tels que la recherche, les e-mails, la cartographie, les photos et le stockage en ligne µpermet à ces entreprises de regrouper un vaste ensemble de données personnelles collectées à partir des différents services proposés.","",'outStoreLogin')]
     imagebutton:
         idle At("UI/store/logViaMail.png", outline_transform(0, "#8080804f", 4.0, offset=(3, 3)))
-        hover "UI/store/logViaMail.png"   
+        hover "UI/store/logViaMail.png"
         sensitive not mediateurDisplayMessage
         xalign 0.5
         yalign 0.6

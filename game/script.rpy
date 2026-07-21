@@ -16,7 +16,7 @@ define s = Character('Syrielle', color="#ae3f5b")
 define a = Character('Alexia', color="#7A1EBB")
 
 define m = Character('Maman', color="#5833ae")
- 
+
 define med = Character('Mediateur', color="#209792")
 
 define vendeuse = Character('Vendeuse', color="#DE843A")
@@ -61,9 +61,9 @@ label hub:
     hide screen mailx3
     scene hub
     if dogInBasket == True:
-        show loungeHubDogInBasket
+        show loungeHubDogInBasket with dissolve
     else:
-        show loungeHubDogInCouch
+        show loungeHubDogInCouch with dissolve
     show screen barre_de_vie
     show screen hubElements
     stop music fadeout 1.0

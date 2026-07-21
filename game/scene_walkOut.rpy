@@ -11,6 +11,7 @@ label walkOut :
     #scene street
     show walkInfinite with fade
     stop music fadeout 1.0
+    play sound "audio/notif.mp3"
     $ renpy.pause(4.0, hard=True)
 
     show walkFix

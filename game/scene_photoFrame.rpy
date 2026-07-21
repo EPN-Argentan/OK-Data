@@ -59,9 +59,10 @@ label IAsearch:
 label endPrompt:
     hide screen IASearch
     hide screen miniGamePrompt
-    a "Incroyable comme l’IA est capable d’analyser chaque détail de mes photos."
-    show screen brotherPictureDisplay
+    show screen brotherPictureDisplay with moveinbottom
+    play sound "audio/succes.mp3"
     a "Ça y est… enfin ! Je l’ai !"
+    a "Incroyable comme l’IA est capable d’analyser chaque détail de mes photos."
     nvl clear
     e_nvl "Il faut être encore plus vigilant avec l’IA, car elle peut analyser très vite de grandes quantités de données personnelles et repérer des corrélations que nous, humains, mettrions beaucoup plus de temps à identifier."
     e_nvl "L’IA n’est pas un « cerveau autonome » : elle n’a ni intention, ni désir, ni volonté propre. Ce sont les humains qui décident comment elle est entraînée, déployée et surveillée."
@@ -102,12 +103,12 @@ image frame_slideshow_withselfie:
 
 #Browsing in phone gallery
 screen galeryOpeningLogo:
-    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "UI/applications/Icons/appGallery.png" xalign 0.675 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen galery:
-    add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
     hbox:
             xalign 0.74
@@ -169,7 +170,7 @@ screen popUpAI:
         #    action Jump("consent")
 
 screen consentScreen:
-    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
     vbox :
         xalign 0.690
@@ -320,5 +321,5 @@ label promptChecker(key1=0,key2=0,key3=0):
     return
 
 screen brotherPictureDisplay:
-    add "ui/Cadre/brotherDisplayPhone.png" xalign 0.6955 yalign 0.5
+    add "ui/Cadre/brotherDisplayPhone.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
