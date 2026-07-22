@@ -121,9 +121,10 @@ label feed_coli6mots :
 
 label Noformok :
     nvl clear
+    hide screen mail_coli6mots
     call addPoints(+2,'point_administrative') from _call_addPoints_22
     e_nvl "Bon réflexe ! L’adresse mail de l’expéditeur était suspecte."
-    e_nvl "Au moindre doute, évite de cliquer sur des liens ou des boutons." 
+    e_nvl "Au moindre doute, évite de cliquer sur des liens ou des boutons."
     jump mailx3
 
 label phonestopcoli6mots :

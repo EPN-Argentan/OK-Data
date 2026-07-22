@@ -14,6 +14,7 @@ label bus:
     $ WifiState = False
     $ DataState = False
 
+
     hide screen hubElements
 
 
@@ -422,11 +423,11 @@ screen phishing:
 
 screen galeryOpening:
     add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
-    add "UI/applications/Icons/appGallery.png" xalign 0.675 yalign 0.5 zoom 1.5
+    add "UI/applications/Icons/appGallery.png" xalign 0.670 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen galeryNoFilter:
-    add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/galeryNoFilter.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
     hbox:
             xalign 0.74
@@ -555,8 +556,8 @@ screen metaData(text):
         text "[text]"
 
 screen dataCloudOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
-    add "UI/applications/Icons/appCloud.png" xalign 0.6955 yalign 0.5 zoom 1.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
+    add "UI/applications/Icons/appCloud.png" xalign 0.6695 yalign 0.5 zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
 screen birthdayPicture:
@@ -626,7 +627,7 @@ screen cloudPhotos:
     add "smartphone.png" xalign 0.7 yalign 0.5
 
 screen dataBookOpening:
-    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5
+    add "UI/applications/loadingScreen.png" xalign 0.6955 yalign 0.5 zoom 1.02
     add "UI/applications/Icons/appDataBook.png" xalign 0.67 yalign 0.5  zoom 1.5
     add "smartphoneFrameTransparent.png" xalign 0.7 yalign 0.5
 
