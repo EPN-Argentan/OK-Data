@@ -92,6 +92,14 @@
         ],
         "properties": "bottom_right"
     },
+    "tuto_2d90fede": {
+        "area": [
+            1120,
+            675,
+            400,
+            180
+        ]
+    },
     "tuto_343f0875": {
         "area": [
             160,
@@ -167,6 +175,15 @@
             180
         ]
     },
+    "tuto_522110fd": {
+        "area": [
+            1120,
+            675,
+            400,
+            180
+        ],
+        "properties": "bottom_right"
+    },
     "tuto_53d96dba": {
         "area": [
             960,
@@ -189,6 +206,14 @@
             1120,
             90,
             400,
+            180
+        ]
+    },
+    "tuto_5cdce217": {
+        "area": [
+            800,
+            675,
+            640,
             180
         ]
     },
@@ -433,11 +458,28 @@
             225
         ]
     },
+    "tuto_ecb28923": {
+        "area": [
+            960,
+            675,
+            560,
+            180
+        ]
+    },
     "tuto_ee1926dd": {
         "area": [
             960,
             675,
             480,
+            180
+        ],
+        "properties": "bottom_right"
+    },
+    "tuto_eea9d34d": {
+        "area": [
+            1120,
+            675,
+            400,
             180
         ],
         "properties": "bottom_right"

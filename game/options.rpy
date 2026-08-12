@@ -1,4 +1,5 @@
-﻿## Ce fichier contient les options qui peuvent être modifiées pour personnaliser
+﻿
+## Ce fichier contient les options qui peuvent être modifiées pour personnaliser
 ## votre jeu.
 ##
 ## Les lignes qui commencent avec deux dièses '#' sont des commentaires et vous
@@ -224,3 +225,7 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 #define config.rollback_enabled = False # enable rollback
+
+#pour definir des canaux audio
+    renpy.music.register_channel("diag", "sfx",False)
+

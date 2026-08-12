@@ -14,9 +14,11 @@ label browserLabel:
 label browserLabelCall:
     show screen callPhoneAnswer
     stop sound
+    play diag "Alexia/MAMAN/Alexia_OUI.mp3"
     a "Ouiiiii maman !"
     m "Coucou, ma grande..."
     m "Super, la photo avec ta sœur ! Ça m’a rappelé\nque j’aurai besoin de toi pour envoyer des photos."
+    play diag "Alexia/MAMAN/Alexia_CestVrai.mp3"
     a "Ah oui, c’est vrai ! J’arrive, à tout de suite."
     jump browserLabelAfterCall
     while True:
@@ -31,6 +33,7 @@ label browserLabelAfterCall:
     #scene lounge with fade
     show loungeIdle with fade
     show screen phoneDown
+    play diag "Alexia/MAMAN/Alexia_FaireQuoi.mp3"
     a "Tu dois faire quoi exactement ?"
     m "Un ami de ton frère m’a demandé de lui envoyer des photos\nde Pierrot sur Databook, mais je ne sais pas m’en servir ! "
     a "Bon, la première étape, c’est de créer un compte."

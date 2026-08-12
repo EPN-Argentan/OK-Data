@@ -1,11 +1,14 @@
+
 label barOut:
     nvl clear
     #show screen phoneDown
     hide screen phoneDown
-
+    play music "Spring Field - Godmode.mp3" volume 0.1
     syrielle_nvl "Salut frangine ! \nFaut qu’on s’organise pour la surprise 🎉 \ndu fréro. T’es dispo ?\nOn pourrait se\nretrouver au bar\nChez Thon Thon 🐟,\nrue du Port."
-    syrielle_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant."
+    play diag "Alexia/BAR/Alexia_Yes.mp3"
+    alexia_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant."
     syrielle_nvl "Un coup\nde téléportation,\net j’y suis ! 😜"
+    play diag "Alexia/BAR/Alexia_PlusTrop.mp3"
     a "J’me souviens plus trop comment y aller, \non vérifie ça sur Data Maps."
     hide screen hubElements
     show screen dataMap with moveintop
@@ -25,15 +28,17 @@ label barOut:
     #scene bar
     show barSister
     stop music fadeout 1.0
-    play music "ambi_bar.mp3"
+    play music "ambi_bar.mp3" volume 0.5
     transform offset_middle:
         xpos -250
     show clic at offset_middle
     #medBubble "Germain : J'ai ajouté une flèche clic car j'ai remarqué une attente de la part des joueurs."
     empty ""
     hide clic
+    play diag "Alexia/BAR/Alexia_Wouh.mp3"
     a "Wouhouuu ! Ça fait une éternité qu’on ne s’est pas vues,\nil faut l’anniversaire de Pierrot pour qu’on se croise !"
     s "Tu as raison, on va immortaliser ça."
+    play diag "Alexia/BAR/Alexia_Selfie.mp3"
     a "On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie ?{/a}  et je l’enverrai à maman,\nça lui fera plaisir de nous voir ensemble."
     show screen selfie
     with dissolve
@@ -50,6 +55,7 @@ label barOutAfter:
     call addPoints(5,'point_localisation',LocalisationState, False, "En laissant la géolocalisation activée, l’endroit où tu te\ntrouves sera enregistré dans les {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a} de ta photo.µSi tu partages cette photo, n’importe qui peut alors savoir où tu étais.", "Bravo !µIl est important de réduire au maximum\nles {a=information: Les métadonnées sont des informations associées à un fichier, mais elles ne sont pas visibles directement. Pour une photo, cela peut être la date de prise de vue, le lieu, le modèle d’appareil ou les réglages utilisés…} métadonnées{/a}\nd’une photo, surtout lorsqu’on prévoit\nde la diffuser sur\nles réseaux sociaux.") from _call_addPoints
     hide screen selfie
     $ set_hub_at_Start()
+    play diag "Alexia/BAR/Alexia_OK.mp3"
 
     a "De ton côté les préparatifs sont fait pour l'anniversaire surprise de Pierro ?"
     s "Oui, et pour toi ? Tu as un cadeau ?"

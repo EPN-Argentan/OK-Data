@@ -67,7 +67,7 @@ label hub:
     show screen barre_de_vie
     show screen hubElements
     stop music fadeout 1.0
-    play music "Spring Field - Godmode.mp3"
+    play music "Spring Field - Godmode.mp3" #volume 0.1
     empty ""
 
     #Boucle infinie dans le hub

@@ -14,6 +14,7 @@ init -1 python:
     def Phone_ReceiveSound(event, interact=True, **kwargs):
         if event == "show_done":
             renpy.sound.play("audio/ReceiveText.ogg")
+
     def Phone_SendSound(event, interact=True, **kwargs):
         if event == "show_done":
             renpy.sound.play("audio/SendText.ogg")

@@ -5,38 +5,43 @@ label tuto:
     show screen barre_de_vie
     show screen skipTuto
 
-    play sound "PetitMomentEnsemble.mp3"
     show clic
-    play sound "Coucou.mp3"
-    medBubble "Coucou ! Pour commencer, pense à cliquer pour progresser dans le jeu."
+    play sound "DogGPT/DogGPT_Bienvenue.mp3"
+    medBubble "Bienvenue sur OKDATA… et avant tout, retiens qu’il faut cliquer pour avancer."
     hide clic
-    play sound "Bleu.mp3"
-    medBubble "Et si tu vois un mot en {a=information: Bleu (n. m.) : Couleur souvent évoquée dans les livres, parfois aperçue sur les cartes postales, mais considérée comme espèce protégée en Normandie.}bleu,{/a} tu peux cliquer dessus pour obtenir une définition."
-    play sound "Topo.mp3"
+    play sound "DogGPT/DogGPT_MotEnBleu.mp3"
+    medBubble "Et si tu vois un mot en {a=information: Bleu (n. m.) : Couleur souvent évoquée dans les livres, parfois aperçue sur les cartes postales, mais considérée comme espèce protégée en Normandie.}bleu,{/a} tu peux cliquer dessus pour avoir une définition."
+    play sound "DogGPT/DogGPT_Topo.mp3"
     medBubble "Moi, c’est DogGPT, le chien qui parle. Mon job, c’est de te faire un petit topo du jeu."
-    play sound "Alexia.mp3"
+    play sound "DogGPT/DogGPT_MaMaitresse.mp3"
     medBubble "Là, sur le canapé, c’est Alexia, ma maîtresse. Elle est sympa, mais elle ne fait pas super attention à ses données. Du coup, on va essayer de l’aider un peu."
-    play sound "Cookies.mp3"
-    medBubble "Faut savoir que, sans t’en rendre compte, à chaque connexion tu laisses des petites traces… et les cookies adorent ça."
-    play sound "Miettes.mp3"
-    medBubble "Ton rôle, ça va être de limiter au maximum ces petites miettes, tout en profitant à fond des avantages du numérique."
-    play sound "Donnees.mp3"
+    play sound "DogGPT/DogGPT_Cookies.mp3"
+    medBubble "Faut savoir que, sans t’en rendre compte, à chaque connexion tu laisses des petites traces… et les cookies, ils adorent ça."
+    play sound "DogGPT/DogGPT_Limiter.mp3"
+    medBubble "Ton rôle, va t'être de limiter au maximum ces petites traces, tout en profitant des avantages du numérique."
+    play sound "DogGPT/DogGPT_SIX.mp3"
     medBubble "On a classé les {a=information: Les données personnelles, c’est ton double numérique : ton prénom, ton âge, ton adresse, ou encore tes goûts et préférences. Ce sont des infos qui permettent de te définir en profondeur. Elles sont précieuses, comme un journal intime. Il faut les protéger, comme on protège un trésor : avec attention, discernement, et une bonne dose de prudence.}données personnelles{/a} en six catégories."
+    play sound "DogGPT/DogGPT_Interet.mp3"
     medBubble "Les données de centre d’intérêt"
+    play sound "DogGPT/DogGPT_Sante.mp3"
     medBubble "Les données de santé"
+    play sound "DogGPT/DogGPT_Conviction.mp3"
     medBubble "Les données de conviction"
+    play sound "DogGPT/DogGPT_Localisation.mp3"
     medBubble "Les données de localisation"
+    play sound "DogGPT/DogGPT_Reseaux.mp3"
     medBubble "Les données de réseaux sociaux"
+    play sound "DogGPT/DogGPT_Admi.mp3"
     medBubble "Les données administratives"
-    play sound "Score.mp3"
+    play sound "DogGPT/DogGPT_Score.mp3"
     medBubble "Au-dessus de chacune d’elles, tu verras ton score."
     call addPoints(-5,'point_administrative') from _call_addPoints_19
-    play sound "Perdre.mp3"
+    play sound "DogGPT/DogGPT_Perdre.mp3"
     medBubble "Évidemment, tu perds des points si tu ne protèges pas ta vie privée."
 
     call addPoints(5,'point_administrative') from _call_addPoints_20
-    play sound "Gagner.mp3"
-    medBubble "Et tu en gagnes si tu restes discret, si tu vas piocher dans les ressources… ou même si tu vas te promener loin des réseaux."
+    play sound "DogGPT/DogGPT_Gagner.mp3"
+    medBubble "Mais tu y gagnes si tu restes discret, si tu vas piocher dans les ressources… et si tu m’emmènes me promener loin des réseaux."
     window hide
     jump hub
 
