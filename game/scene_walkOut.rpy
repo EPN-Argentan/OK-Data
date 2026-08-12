@@ -36,12 +36,13 @@ label walkOut :
         empty ""
     #give back point if you lost them before
     if points['point_localisation'][0] == -5:
-        play diag ["Mediateur/WalkOut/Med_Gagne5Loc.mp3", "Mediateur/WalkOut/Med_DesacGeo.mp3"]
         call addPoints(5,'point_localisation',LocalisationState, False, "En laissant activée la géolocalisation, tu peux être localisé par OK DATA, qui revendra cette information à ses partenaires.", "Tu as bien désactivé la localisation") from _call_addPoints_9
     nvl clear
     scene hub with fade
     hide screen hubElements
+    play diag ["Mediateur/WalkOut/Med_GrandeAventure.mp3"]
     e_nvl "Maintenant, tu es prêt pour la grande aventure 👩‍🚀 des données personnelles."
+    play diag ["Mediateur/WalkOut/Med_AToi.mp3"]
     e_nvl "À toi de jouer 🕹️ !"
 
     $ dogInBasket = False
