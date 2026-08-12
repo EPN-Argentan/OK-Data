@@ -28,7 +28,7 @@ label barOut:
     #scene bar
     show barSister
     stop music fadeout 1.0
-    play music "ambi_bar.mp3" volume 0.5
+    play music "ambi_bar.mp3" volume 0.3
     transform offset_middle:
         xpos -250
     show clic at offset_middle
