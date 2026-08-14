@@ -4,9 +4,11 @@ label barOut:
     #show screen phoneDown
     hide screen phoneDown
     play music "Spring Field - Godmode.mp3" volume 0.1
+    play diag "Syrielle/Syrielle_Thon.mp3"
     syrielle_nvl "Salut frangine ! \nFaut qu’on s’organise pour la surprise 🎉 \ndu fréro. T’es dispo ?\nOn pourrait se\nretrouver au bar\nChez Thon Thon 🐟,\nrue du Port."
     play diag "Alexia/BAR/Alexia_Yes.mp3"
     alexia_nvl "👍 Yes, t’as raison. On peut s’y retrouver maintenant."
+    play diag "Syrielle/Syrielle_UnCoup.mp3"
     syrielle_nvl "Un coup\nde téléportation,\net j’y suis ! 😜"
     play diag "Alexia/BAR/Alexia_PlusTrop.mp3"
     a "J’me souviens plus trop comment y aller, \non vérifie ça sur Data Maps."
@@ -28,7 +30,7 @@ label barOut:
     #scene bar
     show barSister
     stop music fadeout 1.0
-    play music "ambi_bar.mp3" volume 0.3
+    play music "ambi_bar.mp3" volume 0.5
     transform offset_middle:
         xpos -250
     show clic at offset_middle
@@ -37,6 +39,7 @@ label barOut:
     hide clic
     play diag "Alexia/BAR/Alexia_Wouh.mp3"
     a "Wouhouuu ! Ça fait une éternité qu’on ne s’est pas vues,\nil faut l’anniversaire de Pierrot pour qu’on se croise !"
+    play diag "Syrielle/Syrielle_Raison.mp3"
     s "Tu as raison, on va immortaliser ça."
     play diag "Alexia/BAR/Alexia_Selfie.mp3"
     a "On se fait un petit {a=information: C’est un autoportrait photographique réalisé généralement avec un portable et destiné à être publié sur les réseaux sociaux. Le selfie est également considéré comme un reflet de notre personnalité. En prenant un selfie, on contrôle l’image qu’on souhaite donner de soi-même.}selfie ?{/a}  et je l’enverrai à maman,\nça lui fera plaisir de nous voir ensemble."
